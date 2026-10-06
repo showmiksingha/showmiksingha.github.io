@@ -348,46 +348,6 @@ classes: wide
 </div>
 
 
-<!-- =========================================================
-     BADHAN
-========================================================= -->
-
-<div class="eca-card reveal" markdown="1">
-
-  <h3 class="eca-title">
-    <i class="fas fa-hand-holding-heart"></i>
-    BADHAN — Voluntary Blood Donation Organization
-  </h3>
-
-  <p class="muted" style="margin-top:0;">
-    <strong>Bangladesh</strong>
-  </p>
-
-  <p>
-    I have been involved with <strong>BADHAN</strong>, a voluntary
-    blood-donation organization in Bangladesh focused on connecting voluntary
-    blood donors with people in need and promoting awareness of voluntary blood
-    donation.
-  </p>
-
-  <p>
-    Through my involvement, I participated in organizational and volunteer
-    activities centered on community service and supporting individuals seeking
-    emergency blood assistance. This experience strengthened my appreciation
-    for volunteerism, social responsibility, teamwork, and service to the
-    community.
-  </p>
-
-  <div class="image-placeholder">
-    Images will be added here later.
-  </div>
-
-  <!--
-  FUTURE IMAGE FOLDER:
-  /assets/images/eca/badhan/
-  -->
-
-</div>
 
 
 <!-- =========================================================
