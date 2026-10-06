@@ -10,6 +10,7 @@ description: >-
 locale: "en-US"
 timezone: "America/Chicago"
 
+
 url: "https://showmiksingha.github.io"
 baseurl: ""
 
@@ -34,7 +35,7 @@ enable_copy_code_button: true
 
 # SEO / social preview
 title_separator: "-"
-twitter_username: ""
+#twitter_username: ""
 github_username: "showmiksingha"
 
 # ===============================
