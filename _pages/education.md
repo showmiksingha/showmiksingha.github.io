@@ -153,6 +153,7 @@ classes: wide
     <div class="edu-content">
       <h3>B.Sc. in Electrical and Electronic Engineering (EEE)</h3>
       <div class="edu-meta">
+      <span>February 2018</span>
         <span>Department of Electrical and Electronic Engineering</span>
         <span>Rank: 1st</span>
       </div>
@@ -171,19 +172,21 @@ classes: wide
 <hr class="section-rule"/>
 
 <ul class="edu-list">
-  <li>Semiconductor Devices Physics</li>
-  <li>Electronic Devices and Circuits</li>
+  <li>Solid State Devices</li>
+    <li>Optoelectronics</li>
+    <li>VLSI</li>
   <li>Power Electronics</li>
   <li>Analog and Digital Electronics</li>
-  <li>Electrical Circuits</li>
-  <li>Signals and Systems</li>
+  <li>Signals and Linear Systems</li>
   <li>Digital Signal Processing</li>
-  <li>Control Systems</li>
-  <li>Power Systems</li>
-  <li>Electrical Machines</li>
+  <li>Control System</li>
+  <li>Power System</li>
+    <li>Microprocessors and Interfacing</li>
+    <li>Electrical Properties of Materilas</li>
+    <li>Digital Electronics</li>
   <li>Electromagnetic Fields and Waves</li>
-  <li>Microprocessors and Embedded Systems</li>
-  <li>Communication Systems</li>
+  <li>Electrical Machines</li>
+  <li>Electrical Circuits</li>
   <li>C Programming</li>
   
 </ul>
@@ -194,14 +197,16 @@ classes: wide
 
 
 
----
+
 
 ## <i class="fas fa-award"></i> Academic Awards
 <hr class="section-rule"/>
 
 <ul class="edu-list">
-    <li>College of Engineering Outstanding Ph.D. Student Award — University of Missouri (2026)</li>
-  <li>Electrical Engineering and Computer Science Outstanding Ph.D. Student and Teaching Assistant Award — University of Missouri (2026)</li>
+  <li>Dean's Summer Retention Fellowship - College of Engineering — University of Missouri (2026)</li>
+    <li>Outstanding Ph.D. Student Award - College of Engineering — University of Missouri (2026)</li>
+  <li> Outstanding Ph.D. Student and Teaching Assistant Award - Dept. of Electrical Engineering and Computer Science  — University of Missouri (2026)</li>
+  <li> Travel Fellowship Award - Dept. of Electrical Engineering and Computer Science  — University of Missouri (2024,2025)</li>
   <li>2<sup>nd</sup> Place & People’s Choice Award — 41<sup>st</sup> Research and Creative Activities Forum (RCAF) Poster Competition, University of Missouri (2025)</li>
   <li>Best Oral Paper & Graduate Poster Award — 33<sup>rd</sup> Annual Connecticut Symposium on Microelectronics & Optoelectronics (2025)</li>
   <li>Best Graduate Poster Award — 32<sup>nd</sup> Annual Connecticut Symposium on Microelectronics & Optoelectronics (2024)</li>
