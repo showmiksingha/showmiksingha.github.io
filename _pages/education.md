@@ -134,7 +134,7 @@ classes: wide
     <div class="edu-content">
       <h3>Master of Science (M.S.), Electrical and Computer Engineering</h3>
       <div class="edu-meta">
-        <span>Boston University</span>
+        <span>January 2024</span>
         <span>Department of Electrical and Computer Engineering</span>
       </div>
       <p class="edu-inst">Boston University, Boston, Massachusetts, USA</p>
