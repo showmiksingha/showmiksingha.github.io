@@ -179,8 +179,8 @@ classes: wide
 <!-- LEFT: Author profile (manual, same style as other pages) -->
 <aside class="author-card">
   <img class="author-avatar" src="/assets/images/profile.JPG" alt="Md Yekra Rahman">
-  <p class="author-name">Md Yekra Rahman</p>
-  <p class="author-bio">PhD Student, Mizzou</p>
+  <p class="author-name">Showmik Singha</p>
+  <p class="author-bio">PhD Candidate, University of Missouri</p>
   <ul class="author-links">
     <li><a href="mailto:mrvpx@missouri.edu"><i class="fas fa-envelope"></i>Email</a></li>
     <li><a href="https://github.com/MdYekraRahman" target="_blank" rel="noopener"><i class="fab fa-github"></i>GitHub</a></li>
