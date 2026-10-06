@@ -1,3 +1,4 @@
+
 ---
 title: "Education"
 permalink: /education/
@@ -72,25 +73,25 @@ classes: wide
 
   <!-- LEFT: manual author profile -->
   <aside class="author-card">
-    <img class="author-avatar" src="/assets/images/profile.JPG" alt="Md Yekra Rahman">
-    <p class="author-name">Md Yekra Rahman</p>
-    <p class="author-bio">PhD Student, Mizzou</p>
+    <img class="author-avatar" src="/assets/images/profile.JPG" alt="Showmik Singha">
+    <p class="author-name">Showmik Singha</p>
+    <p class="author-bio">PhD Candidate, University of Missouri</p>
 
     <ul class="author-links">
       <li>
-        <a href="mailto:mrvpx@missouri.edu">
+        <a href="mailto:ssqk4@umsystem.edu">
           <i class="fas fa-fw fa-envelope"></i>
           <span>Email</span>
         </a>
       </li>
       <li>
-        <a href="https://github.com/MdYekraRahman" target="_blank" rel="noopener">
+        <a href="https://github.com/showmiksingha" target="_blank" rel="noopener">
           <i class="fab fa-fw fa-github"></i>
           <span>GitHub</span>
         </a>
       </li>
       <li>
-        <a href="https://www.linkedin.com/in/mdyekrarahman/" target="_blank" rel="noopener">
+        <a href="https://www.linkedin.com/in/showmiksingha/" target="_blank" rel="noopener">
           <i class="fab fa-fw fa-linkedin"></i>
           <span>LinkedIn</span>
         </a>
@@ -101,6 +102,7 @@ classes: wide
   <!-- RIGHT: your existing content -->
   <main>
 <div class="wrap" markdown="1">
+
 ## <i class="fas fa-graduation-cap"></i> Education
 
 <div class="edu-timeline">
@@ -112,68 +114,53 @@ classes: wide
     </div>
 
     <div class="edu-content">
-      <h3>Doctor of Philosophy (Ph.D.), Electrical Engineering</h3>
+      <h3>Doctor of Philosophy (Ph.D.), Electrical and Computer Engineering</h3>
       <div class="edu-meta">
-        <span>Fall 2025 – Present</span>
+        <span>January 2024 – Present</span>
         <span>Department of Electrical Engineering and Computer Science</span>
       </div>
       <p class="edu-inst">University of Missouri–Columbia, USA</p>
+      <p class="edu-extra"><strong>GPA:</strong> 4.00 / 4.00</p>
     </div>
   </div>
 
   <div class="edu-divider"></div>
 
-  <!-- TxACE -->
+  <!-- Boston University -->
   <div class="edu-item">
     <div class="edu-logo">
-      <img src="/assets/images/TxACE.png" alt="University of Texas at Dallas">
+      <img src="/assets/images/bu-logo.png" alt="Boston University">
     </div>
 
     <div class="edu-content">
-      <h3>Graduate Teaching Assistant</h3>
+      <h3>Master of Science (M.S.), Electrical and Computer Engineering</h3>
       <div class="edu-meta">
-        <span>Fall 2024 – Summer 2025</span>
-        <span>Department of Electrical Engineering</span>
+        <span>Boston University</span>
+        <span>Department of Electrical and Computer Engineering</span>
       </div>
-      <p class="edu-inst">TxACE, University of Texas at Dallas, USA</p>
+      <p class="edu-inst">Boston University, Boston, Massachusetts, USA</p>
+      <p class="edu-extra"><strong>GPA:</strong> 3.43 / 4.00</p>
     </div>
   </div>
 
   <div class="edu-divider"></div>
 
-  <!-- BUET -->
+  <!-- SUST -->
   <div class="edu-item">
     <div class="edu-logo">
-      <img src="/assets/images/buet-logo.png" alt="BUET">
+      <img src="/assets/images/sust-logo.png" alt="Shahjalal University of Science and Technology">
     </div>
 
     <div class="edu-content">
       <h3>B.Sc. in Electrical and Electronic Engineering (EEE)</h3>
       <div class="edu-meta">
-        <span>April 2018 – May 2023</span>
         <span>Department of Electrical and Electronic Engineering</span>
+        <span>Rank: 1st</span>
       </div>
-      <p class="edu-inst">Bangladesh University of Engineering and Technology (BUET)</p>
-      <p class="edu-extra"><strong>GPA:</strong> 3.65 / 4.00</p>
-    </div>
-  </div>
-
-  <div class="edu-divider"></div>
-
-  <!-- HSC -->
-  <div class="edu-item">
-    <div class="edu-logo">
-      <img src="/assets/images/Rajshahi_College_Logo.png" alt="Rajshahi College">
-    </div>
-
-    <div class="edu-content">
-      <h3>Higher Secondary School Certificate (HSC), Science</h3>
-      <div class="edu-meta">
-        <span>Class of 2017</span>
-        <span>Science Group</span>
-      </div>
-      <p class="edu-inst">Rajshahi College, Rajshahi</p>
-      <p class="edu-extra"><strong>GPA:</strong> 5.00 / 5.00</p>
+      <p class="edu-inst">
+        Shahjalal University of Science and Technology (SUST), Sylhet, Bangladesh
+      </p>
+      <p class="edu-extra"><strong>GPA:</strong> 3.93 / 4.00</p>
     </div>
   </div>
 
@@ -185,31 +172,28 @@ classes: wide
 <hr class="section-rule"/>
 
 <ul class="edu-list">
-  <li>Analog Integrated Circuits</li>
-  <li>Electronic Circuits & Electrical Circuits</li>
-  <li>Solid-State Devices & Compound Semiconductor Devices</li>
-  <li>VLSI Circuits and Design</li>
+  <li>Semiconductor Device Physics</li>
+  <li>Solid-State Electronics</li>
+  <li>Electronic Devices and Circuits</li>
   <li>Power Electronics</li>
-  <li>Power System I & Power System Analysis</li>
-  <li>Electrical Machines</li>
-  <li>Control Systems</li>
-  <li>Digital Signal Processing</li>
+  <li>Microelectronics</li>
+  <li>Analog and Digital Electronics</li>
+  <li>Electrical Circuits</li>
   <li>Signals and Systems</li>
-  <li>Digital Logic Design</li>
+  <li>Digital Signal Processing</li>
+  <li>Control Systems</li>
+  <li>Power Systems</li>
+  <li>Electrical Machines</li>
+  <li>Electromagnetic Fields and Waves</li>
   <li>Microprocessors and Embedded Systems</li>
-  <li>Processing and Fabrication Technology</li>
-  <li>Electrical Properties of Materials</li>
-  <li>Optoelectronics</li>
-  <li>Nano-electronics and Nanotechnology</li>
+  <li>Communication Systems</li>
   <li>Computer Programming</li>
+  <li>Engineering Mathematics</li>
 </ul>
 
 <p class="edu-inst">
-  Full list of my completed undergraduate courses and grades:
-  <a href="https://docs.google.com/spreadsheets/d/1Z4_jXWNf3in0Tf3PKaMeoOQdXzZbt0l7hZH-1Ulfi_0/edit?usp=sharing"
-     target="_blank" rel="noopener">
-    View coursework spreadsheet
-  </a>
+  My academic coursework has provided a strong foundation in semiconductor devices,
+  electronics, power systems, signal processing, and electrical engineering.
 </p>
 
 ---
@@ -225,9 +209,10 @@ classes: wide
 <hr class="section-rule"/>
 
 <ul class="edu-list">
-  <li>Dean’s List Award — BUET (Level-2)</li>
-  <li>University Merit Scholarship — BUET (2018–2023)</li>
-  <li>Scholarship of Merit — Bangladesh Education Board (2012–2017)</li>
-  <li>Scholarship of Merit — Primary Education Board (2010–2012)</li>
+  <li>Dean’s Graduate Fellowship Program — College of Engineering, University of Missouri</li>
+  <li>Summer Retention Fellowship 2026 — University of Missouri</li>
+  <li>Graduated 1st in Class — B.Sc. in Electrical and Electronic Engineering, SUST</li>
 </ul>
+
 </div> <!-- /.wrap -->
+```
