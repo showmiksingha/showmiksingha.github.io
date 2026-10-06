@@ -171,11 +171,9 @@ classes: wide
 <hr class="section-rule"/>
 
 <ul class="edu-list">
-  <li>Semiconductor Device Physics</li>
-  <li>Solid-State Electronics</li>
+  <li>Semiconductor Devices Physics</li>
   <li>Electronic Devices and Circuits</li>
   <li>Power Electronics</li>
-  <li>Microelectronics</li>
   <li>Analog and Digital Electronics</li>
   <li>Electrical Circuits</li>
   <li>Signals and Systems</li>
@@ -186,21 +184,15 @@ classes: wide
   <li>Electromagnetic Fields and Waves</li>
   <li>Microprocessors and Embedded Systems</li>
   <li>Communication Systems</li>
-  <li>Computer Programming</li>
-  <li>Engineering Mathematics</li>
+  <li>C Programming</li>
+  
 </ul>
 
-<p class="edu-inst">
-  My academic coursework has provided a strong foundation in semiconductor devices,
-  electronics, power systems, signal processing, and electrical engineering.
-</p>
+
 
 ---
 
-## <i class="fas fa-certificate"></i> Certifications
-<hr class="section-rule"/>
 
-<ul class="edu-list"></ul>
 
 ---
 
