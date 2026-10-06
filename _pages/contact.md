@@ -174,34 +174,20 @@ classes: wide
     </p>
 
     <div class="social-row">
-      <a class="social email" href="mailto:mrvpx@missouri.edu" aria-label="Email">
+      <a class="social email" href="mailto:ssqk4@umsystem.edu" aria-label="Email">
         <i class="fas fa-envelope"></i>
       </a>
 
-      <a class="social github" href="https://github.com/MdYekraRahman"
+      <a class="social github" href="https://github.com/showmiksingha"
          target="_blank" rel="noopener" aria-label="GitHub">
         <i class="fab fa-github"></i>
       </a>
 
-      <a class="social linkedin" href="https://www.linkedin.com/in/mdyekrarahman/"
+      <a class="social linkedin" href="https://www.linkedin.com/in/showmik-singha-293967147"
          target="_blank" rel="noopener" aria-label="LinkedIn">
         <i class="fab fa-linkedin-in"></i>
       </a>
 
-      <a class="social facebook" href="https://www.facebook.com/yekra184/"
-         target="_blank" rel="noopener" aria-label="Facebook">
-        <i class="fab fa-facebook-f"></i>
-      </a>
-
-      <a class="social twitter" href="https://x.com/mdyekrarahman"
-         target="_blank" rel="noopener" aria-label="X (Twitter)">
-        <i class="fab fa-x-twitter"></i>
-      </a>
-
-      <a class="social reddit" href="https://www.reddit.com/user/tadpolemyxini/"
-         target="_blank" rel="noopener" aria-label="Reddit">
-        <i class="fab fa-reddit-alien"></i>
-      </a>
     </div>
   </div>
 </section>
@@ -216,8 +202,8 @@ classes: wide
     <h3><i class="fas fa-building-columns"></i> Affiliation</h3>
 
     <p>
-      <strong>Md Yekra Rahman</strong><br>
-      Graduate Teaching & Research Assistant<br>
+      <strong>Showmik Singha</strong><br>
+      Graduate Teaching Assistant<br>
       Analog/Mixed Signal VLSI and Devices Laboratory (AVDL)
     </p>
 
