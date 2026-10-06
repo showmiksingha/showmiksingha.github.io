@@ -208,9 +208,12 @@ classes: wide
 <hr class="section-rule"/>
 
 <ul class="edu-list">
-  <li>Dean’s Graduate Fellowship Program — College of Engineering, University of Missouri</li>
-  <li>Summer Retention Fellowship 2026 — University of Missouri</li>
-  <li>Graduated 1st in Class — B.Sc. in Electrical and Electronic Engineering, SUST</li>
+    <li>College of Engineering Outstanding Ph.D. Student Award — University of Missouri (2026)</li>
+  <li>Electrical Engineering and Computer Science Outstanding Ph.D. Student and Teaching Assistant Award — University of Missouri (2026)</li>
+  <li>2<sup>nd</sup> Place & People’s Choice Award — 41<sup>st</sup> Research and Creative Activities Forum (RCAF) Poster Competition, University of Missouri (2025)</li>
+  <li>Best Oral Paper & Graduate Poster Award — 33<sup>rd</sup> Annual Connecticut Symposium on Microelectronics & Optoelectronics (2025)</li>
+  <li>Best Graduate Poster Award — 32<sup>nd</sup> Annual Connecticut Symposium on Microelectronics & Optoelectronics (2024)</li>
+  <li>Best Paper Award — First International Conference on Emerging Electrical Energy, Electronics and Computing Technologies (ICE4CT) (2019)</li>
 </ul>
 
 </div> <!-- /.wrap -->
