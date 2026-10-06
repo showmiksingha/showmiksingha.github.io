@@ -345,26 +345,29 @@ classes: wide
 
 <div class="page-grid">
 
-  <!-- LEFT: manual author profile -->
+<!-- LEFT: manual author profile -->
   <aside class="author-card">
-    <img class="author-avatar" src="/assets/images/profile.JPG" alt="Md Yekra Rahman">
-    <p class="author-name">Md Yekra Rahman</p>
-    <p class="author-bio">PhD Student, Mizzou</p>
+    <img class="author-avatar" src="/assets/images/profile.JPG" alt="Showmik Singha">
+    <p class="author-name">Showmik Singha</p>
+    <p class="author-bio">PhD Candidate, University of Missouri</p>
 
     <ul class="author-links">
       <li>
-        <a href="mailto:mrvpx@missouri.edu">
-          <i class="fas fa-fw fa-envelope"></i><span>Email</span>
+        <a href="mailto:ssqk4@umsystem.edu">
+          <i class="fas fa-fw fa-envelope"></i>
+          <span>Email</span>
         </a>
       </li>
       <li>
-        <a href="https://github.com/MdYekraRahman" target="_blank" rel="noopener">
-          <i class="fab fa-fw fa-github"></i><span>GitHub</span>
+        <a href="https://github.com/showmiksingha" target="_blank" rel="noopener">
+          <i class="fab fa-fw fa-github"></i>
+          <span>GitHub</span>
         </a>
       </li>
       <li>
-        <a href="https://www.linkedin.com/in/mdyekrarahman/" target="_blank" rel="noopener">
-          <i class="fab fa-fw fa-linkedin"></i><span>LinkedIn</span>
+        <a href="https://www.linkedin.com/in/showmiksingha/" target="_blank" rel="noopener">
+          <i class="fab fa-fw fa-linkedin"></i>
+          <span>LinkedIn</span>
         </a>
       </li>
     </ul>
