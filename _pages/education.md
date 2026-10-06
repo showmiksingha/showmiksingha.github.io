@@ -1,5 +1,3 @@
-
-
 ---
 title: "Education"
 permalink: /education/
@@ -216,4 +214,3 @@ classes: wide
 </ul>
 
 </div> <!-- /.wrap -->
-```
