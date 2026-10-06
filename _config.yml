@@ -1,11 +1,11 @@
 # ===============================
 # Site Identity
 # ===============================
-title: "Md Yekra Rahman"
+title: "Showmik Singha"
 name: "Showmik Singha"
 email: "ssqk4@umsystem.edu"
 description: >-
-  Md Yekra Rahman - Portfolio Website
+  Showmik Singha - Portfolio Website
 
 locale: "en-US"
 timezone: "America/Chicago"
@@ -13,7 +13,7 @@ timezone: "America/Chicago"
 url: "https://showmiksingha.github.io"
 baseurl: ""
 
-repository: "MdYekraRahman/mdyekrarahman.github.io"
+repository: "showmiksingha/showmiksingha.github.io"
 
 # ===============================
 # Theme / UI
@@ -35,7 +35,7 @@ enable_copy_code_button: true
 # SEO / social preview
 title_separator: "-"
 twitter_username: ""
-github_username: "MdYekraRahman"
+github_username: "showmiksingha"
 
 # ===============================
 # Build Settings
@@ -62,19 +62,19 @@ plugins:
 # Author (Sidebar Profile)
 # ===============================
 author:
-  name   : "Md Yekra Rahman"
+  name   : "Showmik Singha"
   avatar : "/assets/images/profile.JPG"
-  bio    : "PhD Student, MIzzou"
+  bio    : "PhD Candidate, University of Missouri"
   links:
     - label: "Email"
       icon: "fas fa-fw fa-envelope"
-      url: "mailto:mrvpx@missouri.edu"
+      url: "mailto:ssqk4@umsystem.edu"
     - label: "GitHub"
       icon: "fab fa-fw fa-github"
-      url: "https://github.com/MdYekraRahman"
+      url: "https://github.com/showmiksingha"
     - label: "LinkedIn"
       icon: "fab fa-fw fa-linkedin"
-      url: "https://www.linkedin.com/in/mdyekrarahman/"
+      url: "https://www.linkedin.com/in/showmiksingha/"
 
 # ===============================
 # Footer (ONLY name + auto year)
