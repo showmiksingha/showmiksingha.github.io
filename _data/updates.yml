@@ -1,8 +1,77 @@
 years:
   - year: 2026
     items:
-      - date: "2026"
-        text: "Actively seeking full-time positions."
+      - date: "Sep 2026"
+        text: "Successfully passed the Ph.D. Comprehensive Examination and advanced to Ph.D. candidacy in Electrical and Computer Engineering at the University of Missouri–Columbia."
 
       - date: "Sep 2026"
-        text: "Passed the PhD Comprehensive Examination and advanced to PhD candidacy in Electrical and Computer Engineering at the University of Missouri–Columbia."
+        text: "Received the College of Engineering Outstanding Ph.D. Student Award at the University of Missouri."
+
+      - date: "2026"
+        text: "Received the Electrical Engineering and Computer Science Outstanding Ph.D. Student and Teaching Assistant Award at the University of Missouri."
+
+      - date: "Oct 2026"
+        text: "Scheduled to present two oral papers at the IEEE Workshop on Wide Bandgap Power Devices and Applications (WiPDA 2026), Burlington, Vermont."
+
+      - date: "Jun 2026"
+        text: "Presented research on Machine Learning-Enabled Parameter Extraction of Beta-Gallium Oxide MOSFETs at the 84th Device Research Conference (DRC 2026)."
+
+      - date: "Summer 2026"
+        text: "Received the Dean's Graduate Fellowship Program - Summer Retention Fellowship 2026 from the College of Engineering at the University of Missouri."
+
+      - date: "2026"
+        text: "Advanced research on temperature-dependent single-event transient effects in beta-Gallium Oxide MOSFETs and machine learning-based semiconductor device optimization."
+
+  - year: 2025
+    items:
+      - date: "2025"
+        text: "Published a first-author journal article titled 'Numerical Analysis of Single Event Transient Effects in Enhancement-Mode p-GaN/AlGaN/GaN HEMTs' in the International Journal of High Speed Electronics and Systems."
+
+      - date: "Oct 2025"
+        text: "Delivered an oral presentation on single-event transient responses in beta-Gallium Oxide MOSFETs under oblique particle irradiation at IEEE WiPDA 2025."
+
+      - date: "2025"
+        text: "Received 2nd Place and People's Choice Awards at the 41st Research and Creative Activities Forum (RCAF) Poster Competition at the University of Missouri."
+
+      - date: "2025"
+        text: "Received the Best Oral Paper and Graduate Poster Award at the 33rd Annual Connecticut Symposium on Microelectronics and Optoelectronics."
+
+      - date: "2025"
+        text: "Presented an invited paper on radiation-induced transient effects in enhancement-mode GaN HEMTs at the 33rd Annual Connecticut Symposium on Microelectronics and Optoelectronics."
+
+      - date: "2025"
+        text: "Presented research on AlN/Beta-Gallium Oxide HEMT device characteristics at the U.S. Gallium Oxide Workshop (US GOX 2025)."
+
+  - year: 2024
+    items:
+      - date: "Jan 2024"
+        text: "Started the Ph.D. program in Electrical and Computer Engineering at the University of Missouri–Columbia under the supervision of Prof. Syed Kamrul Islam."
+
+      - date: "2024"
+        text: "Received the Best Graduate Poster Award at the 32nd Annual Connecticut Symposium on Microelectronics and Optoelectronics."
+
+      - date: "2024"
+        text: "Started research on wide-bandgap and ultra-wide-bandgap semiconductor devices, TCAD simulation, and radiation-induced reliability."
+
+      - date: "2024"
+        text: "Presented semiconductor device research at technical conferences and university research forums."
+
+  - year: 2023
+    items:
+      - date: "2023"
+        text: "Completed graduate studies in Electrical and Computer Engineering at Boston University."
+
+  - year: 2022
+    items:
+      - date: "Aug 2022"
+        text: "Completed faculty service in the Department of Electrical and Electronic Engineering at Shahjalal University of Science and Technology (SUST), Bangladesh."
+
+  - year: 2019
+    items:
+      - date: "2019"
+        text: "Received the Best Paper Award at the First International Conference on Emerging Electrical Energy, Electronics and Computing Technologies (ICE4CT)."
+
+  - year: 2018
+    items:
+      - date: "Sep 2018"
+        text: "Joined the Department of Electrical and Electronic Engineering at Shahjalal University of Science and Technology (SUST) as a Faculty Member."
