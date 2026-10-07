@@ -179,8 +179,7 @@ classes: wide
 
 <p class="skills-intro">
 My technical experience spans semiconductor device modeling, analog and
-mixed-signal circuit design, power electronics, PCB design, scientific
-computing, machine learning, and laboratory characterization.
+mixed-signal circuit design, power electronics, PCB design, laboratory characterization, and machine learning.
 </p>
 
 
@@ -229,17 +228,15 @@ computing, machine learning, and laboratory characterization.
   <p class="skill-title">Cadence Virtuoso / Spectre / ADE</p>
   <p class="skill-desc">
     Analog and mixed-signal IC design including schematic capture,
-    circuit simulation, DC/AC/transient/noise analysis, corner and
-    Monte Carlo simulations, layout, DRC/LVS, and parasitic extraction.
+    circuit simulation, DC/AC/transient analysis, layout, and DRC/LVS.
   </p>
 </div>
 
 <div class="skill-card">
   <p class="skill-title">LTspice</p>
   <p class="skill-desc">
-    Analog and power circuit simulation, custom SPICE models,
-    behavioral sources, transient and frequency-domain analysis,
-    and rapid circuit prototyping.
+    Analog and power circuit simulation, transient and frequency-domain analysis,
+  
   </p>
 </div>
 
@@ -252,14 +249,7 @@ computing, machine learning, and laboratory characterization.
 
 <h2>Power Electronics & Circuit Simulation</h2>
 
-<div class="skill-card">
-  <p class="skill-title">PLECS</p>
-  <p class="skill-desc">
-    System-level power electronics simulation, converter modeling,
-    steady-state analysis, switching behavior evaluation,
-    and control-oriented modeling.
-  </p>
-</div>
+
 
 <div class="skill-card">
   <p class="skill-title">Power Semiconductor Devices</p>
