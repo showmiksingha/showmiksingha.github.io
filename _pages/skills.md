@@ -268,7 +268,6 @@ classes: wide
       </li>
 
     </ul>
-
   </aside>
 
   <!-- RIGHT: Technical Skills -->
