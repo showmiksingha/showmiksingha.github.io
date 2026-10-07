@@ -8,14 +8,14 @@ main:
   - title: "Skills"
     url: /skills/
     
-  - title: "Professional Experience"
-    url: /professional-experience/
+  - title: "Experience"
+    url: /experience/
 
-  - title: "Publications/Projects"
-    url: /pubs-projects/
+  - title: "Publications"
+    url: /publications/
 
-  - title: "CV"
-    url: /cv/
+    - title: "Projects"
+    url: /projects/
 
   - title: "ECA"
     url: /eca/
