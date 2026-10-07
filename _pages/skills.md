@@ -192,6 +192,34 @@ classes: wide
     font-size: 0.9rem;
   }
 }
+
+/* ===== Skills: Icons and Bullet Lists ===== */
+.skills-content {
+  min-width: 0;
+}
+
+.skill-category h2 i {
+  color: #2563eb;
+  margin-right: 10px;
+}
+
+.skill-list {
+  list-style-type: disc;
+  padding-left: 28px;
+  margin: 10px 0 24px;
+}
+
+.skill-list li {
+  font-size: 0.94rem;
+  line-height: 1.75;
+  margin-bottom: 5px;
+  padding-left: 4px;
+}
+
+.skill-list li::marker {
+  color: #64748b;
+}
+
 </style>
 
 <div class="edu-layout">
@@ -250,69 +278,113 @@ classes: wide
 
     <!-- Programming -->
     <section class="skill-category">
-      <h2>Programming</h2>
-      <p>
-        C, Python
-      </p>
+      <h2>
+        <i class="fas fa-code"></i>
+        Programming
+      </h2>
+      <ul class="skill-list">
+        <li>C</li>
+        <li>Python</li>
+      </ul>
     </section>
 
     <!-- Modeling and Simulation -->
     <section class="skill-category">
-      <h2>Modeling &amp; Simulation</h2>
-      <p>
-        Silvaco TCAD, Sentaurus TCAD, Cadence,
-        LTSpice, OrCAD, MATLAB, Simulink,
-        Lumerical, Quantum ESPRESSO,
-        PowerWorld, AutoCAD
-      </p>
+      <h2>
+        <i class="fas fa-laptop-code"></i>
+        Modeling &amp; Simulation
+      </h2>
+      <ul class="skill-list">
+        <li>Silvaco TCAD</li>
+        <li>Sentaurus TCAD</li>
+        <li>Cadence</li>
+        <li>LTSpice</li>
+        <li>OrCAD</li>
+        <li>MATLAB</li>
+        <li>Simulink</li>
+        <li>Lumerical</li>
+        <li>Quantum ESPRESSO</li>
+        <li>PowerWorld</li>
+        <li>AutoCAD</li>
+      </ul>
     </section>
 
     <!-- Semiconductor Processing -->
     <section class="skill-category">
-      <h2>Semiconductor Processing</h2>
-      <p>
-        Wafer Preparation, Spin Coating,
-        Photolithography, Wet Etching,
-        Doping, Oxidation, Metallization,
-        Thin-Film Processing, Thermal Annealing
-      </p>
+      <h2>
+        <i class="fas fa-microchip"></i>
+        Semiconductor Processing
+      </h2>
+      <ul class="skill-list">
+        <li>Wafer Preparation</li>
+        <li>Spin Coating</li>
+        <li>Photolithography</li>
+        <li>Wet Etching</li>
+        <li>Doping</li>
+        <li>Oxidation</li>
+        <li>Metallization</li>
+        <li>Thin-Film Processing</li>
+        <li>Thermal Annealing</li>
+      </ul>
     </section>
 
     <!-- Electrical Characterization -->
     <section class="skill-category">
-      <h2>Electrical Characterization</h2>
-      <p>
-        Four-Point Probe,
-        Hall Measurement (Linseis HCS 1),
-        Semiconductor Parameter Analyzer
-        (I–V, C–V) (Keithley 4200 SCS)
-      </p>
+      <h2>
+        <i class="fas fa-bolt"></i>
+        Electrical Characterization
+      </h2>
+      <ul class="skill-list">
+        <li>Four-Point Probe</li>
+        <li>Hall Measurement (Linseis HCS 1)</li>
+        <li>
+          Semiconductor Parameter Analyzer
+          (I–V, C–V) (Keithley 4200 SCS)
+        </li>
+      </ul>
     </section>
 
     <!-- Materials/Physical Characterization -->
     <section class="skill-category">
-      <h2>Materials/Physical Characterization</h2>
-      <p>
-        Scanning Electron Microscopy
-        (Thermo Fisher VolumeScope 2),
-        Fourier Transform Infrared Spectroscopy
-        (Thermo Fisher Nicolet 4700),
-        Optical Profilometry (Veeco NT 9109),
-        Raman Spectroscopy
-        (Renishaw inVia Microscope),
-        Spectroscopic Ellipsometry
-      </p>
+      <h2>
+        <i class="fas fa-microscope"></i>
+        Materials/Physical Characterization
+      </h2>
+      <ul class="skill-list">
+        <li>
+          Scanning Electron Microscopy
+          (Thermo Fisher VolumeScope 2)
+        </li>
+        <li>
+          Fourier Transform Infrared Spectroscopy
+          (Thermo Fisher Nicolet 4700)
+        </li>
+        <li>
+          Optical Profilometry (Veeco NT 9109)
+        </li>
+        <li>
+          Raman Spectroscopy
+          (Renishaw inVia Microscope)
+        </li>
+        <li>Spectroscopic Ellipsometry</li>
+      </ul>
     </section>
 
     <!-- Instrumentation -->
     <section class="skill-category">
-      <h2>Instrumentation</h2>
-      <p>
-        Mask Aligner (SUSS MA6),
-        Nanoscribe Quantum X Shape,
-        Oscilloscope, Signal Generator,
-        Multimeter, Arduino, Raspberry Pi
-      </p>
+      <h2>
+        <i class="fas fa-tools"></i>
+        Instrumentation
+      </h2>
+      <ul class="skill-list">
+        <li>Mask Aligner (SUSS MA6)</li>
+        <li>Nanoscribe Quantum X Shape</li>
+        <li>Oscilloscope</li>
+        <li>Signal Generator</li>
+        <li>Multimeter</li>
+        <li>Arduino</li>
+        <li>Raspberry Pi</li>
+      </ul>
     </section>
 
   </main>
