@@ -37,7 +37,7 @@ enable_copy_code_button: true
 
 # SEO / social preview
 title_separator: "-"
-#twitter_username: ""
+twitter_username: ""
 github_username: "showmiksingha"
 
 # ===============================
@@ -83,7 +83,7 @@ author:
 # Footer (ONLY name + auto year)
 # ===============================
 footer:
-  since: 2024
+  since: 2026
   links: []   # remove Email/GitHub/LinkedIn/Feed from footer
   powered_by: false
 atom_feed:
