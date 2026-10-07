@@ -4,19 +4,18 @@ main:
 
   - title: "Education"
     url: /education/
+   
     
-  - title: "Skills"
-    url: /skills/
-    
-  - title: "Experience"
-    url: /experience/
+  - title: "Experiences"
+    url: /experiences/
 
   - title: "Publications"
     url: /publications/
 
-    - title: "Projects"
-    url: /projects/
-
+ 
+  - title: "Skills"
+    url: /skills/
+    
   - title: "ECA"
     url: /eca/
 
