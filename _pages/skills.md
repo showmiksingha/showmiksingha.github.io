@@ -78,111 +78,166 @@ classes: wide
   align-items: center;
 }
 
-/* ===== Skills Content ===== */
-.skills-content {
+/* ===== Publications Content ===== */
+.pub-content {
   min-width: 0;
+  color: #242424;
 }
 
-.skills-content h1 {
+.pub-content h1 {
   font-size: 2rem;
-  margin-top: 0;
-  margin-bottom: 24px;
+  margin: 0 0 14px;
   padding-bottom: 12px;
   border-bottom: 2px solid #e5e7eb;
 }
 
-.skill-category {
+.pub-intro {
+  font-size: 0.96rem;
+  color: #555;
   margin-bottom: 25px;
 }
 
-.skill-category h2 {
-  font-size: 1.2rem;
-  font-weight: 700;
-  margin-top: 0;
-  margin-bottom: 10px;
-  color: #222;
+.pub-stats {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 12px;
+  margin: 20px 0 32px;
 }
 
-.skill-category p {
-  font-size: 0.98rem;
-  line-height: 1.8;
-  color: #444;
+.pub-stat {
+  border: 1px solid #e5e7eb;
+  border-radius: 10px;
+  padding: 15px;
+  text-align: center;
+  background: #fafafa;
+}
+
+.pub-stat strong {
+  display: block;
+  font-size: 1.65rem;
+  color: #2563eb;
+}
+
+.pub-stat span {
+  font-size: 0.83rem;
+  color: #555;
+}
+
+.pub-content h2 {
+  font-size: 1.35rem;
+  margin: 36px 0 18px;
+  padding-bottom: 8px;
+  border-bottom: 1px solid #e5e7eb;
+}
+
+/* ===== Publication List ===== */
+.publication-list {
+  list-style-type: decimal;
+  padding-left: 28px;
   margin: 0;
 }
 
-.skill-category:not(:last-child) {
-  padding-bottom: 20px;
-  border-bottom: 1px solid #e5e7eb;
+.publication-list li {
+  padding-left: 5px;
+  margin-bottom: 19px;
+  font-size: 0.94rem;
+  line-height: 1.75;
+  overflow-wrap: anywhere;
+}
+
+.publication-list li::marker {
+  color: #64748b;
+  font-weight: 600;
+}
+
+.publication-list strong {
+  font-weight: 700;
+  color: #111827;
+}
+
+.publication-list em {
+  color: #444;
+}
+
+.pub-year {
+  color: #64748b;
+  font-weight: 600;
+}
+
+.pub-tag {
+  display: inline-block;
+  font-size: 0.72rem;
+  font-weight: 600;
+  color: #1d4ed8;
+  background: #eff6ff;
+  padding: 2px 8px;
+  border-radius: 5px;
+  margin-left: 5px;
+}
+
+@media (max-width: 600px) {
+  .pub-stats {
+    gap: 7px;
+  }
+
+  .pub-stat {
+    padding: 12px 5px;
+  }
+
+  .pub-stat strong {
+    font-size: 1.3rem;
+  }
+
+  .publication-list li {
+    font-size: 0.9rem;
+  }
 }
 </style>
 
 <div class="edu-layout">
 
-  <!-- LEFT: Author Profile -->
+  <!-- =====================================
+       LEFT: AUTHOR PROFILE
+  ====================================== -->
+
   <aside class="author-card">
 
     <img
       class="author-avatar"
-      src="{{ site.author.avatar | relative_url }}"
-      alt="{{ site.author.name }}"
+      src="/assets/images/profile.JPG"
+      alt="Showmik Singha"
     >
 
-    <h2 class="author-name">
-      {{ site.author.name }}
-    </h2>
+    <p class="author-name">Showmik Singha</p>
 
-    {% if site.author.bio %}
     <p class="author-bio">
-      {{ site.author.bio }}
+      PhD Candidate, University of Missouri
     </p>
-    {% endif %}
 
     <ul class="author-links">
 
-      {% if site.author.location %}
       <li>
-        📍 {{ site.author.location }}
-      </li>
-      {% endif %}
-
-      {% if site.author.email %}
-      <li>
-        ✉️
-        <a href="mailto:{{ site.author.email }}">
-          Email
+        <a href="mailto:ssqk4@umsystem.edu">
+          <i class="fas fa-fw fa-envelope"></i>
+          <span>Email</span>
         </a>
       </li>
-      {% endif %}
 
-      {% if site.author.googlescholar %}
       <li>
-        🎓
-        <a href="{{ site.author.googlescholar }}"
-           target="_blank" rel="noopener noreferrer">
-          Google Scholar
+        <a href="https://github.com/showmiksingha"
+           target="_blank" rel="noopener">
+          <i class="fab fa-fw fa-github"></i>
+          <span>GitHub</span>
         </a>
       </li>
-      {% endif %}
 
-      {% if site.author.github %}
       <li>
-        💻
-        <a href="https://github.com/{{ site.author.github }}"
-           target="_blank" rel="noopener noreferrer">
-          GitHub
+        <a href="https://www.linkedin.com/in/showmiksingha/"
+           target="_blank" rel="noopener">
+          <i class="fab fa-fw fa-linkedin"></i>
+          <span>LinkedIn</span>
         </a>
       </li>
-      {% endif %}
-
-      {% if site.author.linkedin %}
-      <li>
-        🔗
-        <a href="https://www.linkedin.com/in/{{ site.author.linkedin }}"
-           target="_blank" rel="noopener noreferrer">
-          LinkedIn
-        </a>
-      </li>
-      {% endif %}
 
     </ul>
 
