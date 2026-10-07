@@ -346,7 +346,7 @@ classes: wide
          CONFERENCE PUBLICATIONS
     ====================================== -->
 
-    <h2>Conference Publications</h2>
+    <h2>Conferences</h2>
 
     <ol class="publication-list">
 
