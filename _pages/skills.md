@@ -16,11 +16,14 @@ classes: wide
   gap:28px;
   align-items:start;
 }
+
 @media(max-width:900px){
-  .page-grid{grid-template-columns:1fr;}
+  .page-grid{
+    grid-template-columns:1fr;
+  }
 }
 
-/* ===== Author card ===== */
+/* ===== Author Card ===== */
 .author-card{
   position:sticky;
   top:90px;
@@ -29,331 +32,413 @@ classes: wide
   padding:16px;
   background:#fff;
 }
-@media(max-width:900px){
-  .author-card{position:static;}
-}
-.author-avatar{
-  width:110px;height:110px;border-radius:999px;
-  object-fit:cover;display:block;margin:0 auto 10px;
-}
-.author-name{text-align:center;font-weight:800;margin:0;}
-.author-bio{text-align:center;color:#6b7280;margin:6px 0 12px;font-size:.95rem;}
-.author-links{list-style:none;padding:0;margin:0;}
-.author-links li{margin:8px 0;}
-.author-links a{display:inline-flex;gap:8px;align-items:center;text-decoration:none;}
-
-/* ===== Skills table ===== */
-.skills-table{
-  width:100%;
-  border:1px solid #e5e7eb;
-  border-radius:16px;
-  overflow:hidden;
-  background:#fff;
-}
-
-.skill-row{
-  display:grid;
-  grid-template-columns: 130px 260px 1fr;
-  gap:18px;
-  padding:16px;
-  border-bottom:1px solid #f1f5f9;
-  align-items:center;
-}
-.skill-row:last-child{border-bottom:none;}
 
 @media(max-width:900px){
-  .skill-row{
-    grid-template-columns: 1fr;
-    gap:12px;
+  .author-card{
+    position:static;
   }
 }
 
-/* ===== Logo ===== */
-.skill-logo{
-  width:120px;height:90px;
-  border:1px solid #e5e7eb;
-  border-radius:14px;
-  display:flex;align-items:center;justify-content:center;
-  padding:12px;background:#fff;
-}
-.skill-logo img{
-  max-width:100%;
-  max-height:100%;
-  object-fit:contain;
+.author-avatar{
+  width:110px;
+  height:110px;
+  border-radius:999px;
+  object-fit:cover;
+  display:block;
+  margin:0 auto 10px;
 }
 
-/* ===== Bar ===== */
-.skill-bar{
-  height:14px;
-  border-radius:999px;
-  background:#eef2f7;
-  overflow:hidden;
-  border:1px solid #e5e7eb;
-}
-.skill-fill{
-  height:100%;
-  border-radius:999px;
-  background:linear-gradient(90deg,#2563eb,#22c55e);
-}
-
-/* ===== Text ===== */
-.skill-title{
+.author-name{
+  text-align:center;
   font-weight:800;
-  margin:0 0 6px 0;
+  margin:0;
 }
+
+.author-bio{
+  text-align:center;
+  color:#6b7280;
+  margin:6px 0 12px;
+  font-size:.95rem;
+}
+
+.author-links{
+  list-style:none;
+  padding:0;
+  margin:0;
+}
+
+.author-links li{
+  margin:8px 0;
+}
+
+.author-links a{
+  display:inline-flex;
+  gap:8px;
+  align-items:center;
+  text-decoration:none;
+}
+
+/* ===== Skills ===== */
+.skills-intro{
+  margin-bottom:28px;
+  color:#4b5563;
+  line-height:1.65;
+  font-size:1rem;
+}
+
+.skill-category{
+  margin-bottom:32px;
+}
+
+.skill-category h2{
+  font-size:1.35rem;
+  font-weight:800;
+  margin:0 0 14px;
+  padding-bottom:8px;
+  border-bottom:2px solid #e5e7eb;
+}
+
+.skill-card{
+  padding:15px 0;
+  border-bottom:1px solid #f1f5f9;
+}
+
+.skill-card:last-child{
+  border-bottom:none;
+}
+
+.skill-title{
+  font-weight:700;
+  font-size:1.02rem;
+  margin:0 0 5px;
+}
+
 .skill-desc{
   margin:0;
   color:#6b7280;
-  line-height:1.4;
+  line-height:1.55;
 }
 </style>
 
+
 <div class="page-grid">
 
-<!-- LEFT: manual author profile -->
-  <aside class="author-card">
-    <img class="author-avatar" src="/assets/images/profile.JPG" alt="Showmik Singha">
-    <p class="author-name">Showmik Singha</p>
-    <p class="author-bio">PhD Candidate, University of Missouri</p>
+<!-- ========================= -->
+<!-- LEFT: AUTHOR PROFILE      -->
+<!-- ========================= -->
 
-    <ul class="author-links">
-      <li>
-        <a href="mailto:ssqk4@umsystem.edu">
-          <i class="fas fa-fw fa-envelope"></i>
-          <span>Email</span>
-        </a>
-      </li>
-      <li>
-        <a href="https://github.com/showmiksingha" target="_blank" rel="noopener">
-          <i class="fab fa-fw fa-github"></i>
-          <span>GitHub</span>
-        </a>
-      </li>
-      <li>
-        <a href="https://www.linkedin.com/in/showmiksingha/" target="_blank" rel="noopener">
-          <i class="fab fa-fw fa-linkedin"></i>
-          <span>LinkedIn</span>
-        </a>
-      </li>
-    </ul>
-  </aside>
-<!-- RIGHT -->
+<aside class="author-card">
+
+  <img class="author-avatar"
+       src="/assets/images/profile.JPG"
+       alt="Showmik Singha">
+
+  <p class="author-name">Showmik Singha</p>
+
+  <p class="author-bio">
+    PhD Candidate, University of Missouri
+  </p>
+
+  <ul class="author-links">
+
+    <li>
+      <a href="mailto:ssqk4@umsystem.edu">
+        <i class="fas fa-fw fa-envelope"></i>
+        <span>Email</span>
+      </a>
+    </li>
+
+    <li>
+      <a href="https://github.com/showmiksingha"
+         target="_blank"
+         rel="noopener">
+        <i class="fab fa-fw fa-github"></i>
+        <span>GitHub</span>
+      </a>
+    </li>
+
+    <li>
+      <a href="https://www.linkedin.com/in/showmiksingha/"
+         target="_blank"
+         rel="noopener">
+        <i class="fab fa-fw fa-linkedin"></i>
+        <span>LinkedIn</span>
+      </a>
+    </li>
+
+  </ul>
+
+</aside>
+
+
+<!-- ========================= -->
+<!-- RIGHT: SKILLS             -->
+<!-- ========================= -->
+
 <main>
 
-<div class="skills-table">
+<p class="skills-intro">
+My technical experience spans semiconductor device modeling, analog and
+mixed-signal circuit design, power electronics, PCB design, scientific
+computing, machine learning, and laboratory characterization.
+</p>
 
-<!-- Cadence -->
-<div class="skill-row">
-  <div class="skill-logo"><img src="/assets/images/logos/Cadence-Logo.jpg"></div>
-  <div class="skill-bar"><div class="skill-fill" style="width:95%"></div></div>
-  <div>
-    <p class="skill-title">Cadence Virtuoso / Spectre / ADE</p>
-    <p class="skill-desc">
-      Full analog/mixed-signal IC flow: schematic & layout, DC/AC/Transient/Noise analysis,
-      Monte Carlo & corner simulations, DRC/LVS, parasitic extraction, and SKILL/OCEAN automation.
-    </p>
-  </div>
+
+<!-- Semiconductor Device Modeling -->
+
+<section class="skill-category">
+
+<h2>Semiconductor Device Modeling & TCAD</h2>
+
+<div class="skill-card">
+  <p class="skill-title">Silvaco TCAD</p>
+  <p class="skill-desc">
+    Physics-based semiconductor device modeling, electrical characterization,
+    transient simulation, radiation-effect analysis, parametric studies,
+    and extraction of device characteristics from simulated I–V responses.
+  </p>
 </div>
 
-<!-- LTspice -->
-<div class="skill-row">
-  <div class="skill-logo"><img src="/assets/images/logos/LtSpice-logo.jpg"></div>
-  <div class="skill-bar"><div class="skill-fill" style="width:90%"></div></div>
-  <div>
-    <p class="skill-title">LTspice</p>
-    <p class="skill-desc">
-      Fast prototyping of power and analog circuits, behavioral sources,
-      custom SPICE models, and performance validation using .meas directives.
-    </p>
-  </div>
+<div class="skill-card">
+  <p class="skill-title">Sentaurus TCAD</p>
+  <p class="skill-desc">
+    Semiconductor device simulation and physics-based modeling of
+    wide-bandgap and ultra-wide-bandgap electronic devices.
+  </p>
 </div>
 
-<!-- MATLAB -->
-<div class="skill-row">
-  <div class="skill-logo"><img src="/assets/images/logos/MATLAB-Symbol.jpg"></div>
-  <div class="skill-bar"><div class="skill-fill" style="width:99%"></div></div>
-  <div>
-    <p class="skill-title">MATLAB</p>
-    <p class="skill-desc">
-      Design automation, numerical analysis, optimization sweeps, data visualization,
-      and control-oriented modeling.
-    </p>
-  </div>
+<div class="skill-card">
+  <p class="skill-title">SPICE & Compact Modeling</p>
+  <p class="skill-desc">
+    Device-model parameter extraction, SPICE model development,
+    simulation-based validation, and integration of semiconductor
+    device behavior into circuit-level analysis.
+  </p>
 </div>
 
-<!-- Altium -->
-<div class="skill-row">
-  <div class="skill-logo"><img src="/assets/images/logos/Altium-Logo.jpg"></div>
-  <div class="skill-bar"><div class="skill-fill" style="width:90%"></div></div>
-  <div>
-    <p class="skill-title">Altium Designer</p>
-    <p class="skill-desc">
-      4-layer PCB design, custom footprints, layout rules,
-      EMI-aware routing, and manufacturing-ready outputs.
-    </p>
-  </div>
+</section>
+
+
+<!-- IC Design -->
+
+<section class="skill-category">
+
+<h2>Analog & Mixed-Signal IC Design</h2>
+
+<div class="skill-card">
+  <p class="skill-title">Cadence Virtuoso / Spectre / ADE</p>
+  <p class="skill-desc">
+    Analog and mixed-signal IC design including schematic capture,
+    circuit simulation, DC/AC/transient/noise analysis, corner and
+    Monte Carlo simulations, layout, DRC/LVS, and parasitic extraction.
+  </p>
 </div>
 
-<div class="skill-row">
-  <!-- Logo -->
-  <div class="skill-logo">
-    <img src="/assets/images/logos/KiCad-Logo.png" alt="KiCad">
-  </div>
-
-  <!-- Skill level -->
-  <div class="skill-barwrap">
-    <div class="skill-bar">
-      <div class="skill-fill" style="width:80%;"></div>
-    </div>
-  </div>
-
-  <!-- Description -->
-  <div class="skill-meta">
-    <p class="skill-title">KiCAD</p>
-    <p class="skill-desc">
-      Complete 4-layer PCB workflow with HV design considerationsa and from custom symbol and footprint library management to fabrication output generation.
-    </p>
-  </div>
+<div class="skill-card">
+  <p class="skill-title">LTspice</p>
+  <p class="skill-desc">
+    Analog and power circuit simulation, custom SPICE models,
+    behavioral sources, transient and frequency-domain analysis,
+    and rapid circuit prototyping.
+  </p>
 </div>
 
-<!-- PLECS -->
-<div class="skill-row">
-  <div class="skill-logo"><img src="/assets/images/logos/plecs-logo.png"></div>
-  <div class="skill-bar"><div class="skill-fill" style="width:70%"></div></div>
-  <div>
-    <p class="skill-title">PLECS</p>
-    <p class="skill-desc">
-      System-level power electronics simulation, steady-state analysis,
-      and small-signal control modeling.
-    </p>
-  </div>
+</section>
+
+
+<!-- Power Electronics -->
+
+<section class="skill-category">
+
+<h2>Power Electronics & Circuit Simulation</h2>
+
+<div class="skill-card">
+  <p class="skill-title">PLECS</p>
+  <p class="skill-desc">
+    System-level power electronics simulation, converter modeling,
+    steady-state analysis, switching behavior evaluation,
+    and control-oriented modeling.
+  </p>
 </div>
 
-<!-- Silvaco -->
-<div class="skill-row">
-  <div class="skill-logo"><img src="/assets/images/logos/SILVACO_Logo.jpg"></div>
-  <div class="skill-bar"><div class="skill-fill" style="width:60%"></div></div>
-  <div>
-    <p class="skill-title">Silvaco TCAD</p>
-    <p class="skill-desc">
-      Physics-based device simulation, IV extraction,
-      and compact-model preparation for circuit integration.
-    </p>
-  </div>
+<div class="skill-card">
+  <p class="skill-title">Power Semiconductor Devices</p>
+  <p class="skill-desc">
+    Modeling and analysis of GaN HEMTs, β-Ga₂O₃ MOSFETs,
+    Schottky diodes, and other wide-bandgap and ultra-wide-bandgap
+    semiconductor devices for power electronic applications.
+  </p>
 </div>
 
-<!-- Lumerical -->
-<div class="skill-row">
-  <div class="skill-logo"><img src="/assets/images/logos/Ansys_Lumerical_Logo.jpg"></div>
-  <div class="skill-bar"><div class="skill-fill" style="width:55%"></div></div>
-  <div>
-    <p class="skill-title">ANSYS Lumerical FDTD</p>
-    <p class="skill-desc">
-      Optical and photovoltaic device simulation for undergraduate thesis work.
-    </p>
-  </div>
+</section>
+
+
+<!-- PCB -->
+
+<section class="skill-category">
+
+<h2>PCB Design & Hardware Development</h2>
+
+<div class="skill-card">
+  <p class="skill-title">Altium Designer</p>
+  <p class="skill-desc">
+    Multilayer PCB schematic and layout design, custom footprints,
+    design-rule configuration, EMI-aware routing, and generation
+    of manufacturing-ready fabrication files.
+  </p>
 </div>
 
-<!-- Quantum ESPRESSO -->
-<div class="skill-row">
-  <div class="skill-logo"><img src="/assets/images/logos/Quantum_ESPRESSO_logo.jpg"></div>
-  <div class="skill-bar"><div class="skill-fill" style="width:55%"></div></div>
-  <div>
-    <p class="skill-title">Quantum ESPRESSO</p>
-    <p class="skill-desc">
-      DFT-based material modeling, band structure and DOS analysis,
-      and convergence testing.
-    </p>
-  </div>
+<div class="skill-card">
+  <p class="skill-title">KiCad</p>
+  <p class="skill-desc">
+    Multilayer PCB design including schematic capture, custom symbol
+    and footprint library development, high-voltage design considerations,
+    board layout, and fabrication output generation.
+  </p>
 </div>
 
-<!-- Quartus -->
-<div class="skill-row">
-  <div class="skill-logo"><img src="/assets/images/logos/quartus-logo.png"></div>
-  <div class="skill-bar"><div class="skill-fill" style="width:60%"></div></div>
-  <div>
-    <p class="skill-title">Intel Quartus Prime</p>
-    <p class="skill-desc">
-      FPGA RTL design in Verilog, FSM implementation,
-      simulation and timing analysis.
-    </p>
-  </div>
-</div>
+</section>
+
 
 <!-- Programming -->
-<div class="skill-row">
-  <div class="skill-logo"><img src="/assets/images/logos/C_Programming_Language.png"></div>
-  <div class="skill-bar"><div class="skill-fill" style="width:90%"></div></div>
-  <div>
-    <p class="skill-title">C Programming</p>
-    <p class="skill-desc">
-      Core procedural programming, algorithm design,
-      and embedded-oriented problem solving.
-    </p>
-  </div>
+
+<section class="skill-category">
+
+<h2>Programming, Data Analysis & Automation</h2>
+
+<div class="skill-card">
+  <p class="skill-title">MATLAB</p>
+  <p class="skill-desc">
+    Numerical analysis, scientific computing, automated data processing,
+    optimization and parameter sweeps, simulation post-processing,
+    data visualization, and engineering analysis.
+  </p>
 </div>
 
-<div class="skill-row">
-  <div class="skill-logo"><img src="/assets/images/logos/Python-logo-notext.svg.png"></div>
-  <div class="skill-bar"><div class="skill-fill" style="width:75%"></div></div>
-  <div>
-    <p class="skill-title">Python</p>
-    <p class="skill-desc">
-      Automation, data processing, parsing simulation outputs,
-      and research tooling.
-    </p>
-  </div>
+<div class="skill-card">
+  <p class="skill-title">Python</p>
+  <p class="skill-desc">
+    Scientific computing, data processing, simulation-output parsing,
+    workflow automation, machine-learning model development,
+    visualization, and research tooling.
+  </p>
 </div>
 
-<!-- Instruments -->
-<div class="skill-row">
-  <div class="skill-logo"><img src="/assets/images/logos/tektronix-logo.png"></div>
-  <div class="skill-bar"><div class="skill-fill" style="width:90%"></div></div>
-  <div>
-    <p class="skill-title">Oscilloscope</p>
-    <p class="skill-desc">
-      High-speed signal probing, waveform analysis,
-      debugging and measurement documentation.
-    </p>
-  </div>
+<div class="skill-card">
+  <p class="skill-title">C Programming</p>
+  <p class="skill-desc">
+    Procedural programming, algorithm implementation,
+    numerical problem solving, and embedded-oriented programming.
+  </p>
 </div>
 
-<div class="skill-row">
-  <div class="skill-logo"><img src="/assets/images/logos/Agilent-33120A.jpg"></div>
-  <div class="skill-bar"><div class="skill-fill" style="width:85%"></div></div>
-  <div>
-    <p class="skill-title">Signal Generator</p>
-    <p class="skill-desc">
-      Precise waveform generation, modulation,
-      sweep configuration and test stimulus.
-    </p>
-  </div>
+</section>
+
+
+<!-- Machine Learning -->
+
+<section class="skill-category">
+
+<h2>Machine Learning & Data-Driven Modeling</h2>
+
+<div class="skill-card">
+  <p class="skill-title">Machine Learning for Semiconductor Devices</p>
+  <p class="skill-desc">
+    Data-driven semiconductor parameter extraction and inverse modeling
+    using electrical I–V characteristics, with applications to device
+    characterization and design optimization.
+  </p>
 </div>
 
-<div class="skill-row">
-  <div class="skill-logo"><img src="/assets/images/logos/SLx_01_0224.jpg"></div>
-  <div class="skill-bar"><div class="skill-fill" style="width:60%"></div></div>
-  <div>
-    <p class="skill-title">Magna-Power DC Supply</p>
-    <p class="skill-desc">
-      High-voltage programmable DC supply operation for power device testing.
-    </p>
-  </div>
+<div class="skill-card">
+  <p class="skill-title">ML Methods</p>
+  <p class="skill-desc">
+    Experience with XGBoost, 1D convolutional neural networks (CNNs),
+    Transformer-based models, regression analysis, feature engineering,
+    model evaluation, and hyperparameter optimization.
+  </p>
 </div>
 
-<div class="skill-row">
-  <div class="skill-logo"><img src="/assets/images/logos/alx_front.jpg"></div>
-  <div class="skill-bar"><div class="skill-fill" style="width:60%"></div></div>
-  <div>
-    <p class="skill-title">MagnaLOAD Electronic Load</p>
-    <p class="skill-desc">
-      High-power DC electronic load for current sinking,
-      characterization and stress testing.
-    </p>
-  </div>
+</section>
+
+
+<!-- Computational Materials -->
+
+<section class="skill-category">
+
+<h2>Computational Materials & Optical Simulation</h2>
+
+<div class="skill-card">
+  <p class="skill-title">Quantum ESPRESSO</p>
+  <p class="skill-desc">
+    Density functional theory (DFT) calculations, electronic band-structure
+    analysis, density-of-states analysis, and convergence studies.
+  </p>
 </div>
 
+<div class="skill-card">
+  <p class="skill-title">ANSYS Lumerical FDTD</p>
+  <p class="skill-desc">
+    Optical and photovoltaic device simulation, electromagnetic field
+    analysis, and optoelectronic modeling.
+  </p>
 </div>
+
+</section>
+
+
+<!-- FPGA -->
+
+<section class="skill-category">
+
+<h2>Digital Design & FPGA</h2>
+
+<div class="skill-card">
+  <p class="skill-title">Intel Quartus Prime / Verilog</p>
+  <p class="skill-desc">
+    RTL design, Verilog implementation, finite-state-machine development,
+    functional simulation, FPGA synthesis, and timing analysis.
+  </p>
+</div>
+
+</section>
+
+
+<!-- Experimental -->
+
+<section class="skill-category">
+
+<h2>Experimental & Laboratory Skills</h2>
+
+<div class="skill-card">
+  <p class="skill-title">Electrical Characterization</p>
+  <p class="skill-desc">
+    Semiconductor and circuit characterization using laboratory
+    instrumentation, measurement setup development, waveform analysis,
+    experimental troubleshooting, and data interpretation.
+  </p>
+</div>
+
+<div class="skill-card">
+  <p class="skill-title">Oscilloscope & Signal Generation</p>
+  <p class="skill-desc">
+    Signal probing, waveform characterization, transient measurements,
+    frequency and timing analysis, function-generator configuration,
+    and circuit debugging.
+  </p>
+</div>
+
+<div class="skill-card">
+  <p class="skill-title">High-Power DC Test Equipment</p>
+  <p class="skill-desc">
+    Operation of Magna-Power programmable DC supplies and MagnaLOAD
+    electronic loads for high-voltage and high-power device and
+    circuit characterization.
+  </p>
+</div>
+
+</section>
+
 
 </main>
 
