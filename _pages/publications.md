@@ -133,7 +133,7 @@ classes: wide
     <h1>Publications</h1>
 
     <!-- Journal Publications -->
-    <h2>Journal Publications</h2>
+    <h2>Journals</h2>
 
     <ol class="publication-list">
       <li>
