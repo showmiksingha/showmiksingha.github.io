@@ -1,6 +1,6 @@
 ---
-title: "Publications / Projects"
-permalink: /pubs-projects/
+title: "Publications"
+permalink: /publications/
 layout: default
 author_profile: false
 classes: wide
