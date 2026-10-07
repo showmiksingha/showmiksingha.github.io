@@ -1,28 +1,57 @@
 years:
   - year: 2026
     items:
+
+     - date: "2026"
+        text: "Actively seeking full-time positions."
+      - date: "Sep 2026"
+        text: "Passed the PhD Comprehensive Examination and advanced to PhD candidacy in Electrical and Computer Engineering at the University of Missouri–Columbia."
+
       - date: "2026"
-        text: "Actively seeking internship opportunities in Analog / Mixed-Signal and Power IC Design."
+        text: "Received the College of Engineering Outstanding PhD Student Award and the EECS Outstanding PhD Student and Teaching Assistant Award at the University of Missouri–Columbia."
+
+      - date: "2026"
+        text: "Two papers accepted for oral presentation at the IEEE Workshop on Wide Bandgap Power Devices and Applications (WiPDA 2026)."
+
+      - date: "2026"
+        text: "Machine-learning-enabled parameter extraction research for β-Ga2O3 MOSFETs accepted for presentation at the 84th Device Research Conference (DRC 2026)."
+
+     
 
   - year: 2025
     items:
-      - date: "Aug 2025"
-        text: "Started PhD in Electrical Engineering at the University of Missouri–Columbia; serving as Graduate Research and Teaching Assistant."
+      - date: "2025"
+        text: "Published a journal article on single-event transient effects in enhancement-mode p-GaN/AlGaN/GaN HEMTs."
+
+      - date: "2025"
+        text: "Presented research on radiation effects in β-Ga2O3 MOSFETs at IEEE WiPDA 2025."
+
+      - date: "2025"
+        text: "Received 2nd Place and the People’s Choice Award at the University of Missouri Research and Creative Activities Forum Poster Competition."
+
+      - date: "2025"
+        text: "Received the Best Oral Paper and Graduate Poster Award at the 33rd Connecticut Symposium on Microelectronics and Optoelectronics."
 
   - year: 2024
     items:
-      - date: "Dec 2024"
-        text: "Published first first authored IEEE ICECE 2024 conference paper on lead-free mixed halide double perovskite solar cells from undergraduate thesis."
-        link: "https://doi.org/10.1109/ICECE64886.2024.11024609"
-      - date: "Aug 2024"
-        text: "Started working in TxACE (Texas Analog Center of Excellence) at UT Dallas and served as Graduate Teaching Assistant."
-      - date: "Aug 2024"
-        text: "Took leave for graduate studies from Eastern University."
+      - date: "Jan 2024"
+        text: "Started PhD studies in Electrical and Computer Engineering at the University of Missouri–Columbia."
 
-  - year: 2023
+      - date: "2024"
+        text: "Began research on wide- and ultra-wide-bandgap semiconductor devices, radiation effects, TCAD modeling, and semiconductor device reliability."
+
+      - date: "2024"
+        text: "Received the Best Graduate Poster Award at the 32nd Connecticut Symposium on Microelectronics and Optoelectronics."
+
+  - year: 2022
     items:
-      - date: "Aug 2023"
-        text: "Joined as Lecturer at Eastern University, Dhaka, Bangladesh."
+      - date: "2022"
+        text: "Completed M.S. in Electrical and Computer Engineering at Boston University."
 
-      - date: "May 2023"
-        text: "Graduated with B.Sc. in Electrical and Electronic Engineering (Electronics major) from BUET, Dhaka, Bangladesh."
+  - year: 2018
+    items:
+      - date: "Sep 2018"
+        text: "Joined the Department of Electrical and Electronic Engineering at Shahjalal University of Science and Technology (SUST) as a faculty member."
+
+      - date: "2018"
+        text: "Graduated with B.Sc. in Electrical and Electronic Engineering from Shahjalal University of Science and Technology, ranking first in the graduating class."
