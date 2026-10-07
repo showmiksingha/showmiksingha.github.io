@@ -177,10 +177,7 @@ classes: wide
 
 <main>
 
-<p class="skills-intro">
-My technical experience spans semiconductor device modeling, analog and
-mixed-signal circuit design, power electronics, PCB design, laboratory characterization, and machine learning.
-</p>
+
 
 
 <!-- Semiconductor Device Modeling -->
