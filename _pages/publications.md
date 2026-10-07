@@ -251,11 +251,7 @@ classes: wide
 
     <h1>Publications</h1>
 
-    <p class="pub-intro">
-      Peer-reviewed journal articles, invited papers,
-      and conference publications in semiconductor devices,
-      power electronics, device modeling, and emerging technologies.
-    </p>
+    
 
     <!-- Publication Statistics -->
     <div class="pub-stats">
@@ -278,10 +274,10 @@ classes: wide
     </div>
 
     <!-- =====================================
-         JOURNAL PUBLICATIONS
+         JOURNAL 
     ====================================== -->
 
-    <h2>Journal Publications</h2>
+    <h2>Journals</h2>
 
     <ol class="publication-list">
 
