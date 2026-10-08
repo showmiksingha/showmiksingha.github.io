@@ -9,7 +9,9 @@ classes: wide
 <div class="wrap" markdown="1">
 
 <style>
-/* ===== Page Layout ===== */
+/* ===================================== */
+/* PAGE LAYOUT */
+/* ===================================== */
 .edu-layout {
   display: grid;
   grid-template-columns: 260px minmax(0, 1fr);
@@ -23,7 +25,9 @@ classes: wide
   }
 }
 
-/* ===== Author Card ===== */
+/* ===================================== */
+/* AUTHOR PROFILE */
+/* ===================================== */
 .author-card {
   position: sticky;
   top: 90px;
@@ -45,238 +49,311 @@ classes: wide
   border-radius: 999px;
   object-fit: cover;
   display: block;
-  margin: 0 auto 10px auto;
+  margin: 0 auto 12px;
 }
 
 .author-name {
+  font-size: 1.25rem;
+  font-weight: 700;
   text-align: center;
-  font-weight: 800;
-  margin: 0;
+  margin-bottom: 6px;
+}
+
+.author-title {
+  font-size: 0.9rem;
+  text-align: center;
+  color: #555;
+  margin-bottom: 12px;
 }
 
 .author-bio {
+  font-size: 0.88rem;
+  line-height: 1.6;
+  color: #555;
   text-align: center;
-  color: #6b7280;
-  margin: 6px 0 12px 0;
-  font-size: 0.95rem;
 }
 
 .author-links {
-  list-style: none;
-  padding: 0;
-  margin: 0;
-}
-
-.author-links li {
-  margin: 8px 0;
+  margin-top: 16px;
+  font-size: 0.9rem;
 }
 
 .author-links a {
-  text-decoration: none;
-  display: inline-flex;
-  gap: 8px;
-  align-items: center;
-}
-
-/* ===== Publications Content ===== */
-.pub-content {
-  min-width: 0;
-  color: #242424;
-}
-
-.pub-content h1 {
-  font-size: 2rem;
-  margin: 0 0 14px;
-  padding-bottom: 12px;
-  border-bottom: 2px solid #e5e7eb;
-}
-
-.pub-intro {
-  font-size: 0.96rem;
-  color: #555;
-  margin-bottom: 25px;
-}
-
-.pub-stats {
-  display: grid;
-  grid-template-columns: repeat(3, 1fr);
-  gap: 12px;
-  margin: 20px 0 32px;
-}
-
-.pub-stat {
-  border: 1px solid #e5e7eb;
-  border-radius: 10px;
-  padding: 15px;
-  text-align: center;
-  background: #fafafa;
-}
-
-.pub-stat strong {
   display: block;
-  font-size: 1.65rem;
+  margin-bottom: 9px;
+  text-decoration: none;
+  color: #334155;
+}
+
+.author-links a:hover {
+  color: #2563eb;
+  text-decoration: none;
+}
+
+/* ===================================== */
+/* PROJECT CONTENT */
+/* ===================================== */
+.project-content {
+  min-width: 0;
+}
+
+.project-content h1 {
+  margin-top: 0;
+  margin-bottom: 12px;
+  font-size: 1.85rem;
+}
+
+.project-intro {
+  color: #555;
+  line-height: 1.75;
+  margin-bottom: 28px;
+}
+
+/* ===================================== */
+/* SECTION HEADINGS */
+/* ===================================== */
+.project-category {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  margin-top: 32px;
+  margin-bottom: 18px;
+  padding-bottom: 11px;
+  border-bottom: 2px solid #e5e7eb;
+  font-size: 1.28rem;
+  font-weight: 700;
+  line-height: 1.4;
+}
+
+.project-category i {
+  color: #2563eb;
+  font-size: 1.05rem;
+}
+
+/* ===================================== */
+/* PROJECT CARDS */
+/* ===================================== */
+.project-item {
+  background: #ffffff;
+  border: 1px solid #e5e7eb;
+  border-radius: 14px;
+  padding: 22px;
+  margin-bottom: 18px;
+
+  transition:
+    border-color 0.25s ease,
+    box-shadow 0.25s ease,
+    transform 0.25s ease;
+}
+
+.project-item:hover {
+  border-color: #bfdbfe;
+  box-shadow: 0 8px 24px rgba(15, 23, 42, 0.07);
+  transform: translateY(-2px);
+}
+
+.project-title {
+  font-size: 1.13rem;
+  font-weight: 700;
+  line-height: 1.5;
+  margin: 0 0 8px;
+  color: #172033;
+}
+
+.project-meta {
+  font-size: 0.85rem;
+  color: #64748b;
+  margin-bottom: 15px;
+}
+
+.project-meta i {
+  margin-right: 5px;
+  color: #64748b;
+}
+
+/* ===================================== */
+/* PROJECT DESCRIPTION LIST */
+/* ===================================== */
+.project-list {
+  margin: 10px 0 16px;
+  padding-left: 20px;
+}
+
+.project-list li {
+  margin-bottom: 10px;
+  line-height: 1.7;
+  color: #475569;
+  font-size: 0.94rem;
+}
+
+.project-list li:last-child {
+  margin-bottom: 0;
+}
+
+.project-list li::marker {
   color: #2563eb;
 }
 
-.pub-stat span {
-  font-size: 0.83rem;
-  color: #555;
+/* ===================================== */
+/* TECHNOLOGY KEYWORD PILLS */
+/* ===================================== */
+.project-tags {
+  display: flex !important;
+  flex-wrap: wrap !important;
+  gap: 9px !important;
+  margin-top: 18px;
+  margin-bottom: 2px;
 }
 
-.pub-content h2 {
-  font-size: 1.35rem;
-  margin: 36px 0 18px;
-  padding-bottom: 8px;
-  border-bottom: 1px solid #e5e7eb;
+.project-tag {
+  display: inline-flex !important;
+  align-items: center;
+  justify-content: center;
+
+  padding: 7px 14px !important;
+
+  border: 1px solid #dbe3ed !important;
+  border-radius: 999px !important;
+
+  background-color: #f1f5f9 !important;
+  color: #334155 !important;
+
+  font-size: 0.8rem !important;
+  font-weight: 500 !important;
+  line-height: 1.4 !important;
+
+  white-space: normal;
+  text-align: center;
+  cursor: default;
+
+  transition:
+    background-color 0.25s ease,
+    color 0.25s ease,
+    border-color 0.25s ease,
+    box-shadow 0.25s ease,
+    transform 0.25s ease !important;
 }
 
-/* ===== Publication List ===== */
-.publication-list {
-  list-style-type: decimal;
-  padding-left: 28px;
-  margin: 0;
+/* Blue hover effect */
+.project-tag:hover {
+  background-color: #2563eb !important;
+  color: #ffffff !important;
+  border-color: #2563eb !important;
+
+  transform: translateY(-2px);
+
+  box-shadow: 0 4px 12px rgba(37, 99, 235, 0.22);
 }
 
-.publication-list li {
-  padding-left: 5px;
-  margin-bottom: 19px;
-  font-size: 0.94rem;
-  line-height: 1.75;
-  overflow-wrap: anywhere;
-}
-
-.publication-list li::marker {
-  color: #64748b;
-  font-weight: 600;
-}
-
-.publication-list strong {
-  font-weight: 700;
-  color: #111827;
-}
-
-.publication-list em {
-  color: #444;
-}
-
-.pub-year {
-  color: #64748b;
-  font-weight: 600;
-}
-
-.pub-tag {
-  display: inline-block;
-  font-size: 0.72rem;
-  font-weight: 600;
-  color: #1d4ed8;
-  background: #eff6ff;
-  padding: 2px 8px;
-  border-radius: 5px;
-  margin-left: 5px;
-}
-
+/* ===================================== */
+/* MOBILE RESPONSIVENESS */
+/* ===================================== */
 @media (max-width: 600px) {
-  .pub-stats {
-    gap: 7px;
+  .project-content h1 {
+    font-size: 1.6rem;
   }
 
-  .pub-stat {
-    padding: 12px 5px;
+  .project-category {
+    font-size: 1.12rem;
   }
 
-  .pub-stat strong {
-    font-size: 1.3rem;
+  .project-item {
+    padding: 17px;
   }
 
-  .publication-list li {
+  .project-title {
+    font-size: 1.05rem;
+  }
+
+  .project-list {
+    padding-left: 18px;
+  }
+
+  .project-list li {
     font-size: 0.9rem;
   }
+
+  .project-tags {
+    gap: 7px !important;
+  }
+
+  .project-tag {
+    padding: 6px 11px !important;
+    font-size: 0.76rem !important;
+  }
 }
 
-/* ===== Skills: Icons and Bullet Lists ===== */
-.skills-content {
-  min-width: 0;
+@media (prefers-reduced-motion: reduce) {
+  .project-item,
+  .project-tag {
+    transition: none !important;
+  }
 }
-
-.skill-category h2 i {
-  color: #2563eb;
-  margin-right: 10px;
-}
-
-.skill-list {
-  list-style-type: disc;
-  padding-left: 28px;
-  margin: 10px 0 24px;
-}
-
-.skill-list li {
-  font-size: 0.94rem;
-  line-height: 1.75;
-  margin-bottom: 5px;
-  padding-left: 4px;
-}
-
-.skill-list li::marker {
-  color: #64748b;
-}
-
 </style>
 
 <div class="edu-layout">
 
-  <!-- =====================================
-       LEFT: AUTHOR PROFILE
-  ====================================== -->
-
+  <!-- ===================================== -->
+  <!-- LEFT: AUTHOR PROFILE -->
+  <!-- ===================================== -->
   <aside class="author-card">
 
     <img
-      class="author-avatar"
-      src="/assets/images/profile.JPG"
+      src="{{ '/assets/images/profile.JPG' | relative_url }}"
       alt="Showmik Singha"
+      class="author-avatar"
     >
 
-    <p class="author-name">Showmik Singha</p>
+    <div class="author-name">
+      Showmik Singha
+    </div>
 
-    <p class="author-bio">
+    <div class="author-title">
       PhD Candidate, University of Missouri
-    </p>
+    </div>
 
-    <ul class="author-links">
+    <div class="author-bio">
+      Semiconductor Device Modeling,
+      Wide- and Ultra-Wide-Bandgap Power Devices,
+      Radiation Effects, and Machine Learning.
+    </div>
 
-      <li>
-        <a href="mailto:ssqk4@umsystem.edu">
-          <i class="fas fa-fw fa-envelope"></i>
-          <span>Email</span>
-        </a>
-      </li>
+    <div class="author-links">
 
-      <li>
-        <a href="https://github.com/showmiksingha"
-           target="_blank" rel="noopener">
-          <i class="fab fa-fw fa-github"></i>
-          <span>GitHub</span>
-        </a>
-      </li>
+      <a href="mailto:ssqk4@umsystem.edu">
+        <i class="fas fa-envelope"></i> Email
+      </a>
 
-      <li>
-        <a href="https://www.linkedin.com/in/showmik-singha-293967147"
-           target="_blank" rel="noopener">
-          <i class="fab fa-fw fa-linkedin"></i>
-          <span>LinkedIn</span>
-        </a>
-      </li>
+      <a href="https://scholar.google.com/citations?user=B0llklQAAAAJ&hl=en"
+         target="_blank" rel="noopener noreferrer">
+        <i class="ai ai-google-scholar"></i> Google Scholar
+      </a>
 
-    </ul>
+      <a href="https://github.com/showmiksingha"
+         target="_blank" rel="noopener noreferrer">
+        <i class="fab fa-github"></i> GitHub
+      </a>
+
+    </div>
+
   </aside>
 
-
-  <!-- RIGHT: Projects -->
+  <!-- ===================================== -->
+  <!-- RIGHT: RESEARCH PROJECTS -->
+  <!-- ===================================== -->
   <main class="project-content">
 
     <h1>Research Projects</h1>
 
-
+    <p class="project-intro">
+      My research integrates semiconductor device
+      physics, numerical simulation, radiation
+      reliability, machine learning, and
+      microfabrication. These projects investigate
+      next-generation electronic devices for
+      high-performance power conversion and
+      operation in extreme environments.
+    </p>
 
     <!-- ===================================== -->
     <!-- RADIATION EFFECTS -->
@@ -287,6 +364,7 @@ classes: wide
       Radiation Effects and Device Reliability
     </h2>
 
+    <!-- Project 1 -->
     <div class="project-item">
 
       <h3 class="project-title">
@@ -295,33 +373,35 @@ classes: wide
       </h3>
 
       <div class="project-meta">
+        <i class="fas fa-university"></i>
         University of Missouri–Columbia
       </div>
 
       <ul class="project-list">
         <li>
-          Developed TCAD models of enhancement-mode
-          p-GaN/AlGaN/GaN HEMTs to investigate
-          radiation-induced single-event transient
-          responses.
+          Developed physics-based TCAD models of
+          enhancement-mode p-GaN/AlGaN/GaN HEMTs
+          to investigate radiation-induced
+          single-event transient responses.
         </li>
 
         <li>
-          Simulated heavy-ion strikes under normal
-          incidence across different drain biases
-          and linear energy transfer conditions.
+          Simulated heavy-ion irradiation under
+          normal incidence across different
+          drain biases and linear energy transfer
+          conditions.
         </li>
 
         <li>
           Analyzed transient drain currents,
           charge collection, electric-field
           distributions, and dual-peak
-          current responses.
+          transient responses.
         </li>
 
         <li>
-          Evaluated device susceptibility and
-          radiation reliability for applications
+          Evaluated radiation susceptibility
+          and device reliability for applications
           in space and other radiation-intensive
           environments.
         </li>
@@ -336,6 +416,7 @@ classes: wide
 
     </div>
 
+    <!-- Project 2 -->
     <div class="project-item">
 
       <h3 class="project-title">
@@ -345,6 +426,7 @@ classes: wide
       </h3>
 
       <div class="project-meta">
+        <i class="fas fa-university"></i>
         University of Missouri–Columbia
       </div>
 
@@ -357,22 +439,23 @@ classes: wide
         </li>
 
         <li>
-          Evaluated heavy-ion irradiation at
-          different incidence angles, drain
-          voltages, and energy deposition levels.
+          Evaluated heavy-ion strikes at different
+          incidence angles, drain voltages,
+          and energy deposition levels.
         </li>
 
         <li>
           Investigated transient current peaks,
           charge collection, recovery behavior,
-          and sensitive regions within the device.
+          and radiation-sensitive regions
+          within the device.
         </li>
 
         <li>
           Identified the influence of particle
-          trajectory and device bias on radiation
-          sensitivity to support reliability
-          assessment and device optimization.
+          trajectory and device bias on
+          radiation susceptibility and
+          device performance.
         </li>
       </ul>
 
@@ -385,6 +468,7 @@ classes: wide
 
     </div>
 
+    <!-- Project 3 -->
     <div class="project-item">
 
       <h3 class="project-title">
@@ -394,15 +478,17 @@ classes: wide
       </h3>
 
       <div class="project-meta">
+        <i class="fas fa-university"></i>
         University of Missouri–Columbia
       </div>
 
       <ul class="project-list">
         <li>
-          Investigated radiation-induced transient
-          responses of β-Ga<sub>2</sub>O<sub>3</sub>
-          MOSFETs over temperatures ranging
-          from 300 K to 500 K.
+          Investigated radiation-induced
+          transient responses of
+          β-Ga<sub>2</sub>O<sub>3</sub> MOSFETs
+          over temperatures ranging from
+          300 K to 500 K.
         </li>
 
         <li>
@@ -420,23 +506,23 @@ classes: wide
 
         <li>
           Assessed the combined influence of
-          temperature and radiation on device
-          reliability for extreme-environment
-          power electronics.
+          temperature and radiation on
+          semiconductor reliability for
+          extreme-environment power electronics.
         </li>
       </ul>
 
       <div class="project-tags">
         <span class="project-tag">β-Ga2O3</span>
         <span class="project-tag">Temperature Analysis</span>
-        <span class="project-tag">SET</span>
+        <span class="project-tag">Single-Event Transients</span>
         <span class="project-tag">Power MOSFET</span>
       </div>
 
     </div>
 
     <!-- ===================================== -->
-    <!-- DEVICE MODELING -->
+    <!-- SEMICONDUCTOR DEVICE MODELING -->
     <!-- ===================================== -->
 
     <h2 class="project-category">
@@ -444,6 +530,7 @@ classes: wide
       Semiconductor Device Modeling
     </h2>
 
+    <!-- Project 4 -->
     <div class="project-item">
 
       <h3 class="project-title">
@@ -452,12 +539,13 @@ classes: wide
       </h3>
 
       <div class="project-meta">
+        <i class="fas fa-university"></i>
         University of Missouri–Columbia
       </div>
 
       <ul class="project-list">
         <li>
-          Developed numerical models of
+          Developed numerical device models of
           AlN/β-Ga<sub>2</sub>O<sub>3</sub>
           high electron mobility transistors
           for power electronic applications.
@@ -501,6 +589,7 @@ classes: wide
       Machine Learning for Semiconductor Devices
     </h2>
 
+    <!-- Project 5 -->
     <div class="project-item">
 
       <h3 class="project-title">
@@ -510,37 +599,38 @@ classes: wide
       </h3>
 
       <div class="project-meta">
+        <i class="fas fa-university"></i>
         University of Missouri–Columbia
       </div>
 
       <ul class="project-list">
         <li>
           Generated a TCAD-based dataset of
-          semiconductor device configurations
-          and electrical characteristics
-          for machine learning applications.
+          600 device configurations and
+          approximately 6,000 current-voltage
+          curves for machine learning applications.
         </li>
 
         <li>
           Developed inverse modeling techniques
           to predict oxide thickness, channel
           thickness, doping concentration,
-          and gate dimensions from current-voltage
+          and gate dimensions from electrical
           characteristics.
         </li>
 
         <li>
           Evaluated XGBoost, convolutional
-          neural networks, and Transformer-based
-          architectures for device parameter
-          extraction.
+          neural networks, and Transformer
+          architectures for semiconductor
+          parameter extraction.
         </li>
 
         <li>
-          Developed a hybrid prediction
-          framework to improve parameter
-          estimation accuracy and reduce
-          iterative device design time.
+          Developed a hybrid prediction framework
+          achieving a mean R² of approximately
+          0.942 across the modeled device
+          parameters.
         </li>
       </ul>
 
@@ -554,6 +644,7 @@ classes: wide
 
     </div>
 
+    <!-- Project 6 -->
     <div class="project-item">
 
       <h3 class="project-title">
@@ -562,14 +653,15 @@ classes: wide
       </h3>
 
       <div class="project-meta">
+        <i class="fas fa-microchip"></i>
         Semiconductor Device Modeling and Data Analysis
       </div>
 
       <ul class="project-list">
         <li>
           Investigated data-driven parameter
-          extraction techniques for semiconductor
-          PIN diode structures.
+          extraction techniques for
+          semiconductor PIN diode structures.
         </li>
 
         <li>
@@ -581,7 +673,7 @@ classes: wide
         <li>
           Explored Transformer-based learning
           and feature extraction techniques
-          to estimate semiconductor doping
+          to estimate doping concentrations
           and structural parameters.
         </li>
 
@@ -603,7 +695,7 @@ classes: wide
     </div>
 
     <!-- ===================================== -->
-    <!-- EXPERIMENTAL FABRICATION -->
+    <!-- MICROFABRICATION -->
     <!-- ===================================== -->
 
     <h2 class="project-category">
@@ -611,6 +703,7 @@ classes: wide
       Microfabrication and Experimental Research
     </h2>
 
+    <!-- Project 7 -->
     <div class="project-item">
 
       <h3 class="project-title">
@@ -619,6 +712,7 @@ classes: wide
       </h3>
 
       <div class="project-meta">
+        <i class="fas fa-flask"></i>
         Microfabrication and Biosensor Development
       </div>
 
@@ -666,4 +760,3 @@ classes: wide
 </div>
 
 </div>
-
