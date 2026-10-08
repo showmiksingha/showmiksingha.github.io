@@ -115,7 +115,7 @@ classes: wide
     <div class="edu-content">
       <h3>Doctor of Philosophy (Ph.D.), Electrical and Computer Engineering</h3>
       <div class="edu-meta">
-        <span>January 2024 – Present</span>
+        <span>Jan 2024 – Present</span>
         <span>Department of Electrical Engineering and Computer Science</span>
       </div>
       <p class="edu-inst">University of Missouri–Columbia, USA</p>
@@ -134,7 +134,7 @@ classes: wide
     <div class="edu-content">
       <h3>Master of Science (M.S.), Electrical and Computer Engineering</h3>
       <div class="edu-meta">
-        <span>January 2024</span>
+        <span>Jan 2024</span>
         <span>Department of Electrical and Computer Engineering</span>
       </div>
       <p class="edu-inst">Boston University, Boston, Massachusetts, USA</p>
