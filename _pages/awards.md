@@ -6,7 +6,6 @@ author_profile: false
 classes: wide
 ---
 
-
 <div class="wrap" markdown="1">
 
 <style>
@@ -79,33 +78,35 @@ classes: wide
   align-items: center;
 }
 
-/* ===== Publications Content ===== */
-.pub-content {
+/* ===== Awards Content ===== */
+.awards-content {
   min-width: 0;
   color: #242424;
 }
 
-.pub-content h1 {
+.awards-content h1 {
   font-size: 2rem;
   margin: 0 0 14px;
   padding-bottom: 12px;
   border-bottom: 2px solid #e5e7eb;
 }
 
-.pub-intro {
+.awards-intro {
   font-size: 0.96rem;
   color: #555;
+  line-height: 1.75;
   margin-bottom: 25px;
 }
 
-.pub-stats {
+/* ===== Statistics ===== */
+.awards-stats {
   display: grid;
-  grid-template-columns: repeat(3, 1fr);
+  grid-template-columns: repeat(3, minmax(0, 1fr));
   gap: 12px;
   margin: 20px 0 32px;
 }
 
-.pub-stat {
+.awards-stat {
   border: 1px solid #e5e7eb;
   border-radius: 10px;
   padding: 15px;
@@ -113,114 +114,319 @@ classes: wide
   background: #fafafa;
 }
 
-.pub-stat strong {
+.awards-stat strong {
   display: block;
   font-size: 1.65rem;
   color: #2563eb;
 }
 
-.pub-stat span {
+.awards-stat span {
   font-size: 0.83rem;
   color: #555;
 }
 
-.pub-content h2 {
+/* ===== Section Headings ===== */
+.awards-content h2.awards-heading {
   font-size: 1.35rem;
   margin: 36px 0 18px;
   padding-bottom: 8px;
   border-bottom: 1px solid #e5e7eb;
 }
 
-/* ===== Publication List ===== */
-.publication-list {
-  list-style-type: decimal;
-  padding-left: 28px;
-  margin: 0;
+/* ===== Featured Awards ===== */
+.featured-grid {
+  display: grid;
+  grid-template-columns: repeat(2, minmax(0, 1fr));
+  gap: 15px;
 }
 
-.publication-list li {
-  padding-left: 5px;
-  margin-bottom: 19px;
-  font-size: 0.94rem;
-  line-height: 1.75;
-  overflow-wrap: anywhere;
+.featured-card {
+  position: relative;
+  padding: 22px;
+  border: 1px solid #f0d99b;
+  border-radius: 14px;
+  background: linear-gradient(
+    135deg,
+    #fffbeb 0%,
+    #ffffff 85%
+  );
+  overflow: hidden;
+  transition: transform 0.25s, box-shadow 0.25s;
 }
 
-.publication-list li::marker {
-  color: #64748b;
-  font-weight: 600;
+.featured-card:hover {
+  transform: translateY(-4px);
+  box-shadow: 0 8px 24px rgba(0,0,0,0.07);
 }
 
-.publication-list strong {
+.featured-card::before {
+  content: "";
+  position: absolute;
+  left: 0;
+  top: 0;
+  bottom: 0;
+  width: 4px;
+  background: #d97706;
+}
+
+.featured-card:first-child {
+  grid-column: 1 / -1;
+}
+
+.featured-header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-bottom: 15px;
+}
+
+.featured-icon {
+  width: 48px;
+  height: 48px;
+  border-radius: 12px;
+  background: #fef3c7;
+  color: #b45309;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-size: 1.3rem;
+}
+
+.featured-date {
+  font-size: 0.75rem;
   font-weight: 700;
-  color: #111827;
+  color: #92400e;
+  background: #fef3c7;
+  border-radius: 20px;
+  padding: 5px 11px;
 }
 
-.publication-list em {
-  color: #444;
+.featured-title {
+  font-size: 1.04rem;
+  font-weight: 750;
+  color: #1f2937;
+  line-height: 1.5;
+  margin-bottom: 8px;
 }
 
-.pub-year {
+.featured-org {
+  font-size: 0.87rem;
+  line-height: 1.65;
+  color: #475569;
+}
+
+.featured-description {
+  font-size: 0.85rem;
+  line-height: 1.7;
   color: #64748b;
-  font-weight: 600;
+  margin-top: 9px;
 }
 
-.pub-tag {
-  display: inline-block;
-  font-size: 0.72rem;
-  font-weight: 600;
-  color: #1d4ed8;
-  background: #eff6ff;
-  padding: 2px 8px;
-  border-radius: 5px;
-  margin-left: 5px;
+/* ===== Timeline ===== */
+.awards-timeline {
+  position: relative;
+  margin-top: 22px;
+  padding-left: 28px;
+  border-left: 2px solid #e2e8f0;
 }
 
-@media (max-width: 600px) {
-  .pub-stats {
-    gap: 7px;
-  }
-
-  .pub-stat {
-    padding: 12px 5px;
-  }
-
-  .pub-stat strong {
-    font-size: 1.3rem;
-  }
-
-  .publication-list li {
-    font-size: 0.9rem;
-  }
+.timeline-year {
+  position: relative;
+  margin: 30px 0 17px;
 }
 
-/* ===== Skills: Icons and Bullet Lists ===== */
-.skills-content {
+.timeline-year:first-child {
+  margin-top: 0;
+}
+
+.timeline-year::before {
+  content: "";
+  position: absolute;
+  left: -36px;
+  top: 5px;
+  width: 12px;
+  height: 12px;
+  background: #2563eb;
+  border: 3px solid #fff;
+  border-radius: 50%;
+  box-shadow: 0 0 0 2px #bfdbfe;
+}
+
+.timeline-year h3 {
+  margin: 0;
+  font-size: 1.2rem;
+  font-weight: 800;
+  color: #1e293b;
+}
+
+/* ===== Award Cards ===== */
+.award-card {
+  display: flex;
+  gap: 15px;
+  padding: 19px;
+  margin-bottom: 14px;
+  border: 1px solid #e5e7eb;
+  border-radius: 12px;
+  background: #fff;
+  transition: transform 0.2s, border-color 0.2s,
+              box-shadow 0.2s;
+}
+
+.award-card:hover {
+  transform: translateX(4px);
+  border-color: #bfdbfe;
+  box-shadow: 0 5px 18px rgba(0,0,0,0.055);
+}
+
+.award-icon {
+  flex-shrink: 0;
+  width: 44px;
+  height: 44px;
+  border-radius: 11px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  font-size: 1.15rem;
+}
+
+.award-icon.gold {
+  background: #fef3c7;
+  color: #b45309;
+}
+
+.award-icon.blue {
+  background: #dbeafe;
+  color: #2563eb;
+}
+
+.award-icon.green {
+  background: #dcfce7;
+  color: #15803d;
+}
+
+.award-icon.purple {
+  background: #f3e8ff;
+  color: #9333ea;
+}
+
+.award-details {
+  flex: 1;
   min-width: 0;
 }
 
-.skill-category h2 i {
-  color: #2563eb;
-  margin-right: 10px;
+.award-title {
+  font-size: 0.99rem;
+  font-weight: 750;
+  color: #1e293b;
+  line-height: 1.5;
+  margin: 0 0 6px;
 }
 
-.skill-list {
-  list-style-type: disc;
-  padding-left: 28px;
-  margin: 10px 0 24px;
+.award-organization {
+  font-size: 0.87rem;
+  color: #475569;
+  line-height: 1.65;
 }
 
-.skill-list li {
-  font-size: 0.94rem;
-  line-height: 1.75;
-  margin-bottom: 5px;
-  padding-left: 4px;
-}
-
-.skill-list li::marker {
+.award-description {
   color: #64748b;
+  font-size: 0.85rem;
+  line-height: 1.7;
+  margin-top: 8px;
 }
 
+/* ===== Award Labels ===== */
+.award-labels {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 7px;
+  margin-top: 11px;
+}
+
+.award-tag {
+  display: inline-block;
+  padding: 4px 10px;
+  border-radius: 20px;
+  background: #eff6ff;
+  color: #1d4ed8;
+  font-size: 0.73rem;
+  font-weight: 600;
+}
+
+.award-tag.gold {
+  background: #fef3c7;
+  color: #92400e;
+}
+
+.award-tag.green {
+  background: #dcfce7;
+  color: #166534;
+}
+
+.award-tag.purple {
+  background: #f3e8ff;
+  color: #7e22ce;
+}
+
+.award-tag.date {
+  background: #f1f5f9;
+  color: #475569;
+}
+
+/* ===== Responsive ===== */
+@media (max-width: 700px) {
+  .featured-grid {
+    grid-template-columns: 1fr;
+  }
+
+  .featured-card:first-child {
+    grid-column: auto;
+  }
+}
+
+@media (max-width: 600px) {
+  .awards-content h1 {
+    font-size: 1.65rem;
+  }
+
+  .awards-stats {
+    gap: 7px;
+  }
+
+  .awards-stat {
+    padding: 12px 5px;
+  }
+
+  .awards-stat strong {
+    font-size: 1.3rem;
+  }
+
+  .awards-stat span {
+    font-size: 0.72rem;
+  }
+
+  .awards-timeline {
+    padding-left: 20px;
+  }
+
+  .timeline-year::before {
+    left: -28px;
+  }
+
+  .award-card {
+    padding: 14px;
+    gap: 11px;
+  }
+
+  .award-icon {
+    width: 38px;
+    height: 38px;
+  }
+
+  .featured-card {
+    padding: 18px;
+  }
+}
 </style>
 
 <div class="edu-layout">
@@ -271,138 +477,474 @@ classes: wide
     </ul>
   </aside>
 
-  <!-- RIGHT: Awards -->
+  <!-- =====================================
+       RIGHT: AWARDS & HONORS
+  ====================================== -->
+
   <main class="awards-content">
 
     <h1>Awards & Honors</h1>
 
     <p class="awards-intro">
-      Recognition for academic excellence, research contributions,
-      teaching, and scholarly achievements in electrical engineering
-      and semiconductor research.
+      Recognition of academic excellence, research contributions,
+      teaching, undergraduate mentorship, and scholarly achievements
+      throughout my academic and professional journey.
     </p>
 
-    <!-- 2026 -->
-    <h2 class="awards-year">2026</h2>
+    <!-- ===== AWARD STATISTICS ===== -->
 
-    <div class="award-card">
-      <div class="award-icon">🏆</div>
-      <div class="award-details">
-        <div class="award-title">
+    <div class="awards-stats">
+
+      <div class="awards-stat">
+        <strong>11</strong>
+        <span>Honors & Recognitions</span>
+      </div>
+
+      <div class="awards-stat">
+        <strong>3</strong>
+        <span>Fellowships</span>
+      </div>
+
+      <div class="awards-stat">
+        <strong>2018–26</strong>
+        <span>Recognition Timeline</span>
+      </div>
+
+    </div>
+
+    <!-- =====================================
+         FEATURED RECOGNITIONS
+    ====================================== -->
+
+    <h2 class="awards-heading">
+      <i class="fas fa-star"></i>
+      Featured Recognitions
+    </h2>
+
+    <div class="featured-grid">
+
+      <!-- Featured Award 1 -->
+      <div class="featured-card">
+
+        <div class="featured-header">
+          <div class="featured-icon">
+            <i class="fas fa-trophy"></i>
+          </div>
+          <span class="featured-date">Sep 2026</span>
+        </div>
+
+        <div class="featured-title">
           College of Engineering Outstanding Ph.D. Student Award
         </div>
-        <div class="award-organization">
-          College of Engineering, University of Missouri
-        </div>
-        <div class="award-description">
-          Recognized for outstanding academic achievements
-          and research contributions at the doctoral level.
-        </div>
-        <span class="award-tag">Academic Excellence</span>
-      </div>
-    </div>
 
-    <div class="award-card">
-      <div class="award-icon">🏅</div>
-      <div class="award-details">
-        <div class="award-title">
-          Outstanding Ph.D. Student and Teaching Assistant Award
-        </div>
-        <div class="award-organization">
-          Department of Electrical Engineering and Computer Science,
+        <div class="featured-org">
+          College of Engineering<br>
           University of Missouri
         </div>
-        <div class="award-description">
-          Recognition for excellence in doctoral studies,
-          research, and undergraduate teaching support.
+
+        <div class="featured-description">
+          Recognized for outstanding academic achievements
+          and doctoral research contributions.
         </div>
-        <span class="award-tag">Research & Teaching</span>
+
       </div>
+
+      <!-- Featured Award 2 -->
+      <div class="featured-card">
+
+        <div class="featured-header">
+          <div class="featured-icon">
+            <i class="fas fa-medal"></i>
+          </div>
+          <span class="featured-date">May 2026</span>
+        </div>
+
+        <div class="featured-title">
+          Outstanding Ph.D. Student and Teaching Assistant Award
+        </div>
+
+        <div class="featured-org">
+          Department of Electrical Engineering and Computer Science<br>
+          University of Missouri
+        </div>
+
+        <div class="featured-description">
+          Recognition for achievements in doctoral studies,
+          research, and undergraduate teaching.
+        </div>
+
+      </div>
+
+      <!-- Featured Award 3 -->
+      <div class="featured-card">
+
+        <div class="featured-header">
+          <div class="featured-icon">
+            <i class="fas fa-graduation-cap"></i>
+          </div>
+          <span class="featured-date">May 2026</span>
+        </div>
+
+        <div class="featured-title">
+          Dean's Graduate Summer Retention Fellowship
+        </div>
+
+        <div class="featured-org">
+          Dean's Graduate Fellowship Program<br>
+          College of Engineering, University of Missouri
+        </div>
+
+        <div class="featured-description">
+          Fellowship supporting continued doctoral studies
+          and graduate research during Summer 2026.
+        </div>
+
+      </div>
+
     </div>
 
-    <!-- 2025 -->
-    <h2 class="awards-year">2025</h2>
+    <!-- =====================================
+         COMPLETE AWARDS TIMELINE
+    ====================================== -->
 
-    <div class="award-card">
-      <div class="award-icon">🥈</div>
-      <div class="award-details">
-        <div class="award-title">
-          2nd Place & People's Choice Award
-        </div>
-        <div class="award-organization">
-          41st Research and Creative Activities Forum (RCAF)
-          Poster Competition, University of Missouri
-        </div>
-        <div class="award-description">
-          Awarded second place and the People's Choice Award
-          for research poster presentation.
-        </div>
-        <span class="award-tag">Research Presentation</span>
+    <h2 class="awards-heading">
+      <i class="fas fa-award"></i>
+      Recognition Timeline
+    </h2>
+
+    <div class="awards-timeline">
+
+      <!-- ============== 2026 ============== -->
+
+      <div class="timeline-year">
+        <h3>2026</h3>
       </div>
-    </div>
 
-    <div class="award-card">
-      <div class="award-icon">🏆</div>
-      <div class="award-details">
-        <div class="award-title">
-          Best Oral Paper & Graduate Poster Award
+      <!-- Outstanding PhD Student -->
+      <div class="award-card">
+        <div class="award-icon gold">
+          <i class="fas fa-trophy"></i>
         </div>
-        <div class="award-organization">
-          33rd Annual Connecticut Symposium on
-          Microelectronics & Optoelectronics
+
+        <div class="award-details">
+          <div class="award-title">
+            College of Engineering Outstanding Ph.D. Student Award
+          </div>
+
+          <div class="award-organization">
+            College of Engineering, University of Missouri
+          </div>
+
+          <div class="award-labels">
+            <span class="award-tag gold">Academic Excellence</span>
+            <span class="award-tag date">September 2026</span>
+          </div>
         </div>
-        <div class="award-description">
-          Recognized for outstanding oral and poster
-          research presentations.
-        </div>
-        <span class="award-tag">Research Excellence</span>
       </div>
-    </div>
 
-    <!-- 2024 -->
-    <h2 class="awards-year">2024</h2>
+      <!-- EECS Outstanding Student and TA -->
+      <div class="award-card">
+        <div class="award-icon gold">
+          <i class="fas fa-medal"></i>
+        </div>
 
-    <div class="award-card">
-      <div class="award-icon">🏅</div>
-      <div class="award-details">
-        <div class="award-title">
-          Best Graduate Poster Award
+        <div class="award-details">
+          <div class="award-title">
+            Outstanding Ph.D. Student and Teaching Assistant Award
+          </div>
+
+          <div class="award-organization">
+            Department of Electrical Engineering and Computer Science,
+            University of Missouri
+          </div>
+
+          <div class="award-labels">
+            <span class="award-tag gold">Research & Teaching</span>
+            <span class="award-tag date">May 2026</span>
+          </div>
         </div>
-        <div class="award-organization">
-          32nd Annual Connecticut Symposium on
-          Microelectronics & Optoelectronics
-        </div>
-        <div class="award-description">
-          Recognized for excellence in graduate-level
-          research poster presentation.
-        </div>
-        <span class="award-tag">Research Presentation</span>
       </div>
-    </div>
 
-    <!-- 2019 -->
-    <h2 class="awards-year">2019</h2>
+      <!-- Dean's Summer Retention Fellowship -->
+      <div class="award-card">
+        <div class="award-icon green">
+          <i class="fas fa-graduation-cap"></i>
+        </div>
 
-    <div class="award-card">
-      <div class="award-icon">🏆</div>
-      <div class="award-details">
-        <div class="award-title">
-          Best Paper Award
+        <div class="award-details">
+          <div class="award-title">
+            Dean's Graduate Summer Retention Fellowship
+          </div>
+
+          <div class="award-organization">
+            Dean's Graduate Fellowship Program,
+            College of Engineering, University of Missouri
+          </div>
+
+          <div class="award-description">
+            Received fellowship support for continued
+            doctoral research during Summer 2026.
+          </div>
+
+          <div class="award-labels">
+            <span class="award-tag green">Graduate Fellowship</span>
+            <span class="award-tag date">May 2026</span>
+          </div>
         </div>
-        <div class="award-organization">
-          1st International Conference on Emerging Electrical
-          Energy, Electronics and Computing Technologies (ICE4CT)
-        </div>
-        <div class="award-description">
-          Awarded Best Paper for research presented
-          at the international conference.
-        </div>
-        <span class="award-tag">Best Paper</span>
       </div>
+
+      <!-- Undergraduate Mentor Nomination -->
+      <div class="award-card">
+        <div class="award-icon purple">
+          <i class="fas fa-chalkboard-teacher"></i>
+        </div>
+
+        <div class="award-details">
+          <div class="award-title">
+            Undergraduate Mentor of the Year Nomination
+          </div>
+
+          <div class="award-organization">
+            University of Missouri
+          </div>
+
+          <div class="award-description">
+            Nominated for recognition of contributions
+            to undergraduate student mentorship,
+            guidance, and academic development.
+          </div>
+
+          <div class="award-labels">
+            <span class="award-tag purple">Mentorship Nomination</span>
+            <span class="award-tag date">April 2026</span>
+          </div>
+        </div>
+      </div>
+
+      <!-- ============== 2025 ============== -->
+
+      <div class="timeline-year">
+        <h3>2025</h3>
+      </div>
+
+      <!-- RCAF -->
+      <div class="award-card">
+        <div class="award-icon gold">
+          <i class="fas fa-award"></i>
+        </div>
+
+        <div class="award-details">
+          <div class="award-title">
+            2nd Place & People's Choice Award
+          </div>
+
+          <div class="award-organization">
+            41st Research and Creative Activities Forum (RCAF)
+            Poster Competition, University of Missouri
+          </div>
+
+          <div class="award-description">
+            Received second place and the People's Choice
+            Award for research poster presentation.
+          </div>
+
+          <div class="award-labels">
+            <span class="award-tag gold">Research Presentation</span>
+            <span class="award-tag date">2025</span>
+          </div>
+        </div>
+      </div>
+
+      <!-- CMOC 2025 -->
+      <div class="award-card">
+        <div class="award-icon gold">
+          <i class="fas fa-trophy"></i>
+        </div>
+
+        <div class="award-details">
+          <div class="award-title">
+            Best Oral Paper & Graduate Poster Award
+          </div>
+
+          <div class="award-organization">
+            33rd Annual Connecticut Symposium on
+            Microelectronics & Optoelectronics
+          </div>
+
+          <div class="award-description">
+            Recognized for excellence in oral and
+            graduate poster research presentations.
+          </div>
+
+          <div class="award-labels">
+            <span class="award-tag gold">Research Excellence</span>
+            <span class="award-tag date">2025</span>
+          </div>
+        </div>
+      </div>
+
+      <!-- Travel Fellowship 2025 -->
+      <div class="award-card">
+        <div class="award-icon green">
+          <i class="fas fa-plane"></i>
+        </div>
+
+        <div class="award-details">
+          <div class="award-title">
+            Graduate Student Travel Fellowship
+          </div>
+
+          <div class="award-organization">
+            Department of Electrical Engineering and Computer Science,
+            University of Missouri
+          </div>
+
+          <div class="award-description">
+            Received departmental travel support
+            for academic and research activities.
+          </div>
+
+          <div class="award-labels">
+            <span class="award-tag green">Travel Fellowship</span>
+            <span class="award-tag date">2025</span>
+          </div>
+        </div>
+      </div>
+
+      <!-- ============== 2024 ============== -->
+
+      <div class="timeline-year">
+        <h3>2024</h3>
+      </div>
+
+      <!-- CMOC 2024 -->
+      <div class="award-card">
+        <div class="award-icon gold">
+          <i class="fas fa-medal"></i>
+        </div>
+
+        <div class="award-details">
+          <div class="award-title">
+            Best Graduate Poster Award
+          </div>
+
+          <div class="award-organization">
+            32nd Annual Connecticut Symposium on
+            Microelectronics & Optoelectronics
+          </div>
+
+          <div class="award-description">
+            Recognized for excellence in graduate
+            research poster presentation.
+          </div>
+
+          <div class="award-labels">
+            <span class="award-tag gold">Research Presentation</span>
+            <span class="award-tag date">2024</span>
+          </div>
+        </div>
+      </div>
+
+      <!-- Travel Fellowship 2024 -->
+      <div class="award-card">
+        <div class="award-icon green">
+          <i class="fas fa-plane"></i>
+        </div>
+
+        <div class="award-details">
+          <div class="award-title">
+            Graduate Student Travel Fellowship
+          </div>
+
+          <div class="award-organization">
+            Department of Electrical Engineering and Computer Science,
+            University of Missouri
+          </div>
+
+          <div class="award-description">
+            Received departmental travel support
+            for academic and research activities.
+          </div>
+
+          <div class="award-labels">
+            <span class="award-tag green">Travel Fellowship</span>
+            <span class="award-tag date">2024</span>
+          </div>
+        </div>
+      </div>
+
+      <!-- ============== 2019 ============== -->
+
+      <div class="timeline-year">
+        <h3>2019</h3>
+      </div>
+
+      <!-- Best Paper -->
+      <div class="award-card">
+        <div class="award-icon gold">
+          <i class="fas fa-trophy"></i>
+        </div>
+
+        <div class="award-details">
+          <div class="award-title">
+            Best Paper Award
+          </div>
+
+          <div class="award-organization">
+            1st International Conference on Emerging Electrical
+            Energy, Electronics and Computing Technologies (ICE4CT)
+          </div>
+
+          <div class="award-description">
+            Awarded Best Paper for research presented
+            at the international conference.
+          </div>
+
+          <div class="award-labels">
+            <span class="award-tag gold">Best Paper</span>
+            <span class="award-tag date">2019</span>
+          </div>
+        </div>
+      </div>
+
+      <!-- ============== 2018 ============== -->
+
+      <div class="timeline-year">
+        <h3>2018</h3>
+      </div>
+
+      <!-- BSc Honours -->
+      <div class="award-card">
+        <div class="award-icon purple">
+          <i class="fas fa-graduation-cap"></i>
+        </div>
+
+        <div class="award-details">
+          <div class="award-title">
+            B.Sc. (Engineering) Degree with Honours
+          </div>
+
+          <div class="award-organization">
+            Department of Electrical and Electronic Engineering<br>
+            Shahjalal University of Science and Technology
+          </div>
+
+          <div class="award-description">
+            Graduated with Honours, achieving a CGPA
+            of 3.93/4.00 and securing first position
+            in the class.
+          </div>
+
+          <div class="award-labels">
+            <span class="award-tag purple">Academic Distinction</span>
+            <span class="award-tag date">2018</span>
+          </div>
+        </div>
+      </div>
+
     </div>
 
   </main>
 
 </div>
 </div>
-
