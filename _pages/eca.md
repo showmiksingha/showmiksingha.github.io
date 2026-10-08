@@ -402,14 +402,7 @@ classes: wide
 
       <h1>Extracurricular Activities</h1>
 
-      <p>
-        Beyond academics and research, I actively engage
-        in student leadership, professional organizations,
-        technical communities, and sports. These experiences
-        have helped me develop leadership, communication,
-        teamwork, and organizational skills while building
-        meaningful connections.
-      </p>
+    
 
     </header>
 
@@ -446,7 +439,7 @@ classes: wide
             <div>
 
               <h3 class="eca-org-title">
-                EECS Graduate Student Association
+                Electrical Engineering and Computer Science Graduate Student Association
                 (EECS GSA)
               </h3>
 
@@ -476,8 +469,7 @@ classes: wide
 
         <p>
           I currently serve as the
-          <strong>President of the EECS Graduate Student
-          Association</strong> at the University of
+          <strong>President of the EECS GSA</strong> at the University of
           Missouri–Columbia for the 2026–2027 academic year.
           Previously, I served as the
           <strong>Director of Communications</strong>
@@ -552,18 +544,14 @@ classes: wide
             Former Treasurer
           </span>
 
-          <span class="eca-role member">
-            <i class="fas fa-user"></i>
-            Former IEEE Student Member
-          </span>
+          
 
         </div>
 
         <p>
           I previously served as the
           <strong>Treasurer of the IEEE SUST Student
-          Branch</strong> and was an IEEE Student Member
-          during my undergraduate studies.
+          Branch</strong>during my undergraduate studies.
         </p>
 
         <p>
