@@ -265,13 +265,18 @@ title: "Home"
 
 /* Research interests: consistent pill layout */
 
+/* ============================================
+   RESEARCH INTERESTS — MATCH EDUCATION PILLS
+============================================ */
+
 .home-bento-interest-grid {
   grid-column: 1 / -1;
   display: flex;
   flex-wrap: wrap;
-  align-items: center;
-  gap: 11px;
-  padding: 26px 28px;
+  align-content: start;
+  gap: 10px;
+  padding: 25px 28px;
+  margin: 0;
   background: #ffffff;
   border: 1px solid rgba(0,0,0,.04);
   border-radius: 24px;
@@ -280,43 +285,47 @@ title: "Home"
 .home-bento-interest {
   display: inline-flex;
   align-items: center;
-  width: auto;
   max-width: 100%;
-  min-width: 0;
-  min-height: 0;
-  padding: 11px 17px;
-  background: #f7f9fc;
-  border: 1px solid #dce5f0;
+  padding: 9px 15px;
+  background: #f8fafc;
+  color: #334155;
+  border: 1px solid #e2e8f0;
   border-radius: 999px;
-  color: #354254;
-  font-size: 13px;
-  font-weight: 650;
-  line-height: 1.45;
+  font-size: 0.88rem;
+  font-weight: 500;
+  line-height: 1.4;
   cursor: default;
-  transition: background-color .2s ease,
-              color .2s ease,
-              border-color .2s ease,
-              box-shadow .2s ease,
-              transform .2s ease;
+
+  transition:
+    background-color 0.25s ease,
+    color 0.25s ease,
+    border-color 0.25s ease,
+    box-shadow 0.25s ease,
+    transform 0.25s ease;
 }
 
 .home-bento-interest:hover {
-  color: #0071e3;
-  background: #eaf3ff;
-  border-color: #96c2fa;
-  box-shadow: 0 4px 13px rgba(0,113,227,.10);
-  transform: translateY(-2px);
+  background: #2563eb;
+  color: #ffffff;
+  border-color: #2563eb;
+  transform: translateY(-3px);
+  box-shadow: 0 5px 14px rgba(37, 99, 235, 0.22);
 }
 
-.home-bento-interest span {
-  display: inline;
-  font-size: inherit;
-  line-height: inherit;
-  font-weight: inherit;
-  color: inherit;
-  overflow-wrap: anywhere;
+@media (max-width: 600px) {
+  .home-bento-interest-grid {
+    gap: 8px;
+    padding: 20px;
+  }
+
+  .home-bento-interest {
+    padding: 8px 12px;
+    font-size: 0.82rem;
+  }
 }
 
+
+   
 /* ============================================
    MOBILE RESPONSIVENESS
 ============================================ */
@@ -581,17 +590,23 @@ title: "Home"
            EXISTING YAML DATA
       =============================== -->
 
-      <div class="home-bento-interest-grid">
+      
+<!-- ==============================
+     RESEARCH INTEREST PILLS
+     SAME STYLE AS EDUCATION PAGE
+============================== -->
 
-        {% for item in site.data.interests.items %}
+<div class="home-bento-interest-grid">
 
-          <span class="home-bento-interest">
-            <span>{{ item }}</span>
-          </span>
+  {% for item in site.data.interests.items %}
 
-        {% endfor %}
+    <span class="home-bento-interest">
+      {{ item }}
+    </span>
 
-      </div>
+  {% endfor %}
+
+</div>
 
     </div>
 
