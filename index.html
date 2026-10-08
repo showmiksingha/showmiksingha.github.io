@@ -1,4 +1,3 @@
-
 ---
 layout: default
 permalink: /
@@ -35,3 +34,187 @@ title: "Home"
      HELLO SECTION
 ========================== -->
 <section class="section section--white">
+  <div class="wrap center-col">
+
+    <h2 class="section__heading">HELLO,</h2>
+
+    <p>
+      I am Showmik, a PhD candidate in Electrical and Computer
+      Engineering at the University of Missouri–Columbia,
+      specializing in
+      <strong>wide-bandgap and ultra-wide-bandgap semiconductor devices</strong>,
+      power electronics, and device reliability.
+      My research focuses on developing and analyzing next-generation
+      semiconductor devices for high-efficiency power conversion
+      and operation in extreme environments, including radiation
+      and elevated temperature.
+    </p>
+
+    <p>
+      My technical focus includes semiconductor device physics,
+      TCAD-based device modeling, electrical characterization,
+      and reliability analysis of
+      <strong>GaN HEMTs and β-Ga<sub>2</sub>O<sub>3</sub> MOSFETs</strong>.
+      I investigate device behavior under heavy-ion radiation,
+      temperature variation, and different operating conditions
+      to better understand transient response, charge-collection
+      mechanisms, and device performance.
+    </p>
+
+    <p>
+      Beyond conventional device simulation, I integrate
+      <strong>machine learning with semiconductor device modeling</strong>
+      to accelerate parameter extraction, device optimization,
+      and inverse design.
+      My work includes developing predictive models to extract
+      physical device parameters directly from electrical
+      characteristics and reduce the time required for device
+      design and optimization.
+    </p>
+
+    <p>
+      My research experience also extends to semiconductor
+      fabrication, device characterization, compact-model extraction,
+      and interdisciplinary experimental work.
+      I have contributed to projects involving
+      AlN/β-Ga<sub>2</sub>O<sub>3</sub> heterostructure devices
+      and nanostructured biosensor fabrication using
+      two-photon polymerization and thermal processing.
+      In addition to research, I have several years of
+      university-level teaching experience and enjoy mentoring
+      students in semiconductor devices, electronics,
+      circuit analysis, and engineering problem solving.
+    </p>
+
+  </div>
+</section>
+
+<!-- =========================
+     RESEARCH INTERESTS
+========================== -->
+<section class="section section--soft">
+  <div class="wrap center">
+
+    <h2 class="big-title">
+      RESEARCH INTERESTS
+    </h2>
+
+    <div class="keywords">
+      {% for item in site.data.interests.items %}
+        <span class="kw">{{ item }}</span>
+      {% endfor %}
+    </div>
+
+  </div>
+</section>
+
+<!-- =========================
+     NEWS AND UPDATES
+========================== -->
+<section class="section section--white">
+  <div class="wrap">
+
+    <h2 class="big-title">
+      News and Updates
+    </h2>
+
+    <div class="timeline-scroll">
+      <div class="timeline">
+
+        {% for year in site.data.updates.years %}
+
+          <div class="timeline__year">
+
+            <!-- YEAR LABEL -->
+            <div class="timeline__year-label">
+              {{ year.year }}
+            </div>
+
+            <!-- YEAR ITEMS -->
+            <div class="timeline__items">
+
+              {% for u in year.items %}
+
+                <div class="timeline__item">
+
+                  <div class="timeline__date">
+                    {{ u.date }}
+                  </div>
+
+                  <div class="timeline__text">
+
+                    {{ u.text }}
+
+                    {% if u.link %}
+                      <a href="{{ u.link }}"
+                         target="_blank"
+                         rel="noopener noreferrer">
+                        Link
+                      </a>
+                    {% endif %}
+
+                  </div>
+
+                </div>
+
+              {% endfor %}
+
+            </div>
+
+          </div>
+
+        {% endfor %}
+
+      </div>
+    </div>
+
+  </div>
+</section>
+
+<!-- =========================
+     GET IN TOUCH
+========================== -->
+<section class="section section--soft">
+  <div class="wrap center">
+
+    <h2 class="big-title underline">
+      GET IN TOUCH
+    </h2>
+
+    <div class="social-row">
+
+      <!-- EMAIL -->
+      <a class="social"
+         href="mailto:ssqk4@umsystem.edu"
+         aria-label="Email Showmik Singha">
+
+        <i class="fas fa-envelope" aria-hidden="true"></i>
+
+      </a>
+
+      <!-- GITHUB -->
+      <a class="social"
+         href="https://github.com/showmiksingha"
+         target="_blank"
+         rel="noopener noreferrer"
+         aria-label="GitHub Profile">
+
+        <i class="fab fa-github" aria-hidden="true"></i>
+
+      </a>
+
+      <!-- LINKEDIN -->
+      <a class="social"
+         href="https://www.linkedin.com/in/showmik-singha-293967147/"
+         target="_blank"
+         rel="noopener noreferrer"
+         aria-label="LinkedIn Profile">
+
+        <i class="fab fa-linkedin-in" aria-hidden="true"></i>
+
+      </a>
+
+    </div>
+
+  </div>
+</section>
