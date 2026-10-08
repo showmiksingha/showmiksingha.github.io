@@ -28,7 +28,6 @@ years:
 
   - year: 2025
     items:
-
       - date: "October 2025"
         text: "Presented research on single-event transient effects in Gallium Oxide MOSFETs under oblique particle irradiation at IEEE WiPDA 2025."
 
@@ -44,31 +43,17 @@ years:
 
   - year: 2024
     items:
-      - date: "Jan 2024"
-        text: "Started the Ph.D. program in Electrical and Computer Engineering at the University of Missouri–Columbia under the supervision of Prof. Syed Kamrul Islam."
-
-      - date: "2024"
-        text: "Started serving as a Graduate Research and Teaching Assistant at the University of Missouri."
-
-      - date: "2024"
+      - date: "March 2024"
         text: "Received the Best Graduate Poster Award at the 32nd Annual Connecticut Symposium on Microelectronics and Optoelectronics."
+      - date: "Jan 2024"
+        text: "Started the Ph.D. program in Electrical and Computer Engineering at the University of Missouri–Columbia."
 
-      - date: "2024"
-        text: "Presented research at the IEEE Midwest Symposium on Circuits and Systems (MWSCAS 2024)."
-
-  - year: 2023
-    items:
-      - date: "2023"
+      - date: "Jan 2024"
         text: "Completed the Master of Science in Electrical and Computer Engineering at Boston University."
-
-  - year: 2022
-    items:
-      - date: "Aug 2022"
-        text: "Concluded faculty appointment in the Department of Electrical and Electronic Engineering at Shahjalal University of Science and Technology (SUST) to pursue graduate studies in the United States."
 
   - year: 2019
     items:
-      - date: "2019"
+      - date: "October 2019"
         text: "Received the Best Paper Award at the First International Conference on Emerging Electrical Energy, Electronics and Computing Technologies (ICE4CT)."
 
   - year: 2018
@@ -77,4 +62,4 @@ years:
         text: "Joined the Department of Electrical and Electronic Engineering at Shahjalal University of Science and Technology (SUST) as a Faculty Member."
 
       - date: "Feb 2018"
-        text: "Completed the Bachelor of Science in Electrical and Electronic Engineering at Shahjalal University of Science and Technology (SUST), graduating with a CGPA of 3.93/4.00 and securing first position in the class."
+        text: "Completed the Bachelor of Science in Electrical and Electronic Engineering at Shahjalal University of Science and Technology (SUST), graduating with Honors and securing first position in the class."
