@@ -83,7 +83,7 @@ classes: wide
 }
 
 /* =========================================
-   PUBLICATION CONTENT
+   PUBLICATION MAIN CONTENT
 ========================================= */
 .pub-content {
   min-width: 0;
@@ -100,12 +100,12 @@ classes: wide
 .pub-intro {
   font-size: 0.96rem;
   color: #555;
-  margin-bottom: 25px;
   line-height: 1.75;
+  margin-bottom: 25px;
 }
 
 /* =========================================
-   PUBLICATION STATISTICS
+   PUBLICATION SUMMARY CARDS
 ========================================= */
 .pub-stats {
   display: grid;
@@ -120,9 +120,10 @@ classes: wide
   padding: 18px 10px;
   text-align: center;
   background: #fafafa;
-  transition: transform 0.25s ease,
-              box-shadow 0.25s ease,
-              border-color 0.25s ease;
+  transition:
+    transform 0.25s ease,
+    box-shadow 0.25s ease,
+    border-color 0.25s ease;
 }
 
 .pub-stat:hover {
@@ -131,10 +132,18 @@ classes: wide
   border-color: #93c5fd;
 }
 
+.pub-stat-icon {
+  font-size: 1.15rem;
+  color: #64748b;
+  margin-bottom: 10px;
+}
+
 .pub-stat strong {
   display: block;
   font-size: 1.7rem;
   color: #2563eb;
+  line-height: 1.2;
+  margin-bottom: 6px;
 }
 
 .pub-stat span {
@@ -143,192 +152,296 @@ classes: wide
 }
 
 /* =========================================
-   CITATION IMPACT INFOGRAPHIC
+   MODERN GOOGLE SCHOLAR DASHBOARD
 ========================================= */
-.citation-impact {
-  margin: 28px 0 40px;
+.scholar-dashboard {
+  margin: 30px 0 44px;
   padding: 24px;
   border: 1px solid #e5e7eb;
-  border-radius: 14px;
+  border-radius: 16px;
   background: #fff;
 }
 
-.citation-header {
+.scholar-heading {
   display: flex;
   justify-content: space-between;
   align-items: center;
+  gap: 14px;
   flex-wrap: wrap;
-  gap: 12px;
   margin-bottom: 22px;
 }
 
-.citation-header h2 {
+.scholar-heading h2 {
   margin: 0 !important;
   padding: 0 !important;
   border: none !important;
   font-size: 1.3rem;
 }
 
-.citation-header h2 i {
+.scholar-heading h2 i {
   color: #2563eb;
   margin-right: 7px;
 }
 
-.citation-source {
-  display: inline-block;
-  font-size: 0.75rem;
-  font-weight: 600;
-  color: #1d4ed8;
-  background: #eff6ff;
-  padding: 6px 12px;
-  border-radius: 20px;
-}
-
-/* Citation table */
-.citation-table {
-  width: 100%;
-  border-collapse: collapse;
-  margin-bottom: 34px;
-  font-size: 0.95rem;
-}
-
-.citation-table thead {
-  border-bottom: 1px solid #e5e7eb;
-}
-
-.citation-table th,
-.citation-table td {
-  padding: 11px 8px;
-  border: none;
-  background: transparent;
-}
-
-.citation-table th {
-  font-weight: 600;
-  color: #64748b;
-  text-align: center;
-}
-
-.citation-table td:first-child {
-  font-weight: 500;
-  color: #374151;
-}
-
-.citation-table td:not(:first-child) {
-  text-align: center;
-  font-weight: 600;
-  color: #111827;
-}
-
-/* Citation chart */
-.citation-chart-title {
-  font-size: 0.94rem;
-  font-weight: 600;
-  color: #374151;
-  margin-bottom: 16px;
-}
-
-.citation-chart {
-  display: flex;
-  height: 230px;
-  gap: 14px;
-  margin-bottom: 16px;
-}
-
-.citation-plot {
-  position: relative;
-  display: flex;
-  justify-content: space-around;
-  align-items: flex-end;
-  flex: 1;
-  min-width: 0;
-  height: 200px;
-  border-bottom: 1px solid #cbd5e1;
-  background-image:
-    linear-gradient(to bottom,
-      #e5e7eb 0,
-      #e5e7eb 1px,
-      transparent 1px),
-    linear-gradient(to bottom,
-      transparent calc(50% - 1px),
-      #e5e7eb 50%,
-      transparent calc(50% + 1px));
-}
-
-.citation-bar-group {
-  width: 12%;
-  height: 100%;
-  display: flex;
+.scholar-profile-link {
+  display: inline-flex;
   align-items: center;
-  justify-content: flex-end;
-  flex-direction: column;
+  gap: 7px;
+  text-decoration: none !important;
+  font-size: 0.8rem;
+  font-weight: 600;
+  color: #2563eb !important;
+  background: #eff6ff;
+  border: 1px solid #dbeafe;
+  padding: 8px 12px;
+  border-radius: 20px;
+  transition: all 0.25s ease;
+}
+
+.scholar-profile-link:hover {
+  background: #dbeafe;
+  transform: translateY(-2px);
+}
+
+/* =========================================
+   SCHOLAR METRIC CARDS
+========================================= */
+.scholar-metrics {
+  display: grid;
+  grid-template-columns: repeat(3, minmax(0, 1fr));
+  gap: 12px;
+  margin-bottom: 24px;
+}
+
+.scholar-metric {
   position: relative;
+  overflow: hidden;
+  text-align: center;
+  border: 1px solid #e5e7eb;
+  background: #f8fafc;
+  border-radius: 13px;
+  padding: 22px 10px 18px;
+  transition:
+    transform 0.25s ease,
+    box-shadow 0.25s ease,
+    border-color 0.25s ease;
 }
 
-.citation-bar {
-  width: 60%;
-  max-width: 38px;
-  min-height: 2px;
-  background: #64748b;
-  border-radius: 4px 4px 0 0;
+.scholar-metric:hover {
+  transform: translateY(-4px);
+  border-color: #bfdbfe;
+  box-shadow: 0 9px 22px rgba(37,99,235,0.08);
+}
+
+.metric-icon {
+  width: 37px;
+  height: 37px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  margin: 0 auto 13px;
+  border-radius: 10px;
+  background: #eaf1ff;
+  color: #2563eb;
+  font-size: 1rem;
+}
+
+.metric-number {
+  display: block;
+  font-size: 2rem;
+  line-height: 1.15;
+  font-weight: 800;
+  color: #111827;
+  margin-bottom: 7px;
+}
+
+.metric-label {
+  display: block;
+  font-size: 0.82rem;
+  font-weight: 600;
+  color: #475569;
+}
+
+.metric-description {
+  display: block;
+  font-size: 0.72rem;
+  color: #94a3b8;
+  margin-top: 5px;
+}
+
+/* =========================================
+   SCHOLAR CITATION DISTRIBUTION
+========================================= */
+.scholar-distribution {
+  display: grid;
+  grid-template-columns: 170px minmax(0, 1fr);
+  gap: 24px;
+  align-items: center;
+  padding: 22px;
+  border: 1px solid #e5e7eb;
+  border-radius: 13px;
+  background: #fff;
+}
+
+.citation-donut {
   position: relative;
-  transform-origin: bottom;
-  transition: background 0.25s ease,
-              transform 0.25s ease;
-  cursor: pointer;
+  width: 155px;
+  height: 155px;
+  margin: auto;
 }
 
-.citation-bar:hover {
-  background: #2563eb;
-  transform: scaleX(1.15);
+.citation-donut svg {
+  width: 100%;
+  height: 100%;
+  display: block;
 }
 
-.citation-tooltip {
+.donut-track {
+  fill: none;
+  stroke: #e5e7eb;
+  stroke-width: 11;
+}
+
+.donut-progress {
+  fill: none;
+  stroke: #2563eb;
+  stroke-width: 11;
+  stroke-linecap: round;
+  stroke-dasharray: 263.24 269.55;
+  transform: rotate(-90deg);
+  transform-origin: 50% 50%;
+  transition: stroke 0.3s ease;
+}
+
+.citation-donut:hover .donut-progress {
+  stroke: #1d4ed8;
+}
+
+.donut-text {
   position: absolute;
-  bottom: calc(100% + 8px);
-  left: 50%;
-  transform: translateX(-50%);
-  background: #111827;
-  color: #fff;
-  padding: 6px 9px;
-  border-radius: 6px;
-  font-size: 0.75rem;
-  white-space: nowrap;
-  opacity: 0;
-  visibility: hidden;
-  transition: opacity 0.2s ease;
-  z-index: 3;
+  inset: 0;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
   pointer-events: none;
 }
 
-.citation-bar:hover .citation-tooltip,
-.citation-bar:focus .citation-tooltip {
-  opacity: 1;
-  visibility: visible;
+.donut-percentage {
+  font-size: 1.65rem;
+  font-weight: 800;
+  line-height: 1.2;
+  color: #111827;
 }
 
-.citation-year {
-  position: absolute;
-  top: calc(100% + 8px);
-  font-size: 0.75rem;
+.donut-caption {
+  font-size: 0.72rem;
+  color: #64748b;
+  margin-top: 4px;
+}
+
+/* Distribution right section */
+.distribution-details h3 {
+  font-size: 1rem;
+  margin: 0 0 9px;
+  color: #111827;
+}
+
+.distribution-details p {
+  font-size: 0.82rem;
+  color: #64748b;
+  line-height: 1.6;
+  margin: 0 0 19px;
+}
+
+.distribution-row {
+  margin-bottom: 14px;
+}
+
+.distribution-meta {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  gap: 10px;
+  font-size: 0.82rem;
+  margin-bottom: 8px;
+}
+
+.distribution-meta span {
   color: #64748b;
 }
 
-.citation-axis {
-  height: 200px;
-  min-width: 24px;
+.distribution-meta strong {
+  color: #111827;
+  font-weight: 700;
+}
+
+.distribution-track {
+  width: 100%;
+  height: 8px;
+  border-radius: 99px;
+  background: #eef2f7;
+  overflow: hidden;
+}
+
+.distribution-fill {
+  height: 100%;
+  border-radius: 99px;
+  background: #2563eb;
+  transition: width 0.7s ease;
+}
+
+.distribution-fill.early {
+  background: #94a3b8;
+}
+
+/* =========================================
+   SECONDARY SCHOLAR METRICS
+========================================= */
+.scholar-period {
+  margin-top: 20px;
+  display: grid;
+  grid-template-columns: repeat(2, minmax(0, 1fr));
+  gap: 12px;
+}
+
+.period-card {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  gap: 10px;
+  border: 1px solid #e5e7eb;
+  border-radius: 10px;
+  padding: 15px;
+  background: #fafafa;
+}
+
+.period-card-label {
   display: flex;
   flex-direction: column;
-  justify-content: space-between;
-  align-items: flex-end;
-  font-size: 0.75rem;
+  gap: 5px;
+}
+
+.period-card-label span {
+  font-size: 0.78rem;
   color: #64748b;
 }
 
-.citation-footnote {
-  font-size: 0.76rem;
+.period-card-label strong {
+  font-size: 0.94rem;
+  color: #111827;
+}
+
+.period-card-value {
+  font-size: 1.35rem;
+  font-weight: 800;
+  color: #2563eb;
+}
+
+.scholar-note {
+  margin: 18px 0 0;
+  font-size: 0.75rem;
   color: #94a3b8;
-  margin: 14px 0 0;
   line-height: 1.6;
 }
 
@@ -347,6 +460,9 @@ classes: wide
   margin-right: 8px;
 }
 
+/* =========================================
+   PUBLICATION LIST
+========================================= */
 .publication-list {
   list-style-type: decimal;
   padding-left: 28px;
@@ -359,11 +475,16 @@ classes: wide
   font-size: 0.94rem;
   line-height: 1.8;
   overflow-wrap: anywhere;
+  transition: color 0.2s ease;
 }
 
 .publication-list li::marker {
   color: #64748b;
   font-weight: 600;
+}
+
+.publication-list li:hover {
+  color: #1d4ed8;
 }
 
 .publication-list strong {
@@ -391,19 +512,11 @@ classes: wide
   margin-left: 5px;
 }
 
-/* Subtle hover effect */
-.publication-list li {
-  transition: color 0.2s ease;
-}
-
-.publication-list li:hover {
-  color: #1d4ed8;
-}
-
 /* =========================================
-   MOBILE RESPONSIVENESS
+   RESPONSIVE DESIGN
 ========================================= */
-@media (max-width: 600px) {
+@media (max-width: 650px) {
+
   .pub-content h1 {
     font-size: 1.7rem;
   }
@@ -413,35 +526,91 @@ classes: wide
   }
 
   .pub-stat {
-    padding: 12px 5px;
+    padding: 13px 5px;
   }
 
   .pub-stat strong {
-    font-size: 1.35rem;
+    font-size: 1.4rem;
   }
 
   .pub-stat span {
     font-size: 0.72rem;
   }
 
-  .citation-impact {
-    padding: 16px 10px;
+  .pub-stat-icon {
+    font-size: 0.95rem;
   }
 
-  .citation-chart {
-    gap: 6px;
+  .scholar-dashboard {
+    padding: 17px 12px;
   }
 
-  .citation-year {
-    font-size: 0.63rem;
+  .scholar-metrics {
+    gap: 7px;
   }
 
-  .citation-table {
-    font-size: 0.85rem;
+  .scholar-metric {
+    padding: 16px 5px;
+  }
+
+  .metric-number {
+    font-size: 1.5rem;
+  }
+
+  .metric-label {
+    font-size: 0.72rem;
+  }
+
+  .metric-description {
+    font-size: 0.64rem;
+  }
+
+  .metric-icon {
+    width: 30px;
+    height: 30px;
+    font-size: 0.8rem;
+  }
+
+  .scholar-distribution {
+    grid-template-columns: 1fr;
+    gap: 16px;
+    padding: 18px 14px;
+  }
+
+  .citation-donut {
+    width: 145px;
+    height: 145px;
+  }
+
+  .distribution-details {
+    width: 100%;
+  }
+
+  .scholar-period {
+    gap: 8px;
+  }
+
+  .period-card {
+    padding: 12px 9px;
+  }
+
+  .period-card-value {
+    font-size: 1.1rem;
   }
 
   .publication-list li {
     font-size: 0.9rem;
+  }
+
+}
+
+@media (prefers-reduced-motion: reduce) {
+  .pub-stat,
+  .scholar-metric,
+  .scholar-profile-link,
+  .donut-progress,
+  .distribution-fill {
+    transition: none;
   }
 }
 </style>
@@ -511,22 +680,31 @@ classes: wide
 </p>
 
 <!-- =========================================
-     PUBLICATION STATISTICS
+     PUBLICATION SUMMARY
 ========================================= -->
 
 <div class="pub-stats">
 
   <div class="pub-stat">
+    <div class="pub-stat-icon">
+      <i class="fas fa-book-open"></i>
+    </div>
     <strong>4</strong>
     <span>Journal Articles</span>
   </div>
 
   <div class="pub-stat">
+    <div class="pub-stat-icon">
+      <i class="fas fa-microphone-alt"></i>
+    </div>
     <strong>1</strong>
     <span>Invited Paper</span>
   </div>
 
   <div class="pub-stat">
+    <div class="pub-stat-icon">
+      <i class="fas fa-users"></i>
+    </div>
     <strong>21</strong>
     <span>Conference Papers</span>
   </div>
@@ -534,168 +712,227 @@ classes: wide
 </div>
 
 <!-- =========================================
-     GOOGLE SCHOLAR CITATION IMPACT
+     GOOGLE SCHOLAR RESEARCH IMPACT
 ========================================= -->
 
-<section class="citation-impact">
+<section class="scholar-dashboard">
 
-  <div class="citation-header">
+  <!-- Heading -->
+  <div class="scholar-heading">
 
     <h2>
-      <i class="fas fa-chart-bar"></i>
-      Citation Impact
+      <i class="fas fa-chart-line"></i>
+      Research Impact
     </h2>
 
-    <span class="citation-source">
+    <a
+      class="scholar-profile-link"
+      href="https://scholar.google.com/citations?user=B0llklQAAAAJ"
+      target="_blank"
+      rel="noopener noreferrer"
+    >
+      <i class="fas fa-graduation-cap"></i>
       Google Scholar
-    </span>
+      <i class="fas fa-external-link-alt"></i>
+    </a>
 
   </div>
 
-  <!-- Citation Metrics -->
-  <table class="citation-table">
+  <!-- =====================================
+       PRIMARY CITATION METRICS
+  ====================================== -->
 
-    <thead>
-      <tr>
-        <th></th>
-        <th>All</th>
-        <th>Since 2021</th>
-      </tr>
-    </thead>
+  <div class="scholar-metrics">
 
-    <tbody>
+    <!-- Total Citations -->
+    <div class="scholar-metric">
 
-      <tr>
-        <td>Citations</td>
-        <td>87</td>
-        <td>85</td>
-      </tr>
-
-      <tr>
-        <td>h-index</td>
-        <td>5</td>
-        <td>5</td>
-      </tr>
-
-      <tr>
-        <td>i10-index</td>
-        <td>3</td>
-        <td>3</td>
-      </tr>
-
-    </tbody>
-
-  </table>
-
-  <div class="citation-chart-title">
-    Citations per Year
-  </div>
-
-  <div class="citation-chart"
-       role="img"
-       aria-label="Annual citation bar chart from 2020 to 2026.
-       Yearly citation counts are approximate.">
-
-    <div class="citation-plot">
-
-      <!-- 2020 -->
-      <div class="citation-bar-group">
-        <div class="citation-bar"
-             style="height:6.67%"
-             tabindex="0">
-          <span class="citation-tooltip">
-            2 citations
-          </span>
-        </div>
-        <span class="citation-year">2020</span>
+      <div class="metric-icon">
+        <i class="fas fa-quote-right"></i>
       </div>
 
-      <!-- 2021 -->
-      <div class="citation-bar-group">
-        <div class="citation-bar"
-             style="height:13.33%"
-             tabindex="0">
-          <span class="citation-tooltip">
-            4 citations
-          </span>
-        </div>
-        <span class="citation-year">2021</span>
-      </div>
+      <span class="metric-number">87</span>
 
-      <!-- 2022 -->
-      <div class="citation-bar-group">
-        <div class="citation-bar"
-             style="height:16.67%"
-             tabindex="0">
-          <span class="citation-tooltip">
-            5 citations
-          </span>
-        </div>
-        <span class="citation-year">2022</span>
-      </div>
+      <span class="metric-label">
+        Total Citations
+      </span>
 
-      <!-- 2023 -->
-      <div class="citation-bar-group">
-        <div class="citation-bar"
-             style="height:53.33%"
-             tabindex="0">
-          <span class="citation-tooltip">
-            16 citations
-          </span>
-        </div>
-        <span class="citation-year">2023</span>
-      </div>
-
-      <!-- 2024 -->
-      <div class="citation-bar-group">
-        <div class="citation-bar"
-             style="height:56.67%"
-             tabindex="0">
-          <span class="citation-tooltip">
-            17 citations
-          </span>
-        </div>
-        <span class="citation-year">2024</span>
-      </div>
-
-      <!-- 2025 -->
-      <div class="citation-bar-group">
-        <div class="citation-bar"
-             style="height:100%"
-             tabindex="0">
-          <span class="citation-tooltip">
-            30 citations
-          </span>
-        </div>
-        <span class="citation-year">2025</span>
-      </div>
-
-      <!-- 2026 -->
-      <div class="citation-bar-group">
-        <div class="citation-bar"
-             style="height:43.33%"
-             tabindex="0">
-          <span class="citation-tooltip">
-            13 citations
-          </span>
-        </div>
-        <span class="citation-year">2026</span>
-      </div>
+      <span class="metric-description">
+        All time
+      </span>
 
     </div>
 
-    <!-- Chart Axis -->
-    <div class="citation-axis">
-      <span>30</span>
-      <span>15</span>
-      <span>0</span>
+    <!-- h-index -->
+    <div class="scholar-metric">
+
+      <div class="metric-icon">
+        <i class="fas fa-chart-line"></i>
+      </div>
+
+      <span class="metric-number">5</span>
+
+      <span class="metric-label">
+        h-index
+      </span>
+
+      <span class="metric-description">
+        Research impact
+      </span>
+
+    </div>
+
+    <!-- i10-index -->
+    <div class="scholar-metric">
+
+      <div class="metric-icon">
+        <i class="fas fa-book"></i>
+      </div>
+
+      <span class="metric-number">3</span>
+
+      <span class="metric-label">
+        i10-index
+      </span>
+
+      <span class="metric-description">
+        Papers with 10+ citations
+      </span>
+
     </div>
 
   </div>
 
-  <p class="citation-footnote">
-    Source: Google Scholar. Metrics reflect the provided
-    citation snapshot. Annual counts are approximate.
+  <!-- =====================================
+       CITATION DISTRIBUTION
+  ====================================== -->
+
+  <div class="scholar-distribution">
+
+    <!-- Circular visualization -->
+    <div class="citation-donut">
+
+      <svg
+        viewBox="0 0 120 120"
+        role="img"
+        aria-label="97.7 percent of citations are from 2021 onward"
+      >
+
+        <circle
+          class="donut-track"
+          cx="60"
+          cy="60"
+          r="42.9"
+        />
+
+        <circle
+          class="donut-progress"
+          cx="60"
+          cy="60"
+          r="42.9"
+        />
+
+      </svg>
+
+      <div class="donut-text">
+
+        <span class="donut-percentage">
+          97.7%
+        </span>
+
+        <span class="donut-caption">
+          Since 2021
+        </span>
+
+      </div>
+
+    </div>
+
+    <!-- Citation breakdown -->
+    <div class="distribution-details">
+
+      <h3>Citation Distribution</h3>
+
+      <p>
+        The majority of lifetime citations
+        have been received since 2021.
+      </p>
+
+      <!-- Recent -->
+      <div class="distribution-row">
+
+        <div class="distribution-meta">
+          <span>Since 2021</span>
+          <strong>85 citations</strong>
+        </div>
+
+        <div class="distribution-track">
+          <div
+            class="distribution-fill"
+            style="width:97.7%">
+          </div>
+        </div>
+
+      </div>
+
+      <!-- Earlier -->
+      <div class="distribution-row">
+
+        <div class="distribution-meta">
+          <span>Before 2021</span>
+          <strong>2 citations</strong>
+        </div>
+
+        <div class="distribution-track">
+          <div
+            class="distribution-fill early"
+            style="width:2.3%; min-width:4px;">
+          </div>
+        </div>
+
+      </div>
+
+    </div>
+
+  </div>
+
+  <!-- =====================================
+       RECENT PERIOD METRICS
+  ====================================== -->
+
+  <div class="scholar-period">
+
+    <div class="period-card">
+
+      <div class="period-card-label">
+        <span>Since 2021</span>
+        <strong>h-index</strong>
+      </div>
+
+      <div class="period-card-value">
+        5
+      </div>
+
+    </div>
+
+    <div class="period-card">
+
+      <div class="period-card-label">
+        <span>Since 2021</span>
+        <strong>i10-index</strong>
+      </div>
+
+      <div class="period-card-value">
+        3
+      </div>
+
+    </div>
+
+  </div>
+
+  <p class="scholar-note">
+    Source: Google Scholar. Citation statistics are
+    based on the provided snapshot and are updated manually.
   </p>
 
 </section>
