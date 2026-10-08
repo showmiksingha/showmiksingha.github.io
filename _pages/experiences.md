@@ -6,45 +6,25 @@ author_profile: false
 classes: wide
 ---
 
-<div class="wrap experience-page">
+<div class="wrap" markdown="1">
 
 <style>
-
-/* =========================================
-   GLOBAL PAGE DESIGN
-========================================= */
-
-.experience-page {
-  --exp-navy: #142b4a;
-  --exp-blue: #2563eb;
-  --exp-text: #152238;
-  --exp-muted: #64748b;
-  --exp-border: #e2e8f0;
-  --exp-surface: #f8fafc;
-}
-
-.experience-page * {
-  box-sizing: border-box;
-}
-
-.experience-page .edu-layout {
+/* ===== Page Layout ===== */
+.edu-layout {
   display: grid;
   grid-template-columns: 260px minmax(0, 1fr);
   gap: 28px;
   align-items: start;
 }
 
-@media(max-width:900px) {
-  .experience-page .edu-layout {
+@media (max-width: 900px) {
+  .edu-layout {
     grid-template-columns: 1fr;
   }
 }
 
-/* =========================================
-   LEFT AUTHOR PROFILE
-========================================= */
-
-.experience-page .author-card {
+/* ===== Author Card ===== */
+.author-card {
   position: sticky;
   top: 90px;
   border: 1px solid #e5e7eb;
@@ -53,629 +33,458 @@ classes: wide
   background: #fff;
 }
 
-@media(max-width:900px) {
-  .experience-page .author-card {
+@media (max-width: 900px) {
+  .author-card {
     position: static;
   }
 }
 
-.experience-page .author-avatar {
+.author-avatar {
   width: 110px;
   height: 110px;
   border-radius: 999px;
   object-fit: cover;
   display: block;
-  margin: 0 auto 14px;
-  border: 3px solid #f1f5f9;
+  margin: 0 auto 10px auto;
 }
 
-.experience-page .author-name {
-  font-size: 1.35rem;
-  font-weight: 800;
+.author-name {
   text-align: center;
-  margin: 0 0 6px;
-  color: #111827;
-}
-
-.experience-page .author-bio {
-  font-size: 0.9rem;
-  color: #64748b;
-  text-align: center;
-  margin-bottom: 18px;
-  line-height: 1.6;
-}
-
-.experience-page .author-links {
-  display: flex;
-  flex-direction: column;
-  gap: 11px;
-}
-
-.experience-page .author-links a {
-  display: flex;
-  align-items: center;
-  gap: 10px;
-  color: #334155;
-  font-size: 0.9rem;
-  text-decoration: none;
-  transition: color 0.2s;
-}
-
-.experience-page .author-links a:hover {
-  color: #2563eb;
-}
-
-.experience-page .author-links i {
-  width: 18px;
-  text-align: center;
-  color: #64748b;
-}
-
-/* =========================================
-   MAIN CONTENT
-========================================= */
-
-.experience-page .exp-content {
-  min-width: 0;
-}
-
-/* =========================================
-   HERO BANNER
-========================================= */
-
-.experience-page .exp-hero {
-  position: relative;
-  overflow: hidden;
-  padding: 36px 32px;
-  border-radius: 19px;
-  background: linear-gradient(
-    125deg,
-    #10233d 0%,
-    #1a4169 65%,
-    #265b94 100%
-  );
-  color: white;
-  margin-bottom: 27px;
-}
-
-.experience-page .exp-hero::before {
-  content: "";
-  position: absolute;
-  width: 250px;
-  height: 250px;
-  border: 1px solid rgba(255,255,255,0.13);
-  border-radius: 50%;
-  right: -75px;
-  top: -125px;
-  pointer-events: none;
-}
-
-.experience-page .exp-hero::after {
-  content: "";
-  position: absolute;
-  width: 180px;
-  height: 180px;
-  border: 1px solid rgba(255,255,255,0.1);
-  border-radius: 50%;
-  right: 25px;
-  bottom: -115px;
-  pointer-events: none;
-}
-
-.experience-page .exp-eyebrow {
-  display: block;
-  font-size: 0.68rem;
   font-weight: 800;
-  letter-spacing: 2px;
-  color: #b7d5ff;
-  margin-bottom: 13px;
-}
-
-.experience-page .exp-hero h1 {
-  color: white !important;
-  font-size: clamp(1.7rem,3vw,2.35rem);
-  font-weight: 800;
-  letter-spacing: -0.8px;
-  margin: 0 0 12px;
-  line-height: 1.2;
-}
-
-.experience-page .exp-hero p {
-  color: #d6e4f4;
-  font-size: 0.93rem;
-  line-height: 1.85;
-  max-width: 620px;
   margin: 0;
 }
 
-.experience-page .hero-tags {
-  display: flex;
-  gap: 9px;
-  flex-wrap: wrap;
-  margin-top: 22px;
-}
-
-.experience-page .hero-tags span {
-  font-size: 0.74rem;
-  color: #e1ecfc;
-  border: 1px solid rgba(255,255,255,0.24);
-  background: rgba(255,255,255,0.08);
-  border-radius: 30px;
-  padding: 7px 12px;
-}
-
-/* =========================================
-   STATISTICS
-========================================= */
-
-.experience-page .exp-stats {
-  display: grid;
-  grid-template-columns: repeat(3,minmax(0,1fr));
-  gap: 12px;
-  margin-bottom: 39px;
-}
-
-.experience-page .stat-card {
-  background: #fff;
-  border: 1px solid var(--exp-border);
-  border-radius: 13px;
-  padding: 19px 12px;
+.author-bio {
   text-align: center;
-  transition: all 0.25s ease;
+  color: #6b7280;
+  margin: 6px 0 12px 0;
+  font-size: 0.95rem;
 }
 
-.experience-page .stat-card:hover {
-  transform: translateY(-3px);
-  border-color: #bfdbfe;
-  box-shadow: 0 9px 24px rgba(15,23,42,0.06);
+.author-links {
+  list-style: none;
+  padding: 0;
+  margin: 0;
 }
 
-.experience-page .stat-number {
-  display: block;
-  font-size: 1.9rem;
-  font-weight: 850;
-  color: var(--exp-navy);
-  line-height: 1.2;
+.author-links li {
+  margin: 8px 0;
 }
 
-.experience-page .stat-label {
-  display: block;
-  font-size: 0.74rem;
-  color: var(--exp-muted);
-  line-height: 1.5;
-  margin-top: 7px;
-}
-
-/* =========================================
-   QUICK NAVIGATION
-========================================= */
-
-.experience-page .exp-navigation {
-  display: flex;
-  flex-wrap: wrap;
-  gap: 9px;
-  margin-bottom: 39px;
-}
-
-.experience-page .exp-navigation a {
-  font-size: 0.78rem;
-  font-weight: 650;
-  border: 1px solid var(--exp-border);
-  border-radius: 30px;
-  padding: 9px 13px;
+.author-links a {
   text-decoration: none;
-  color: #475569;
-  background: white;
-  transition: all 0.2s;
-}
-
-.experience-page .exp-navigation a:hover {
-  background: #eff6ff;
-  border-color: #93c5fd;
-  color: #1d4ed8;
-}
-
-.experience-page .exp-navigation i {
-  margin-right: 5px;
-}
-
-/* =========================================
-   SECTION HEADINGS
-========================================= */
-
-.experience-page .exp-section {
-  margin-bottom: 49px;
-  scroll-margin-top: 110px;
-}
-
-.experience-page .section-heading {
-  display: flex;
+  display: inline-flex;
+  gap: 8px;
   align-items: center;
-  gap: 13px;
-  margin-bottom: 9px;
 }
 
-.experience-page .section-icon {
-  width: 41px;
-  height: 41px;
+/* ===== Main Content ===== */
+.awards-content {
+  min-width: 0;
+  color: #242424;
+}
+
+.awards-content h1 {
+  font-size: 2rem;
+  margin: 0 0 14px;
+  padding-bottom: 12px;
+  border-bottom: 2px solid #e5e7eb;
+}
+
+.awards-intro {
+  font-size: 0.96rem;
+  color: #555;
+  line-height: 1.75;
+  margin-bottom: 25px;
+}
+
+/* ===== Statistics ===== */
+.awards-stats {
+  display: grid;
+  grid-template-columns: repeat(3, minmax(0, 1fr));
+  gap: 12px;
+  margin: 20px 0 32px;
+}
+
+.awards-stat {
+  border: 1px solid #e5e7eb;
+  border-radius: 10px;
+  padding: 15px;
+  text-align: center;
+  background: #fafafa;
+}
+
+.awards-stat strong {
+  display: block;
+  font-size: 1.65rem;
+  font-weight: 800;
+  color: #2563eb;
+}
+
+.awards-stat span {
+  font-size: 0.83rem;
+  color: #555;
+}
+
+/* ===== Section Titles ===== */
+.awards-heading {
+  font-size: 1.35rem;
+  margin: 36px 0 18px;
+  padding-bottom: 8px;
+  border-bottom: 1px solid #e5e7eb;
+}
+
+.awards-heading i {
+  color: #2563eb;
+  margin-right: 9px;
+}
+
+/* ===== Featured Awards ===== */
+.featured-grid {
+  display: grid;
+  grid-template-columns: repeat(2, minmax(0, 1fr));
+  gap: 15px;
+}
+
+.featured-card {
+  position: relative;
+  border: 1px solid #f0d99b;
+  border-radius: 14px;
+  padding: 22px;
+  background: linear-gradient(
+    135deg,
+    #fffbeb 0%,
+    #ffffff 85%
+  );
+  overflow: hidden;
+  transition: transform 0.25s, box-shadow 0.25s;
+}
+
+.featured-card:first-child {
+  grid-column: 1 / -1;
+}
+
+.featured-card::before {
+  content: "";
+  position: absolute;
+  left: 0;
+  top: 0;
+  bottom: 0;
+  width: 4px;
+  background: #d97706;
+}
+
+.featured-card:hover {
+  transform: translateY(-4px);
+  box-shadow: 0 8px 24px rgba(0,0,0,0.07);
+}
+
+.featured-header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  gap: 12px;
+  margin-bottom: 15px;
+}
+
+.featured-icon {
+  width: 48px;
+  height: 48px;
+  border-radius: 12px;
+  background: #fef3c7;
+  color: #b45309;
   display: flex;
   align-items: center;
   justify-content: center;
-  border-radius: 11px;
-  background: #eff6ff;
-  color: #2563eb;
-  flex-shrink: 0;
+  font-size: 1.3rem;
 }
 
-.experience-page .section-heading h2 {
-  font-size: 1.32rem;
-  font-weight: 800;
-  color: var(--exp-text);
-  margin: 0;
+.featured-date {
+  font-size: 0.75rem;
+  font-weight: 700;
+  color: #92400e;
+  background: #fef3c7;
+  padding: 5px 11px;
+  border-radius: 20px;
+  white-space: nowrap;
 }
 
-.experience-page .section-description {
+.featured-title {
+  font-size: 1.05rem;
+  font-weight: 750;
+  color: #1f2937;
+  line-height: 1.5;
+  margin-bottom: 8px;
+}
+
+.featured-org {
+  font-size: 0.87rem;
+  color: #475569;
+  line-height: 1.65;
+}
+
+.featured-description {
   font-size: 0.85rem;
-  color: var(--exp-muted);
   line-height: 1.7;
-  margin: 0 0 28px 54px;
+  color: #64748b;
+  margin-top: 10px;
 }
 
-/* =========================================
-   VERTICAL TIMELINE
-========================================= */
-
-.experience-page .exp-timeline {
+/* ===== Timeline ===== */
+.awards-timeline {
   position: relative;
+  margin-top: 22px;
   padding-left: 28px;
-  margin-left: 10px;
-  border-left: 2px solid #dbeafe;
+  border-left: 2px solid #e2e8f0;
 }
 
-.experience-page .exp-card {
+.timeline-year {
   position: relative;
-  border: 1px solid #e2e8f0;
-  border-radius: 15px;
-  background: #fff;
-  padding: 24px;
-  margin-bottom: 23px;
-  transition:
-    transform 0.25s ease,
-    box-shadow 0.25s ease,
-    border-color 0.25s ease;
+  margin: 30px 0 17px;
 }
 
-.experience-page .exp-card:last-child {
-  margin-bottom: 0;
+.timeline-year:first-child {
+  margin-top: 0;
 }
 
-.experience-page .exp-card:hover {
-  transform: translateY(-3px);
-  border-color: #bfdbfe;
-  box-shadow: 0 12px 32px rgba(20,43,74,0.07);
-}
-
-.experience-page .exp-card::before {
+.timeline-year::before {
   content: "";
   position: absolute;
+  left: -36px;
+  top: 5px;
   width: 12px;
   height: 12px;
   background: #2563eb;
   border: 3px solid #fff;
+  border-radius: 50%;
   box-shadow: 0 0 0 2px #bfdbfe;
-  border-radius: 50%;
-  box-sizing: content-box;
-  left: -39px;
-  top: 28px;
 }
 
-.experience-page .exp-card.featured {
-  border-top: 3px solid #2563eb;
-  background: linear-gradient(
-    155deg,
-    #fff 75%,
-    #f6faff
-  );
-}
-
-.experience-page .exp-card-header {
-  display: flex;
-  align-items: flex-start;
-  justify-content: space-between;
-  flex-wrap: wrap;
-  gap: 10px;
-  margin-bottom: 10px;
-}
-
-.experience-page .exp-role {
-  font-size: 1.09rem;
+.timeline-year h3 {
+  font-size: 1.2rem;
   font-weight: 800;
-  line-height: 1.45;
-  color: #152238;
+  color: #1e293b;
   margin: 0;
 }
 
-.experience-page .exp-date {
-  font-size: 0.75rem;
-  font-weight: 700;
-  color: #1d4ed8;
-  background: #eff6ff;
-  border: 1px solid #dbeafe;
-  padding: 6px 10px;
-  border-radius: 30px;
-  white-space: nowrap;
+/* ===== Award Cards ===== */
+.award-card {
+  display: flex;
+  gap: 15px;
+  padding: 19px;
+  margin-bottom: 14px;
+  border: 1px solid #e5e7eb;
+  border-radius: 12px;
+  background: #fff;
+  transition: transform 0.2s,
+              border-color 0.2s,
+              box-shadow 0.2s;
 }
 
-.experience-page .exp-org {
-  font-size: 0.94rem;
-  font-weight: 700;
-  color: #334155;
-  margin-bottom: 6px;
-  line-height: 1.55;
+.award-card:hover {
+  transform: translateX(4px);
+  border-color: #bfdbfe;
+  box-shadow: 0 5px 18px rgba(0,0,0,0.055);
 }
 
-.experience-page .exp-location {
+.award-icon {
+  flex-shrink: 0;
+  width: 44px;
+  height: 44px;
+  border-radius: 11px;
   display: flex;
   align-items: center;
-  gap: 7px;
-  font-size: 0.8rem;
-  color: #94a3b8;
-  margin-bottom: 20px;
+  justify-content: center;
+  font-size: 1.15rem;
 }
 
-.experience-page .exp-status {
-  display: inline-flex;
-  align-items: center;
-  gap: 7px;
-  background: #ecfdf5;
-  border: 1px solid #bbf7d0;
-  color: #047857;
-  padding: 5px 10px;
-  border-radius: 30px;
-  font-size: 0.71rem;
-  font-weight: 700;
-  margin-bottom: 13px;
+.award-icon.gold {
+  background: #fef3c7;
+  color: #b45309;
 }
 
-.experience-page .status-dot {
-  width: 7px;
-  height: 7px;
-  border-radius: 50%;
-  background: #10b981;
+.award-icon.blue {
+  background: #dbeafe;
+  color: #2563eb;
 }
 
-/* =========================================
-   EXPERIENCE DESCRIPTION
-========================================= */
-
-.experience-page .exp-description ul {
-  list-style: none;
-  margin: 0;
-  padding: 0;
+.award-icon.green {
+  background: #dcfce7;
+  color: #15803d;
 }
 
-.experience-page .exp-description li {
-  position: relative;
-  padding-left: 19px;
-  margin-bottom: 11px;
-  font-size: 0.88rem;
+.award-icon.purple {
+  background: #f3e8ff;
+  color: #9333ea;
+}
+
+.award-details {
+  flex: 1;
+  min-width: 0;
+}
+
+.award-title {
+  font-size: 0.99rem;
+  font-weight: 750;
+  color: #1e293b;
+  line-height: 1.5;
+  margin: 0 0 6px;
+}
+
+.award-organization {
+  font-size: 0.87rem;
   color: #475569;
-  line-height: 1.8;
+  line-height: 1.65;
 }
 
-.experience-page .exp-description li::before {
-  content: "";
-  width: 6px;
-  height: 6px;
-  background: #60a5fa;
-  border-radius: 50%;
-  position: absolute;
-  left: 1px;
-  top: 11px;
+.award-description {
+  color: #64748b;
+  font-size: 0.85rem;
+  line-height: 1.7;
+  margin-top: 8px;
 }
 
-.experience-page .exp-description li:last-child {
-  margin-bottom: 0;
-}
-
-/* =========================================
-   SKILL TAGS
-========================================= */
-
-.experience-page .exp-tags {
+/* ===== Labels ===== */
+.award-labels {
   display: flex;
   flex-wrap: wrap;
   gap: 7px;
-  margin-top: 20px;
-  padding-top: 16px;
-  border-top: 1px solid #f1f5f9;
+  margin-top: 11px;
 }
 
-.experience-page .exp-tag {
-  font-size: 0.71rem;
-  font-weight: 600;
-  color: #475569;
-  background: #f1f5f9;
-  padding: 6px 10px;
-  border-radius: 6px;
-}
-
-/* =========================================
-   MENTORSHIP IMPACT
-========================================= */
-
-.experience-page .impact-grid {
-  display: grid;
-  grid-template-columns: repeat(3,minmax(0,1fr));
-  gap: 10px;
-  margin: 21px 0;
-}
-
-.experience-page .impact-box {
-  padding: 17px 8px;
-  background: #f8fafc;
-  border: 1px solid #e2e8f0;
-  border-radius: 11px;
-  text-align: center;
-}
-
-.experience-page .impact-number {
-  display: block;
-  font-weight: 850;
-  color: #2563eb;
-  font-size: 1.8rem;
-  line-height: 1.2;
-}
-
-.experience-page .impact-label {
-  display: block;
+.award-tag {
+  display: inline-block;
+  padding: 4px 10px;
+  border-radius: 20px;
+  background: #eff6ff;
+  color: #1d4ed8;
   font-size: 0.73rem;
-  color: #64748b;
-  line-height: 1.5;
-  margin-top: 5px;
+  font-weight: 600;
 }
 
-/* =========================================
-   REVIEW SUMMARY
-========================================= */
+.award-tag.gold {
+  background: #fef3c7;
+  color: #92400e;
+}
 
-.experience-page .review-count {
-  display: inline-flex;
-  align-items: center;
-  gap: 7px;
-  font-size: 0.74rem;
-  color: #475569;
-  font-weight: 650;
+.award-tag.green {
+  background: #dcfce7;
+  color: #166534;
+}
+
+.award-tag.purple {
+  background: #f3e8ff;
+  color: #7e22ce;
+}
+
+.award-tag.date {
   background: #f1f5f9;
-  border-radius: 7px;
-  padding: 8px 11px;
-  margin-top: 16px;
+  color: #475569;
 }
 
-/* =========================================
-   RESPONSIVE
-========================================= */
-
-@media(max-width:600px) {
-
-  .experience-page .exp-hero {
-    padding: 27px 21px;
+/* ===== Responsive ===== */
+@media (max-width: 700px) {
+  .featured-grid {
+    grid-template-columns: 1fr;
   }
 
-  .experience-page .exp-stats {
+  .featured-card:first-child {
+    grid-column: auto;
+  }
+}
+
+@media (max-width: 600px) {
+  .awards-content h1 {
+    font-size: 1.65rem;
+  }
+
+  .awards-stats {
     gap: 7px;
   }
 
-  .experience-page .stat-card {
-    padding: 14px 6px;
+  .awards-stat {
+    padding: 12px 5px;
   }
 
-  .experience-page .stat-number {
-    font-size: 1.5rem;
+  .awards-stat strong {
+    font-size: 1.3rem;
   }
 
-  .experience-page .stat-label {
-    font-size: 0.67rem;
+  .awards-stat span {
+    font-size: 0.72rem;
   }
 
-  .experience-page .exp-timeline {
-    padding-left: 21px;
+  .awards-timeline {
+    padding-left: 20px;
   }
 
-  .experience-page .exp-card {
-    padding: 19px;
+  .timeline-year::before {
+    left: -28px;
   }
 
-  .experience-page .exp-card::before {
-    left: -31px;
+  .award-card {
+    padding: 14px;
+    gap: 11px;
   }
 
-  .experience-page .exp-card-header {
-    flex-direction: column;
-    align-items: flex-start;
+  .award-icon {
+    width: 38px;
+    height: 38px;
   }
 
-  .experience-page .section-description {
-    margin-left: 0;
-  }
-
-  .experience-page .impact-grid {
-    gap: 7px;
-  }
-
-  .experience-page .impact-number {
-    font-size: 1.5rem;
-  }
-
-}
-
-/* Accessibility */
-@media(prefers-reduced-motion: reduce) {
-  .experience-page *,
-  .experience-page *::before,
-  .experience-page *::after {
-    transition: none !important;
+  .featured-card {
+    padding: 18px;
   }
 }
-
 </style>
-
 
 <div class="edu-layout">
 
-<!-- =====================================
-     LEFT: AUTHOR PROFILE
-===================================== -->
+  <!-- =====================================
+       LEFT: AUTHOR PROFILE
+  ====================================== -->
 
-<aside class="author-card">
+  <aside class="author-card">
 
-  <img
-    src="/assets/images/profile.JPG"
-    alt="Showmik Singha"
-    class="author-avatar"
-  >
+    <img
+      class="author-avatar"
+      src="/assets/images/profile.JPG"
+      alt="Showmik Singha"
+    >
 
-  <h2 class="author-name">Showmik Singha</h2>
+    <p class="author-name">Showmik Singha</p>
 
-  <p class="author-bio">
-    PhD Candidate<br>
-    University of Missouri
-  </p>
+    <p class="author-bio">
+      PhD Candidate, University of Missouri
+    </p>
 
-  <div class="author-links">
+    <ul class="author-links">
 
-    <a href="mailto:ssqk4@umsystem.edu">
-      <i class="fas fa-envelope"></i>
-      Email
-    </a>
+      <li>
+        <a href="mailto:ssqk4@umsystem.edu">
+          <i class="fas fa-fw fa-envelope"></i>
+          <span>Email</span>
+        </a>
+      </li>
 
-    <a href="https://github.com/showmiksingha"
-       target="_blank" rel="noopener noreferrer">
-      <i class="fab fa-github"></i>
-      GitHub
-    </a>
+      <li>
+        <a href="https://github.com/showmiksingha"
+           target="_blank" rel="noopener">
+          <i class="fab fa-fw fa-github"></i>
+          <span>GitHub</span>
+        </a>
+      </li>
 
-    <a href="https://www.linkedin.com/in/showmiksingha/"
-       target="_blank" rel="noopener noreferrer">
-      <i class="fab fa-linkedin"></i>
-      LinkedIn
-    </a>
+      <li>
+        <a href="https://www.linkedin.com/in/showmiksingha/"
+           target="_blank" rel="noopener">
+          <i class="fab fa-fw fa-linkedin"></i>
+          <span>LinkedIn</span>
+        </a>
+      </li>
 
-    <a href="https://scholar.google.com/"
-       target="_blank" rel="noopener noreferrer">
-      <i class="fas fa-graduation-cap"></i>
-      Google Scholar
-    </a>
-
-    <a href="/files/Showmik_Singha_CV.pdf"
-       target="_blank" rel="noopener noreferrer">
-      <i class="fas fa-file-pdf"></i>
-      Download CV
-    </a>
-
-  </div>
-
-</aside>
+    </ul>
+  </aside>
 
 
 <!-- =====================================
