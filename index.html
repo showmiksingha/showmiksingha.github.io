@@ -1,220 +1,1051 @@
+
 ---
 layout: default
 permalink: /
 title: "Home"
+author_profile: false
+classes: wide
 ---
 
-<!-- =========================
-     HERO (background image + left photo + centered text)
-========================== -->
-<section class="hero hero--split">
-  <div class="hero__overlay">
-    <div class="hero__content">
+<style>
+/* =========================================
+   APPLE STYLE HOMEPAGE
+========================================= */
 
-      <!-- LEFT: Photo -->
-      <div class="hero__photo">
-        <img src="{{ '/assets/images/profile.JPG' | relative_url }}" alt="Showmik Singha">
+.home-wrap {
+  max-width: 1280px;
+  margin: 0 auto;
+  padding: 30px 18px 65px;
+  font-family: -apple-system, BlinkMacSystemFont,
+    "Segoe UI", sans-serif;
+  color: #1d1d1f;
+}
+
+.home-wrap * {
+  box-sizing: border-box;
+}
+
+.home-wrap a {
+  text-decoration: none !important;
+}
+
+.home-wrap a:focus-visible {
+  outline: 3px solid #0071e3;
+  outline-offset: 4px;
+}
+
+.home-label {
+  display: inline-block;
+  font-size: 11px;
+  font-weight: 750;
+  letter-spacing: 1.5px;
+  text-transform: uppercase;
+  color: #86868b;
+  margin-bottom: 14px;
+}
+
+/* =========================================
+   BENTO GRID
+========================================= */
+
+.home-bento {
+  display: grid;
+  grid-template-columns: repeat(12, minmax(0, 1fr));
+  gap: 18px;
+}
+
+.home-card {
+  background: #fff;
+  border: 1px solid #e9e9ed;
+  border-radius: 24px;
+  padding: 30px;
+  position: relative;
+  min-width: 0;
+  overflow: hidden;
+  transition:
+    transform .3s ease,
+    box-shadow .3s ease,
+    border-color .3s ease;
+}
+
+.home-card:hover {
+  transform: translateY(-5px);
+  box-shadow: 0 18px 40px rgba(0,0,0,.075);
+  border-color: #d8e5fa;
+}
+
+.home-card h1,
+.home-card h2,
+.home-card h3 {
+  margin: 0 0 14px;
+  padding: 0;
+  border: none;
+  line-height: 1.2;
+  letter-spacing: -.8px;
+}
+
+.home-card p {
+  margin: 0;
+  font-size: 15px;
+  line-height: 1.75;
+  color: #6e6e73;
+}
+
+.home-card-link {
+  display: inline-flex;
+  align-items: center;
+  gap: 8px;
+  margin-top: 20px;
+  font-size: 14px;
+  font-weight: 650;
+  color: #0071e3 !important;
+}
+
+.home-card-link:hover {
+  color: #005bb5 !important;
+}
+
+/* =========================================
+   HERO INTRODUCTION
+========================================= */
+
+.home-hero {
+  grid-column: span 8;
+  min-height: 420px;
+  background: linear-gradient(
+    135deg,
+    #ffffff 0%,
+    #f1f6ff 100%
+  );
+  padding: 52px;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+}
+
+.home-hero h1 {
+  font-size: clamp(43px, 5.3vw, 74px);
+  font-weight: 800;
+  letter-spacing: -3px;
+  color: #1d1d1f;
+  margin-bottom: 22px;
+}
+
+.home-hero h1 span {
+  color: #0071e3;
+}
+
+.home-hero p {
+  max-width: 620px;
+  font-size: clamp(18px, 2vw, 22px);
+  line-height: 1.55;
+  color: #48484a;
+  font-weight: 450;
+}
+
+.home-buttons {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 12px;
+  margin-top: 30px;
+}
+
+.home-button {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  padding: 12px 22px;
+  border-radius: 50px;
+  background: #0071e3;
+  color: #fff !important;
+  font-size: 14px;
+  font-weight: 650;
+  transition: .25s ease;
+}
+
+.home-button:hover {
+  background: #005bb5;
+  transform: translateY(-2px);
+}
+
+.home-button.secondary {
+  background: #fff;
+  border: 1px solid #cdddf4;
+  color: #0071e3 !important;
+}
+
+.home-button.secondary:hover {
+  background: #eaf3ff;
+}
+
+/* =========================================
+   PROFILE PHOTO CARD
+========================================= */
+
+.home-profile {
+  grid-column: span 4;
+  padding: 0;
+  min-height: 420px;
+  background: #f3f4f6;
+  display: flex;
+  flex-direction: column;
+}
+
+.home-profile-photo {
+  height: 335px;
+  overflow: hidden;
+}
+
+.home-profile-photo img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  object-position: center 25%;
+  display: block;
+  transition: transform .5s ease;
+}
+
+.home-profile:hover img {
+  transform: scale(1.045);
+}
+
+.home-profile-info {
+  padding: 22px 26px;
+  background: #fff;
+  flex: 1;
+}
+
+.home-profile-info h3 {
+  font-size: 20px;
+  margin-bottom: 5px;
+}
+
+.home-profile-info p {
+  font-size: 13px;
+  color: #6e6e73;
+}
+
+/* =========================================
+   SMALL FEATURE CARDS
+========================================= */
+
+.home-feature {
+  grid-column: span 4;
+  min-height: 255px;
+}
+
+.home-icon {
+  width: 55px;
+  height: 55px;
+  border-radius: 16px;
+  background: #eef5ff;
+  color: #0071e3;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-size: 23px;
+  margin-bottom: 25px;
+}
+
+.home-feature h3 {
+  font-size: 24px;
+  font-weight: 750;
+}
+
+.home-feature p {
+  font-size: 14px;
+}
+
+/* =========================================
+   RESEARCH CARD
+========================================= */
+
+.home-research {
+  grid-column: span 7;
+  min-height: 320px;
+  background: linear-gradient(
+    135deg,
+    #152238 0%,
+    #203657 100%
+  );
+  color: #fff;
+}
+
+.home-research .home-label {
+  color: #aac7ed;
+}
+
+.home-research h2 {
+  font-size: clamp(26px, 3vw, 36px);
+  color: #fff;
+  max-width: 600px;
+}
+
+.home-research p {
+  color: #d2deec;
+  max-width: 610px;
+}
+
+.home-research .home-card-link {
+  color: #91c3ff !important;
+}
+
+.home-tags {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 9px;
+  margin-top: 23px;
+}
+
+.home-tags span {
+  padding: 8px 13px;
+  border-radius: 30px;
+  background: rgba(255,255,255,.1);
+  color: #e8f2ff;
+  font-size: 12px;
+  font-weight: 550;
+  transition: .25s ease;
+}
+
+.home-tags span:hover {
+  background: rgba(255,255,255,.22);
+  transform: translateY(-2px);
+}
+
+/* =========================================
+   PUBLICATIONS
+========================================= */
+
+.home-publications {
+  grid-column: span 5;
+  min-height: 320px;
+  background: #f2f6fc;
+}
+
+.home-publications h2 {
+  font-size: 32px;
+  font-weight: 750;
+}
+
+.home-publications .home-icon {
+  background: #fff;
+}
+
+/* =========================================
+   AWARDS / LEADERSHIP
+========================================= */
+
+.home-highlight {
+  grid-column: span 6;
+  min-height: 265px;
+}
+
+.home-highlight h3 {
+  font-size: 26px;
+  font-weight: 750;
+}
+
+.home-highlight .home-icon {
+  margin-bottom: 18px;
+}
+
+/* =========================================
+   CONTACT
+========================================= */
+
+.home-contact {
+  grid-column: span 12;
+  padding: 48px 30px;
+  text-align: center;
+  background: linear-gradient(
+    125deg,
+    #ecf5ff 0%,
+    #ffffff 100%
+  );
+}
+
+.home-contact h2 {
+  font-size: clamp(30px, 3.4vw, 42px);
+  font-weight: 750;
+}
+
+.home-contact p {
+  max-width: 680px;
+  margin: 0 auto;
+}
+
+.home-contact .home-button {
+  margin-top: 25px;
+}
+
+/* =========================================
+   NEWS & UPDATES HEADER
+========================================= */
+
+.home-section-title {
+  text-align: center;
+  margin: 80px 0 35px;
+}
+
+.home-section-title h2 {
+  font-size: clamp(32px, 4vw, 46px);
+  font-weight: 780;
+  letter-spacing: -1.5px;
+  margin: 8px 0 12px;
+  border: 0;
+}
+
+.home-section-title p {
+  color: #6e6e73;
+  font-size: 16px;
+  max-width: 650px;
+  margin: 0 auto;
+  line-height: 1.7;
+}
+
+/* =========================================
+   LATEST NEWS
+========================================= */
+
+.home-news-grid {
+  display: grid;
+  grid-template-columns: repeat(3, minmax(0, 1fr));
+  gap: 18px;
+}
+
+.home-news-card {
+  background: #fff;
+  border: 1px solid #e9e9ed;
+  border-radius: 22px;
+  padding: 27px;
+  min-width: 0;
+  transition: .3s ease;
+}
+
+.home-news-card:hover {
+  transform: translateY(-4px);
+  box-shadow: 0 14px 35px rgba(0,0,0,.07);
+  border-color: #d8e5fa;
+}
+
+.home-news-date {
+  display: inline-block;
+  padding: 7px 12px;
+  background: #edf5ff;
+  color: #0071e3;
+  border-radius: 30px;
+  font-size: 12px;
+  font-weight: 700;
+  margin-bottom: 18px;
+}
+
+.home-news-card p {
+  margin: 0;
+  color: #333;
+  font-size: 15px;
+  line-height: 1.7;
+}
+
+.home-news-card a,
+.home-timeline-content a {
+  display: inline-block;
+  font-size: 13px;
+  font-weight: 650;
+  color: #0071e3 !important;
+  margin-top: 13px;
+}
+
+/* =========================================
+   UPDATES TIMELINE
+========================================= */
+
+.home-updates {
+  margin-top: 60px;
+}
+
+.home-updates-heading {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  gap: 15px;
+  margin-bottom: 27px;
+}
+
+.home-updates-heading h2 {
+  font-size: 30px;
+  font-weight: 750;
+  margin: 0;
+  border: 0;
+}
+
+.home-timeline-year {
+  display: flex;
+  align-items: center;
+  gap: 14px;
+  margin: 34px 0 22px;
+}
+
+.home-timeline-year span {
+  font-size: 24px;
+  font-weight: 800;
+  color: #1d1d1f;
+}
+
+.home-timeline-year::after {
+  content: "";
+  height: 1px;
+  flex: 1;
+  background: #e5e7eb;
+}
+
+.home-timeline {
+  position: relative;
+  margin-left: 10px;
+  padding-left: 29px;
+  border-left: 2px solid #dfe8f6;
+}
+
+.home-timeline-item {
+  position: relative;
+  margin-bottom: 16px;
+}
+
+.home-timeline-item::before {
+  content: "";
+  position: absolute;
+  width: 11px;
+  height: 11px;
+  border-radius: 50%;
+  background: #0071e3;
+  left: -35.5px;
+  top: 26px;
+  box-shadow: 0 0 0 5px #eaf3ff;
+}
+
+.home-timeline-content {
+  background: #fff;
+  border: 1px solid #e9e9ed;
+  border-radius: 18px;
+  padding: 22px 25px;
+  transition: .25s ease;
+}
+
+.home-timeline-content:hover {
+  background: #f8fbff;
+  border-color: #d6e5fa;
+}
+
+.home-timeline-date {
+  display: block;
+  font-size: 12px;
+  font-weight: 750;
+  color: #0071e3;
+  margin-bottom: 9px;
+}
+
+.home-timeline-content p {
+  margin: 0;
+  font-size: 14px;
+  color: #444;
+  line-height: 1.75;
+}
+
+.home-empty {
+  grid-column: 1 / -1;
+  padding: 20px;
+  border: 1px solid #e9e9ed;
+  border-radius: 18px;
+  color: #6e6e73;
+}
+
+/* =========================================
+   RESPONSIVE
+========================================= */
+
+@media (max-width: 1000px) {
+  .home-hero,
+  .home-profile {
+    grid-column: span 6;
+  }
+
+  .home-feature {
+    grid-column: span 4;
+  }
+
+  .home-research,
+  .home-publications,
+  .home-highlight {
+    grid-column: span 6;
+  }
+}
+
+@media (max-width: 750px) {
+  .home-wrap {
+    padding: 15px 12px 45px;
+  }
+
+  .home-bento {
+    gap: 13px;
+  }
+
+  .home-card {
+    padding: 25px;
+  }
+
+  .home-hero,
+  .home-profile,
+  .home-feature,
+  .home-research,
+  .home-publications,
+  .home-highlight,
+  .home-contact {
+    grid-column: 1 / -1;
+    min-height: auto;
+  }
+
+  .home-hero {
+    padding: 40px 27px;
+  }
+
+  .home-hero h1 {
+    letter-spacing: -2px;
+  }
+
+  .home-profile {
+    padding: 0;
+  }
+
+  .home-profile-photo {
+    height: 350px;
+  }
+
+  .home-news-grid {
+    grid-template-columns: 1fr;
+  }
+
+  .home-section-title {
+    margin-top: 60px;
+  }
+}
+
+@media (prefers-reduced-motion: reduce) {
+  .home-wrap *,
+  .home-wrap *::before,
+  .home-wrap *::after {
+    transition: none !important;
+    animation: none !important;
+  }
+}
+</style>
+
+<!-- =========================================
+     MAIN HOMEPAGE
+========================================= -->
+
+<div class="home-wrap">
+
+  <div class="home-bento">
+
+    <!-- HERO -->
+    <section class="home-card home-hero">
+
+      <span class="home-label">
+        Welcome to my portfolio
+      </span>
+
+      <h1>
+        Hi, I'm <span>Showmik.</span>
+      </h1>
+
+      <p>
+        Bridging Semiconductor Device Physics,
+        Computational Modeling, and Machine Learning.
+      </p>
+
+      <div class="home-buttons">
+
+        <a href="{{ '/projects/' | relative_url }}"
+           class="home-button">
+          Explore My Research &rarr;
+        </a>
+
+        <a href="{{ '/publications/' | relative_url }}"
+           class="home-button secondary">
+          Publications
+        </a>
+
       </div>
 
-      <!-- RIGHT: Centered Text -->
-      <div class="hero__text">
-        <h1 class="hero__title">HI, I'M <span class="hero__name">Showmik</span></h1>
-        <div class="hero__rule"></div>
+    </section>
 
-        <h2 class="hero__subtitle">
-          Bridging Semiconductor Device Physics, Computational Modeling, and Machine Learning.
-        </h2>
+    <!-- PROFILE PHOTO -->
+    <section class="home-card home-profile">
+
+      <div class="home-profile-photo">
+        <img
+          src="{{ '/assets/images/profile.JPG' | relative_url }}"
+          alt="Showmik Singha"
+        >
       </div>
 
+      <div class="home-profile-info">
+        <h3>Showmik Singha</h3>
+        <p>
+          Ph.D. Candidate
+          <span aria-hidden="true">|</span>
+          University of Missouri
+        </p>
+      </div>
+
+    </section>
+
+    <!-- EDUCATION -->
+    <section class="home-card home-feature">
+
+      <div class="home-icon">
+        <i class="fas fa-graduation-cap"
+           aria-hidden="true"></i>
+      </div>
+
+      <h3>Education</h3>
+
+      <p>
+        Ph.D. Candidate in Electrical and Computer
+        Engineering at the University of Missouri,
+        with a background in electrical engineering.
+      </p>
+
+      <a href="{{ '/education/' | relative_url }}"
+         class="home-card-link">
+        Academic Journey &rarr;
+      </a>
+
+    </section>
+
+    <!-- SKILLS -->
+    <section class="home-card home-feature">
+
+      <div class="home-icon">
+        <i class="fas fa-microchip"
+           aria-hidden="true"></i>
+      </div>
+
+      <h3>Technical Skills</h3>
+
+      <p>
+        Semiconductor device modeling,
+        TCAD simulation, electrical characterization,
+        Python, MATLAB, and machine learning.
+      </p>
+
+      <a href="{{ '/skills/' | relative_url }}"
+         class="home-card-link">
+        Explore Skills &rarr;
+      </a>
+
+    </section>
+
+    <!-- EXPERIENCE -->
+    <section class="home-card home-feature">
+
+      <div class="home-icon">
+        <i class="fas fa-chalkboard-teacher"
+           aria-hidden="true"></i>
+      </div>
+
+      <h3>Experience</h3>
+
+      <p>
+        Research and teaching experience spanning
+        semiconductor device simulation,
+        engineering education, and mentorship.
+      </p>
+
+      <a href="{{ '/experience/' | relative_url }}"
+         class="home-card-link">
+        View Experience &rarr;
+      </a>
+
+    </section>
+
+    <!-- RESEARCH -->
+    <section class="home-card home-research">
+
+      <span class="home-label">
+        Research Focus
+      </span>
+
+      <h2>
+        Engineering Reliable Semiconductor Devices
+        for Extreme Environments.
+      </h2>
+
+      <p>
+        My research focuses on wide- and
+        ultrawide-bandgap semiconductor devices,
+        radiation-induced transient effects,
+        physics-based simulation, and
+        machine learning-enabled device optimization.
+      </p>
+
+      <div class="home-tags">
+        <span>GaN HEMTs</span>
+        <span>β-Ga₂O₃ MOSFETs</span>
+        <span>Radiation Effects</span>
+        <span>TCAD</span>
+        <span>Machine Learning</span>
+      </div>
+
+      <a href="{{ '/projects/' | relative_url }}"
+         class="home-card-link">
+        Explore Research Projects &rarr;
+      </a>
+
+    </section>
+
+    <!-- PUBLICATIONS -->
+    <section class="home-card home-publications">
+
+      <div class="home-icon">
+        <i class="fas fa-book-open"
+           aria-hidden="true"></i>
+      </div>
+
+      <span class="home-label">
+        Scholarly Contributions
+      </span>
+
+      <h2>Research Publications.</h2>
+
+      <p>
+        Journal articles, conference papers,
+        and technical presentations covering
+        semiconductor devices, radiation effects,
+        computational modeling, and
+        machine learning.
+      </p>
+
+      <a href="{{ '/publications/' | relative_url }}"
+         class="home-card-link">
+        View Publications &rarr;
+      </a>
+
+    </section>
+
+    <!-- AWARDS -->
+    <section class="home-card home-highlight">
+
+      <div class="home-icon">
+        <i class="fas fa-award"
+           aria-hidden="true"></i>
+      </div>
+
+      <span class="home-label">
+        Recognition & Excellence
+      </span>
+
+      <h3>Awards & Honors</h3>
+
+      <p>
+        Recognized for academic excellence,
+        research achievements, and teaching,
+        including the Outstanding Ph.D. Student
+        Award and Dean's Summer Retention Fellowship
+        at the University of Missouri.
+      </p>
+
+      <a href="{{ '/awards/' | relative_url }}"
+         class="home-card-link">
+        View All Awards &rarr;
+      </a>
+
+    </section>
+
+    <!-- LEADERSHIP -->
+    <section class="home-card home-highlight">
+
+      <div class="home-icon">
+        <i class="fas fa-users"
+           aria-hidden="true"></i>
+      </div>
+
+      <span class="home-label">
+        Leadership & Community
+      </span>
+
+      <h3>Beyond Academics</h3>
+
+      <p>
+        President of the EECS Graduate Association
+        of Students for 2026–2027, with previous
+        experience in student leadership,
+        IEEE activities, outreach, and
+        extracurricular engagement.
+      </p>
+
+      <a href="{{ '/eca/' | relative_url }}"
+         class="home-card-link">
+        Explore Activities &rarr;
+      </a>
+
+    </section>
+
+    <!-- CONTACT -->
+    <section class="home-card home-contact">
+
+      <span class="home-label">
+        Connect & Collaborate
+      </span>
+
+      <h2>Let's Build Something Meaningful.</h2>
+
+      <p>
+        I welcome opportunities for research
+        collaboration, academic discussions,
+        industry partnerships, and innovative
+        engineering projects.
+      </p>
+
+      <a href="mailto:ssqk4@umsystem.edu"
+         class="home-button">
+        Get in Touch &rarr;
+      </a>
+
+    </section>
+
+  </div>
+
+  <!-- =====================================
+       NEWS & UPDATES
+       DATA SOURCE: _data/updates.yml
+  ====================================== -->
+
+  <section class="home-news-section"
+           id="news-updates">
+
+    <div class="home-section-title">
+
+      <span class="home-label">
+        What's New
+      </span>
+
+      <h2>News & Updates</h2>
+
+      <p>
+        Recent milestones, research achievements,
+        publications, awards, and professional
+        activities.
+      </p>
+
     </div>
-  </div>
-</section>
 
-<!-- =========================
-     HELLO SECTION
-========================== -->
-<section class="section section--white">
-  <div class="wrap center-col">
+    <!-- ===================================
+         LATEST NEWS CARDS
+    ==================================== -->
 
-    <h2 class="section__heading">HELLO,</h2>
+    <div class="home-news-grid">
 
-    <p>
-      I am Showmik, a PhD candidate in Electrical and Computer
-      Engineering at the University of Missouri–Columbia,
-      specializing in
-      <strong>wide-bandgap and ultra-wide-bandgap semiconductor devices</strong>,
-      power electronics, and device reliability.
-      My research focuses on developing and analyzing next-generation
-      semiconductor devices for high-efficiency power conversion
-      and operation in extreme environments, including radiation
-      and elevated temperature.
-    </p>
+      {% if site.data.updates and site.data.updates.years %}
 
-    <p>
-      My technical focus includes semiconductor device physics,
-      TCAD-based device modeling, electrical characterization,
-      and reliability analysis of
-      <strong>GaN HEMTs and β-Ga<sub>2</sub>O<sub>3</sub> MOSFETs</strong>.
-      I investigate device behavior under heavy-ion radiation,
-      temperature variation, and different operating conditions
-      to better understand transient response, charge-collection
-      mechanisms, and device performance.
-    </p>
+        {% assign latest_year = site.data.updates.years | first %}
 
-    <p>
-      Beyond conventional device simulation, I integrate
-      <strong>machine learning with semiconductor device modeling</strong>
-      to accelerate parameter extraction, device optimization,
-      and inverse design.
-      My work includes developing predictive models to extract
-      physical device parameters directly from electrical
-      characteristics and reduce the time required for device
-      design and optimization.
-    </p>
+        {% for item in latest_year.items limit:3 %}
 
-    <p>
-      My research experience also extends to semiconductor
-      fabrication, device characterization, compact-model extraction,
-      and interdisciplinary experimental work.
-      I have contributed to projects involving
-      AlN/β-Ga<sub>2</sub>O<sub>3</sub> heterostructure devices
-      and nanostructured biosensor fabrication using
-      two-photon polymerization and thermal processing.
-      In addition to research, I have several years of
-      university-level teaching experience and enjoy mentoring
-      students in semiconductor devices, electronics,
-      circuit analysis, and engineering problem solving.
-    </p>
+          <article class="home-news-card">
 
-  </div>
-</section>
+            <span class="home-news-date">
+              {{ item.date }}
+            </span>
 
-<!-- =========================
-     RESEARCH INTERESTS
-========================== -->
-<section class="section section--soft">
-  <div class="wrap center">
+            <p>
+              {{ item.text }}
+            </p>
 
-    <h2 class="big-title">
-      RESEARCH INTERESTS
-    </h2>
+            {% if item.link %}
+              <a href="{{ item.link }}"
+                 target="_blank"
+                 rel="noopener noreferrer">
+                Read More &rarr;
+              </a>
+            {% endif %}
 
-    <div class="keywords">
-      {% for item in site.data.interests.items %}
-        <span class="kw">{{ item }}</span>
-      {% endfor %}
+          </article>
+
+        {% endfor %}
+
+      {% else %}
+
+        <div class="home-empty">
+          News will appear here from
+          _data/updates.yml.
+        </div>
+
+      {% endif %}
+
     </div>
 
-  </div>
-</section>
+    <!-- ===================================
+         FULL UPDATES TIMELINE
+    ==================================== -->
 
-<!-- =========================
-     NEWS AND UPDATES
-========================== -->
-<section class="section section--white">
-  <div class="wrap">
+    <div class="home-updates">
 
-    <h2 class="big-title">
-      News and Updates
-    </h2>
+      <div class="home-updates-heading">
+        <h2>All Updates</h2>
+      </div>
 
-    <div class="timeline-scroll">
-      <div class="timeline">
+      {% if site.data.updates and site.data.updates.years %}
 
-        {% for year in site.data.updates.years %}
+        {% for year_group in site.data.updates.years %}
 
-          <div class="timeline__year">
+          <div class="home-timeline-year">
+            <span>{{ year_group.year }}</span>
+          </div>
 
-            <!-- YEAR LABEL -->
-            <div class="timeline__year-label">
-              {{ year.year }}
-            </div>
+          <div class="home-timeline">
 
-            <!-- YEAR ITEMS -->
-            <div class="timeline__items">
+            {% for item in year_group.items %}
 
-              {% for u in year.items %}
+              <article class="home-timeline-item">
 
-                <div class="timeline__item">
+                <div class="home-timeline-content">
 
-                  <div class="timeline__date">
-                    {{ u.date }}
-                  </div>
+                  <span class="home-timeline-date">
+                    {{ item.date }}
+                  </span>
 
-                  <div class="timeline__text">
+                  <p>
+                    {{ item.text }}
+                  </p>
 
-                    {{ u.text }}
-
-                    {% if u.link %}
-                      <a href="{{ u.link }}"
-                         target="_blank"
-                         rel="noopener noreferrer">
-                        Link
-                      </a>
-                    {% endif %}
-
-                  </div>
+                  {% if item.link %}
+                    <a href="{{ item.link }}"
+                       target="_blank"
+                       rel="noopener noreferrer">
+                      Learn More &rarr;
+                    </a>
+                  {% endif %}
 
                 </div>
 
-              {% endfor %}
+              </article>
 
-            </div>
+            {% endfor %}
 
           </div>
 
         {% endfor %}
 
-      </div>
-    </div>
+      {% else %}
 
-  </div>
-</section>
+        <p>
+          No updates available yet.
+        </p>
 
-<!-- =========================
-     GET IN TOUCH
-========================== -->
-<section class="section section--soft">
-  <div class="wrap center">
-
-    <h2 class="big-title underline">
-      GET IN TOUCH
-    </h2>
-
-    <div class="social-row">
-
-      <!-- EMAIL -->
-      <a class="social"
-         href="mailto:ssqk4@umsystem.edu"
-         aria-label="Email Showmik Singha">
-
-        <i class="fas fa-envelope" aria-hidden="true"></i>
-
-      </a>
-
-      <!-- GITHUB -->
-      <a class="social"
-         href="https://github.com/showmiksingha"
-         target="_blank"
-         rel="noopener noreferrer"
-         aria-label="GitHub Profile">
-
-        <i class="fab fa-github" aria-hidden="true"></i>
-
-      </a>
-
-      <!-- LINKEDIN -->
-      <a class="social"
-         href="https://www.linkedin.com/in/showmik-singha-293967147/"
-         target="_blank"
-         rel="noopener noreferrer"
-         aria-label="LinkedIn Profile">
-
-        <i class="fab fa-linkedin-in" aria-hidden="true"></i>
-
-      </a>
+      {% endif %}
 
     </div>
 
-  </div>
-</section>
+  </section>
+
+</div>
