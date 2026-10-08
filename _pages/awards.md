@@ -78,7 +78,7 @@ classes: wide
   align-items: center;
 }
 
-/* ===== Awards Content ===== */
+/* ===== Main Content ===== */
 .awards-content {
   min-width: 0;
   color: #242424;
@@ -117,6 +117,7 @@ classes: wide
 .awards-stat strong {
   display: block;
   font-size: 1.65rem;
+  font-weight: 800;
   color: #2563eb;
 }
 
@@ -125,12 +126,17 @@ classes: wide
   color: #555;
 }
 
-/* ===== Section Headings ===== */
-.awards-content h2.awards-heading {
+/* ===== Section Titles ===== */
+.awards-heading {
   font-size: 1.35rem;
   margin: 36px 0 18px;
   padding-bottom: 8px;
   border-bottom: 1px solid #e5e7eb;
+}
+
+.awards-heading i {
+  color: #2563eb;
+  margin-right: 9px;
 }
 
 /* ===== Featured Awards ===== */
@@ -142,9 +148,9 @@ classes: wide
 
 .featured-card {
   position: relative;
-  padding: 22px;
   border: 1px solid #f0d99b;
   border-radius: 14px;
+  padding: 22px;
   background: linear-gradient(
     135deg,
     #fffbeb 0%,
@@ -154,9 +160,8 @@ classes: wide
   transition: transform 0.25s, box-shadow 0.25s;
 }
 
-.featured-card:hover {
-  transform: translateY(-4px);
-  box-shadow: 0 8px 24px rgba(0,0,0,0.07);
+.featured-card:first-child {
+  grid-column: 1 / -1;
 }
 
 .featured-card::before {
@@ -169,14 +174,16 @@ classes: wide
   background: #d97706;
 }
 
-.featured-card:first-child {
-  grid-column: 1 / -1;
+.featured-card:hover {
+  transform: translateY(-4px);
+  box-shadow: 0 8px 24px rgba(0,0,0,0.07);
 }
 
 .featured-header {
   display: flex;
   justify-content: space-between;
   align-items: center;
+  gap: 12px;
   margin-bottom: 15px;
 }
 
@@ -197,12 +204,13 @@ classes: wide
   font-weight: 700;
   color: #92400e;
   background: #fef3c7;
-  border-radius: 20px;
   padding: 5px 11px;
+  border-radius: 20px;
+  white-space: nowrap;
 }
 
 .featured-title {
-  font-size: 1.04rem;
+  font-size: 1.05rem;
   font-weight: 750;
   color: #1f2937;
   line-height: 1.5;
@@ -211,15 +219,15 @@ classes: wide
 
 .featured-org {
   font-size: 0.87rem;
-  line-height: 1.65;
   color: #475569;
+  line-height: 1.65;
 }
 
 .featured-description {
   font-size: 0.85rem;
   line-height: 1.7;
   color: #64748b;
-  margin-top: 9px;
+  margin-top: 10px;
 }
 
 /* ===== Timeline ===== */
@@ -253,10 +261,10 @@ classes: wide
 }
 
 .timeline-year h3 {
-  margin: 0;
   font-size: 1.2rem;
   font-weight: 800;
   color: #1e293b;
+  margin: 0;
 }
 
 /* ===== Award Cards ===== */
@@ -268,7 +276,8 @@ classes: wide
   border: 1px solid #e5e7eb;
   border-radius: 12px;
   background: #fff;
-  transition: transform 0.2s, border-color 0.2s,
+  transition: transform 0.2s,
+              border-color 0.2s,
               box-shadow 0.2s;
 }
 
@@ -284,8 +293,8 @@ classes: wide
   height: 44px;
   border-radius: 11px;
   display: flex;
-  justify-content: center;
   align-items: center;
+  justify-content: center;
   font-size: 1.15rem;
 }
 
@@ -335,7 +344,7 @@ classes: wide
   margin-top: 8px;
 }
 
-/* ===== Award Labels ===== */
+/* ===== Labels ===== */
 .award-labels {
   display: flex;
   flex-wrap: wrap;
@@ -485,14 +494,10 @@ classes: wide
 
     <h1>Awards & Honors</h1>
 
-    <p class="awards-intro">
-      Recognition of academic excellence, research contributions,
-      teaching, undergraduate mentorship, and scholarly achievements
-      throughout my academic and professional journey.
-    </p>
+    
+  
 
-    <!-- ===== AWARD STATISTICS ===== -->
-
+    <!-- ===== STATISTICS ===== -->
     <div class="awards-stats">
 
       <div class="awards-stat">
@@ -523,18 +528,18 @@ classes: wide
 
     <div class="featured-grid">
 
-      <!-- Featured Award 1 -->
+      <!-- Featured 1 -->
       <div class="featured-card">
 
         <div class="featured-header">
           <div class="featured-icon">
             <i class="fas fa-trophy"></i>
           </div>
-          <span class="featured-date">Sep 2026</span>
+          <span class="featured-date">April 2026</span>
         </div>
 
         <div class="featured-title">
-          College of Engineering Outstanding Ph.D. Student Award
+          Outstanding Ph.D. Student Award
         </div>
 
         <div class="featured-org">
@@ -543,13 +548,13 @@ classes: wide
         </div>
 
         <div class="featured-description">
-          Recognized for outstanding academic achievements
-          and doctoral research contributions.
+          Recognized for academic excellence and
+          contributions to doctoral research.
         </div>
 
       </div>
 
-      <!-- Featured Award 2 -->
+      <!-- Featured 2 -->
       <div class="featured-card">
 
         <div class="featured-header">
@@ -569,13 +574,13 @@ classes: wide
         </div>
 
         <div class="featured-description">
-          Recognition for achievements in doctoral studies,
-          research, and undergraduate teaching.
+          Recognition for achievements in doctoral
+          studies and undergraduate teaching.
         </div>
 
       </div>
 
-      <!-- Featured Award 3 -->
+      <!-- Featured 3 -->
       <div class="featured-card">
 
         <div class="featured-header">
@@ -586,17 +591,17 @@ classes: wide
         </div>
 
         <div class="featured-title">
-          Dean's Graduate Summer Retention Fellowship
+          Dean's Summer Retention Fellowship
         </div>
 
         <div class="featured-org">
-          Dean's Graduate Fellowship Program<br>
-          College of Engineering, University of Missouri
+          College of Engineering<br>
+          University of Missouri
         </div>
 
         <div class="featured-description">
-          Fellowship supporting continued doctoral studies
-          and graduate research during Summer 2026.
+          Fellowship supporting continued doctoral
+          research during Summer 2026.
         </div>
 
       </div>
@@ -604,7 +609,7 @@ classes: wide
     </div>
 
     <!-- =====================================
-         COMPLETE AWARDS TIMELINE
+         RECOGNITION TIMELINE
     ====================================== -->
 
     <h2 class="awards-heading">
@@ -615,34 +620,38 @@ classes: wide
     <div class="awards-timeline">
 
       <!-- ============== 2026 ============== -->
-
       <div class="timeline-year">
         <h3>2026</h3>
       </div>
 
-      <!-- Outstanding PhD Student -->
+      <!-- May 2026: Dean's Fellowship -->
       <div class="award-card">
-        <div class="award-icon gold">
-          <i class="fas fa-trophy"></i>
+        <div class="award-icon green">
+          <i class="fas fa-graduation-cap"></i>
         </div>
 
         <div class="award-details">
           <div class="award-title">
-            College of Engineering Outstanding Ph.D. Student Award
+            Dean's Summer Retention Fellowship
           </div>
 
           <div class="award-organization">
             College of Engineering, University of Missouri
           </div>
 
+          <div class="award-description">
+            Received fellowship support for continued
+            doctoral research during Summer 2026.
+          </div>
+
           <div class="award-labels">
-            <span class="award-tag gold">Academic Excellence</span>
-            <span class="award-tag date">September 2026</span>
+            <span class="award-tag green">Graduate Fellowship</span>
+            <span class="award-tag date">May 2026</span>
           </div>
         </div>
       </div>
 
-      <!-- EECS Outstanding Student and TA -->
+      <!-- May 2026: Outstanding Student and TA -->
       <div class="award-card">
         <div class="award-icon gold">
           <i class="fas fa-medal"></i>
@@ -665,35 +674,29 @@ classes: wide
         </div>
       </div>
 
-      <!-- Dean's Summer Retention Fellowship -->
+      <!-- April 2026: Outstanding PhD -->
       <div class="award-card">
-        <div class="award-icon green">
-          <i class="fas fa-graduation-cap"></i>
+        <div class="award-icon gold">
+          <i class="fas fa-trophy"></i>
         </div>
 
         <div class="award-details">
           <div class="award-title">
-            Dean's Graduate Summer Retention Fellowship
+            Outstanding Ph.D. Student Award
           </div>
 
           <div class="award-organization">
-            Dean's Graduate Fellowship Program,
             College of Engineering, University of Missouri
           </div>
 
-          <div class="award-description">
-            Received fellowship support for continued
-            doctoral research during Summer 2026.
-          </div>
-
           <div class="award-labels">
-            <span class="award-tag green">Graduate Fellowship</span>
-            <span class="award-tag date">May 2026</span>
+            <span class="award-tag gold">Academic Excellence</span>
+            <span class="award-tag date">April 2026</span>
           </div>
         </div>
       </div>
 
-      <!-- Undergraduate Mentor Nomination -->
+      <!-- April 2026: Mentor Nomination -->
       <div class="award-card">
         <div class="award-icon purple">
           <i class="fas fa-chalkboard-teacher"></i>
@@ -722,12 +725,34 @@ classes: wide
       </div>
 
       <!-- ============== 2025 ============== -->
-
       <div class="timeline-year">
         <h3>2025</h3>
       </div>
 
-      <!-- RCAF -->
+      <!-- August 2025: Travel -->
+      <div class="award-card">
+        <div class="award-icon green">
+          <i class="fas fa-plane"></i>
+        </div>
+
+        <div class="award-details">
+          <div class="award-title">
+            Travel Fellowship Award
+          </div>
+
+          <div class="award-organization">
+            Department of Electrical Engineering and Computer Science,
+            University of Missouri
+          </div>
+
+          <div class="award-labels">
+            <span class="award-tag green">Travel Fellowship</span>
+            <span class="award-tag date">August 2025</span>
+          </div>
+        </div>
+      </div>
+
+      <!-- April 2025: RCAF -->
       <div class="award-card">
         <div class="award-icon gold">
           <i class="fas fa-award"></i>
@@ -743,19 +768,17 @@ classes: wide
             Poster Competition, University of Missouri
           </div>
 
-          <div class="award-description">
-            Received second place and the People's Choice
-            Award for research poster presentation.
+          <div class="label">
           </div>
 
           <div class="award-labels">
             <span class="award-tag gold">Research Presentation</span>
-            <span class="award-tag date">2025</span>
+            <span class="award-tag date">April 2025</span>
           </div>
         </div>
       </div>
 
-      <!-- CMOC 2025 -->
+      <!-- March 2025: CMOC -->
       <div class="award-card">
         <div class="award-icon gold">
           <i class="fas fa-trophy"></i>
@@ -771,19 +794,19 @@ classes: wide
             Microelectronics & Optoelectronics
           </div>
 
-          <div class="award-description">
-            Recognized for excellence in oral and
-            graduate poster research presentations.
-          </div>
-
           <div class="award-labels">
             <span class="award-tag gold">Research Excellence</span>
-            <span class="award-tag date">2025</span>
+            <span class="award-tag date">March 2025</span>
           </div>
         </div>
       </div>
 
-      <!-- Travel Fellowship 2025 -->
+      <!-- ============== 2024 ============== -->
+      <div class="timeline-year">
+        <h3>2024</h3>
+      </div>
+
+      <!-- August 2024: Travel -->
       <div class="award-card">
         <div class="award-icon green">
           <i class="fas fa-plane"></i>
@@ -791,7 +814,7 @@ classes: wide
 
         <div class="award-details">
           <div class="award-title">
-            Graduate Student Travel Fellowship
+            Travel Fellowship Award
           </div>
 
           <div class="award-organization">
@@ -799,25 +822,14 @@ classes: wide
             University of Missouri
           </div>
 
-          <div class="award-description">
-            Received departmental travel support
-            for academic and research activities.
-          </div>
-
           <div class="award-labels">
             <span class="award-tag green">Travel Fellowship</span>
-            <span class="award-tag date">2025</span>
+            <span class="award-tag date">August 2024</span>
           </div>
         </div>
       </div>
 
-      <!-- ============== 2024 ============== -->
-
-      <div class="timeline-year">
-        <h3>2024</h3>
-      </div>
-
-      <!-- CMOC 2024 -->
+      <!-- March 2024: CMOC -->
       <div class="award-card">
         <div class="award-icon gold">
           <i class="fas fa-medal"></i>
@@ -833,53 +845,19 @@ classes: wide
             Microelectronics & Optoelectronics
           </div>
 
-          <div class="award-description">
-            Recognized for excellence in graduate
-            research poster presentation.
-          </div>
-
           <div class="award-labels">
             <span class="award-tag gold">Research Presentation</span>
-            <span class="award-tag date">2024</span>
-          </div>
-        </div>
-      </div>
-
-      <!-- Travel Fellowship 2024 -->
-      <div class="award-card">
-        <div class="award-icon green">
-          <i class="fas fa-plane"></i>
-        </div>
-
-        <div class="award-details">
-          <div class="award-title">
-            Graduate Student Travel Fellowship
-          </div>
-
-          <div class="award-organization">
-            Department of Electrical Engineering and Computer Science,
-            University of Missouri
-          </div>
-
-          <div class="award-description">
-            Received departmental travel support
-            for academic and research activities.
-          </div>
-
-          <div class="award-labels">
-            <span class="award-tag green">Travel Fellowship</span>
-            <span class="award-tag date">2024</span>
+            <span class="award-tag date">March 2024</span>
           </div>
         </div>
       </div>
 
       <!-- ============== 2019 ============== -->
-
       <div class="timeline-year">
         <h3>2019</h3>
       </div>
 
-      <!-- Best Paper -->
+      <!-- October 2019: ICE4CT -->
       <div class="award-card">
         <div class="award-icon gold">
           <i class="fas fa-trophy"></i>
@@ -891,29 +869,23 @@ classes: wide
           </div>
 
           <div class="award-organization">
-            1st International Conference on Emerging Electrical
+            First International Conference on Emerging Electrical
             Energy, Electronics and Computing Technologies (ICE4CT)
-          </div>
-
-          <div class="award-description">
-            Awarded Best Paper for research presented
-            at the international conference.
           </div>
 
           <div class="award-labels">
             <span class="award-tag gold">Best Paper</span>
-            <span class="award-tag date">2019</span>
+            <span class="award-tag date">October 2019</span>
           </div>
         </div>
       </div>
 
       <!-- ============== 2018 ============== -->
-
       <div class="timeline-year">
         <h3>2018</h3>
       </div>
 
-      <!-- BSc Honours -->
+      <!-- February 2018: BSc Honours -->
       <div class="award-card">
         <div class="award-icon purple">
           <i class="fas fa-graduation-cap"></i>
@@ -921,11 +893,11 @@ classes: wide
 
         <div class="award-details">
           <div class="award-title">
-            B.Sc. (Engineering) Degree with Honours
+            B.Sc. (Engg.) Degree with Honours
           </div>
 
           <div class="award-organization">
-            Department of Electrical and Electronic Engineering<br>
+            Department of Electrical and Electronic Engineering,
             Shahjalal University of Science and Technology
           </div>
 
@@ -937,7 +909,7 @@ classes: wide
 
           <div class="award-labels">
             <span class="award-tag purple">Academic Distinction</span>
-            <span class="award-tag date">2018</span>
+            <span class="award-tag date">February 2018</span>
           </div>
         </div>
       </div>
