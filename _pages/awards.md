@@ -476,7 +476,7 @@ classes: wide
       </li>
 
       <li>
-        <a href="https://www.linkedin.com/in/showmiksingha/"
+        <a href="https://www.linkedin.com/in/showmik-singha-293967147"
            target="_blank" rel="noopener">
           <i class="fab fa-fw fa-linkedin"></i>
           <span>LinkedIn</span>
