@@ -9,7 +9,11 @@ classes: wide
 <div class="wrap" markdown="1">
 
 <style>
-/* ===== Page Layout ===== */
+
+/* ==========================================
+   PAGE LAYOUT
+========================================== */
+
 .edu-layout {
   display: grid;
   grid-template-columns: 260px minmax(0, 1fr);
@@ -23,7 +27,10 @@ classes: wide
   }
 }
 
-/* ===== Author Card ===== */
+/* ==========================================
+   LEFT: AUTHOR PROFILE
+========================================== */
+
 .author-card {
   position: sticky;
   top: 90px;
@@ -78,149 +85,179 @@ classes: wide
   align-items: center;
 }
 
-/* ===== Publications Content ===== */
-.pub-content {
+/* ==========================================
+   RIGHT: TECHNICAL SKILLS
+========================================== */
+
+.skills-content {
   min-width: 0;
+  width: 100%;
   color: #242424;
 }
 
-.pub-content h1 {
+.skills-content h1 {
   font-size: 2rem;
-  margin: 0 0 14px;
+  font-weight: 700;
+  margin: 0 0 28px;
   padding-bottom: 12px;
   border-bottom: 2px solid #e5e7eb;
 }
 
-.pub-intro {
-  font-size: 0.96rem;
-  color: #555;
-  margin-bottom: 25px;
-}
+/* Individual categories */
 
-.pub-stats {
-  display: grid;
-  grid-template-columns: repeat(3, 1fr);
-  gap: 12px;
-  margin: 20px 0 32px;
-}
-
-.pub-stat {
-  border: 1px solid #e5e7eb;
-  border-radius: 10px;
-  padding: 15px;
-  text-align: center;
-  background: #fafafa;
-}
-
-.pub-stat strong {
-  display: block;
-  font-size: 1.65rem;
-  color: #2563eb;
-}
-
-.pub-stat span {
-  font-size: 0.83rem;
-  color: #555;
-}
-
-.pub-content h2 {
-  font-size: 1.35rem;
-  margin: 36px 0 18px;
-  padding-bottom: 8px;
+.skills-content .skill-category {
+  margin-bottom: 34px;
+  padding-bottom: 26px;
   border-bottom: 1px solid #e5e7eb;
 }
 
-/* ===== Publication List ===== */
-.publication-list {
-  list-style-type: decimal;
-  padding-left: 28px;
-  margin: 0;
+.skills-content .skill-category:last-child {
+  border-bottom: none;
 }
 
-.publication-list li {
-  padding-left: 5px;
-  margin-bottom: 19px;
-  font-size: 0.94rem;
-  line-height: 1.75;
-  overflow-wrap: anywhere;
-}
+/* Category headings */
 
-.publication-list li::marker {
-  color: #64748b;
-  font-weight: 600;
-}
+.skills-content .skill-category h2 {
+  display: flex;
+  align-items: center;
+  gap: 10px;
 
-.publication-list strong {
+  font-size: 1.25rem;
   font-weight: 700;
-  color: #111827;
+  line-height: 1.4;
+
+  margin: 0 0 18px;
+  padding: 0;
+  border: none;
+
+  color: #242424;
 }
 
-.publication-list em {
-  color: #444;
+/* Category icons */
+
+.skills-content .skill-category h2 i {
+  color: #2563eb;
+  font-size: 1.15rem;
+  width: 24px;
+  text-align: center;
+  flex-shrink: 0;
 }
 
-.pub-year {
-  color: #64748b;
-  font-weight: 600;
+/* ==========================================
+   SKILL TAG CONTAINER
+========================================== */
+
+.skills-content .skill-tags {
+  display: flex !important;
+  flex-wrap: wrap !important;
+  align-items: center;
+  gap: 11px;
+  margin: 0;
+  padding: 0;
 }
 
-.pub-tag {
-  display: inline-block;
-  font-size: 0.72rem;
-  font-weight: 600;
-  color: #1d4ed8;
-  background: #eff6ff;
-  padding: 2px 8px;
-  border-radius: 5px;
-  margin-left: 5px;
+/* ==========================================
+   INDIVIDUAL SKILL TAG
+========================================== */
+
+.skills-content .skill-tags .skill-tag {
+  display: inline-flex !important;
+  align-items: center;
+  justify-content: center;
+
+  padding: 10px 17px !important;
+
+  background-color: #f8fafc !important;
+  color: #334155 !important;
+
+  border: 1px solid #dbe3ed !important;
+  border-radius: 999px !important;
+
+  font-family: inherit;
+  font-size: 0.88rem !important;
+  font-weight: 500 !important;
+  line-height: 1.4;
+
+  text-align: center;
+  text-decoration: none !important;
+
+  cursor: default;
+  user-select: none;
+
+  box-shadow: 0 1px 2px rgba(0,0,0,0.03);
+
+  transform: translateY(0) scale(1);
+
+  transition:
+    background-color 0.25s ease,
+    color 0.25s ease,
+    border-color 0.25s ease,
+    transform 0.25s ease,
+    box-shadow 0.25s ease !important;
 }
+
+/* ==========================================
+   HOVER EFFECT
+========================================== */
+
+.skills-content .skill-tags .skill-tag:hover {
+  background-color: #2563eb !important;
+  color: #ffffff !important;
+
+  border-color: #2563eb !important;
+
+  transform: translateY(-4px) scale(1.04) !important;
+
+  box-shadow:
+    0 8px 20px rgba(37,99,235,0.28) !important;
+}
+
+/* Keyboard focus, if tags become interactive */
+
+.skills-content .skill-tags .skill-tag:focus-visible {
+  outline: 2px solid #2563eb;
+  outline-offset: 3px;
+}
+
+/* ==========================================
+   MOBILE RESPONSIVENESS
+========================================== */
 
 @media (max-width: 600px) {
-  .pub-stats {
-    gap: 7px;
+
+  .skills-content h1 {
+    font-size: 1.75rem;
   }
 
-  .pub-stat {
-    padding: 12px 5px;
+  .skills-content .skill-category h2 {
+    font-size: 1.12rem;
   }
 
-  .pub-stat strong {
-    font-size: 1.3rem;
+  .skills-content .skill-tags {
+    gap: 8px;
   }
 
-  .publication-list li {
-    font-size: 0.9rem;
+  .skills-content .skill-tags .skill-tag {
+    padding: 8px 13px !important;
+    font-size: 0.82rem !important;
   }
+
 }
 
-/* ===== Skills: Icons and Bullet Lists ===== */
-.skills-content {
-  min-width: 0;
-}
+/* Accessibility: reduce motion when requested */
 
-.skill-category h2 i {
-  color: #2563eb;
-  margin-right: 10px;
-}
+@media (prefers-reduced-motion: reduce) {
+  .skills-content .skill-tags .skill-tag {
+    transition: none !important;
+  }
 
-.skill-list {
-  list-style-type: disc;
-  padding-left: 28px;
-  margin: 10px 0 24px;
-}
-
-.skill-list li {
-  font-size: 0.94rem;
-  line-height: 1.75;
-  margin-bottom: 5px;
-  padding-left: 4px;
-}
-
-.skill-list li::marker {
-  color: #64748b;
+  .skills-content .skill-tags .skill-tag:hover {
+    transform: none !important;
+  }
 }
 
 </style>
+
 
 <div class="edu-layout">
 
@@ -252,7 +289,7 @@ classes: wide
       </li>
 
       <li>
-        <a href="https://www.linkedin.com/in/showmik-singha-293967147"
+        <a href="https://github.com/showmiksingha"
            target="_blank" rel="noopener">
           <i class="fab fa-fw fa-github"></i>
           <span>GitHub</span>
@@ -268,147 +305,201 @@ classes: wide
       </li>
 
     </ul>
+
   </aside>
 
-  
-<!-- RIGHT: Technical Skills -->
-<main class="skills-content">
 
-  <h1>Technical Skills</h1>
+  <!-- =====================================
+       RIGHT: TECHNICAL SKILLS
+  ====================================== -->
 
-  <!-- Programming -->
-  <section class="skill-category">
-    <h2>
-      <i class="fas fa-code"></i>
-      Programming
-    </h2>
+  <main class="skills-content">
 
-    <div class="skill-tags">
-      <span class="skill-tag">C</span>
-      <span class="skill-tag">Python</span>
-      <span class="skill-tag">MATLAB</span>
-    </div>
-  </section>
-
-  <!-- Modeling and Simulation -->
-  <section class="skill-category">
-    <h2>
-      <i class="fas fa-laptop-code"></i>
-      Modeling &amp; Simulation
-    </h2>
-
-    <div class="skill-tags">
-      <span class="skill-tag">Silvaco TCAD</span>
-      <span class="skill-tag">Sentaurus TCAD</span>
-      <span class="skill-tag">Cadence</span>
-      <span class="skill-tag">LTSpice</span>
-      <span class="skill-tag">OrCAD</span>
-      <span class="skill-tag">Simulink</span>
-      <span class="skill-tag">Lumerical</span>
-      <span class="skill-tag">Quantum ESPRESSO</span>
-      <span class="skill-tag">PowerWorld</span>
-      <span class="skill-tag">AutoCAD</span>
-    </div>
-  </section>
-
-  <!-- Semiconductor Processing -->
-  <section class="skill-category">
-    <h2>
-      <i class="fas fa-microchip"></i>
-      Semiconductor Processing
-    </h2>
-
-    <div class="skill-tags">
-      <span class="skill-tag">Wafer Preparation</span>
-      <span class="skill-tag">Spin Coating</span>
-      <span class="skill-tag">Photolithography</span>
-      <span class="skill-tag">Wet Etching</span>
-      <span class="skill-tag">Doping</span>
-      <span class="skill-tag">Oxidation</span>
-      <span class="skill-tag">Metallization</span>
-      <span class="skill-tag">Thin-Film Processing</span>
-      <span class="skill-tag">Thermal Annealing</span>
-    </div>
-  </section>
-
-  <!-- Electrical Characterization -->
-  <section class="skill-category">
-    <h2>
-      <i class="fas fa-bolt"></i>
-      Electrical Characterization
-    </h2>
-
-    <div class="skill-tags">
-      <span class="skill-tag">Four-Point Probe</span>
-      <span class="skill-tag">
-        Hall Measurement (Linseis HCS 1)
-      </span>
-      <span class="skill-tag">
-        Semiconductor Parameter Analyzer
-        (I–V, C–V) (Keithley 4200 SCS)
-      </span>
-    </div>
-  </section>
-
-  <!-- Materials/Physical Characterization -->
-  <section class="skill-category">
-    <h2>
-      <i class="fas fa-microscope"></i>
-      Materials/Physical Characterization
-    </h2>
-
-    <div class="skill-tags">
-      <span class="skill-tag">
-        Scanning Electron Microscopy
-        (Thermo Fisher VolumeScope 2)
-      </span>
-
-      <span class="skill-tag">
-        Fourier Transform Infrared Spectroscopy
-        (Thermo Fisher Nicolet 4700)
-      </span>
-
-      <span class="skill-tag">
-        Optical Profilometry (Veeco NT 9109)
-      </span>
-
-      <span class="skill-tag">
-        Raman Spectroscopy
-        (Renishaw inVia Microscope)
-      </span>
-
-      <span class="skill-tag">
-        Spectroscopic Ellipsometry
-      </span>
-    </div>
-  </section>
-
-  <!-- Instrumentation -->
-  <section class="skill-category">
-    <h2>
-      <i class="fas fa-tools"></i>
-      Instrumentation
-    </h2>
-
-    <div class="skill-tags">
-      <span class="skill-tag">
-        Mask Aligner (SUSS MA6)
-      </span>
-      <span class="skill-tag">
-        Nanoscribe Quantum X Shape
-      </span>
-      <span class="skill-tag">Oscilloscope</span>
-      <span class="skill-tag">Signal Generator</span>
-      <span class="skill-tag">Multimeter</span>
-      <span class="skill-tag">Arduino</span>
-      <span class="skill-tag">Raspberry Pi</span>
-    </div>
-  </section>
+    <h1>Technical Skills</h1>
 
 
+    <!-- =====================================
+         PROGRAMMING
+    ====================================== -->
 
-     
+    <section class="skill-category">
+
+      <h2>
+        <i class="fas fa-code"></i>
+        Programming
+      </h2>
+
+      <div class="skill-tags">
+        <span class="skill-tag">C</span>
+        <span class="skill-tag">Python</span>
+        <span class="skill-tag">MATLAB</span>
+      </div>
+
+    </section>
+
+
+    <!-- =====================================
+         MODELING & SIMULATION
+    ====================================== -->
+
+    <section class="skill-category">
+
+      <h2>
+        <i class="fas fa-laptop-code"></i>
+        Modeling &amp; Simulation
+      </h2>
+
+      <div class="skill-tags">
+
+        <span class="skill-tag">Silvaco TCAD</span>
+        <span class="skill-tag">Sentaurus TCAD</span>
+        <span class="skill-tag">Cadence</span>
+        <span class="skill-tag">LTSpice</span>
+        <span class="skill-tag">OrCAD</span>
+        <span class="skill-tag">Simulink</span>
+        <span class="skill-tag">Lumerical</span>
+        <span class="skill-tag">Quantum ESPRESSO</span>
+        <span class="skill-tag">PowerWorld</span>
+        <span class="skill-tag">AutoCAD</span>
+
+      </div>
+
+    </section>
+
+
+    <!-- =====================================
+         SEMICONDUCTOR PROCESSING
+    ====================================== -->
+
+    <section class="skill-category">
+
+      <h2>
+        <i class="fas fa-microchip"></i>
+        Semiconductor Processing
+      </h2>
+
+      <div class="skill-tags">
+
+        <span class="skill-tag">Wafer Preparation</span>
+        <span class="skill-tag">Spin Coating</span>
+        <span class="skill-tag">Photolithography</span>
+        <span class="skill-tag">Wet Etching</span>
+        <span class="skill-tag">Doping</span>
+        <span class="skill-tag">Oxidation</span>
+        <span class="skill-tag">Metallization</span>
+        <span class="skill-tag">Thin-Film Processing</span>
+        <span class="skill-tag">Thermal Annealing</span>
+
+      </div>
+
+    </section>
+
+
+    <!-- =====================================
+         ELECTRICAL CHARACTERIZATION
+    ====================================== -->
+
+    <section class="skill-category">
+
+      <h2>
+        <i class="fas fa-bolt"></i>
+        Electrical Characterization
+      </h2>
+
+      <div class="skill-tags">
+
+        <span class="skill-tag">
+          Four-Point Probe
+        </span>
+
+        <span class="skill-tag">
+          Hall Measurement (Linseis HCS 1)
+        </span>
+
+        <span class="skill-tag">
+          Semiconductor Parameter Analyzer
+          (I–V, C–V) (Keithley 4200 SCS)
+        </span>
+
+      </div>
+
+    </section>
+
+
+    <!-- =====================================
+         MATERIALS / PHYSICAL CHARACTERIZATION
+    ====================================== -->
+
+    <section class="skill-category">
+
+      <h2>
+        <i class="fas fa-microscope"></i>
+        Materials/Physical Characterization
+      </h2>
+
+      <div class="skill-tags">
+
+        <span class="skill-tag">
+          Scanning Electron Microscopy
+          (Thermo Fisher VolumeScope 2)
+        </span>
+
+        <span class="skill-tag">
+          Fourier Transform Infrared Spectroscopy
+          (Thermo Fisher Nicolet 4700)
+        </span>
+
+        <span class="skill-tag">
+          Optical Profilometry (Veeco NT 9109)
+        </span>
+
+        <span class="skill-tag">
+          Raman Spectroscopy
+          (Renishaw inVia Microscope)
+        </span>
+
+        <span class="skill-tag">
+          Spectroscopic Ellipsometry
+        </span>
+
+      </div>
+
+    </section>
+
+
+    <!-- =====================================
+         INSTRUMENTATION
+    ====================================== -->
+
+    <section class="skill-category">
+
+      <h2>
+        <i class="fas fa-tools"></i>
+        Instrumentation
+      </h2>
+
+      <div class="skill-tags">
+
+        <span class="skill-tag">
+          Mask Aligner (SUSS MA6)
+        </span>
+
+        <span class="skill-tag">
+          Nanoscribe Quantum X Shape
+        </span>
+
+        <span class="skill-tag">Oscilloscope</span>
+        <span class="skill-tag">Signal Generator</span>
+        <span class="skill-tag">Multimeter</span>
+        <span class="skill-tag">Arduino</span>
+        <span class="skill-tag">Raspberry Pi</span>
+
+      </div>
+
+    </section>
+
   </main>
 
 </div>
+
 </div>
