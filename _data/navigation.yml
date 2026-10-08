@@ -21,5 +21,8 @@ main:
   - title: "ECA"
     url: /eca/
 
+  - title: "Awards"
+    url: /awards/
+
   - title: "Contact"
     url: /contact/
