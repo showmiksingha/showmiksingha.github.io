@@ -118,7 +118,7 @@ classes: wide
         <span>Jan 2024 – Present</span>
         <span>Department of Electrical Engineering and Computer Science</span>
       </div>
-      <p class="edu-inst">University of Missouri–Columbia, USA</p>
+      <p class="edu-inst">University of Missouri–Columbia, Missouri, USA</p>
       <p class="edu-extra"><strong>GPA:</strong> 4.00 / 4.00</p>
     </div>
   </div>
