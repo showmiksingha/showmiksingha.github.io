@@ -238,10 +238,10 @@ classes: wide
 .exp-card:hover {
   transform: translateY(-3px);
   border-color: #bfdbfe;
-  box-shadow: 0 9px 27px rgba(15, 23, 42, 0.065);
+  box-shadow: 0 9px 27px rgba(15,23,42,0.065);
 }
 
-/* Timeline nodes */
+/* Timeline Nodes */
 
 .exp-card::before {
   content: "";
@@ -257,7 +257,7 @@ classes: wide
   box-sizing: content-box;
 }
 
-/* Featured ongoing positions */
+/* Featured Ongoing Positions */
 
 .exp-card.featured {
   border-top: 3px solid #2563eb;
@@ -424,7 +424,7 @@ classes: wide
 
 .impact-grid {
   display: grid;
-  grid-template-columns: repeat(3, minmax(0, 1fr));
+  grid-template-columns: repeat(3, minmax(0,1fr));
   gap: 11px;
   margin: 20px 0 24px;
 }
@@ -441,6 +441,7 @@ classes: wide
 .impact-box:hover {
   background: #eff6ff;
   border-color: #bfdbfe;
+  transform: translateY(-2px);
 }
 
 .impact-number {
@@ -677,9 +678,7 @@ classes: wide
   <div class="exp-timeline">
 
 
-    <!-- ================================
-         DOCTORAL RESEARCH
-    ================================= -->
+    <!-- DOCTORAL RESEARCH -->
 
     <article class="exp-card featured">
 
@@ -768,9 +767,7 @@ classes: wide
     </article>
 
 
-    <!-- ================================
-         BOSTON UNIVERSITY
-    ================================= -->
+    <!-- BOSTON UNIVERSITY -->
 
     <article class="exp-card">
 
@@ -864,9 +861,7 @@ classes: wide
   <div class="exp-timeline">
 
 
-    <!-- ================================
-         MIZZOU GTA
-    ================================= -->
+    <!-- MIZZOU GTA -->
 
     <article class="exp-card featured">
 
@@ -950,9 +945,7 @@ classes: wide
     </article>
 
 
-    <!-- ================================
-         SUST FACULTY MEMBER
-    ================================= -->
+    <!-- SUST FACULTY MEMBER -->
 
     <article class="exp-card">
 
@@ -1053,13 +1046,18 @@ classes: wide
   </div>
 
   <p class="section-description">
-    Supporting undergraduate researchers
-    in developing technical expertise,
-    independent research skills,
-    and scientific communication.
+    Mentoring undergraduate researchers
+    in thesis research, academic projects,
+    technical analysis, scientific writing,
+    and research dissemination.
   </p>
 
   <div class="exp-timeline">
+
+
+    <!-- ==================================
+         MIZZOU RESEARCH MENTORSHIP
+    ================================== -->
 
     <article class="exp-card">
 
@@ -1081,7 +1079,7 @@ classes: wide
       </div>
 
 
-      <!-- MENTORSHIP IMPACT -->
+      <!-- MIZZOU MENTORSHIP IMPACT -->
 
       <div class="impact-grid">
 
@@ -1185,6 +1183,149 @@ classes: wide
 
     </article>
 
+
+    <!-- ==================================
+         SUST RESEARCH MENTORSHIP
+    ================================== -->
+
+    <article class="exp-card">
+
+      <div class="exp-card-header">
+
+        <h3 class="exp-role">
+          Undergraduate Thesis &amp;
+          Project Mentor
+        </h3>
+
+        <span class="exp-date">
+          Sep 2018 – Aug 2022
+        </span>
+
+      </div>
+
+      <div class="exp-org">
+        Department of Electrical
+        &amp; Electronic Engineering<br>
+        Shahjalal University of Science
+        and Technology (SUST)
+      </div>
+
+      <div class="exp-location">
+        <i class="fas fa-map-marker-alt"></i>
+        Sylhet, Bangladesh
+      </div>
+
+
+      <!-- SUST MENTORSHIP IMPACT -->
+
+      <div class="impact-grid">
+
+        <div class="impact-box">
+
+          <span class="impact-number">
+            12
+          </span>
+
+          <span class="impact-label">
+            Undergraduate<br>
+            Students
+          </span>
+
+        </div>
+
+        <div class="impact-box">
+
+          <span class="impact-number">
+            6
+          </span>
+
+          <span class="impact-label">
+            Conference<br>
+            Papers
+          </span>
+
+        </div>
+
+        <div class="impact-box">
+
+          <span class="impact-number">
+            2
+          </span>
+
+          <span class="impact-label">
+            Journal<br>
+            Papers
+          </span>
+
+        </div>
+
+      </div>
+
+
+      <div class="exp-description">
+
+        <ul>
+
+          <li>
+            Supervised and mentored
+            12 undergraduate students
+            in thesis research and academic
+            projects at Shahjalal University
+            of Science and Technology (SUST).
+          </li>
+
+          <li>
+            Provided guidance in research
+            methodology, experimental design,
+            data analysis, technical writing,
+            and engineering project development.
+          </li>
+
+          <li>
+            Mentorship and collaborative research
+            activities resulted in
+            six conference papers and
+            two journal papers.
+          </li>
+
+          <li>
+            Supported students in developing
+            independent research skills,
+            critical thinking, technical
+            problem-solving, and scientific
+            communication.
+          </li>
+
+        </ul>
+
+      </div>
+
+      <div class="exp-tags">
+
+        <span class="exp-tag">
+          Thesis Supervision
+        </span>
+
+        <span class="exp-tag">
+          Undergraduate Mentorship
+        </span>
+
+        <span class="exp-tag">
+          Experimental Design
+        </span>
+
+        <span class="exp-tag">
+          Research Publications
+        </span>
+
+        <span class="exp-tag">
+          Technical Writing
+        </span>
+
+      </div>
+
+    </article>
+
   </div>
 
 </section>
@@ -1209,9 +1350,7 @@ classes: wide
   <div class="exp-timeline">
 
 
-    <!-- ================================
-         BATS 2025 REVIEWER
-    ================================= -->
+    <!-- BATS 2025 REVIEWER -->
 
     <article class="exp-card">
 
@@ -1256,9 +1395,7 @@ classes: wide
     </article>
 
 
-    <!-- ================================
-         Q-BATS 2024 REVIEWER
-    ================================= -->
+    <!-- Q-BATS 2024 REVIEWER -->
 
     <article class="exp-card">
 
