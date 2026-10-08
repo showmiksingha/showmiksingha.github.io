@@ -83,7 +83,7 @@ classes: wide
 }
 
 /* =========================================
-   PUBLICATION MAIN CONTENT
+   MAIN PUBLICATION CONTENT
 ========================================= */
 .pub-content {
   min-width: 0;
@@ -152,296 +152,223 @@ classes: wide
 }
 
 /* =========================================
-   MODERN GOOGLE SCHOLAR DASHBOARD
+   APPLE-INSPIRED SCHOLAR BENTO GRID
 ========================================= */
-.scholar-dashboard {
-  margin: 30px 0 44px;
-  padding: 24px;
-  border: 1px solid #e5e7eb;
-  border-radius: 16px;
-  background: #fff;
+.apple-scholar {
+  margin: 35px 0 45px;
 }
 
-.scholar-heading {
+.apple-scholar-heading {
   display: flex;
   justify-content: space-between;
   align-items: center;
   gap: 14px;
-  flex-wrap: wrap;
-  margin-bottom: 22px;
+  margin-bottom: 20px;
 }
 
-.scholar-heading h2 {
-  margin: 0 !important;
-  padding: 0 !important;
+.apple-scholar-heading h2 {
+  font-size: 1.5rem;
+  font-weight: 800;
+  letter-spacing: -0.5px;
   border: none !important;
-  font-size: 1.3rem;
+  padding: 0 !important;
+  margin: 0 0 5px !important;
+  color: #111827;
 }
 
-.scholar-heading h2 i {
-  color: #2563eb;
-  margin-right: 7px;
+.apple-scholar-heading p {
+  font-size: 0.9rem;
+  color: #64748b;
+  margin: 0;
 }
 
-.scholar-profile-link {
-  display: inline-flex;
-  align-items: center;
-  gap: 7px;
-  text-decoration: none !important;
-  font-size: 0.8rem;
-  font-weight: 600;
-  color: #2563eb !important;
-  background: #eff6ff;
-  border: 1px solid #dbeafe;
-  padding: 8px 12px;
-  border-radius: 20px;
-  transition: all 0.25s ease;
+.apple-scholar-heading > i {
+  font-size: 1.6rem;
+  color: #94a3b8;
 }
 
-.scholar-profile-link:hover {
-  background: #dbeafe;
-  transform: translateY(-2px);
-}
-
-/* =========================================
-   SCHOLAR METRIC CARDS
-========================================= */
-.scholar-metrics {
+.apple-bento-grid {
   display: grid;
   grid-template-columns: repeat(3, minmax(0, 1fr));
-  gap: 12px;
-  margin-bottom: 24px;
+  gap: 14px;
 }
 
-.scholar-metric {
+/* Base Bento Tile */
+.apple-tile {
   position: relative;
-  overflow: hidden;
-  text-align: center;
-  border: 1px solid #e5e7eb;
-  background: #f8fafc;
-  border-radius: 13px;
-  padding: 22px 10px 18px;
-  transition:
-    transform 0.25s ease,
-    box-shadow 0.25s ease,
-    border-color 0.25s ease;
-}
-
-.scholar-metric:hover {
-  transform: translateY(-4px);
-  border-color: #bfdbfe;
-  box-shadow: 0 9px 22px rgba(37,99,235,0.08);
-}
-
-.metric-icon {
-  width: 37px;
-  height: 37px;
   display: flex;
-  justify-content: center;
+  flex-direction: column;
+  justify-content: space-between;
+  min-width: 0;
+  min-height: 170px;
+  padding: 22px;
+  border-radius: 20px;
+  overflow: hidden;
+  box-sizing: border-box;
+  transition:
+    transform 0.3s ease,
+    box-shadow 0.3s ease;
+}
+
+.apple-tile:hover {
+  transform: translateY(-5px);
+  box-shadow: 0 16px 35px rgba(0,0,0,0.09);
+}
+
+.apple-tile-top {
+  display: flex;
+  justify-content: space-between;
   align-items: center;
-  margin: 0 auto 13px;
-  border-radius: 10px;
-  background: #eaf1ff;
-  color: #2563eb;
-  font-size: 1rem;
-}
-
-.metric-number {
-  display: block;
-  font-size: 2rem;
-  line-height: 1.15;
-  font-weight: 800;
-  color: #111827;
-  margin-bottom: 7px;
-}
-
-.metric-label {
-  display: block;
+  gap: 8px;
   font-size: 0.82rem;
   font-weight: 600;
+}
+
+.apple-tile-top i {
+  font-size: 1.15rem;
+}
+
+.apple-tile-bottom strong {
+  display: block;
+  font-size: clamp(2.5rem, 5vw, 4rem);
+  font-weight: 800;
+  letter-spacing: -2px;
+  line-height: 1.05;
+}
+
+.apple-tile-bottom p {
+  margin: 9px 0 0;
+  font-size: 0.82rem;
+  line-height: 1.5;
+}
+
+/* Total citations */
+.apple-citations {
+  grid-column: span 2;
+  min-height: 230px;
+  background: #eaf1ff;
+  color: #111827;
+}
+
+.apple-citations .apple-tile-top {
   color: #475569;
 }
 
-.metric-description {
-  display: block;
-  font-size: 0.72rem;
-  color: #94a3b8;
-  margin-top: 5px;
+.apple-citations .apple-tile-top i {
+  color: #2563eb;
 }
 
-/* =========================================
-   SCHOLAR CITATION DISTRIBUTION
-========================================= */
-.scholar-distribution {
-  display: grid;
-  grid-template-columns: 170px minmax(0, 1fr);
-  gap: 24px;
-  align-items: center;
-  padding: 22px;
+.apple-citations .apple-tile-bottom p {
+  color: #64748b;
+}
+
+/* h-index */
+.apple-hindex {
+  background: #f1f5f9;
+  color: #111827;
+  min-height: 230px;
+}
+
+.apple-hindex .apple-tile-top {
+  color: #64748b;
+}
+
+.apple-hindex .apple-tile-bottom p {
+  color: #64748b;
+}
+
+/* i10-index */
+.apple-i10 {
+  background: #f1f5f9;
+  color: #111827;
+}
+
+.apple-i10 .apple-tile-top {
+  color: #64748b;
+}
+
+.apple-i10 .apple-tile-bottom p {
+  color: #64748b;
+}
+
+/* Citations since 2021 */
+.apple-recent {
+  grid-column: span 2;
+  background: #17253d;
+  color: #fff;
+}
+
+.apple-recent .apple-tile-top {
+  color: #cbd5e1;
+}
+
+.apple-recent .apple-tile-top i {
+  color: #93c5fd;
+}
+
+.apple-recent .apple-tile-bottom p {
+  color: #cbd5e1;
+}
+
+/* Google Scholar profile tile */
+.apple-scholar-link {
+  grid-column: span 3;
+  min-height: 95px;
+  padding: 19px 22px;
+  background: #f8fafc;
   border: 1px solid #e5e7eb;
-  border-radius: 13px;
-  background: #fff;
-}
-
-.citation-donut {
-  position: relative;
-  width: 155px;
-  height: 155px;
-  margin: auto;
-}
-
-.citation-donut svg {
-  width: 100%;
-  height: 100%;
-  display: block;
-}
-
-.donut-track {
-  fill: none;
-  stroke: #e5e7eb;
-  stroke-width: 11;
-}
-
-.donut-progress {
-  fill: none;
-  stroke: #2563eb;
-  stroke-width: 11;
-  stroke-linecap: round;
-  stroke-dasharray: 263.24 269.55;
-  transform: rotate(-90deg);
-  transform-origin: 50% 50%;
-  transition: stroke 0.3s ease;
-}
-
-.citation-donut:hover .donut-progress {
-  stroke: #1d4ed8;
-}
-
-.donut-text {
-  position: absolute;
-  inset: 0;
+  text-decoration: none !important;
   display: flex;
-  flex-direction: column;
+  flex-direction: row;
   align-items: center;
+  gap: 15px;
+}
+
+.apple-scholar-link:hover {
+  border-color: #bfdbfe;
+  text-decoration: none !important;
+}
+
+.apple-link-icon {
+  width: 48px;
+  height: 48px;
+  flex-shrink: 0;
+  display: flex;
   justify-content: center;
-  pointer-events: none;
-}
-
-.donut-percentage {
-  font-size: 1.65rem;
-  font-weight: 800;
-  line-height: 1.2;
-  color: #111827;
-}
-
-.donut-caption {
-  font-size: 0.72rem;
-  color: #64748b;
-  margin-top: 4px;
-}
-
-/* Distribution right section */
-.distribution-details h3 {
-  font-size: 1rem;
-  margin: 0 0 9px;
-  color: #111827;
-}
-
-.distribution-details p {
-  font-size: 0.82rem;
-  color: #64748b;
-  line-height: 1.6;
-  margin: 0 0 19px;
-}
-
-.distribution-row {
-  margin-bottom: 14px;
-}
-
-.distribution-meta {
-  display: flex;
-  justify-content: space-between;
   align-items: center;
-  gap: 10px;
-  font-size: 0.82rem;
-  margin-bottom: 8px;
+  border-radius: 13px;
+  background: #eaf1ff;
+  color: #2563eb;
+  font-size: 1.25rem;
 }
 
-.distribution-meta span {
-  color: #64748b;
-}
-
-.distribution-meta strong {
-  color: #111827;
-  font-weight: 700;
-}
-
-.distribution-track {
-  width: 100%;
-  height: 8px;
-  border-radius: 99px;
-  background: #eef2f7;
-  overflow: hidden;
-}
-
-.distribution-fill {
-  height: 100%;
-  border-radius: 99px;
-  background: #2563eb;
-  transition: width 0.7s ease;
-}
-
-.distribution-fill.early {
-  background: #94a3b8;
-}
-
-/* =========================================
-   SECONDARY SCHOLAR METRICS
-========================================= */
-.scholar-period {
-  margin-top: 20px;
-  display: grid;
-  grid-template-columns: repeat(2, minmax(0, 1fr));
-  gap: 12px;
-}
-
-.period-card {
-  display: flex;
-  justify-content: space-between;
-  align-items: center;
-  gap: 10px;
-  border: 1px solid #e5e7eb;
-  border-radius: 10px;
-  padding: 15px;
-  background: #fafafa;
-}
-
-.period-card-label {
+.apple-link-text {
+  flex: 1;
+  min-width: 0;
   display: flex;
   flex-direction: column;
   gap: 5px;
 }
 
-.period-card-label span {
-  font-size: 0.78rem;
-  color: #64748b;
-}
-
-.period-card-label strong {
-  font-size: 0.94rem;
+.apple-link-text strong {
+  font-size: 1rem;
   color: #111827;
 }
 
-.period-card-value {
-  font-size: 1.35rem;
-  font-weight: 800;
-  color: #2563eb;
+.apple-link-text span {
+  font-size: 0.8rem;
+  color: #64748b;
 }
 
-.scholar-note {
-  margin: 18px 0 0;
+.apple-scholar-link > i {
+  color: #64748b;
+  font-size: 1rem;
+}
+
+.apple-scholar-note {
   font-size: 0.75rem;
   color: #94a3b8;
+  margin: 15px 0 0;
   line-height: 1.6;
 }
 
@@ -461,7 +388,7 @@ classes: wide
 }
 
 /* =========================================
-   PUBLICATION LIST
+   PUBLICATION LISTS
 ========================================= */
 .publication-list {
   list-style-type: decimal;
@@ -541,76 +468,56 @@ classes: wide
     font-size: 0.95rem;
   }
 
-  .scholar-dashboard {
-    padding: 17px 12px;
+  .apple-bento-grid {
+    grid-template-columns: repeat(2, minmax(0, 1fr));
+    gap: 10px;
   }
 
-  .scholar-metrics {
-    gap: 7px;
+  .apple-citations {
+    grid-column: span 2;
+    min-height: 180px;
   }
 
-  .scholar-metric {
-    padding: 16px 5px;
+  .apple-hindex,
+  .apple-i10 {
+    grid-column: span 1;
+    min-height: 150px;
   }
 
-  .metric-number {
-    font-size: 1.5rem;
+  .apple-recent {
+    grid-column: span 2;
+    min-height: 170px;
   }
 
-  .metric-label {
-    font-size: 0.72rem;
+  .apple-scholar-link {
+    grid-column: span 2;
+    padding: 15px;
   }
 
-  .metric-description {
-    font-size: 0.64rem;
+  .apple-tile {
+    padding: 17px;
+    border-radius: 16px;
   }
 
-  .metric-icon {
-    width: 30px;
-    height: 30px;
-    font-size: 0.8rem;
-  }
-
-  .scholar-distribution {
-    grid-template-columns: 1fr;
-    gap: 16px;
-    padding: 18px 14px;
-  }
-
-  .citation-donut {
-    width: 145px;
-    height: 145px;
-  }
-
-  .distribution-details {
-    width: 100%;
-  }
-
-  .scholar-period {
-    gap: 8px;
-  }
-
-  .period-card {
-    padding: 12px 9px;
-  }
-
-  .period-card-value {
-    font-size: 1.1rem;
+  .apple-tile-bottom strong {
+    font-size: 2.7rem;
   }
 
   .publication-list li {
     font-size: 0.9rem;
   }
-
 }
 
 @media (prefers-reduced-motion: reduce) {
+  .apple-tile,
   .pub-stat,
-  .scholar-metric,
-  .scholar-profile-link,
-  .donut-progress,
-  .distribution-fill {
+  .publication-list li {
     transition: none;
+  }
+
+  .apple-tile:hover,
+  .pub-stat:hover {
+    transform: none;
   }
 }
 </style>
@@ -646,7 +553,8 @@ classes: wide
 
     <li>
       <a href="https://github.com/showmiksingha"
-         target="_blank" rel="noopener">
+         target="_blank"
+         rel="noopener">
         <i class="fab fa-fw fa-github"></i>
         <span>GitHub</span>
       </a>
@@ -654,7 +562,8 @@ classes: wide
 
     <li>
       <a href="https://www.linkedin.com/in/showmiksingha/"
-         target="_blank" rel="noopener">
+         target="_blank"
+         rel="noopener">
         <i class="fab fa-fw fa-linkedin"></i>
         <span>LinkedIn</span>
       </a>
@@ -712,227 +621,109 @@ classes: wide
 </div>
 
 <!-- =========================================
-     GOOGLE SCHOLAR RESEARCH IMPACT
+     APPLE-INSPIRED RESEARCH IMPACT GRID
 ========================================= -->
 
-<section class="scholar-dashboard">
+<section class="apple-scholar">
 
-  <!-- Heading -->
-  <div class="scholar-heading">
+  <div class="apple-scholar-heading">
 
-    <h2>
-      <i class="fas fa-chart-line"></i>
-      Research Impact
-    </h2>
+    <div>
+      <h2>Research Impact</h2>
+      <p>Academic impact at a glance.</p>
+    </div>
 
-    <a
-      class="scholar-profile-link"
-      href="https://scholar.google.com/citations?user=B0llklQAAAAJ"
-      target="_blank"
-      rel="noopener noreferrer"
-    >
-      <i class="fas fa-graduation-cap"></i>
-      Google Scholar
-      <i class="fas fa-external-link-alt"></i>
-    </a>
+    <i class="fas fa-graduation-cap"></i>
 
   </div>
 
-  <!-- =====================================
-       PRIMARY CITATION METRICS
-  ====================================== -->
-
-  <div class="scholar-metrics">
+  <div class="apple-bento-grid">
 
     <!-- Total Citations -->
-    <div class="scholar-metric">
+    <div class="apple-tile apple-citations">
 
-      <div class="metric-icon">
+      <div class="apple-tile-top">
+        <span>Total Citations</span>
         <i class="fas fa-quote-right"></i>
       </div>
 
-      <span class="metric-number">87</span>
-
-      <span class="metric-label">
-        Total Citations
-      </span>
-
-      <span class="metric-description">
-        All time
-      </span>
+      <div class="apple-tile-bottom">
+        <strong>87</strong>
+        <p>Lifetime Google Scholar citations</p>
+      </div>
 
     </div>
 
     <!-- h-index -->
-    <div class="scholar-metric">
+    <div class="apple-tile apple-hindex">
 
-      <div class="metric-icon">
+      <div class="apple-tile-top">
         <i class="fas fa-chart-line"></i>
       </div>
 
-      <span class="metric-number">5</span>
-
-      <span class="metric-label">
-        h-index
-      </span>
-
-      <span class="metric-description">
-        Research impact
-      </span>
+      <div class="apple-tile-bottom">
+        <strong>5</strong>
+        <p>h-index</p>
+      </div>
 
     </div>
 
     <!-- i10-index -->
-    <div class="scholar-metric">
+    <div class="apple-tile apple-i10">
 
-      <div class="metric-icon">
-        <i class="fas fa-book"></i>
+      <div class="apple-tile-top">
+        <i class="fas fa-book-open"></i>
       </div>
 
-      <span class="metric-number">3</span>
-
-      <span class="metric-label">
-        i10-index
-      </span>
-
-      <span class="metric-description">
-        Papers with 10+ citations
-      </span>
+      <div class="apple-tile-bottom">
+        <strong>3</strong>
+        <p>i10-index</p>
+      </div>
 
     </div>
+
+    <!-- Citations since 2021 -->
+    <div class="apple-tile apple-recent">
+
+      <div class="apple-tile-top">
+        <span>Citations Since 2021</span>
+        <i class="fas fa-chart-line"></i>
+      </div>
+
+      <div class="apple-tile-bottom">
+        <strong>85</strong>
+        <p>Of 87 lifetime citations</p>
+      </div>
+
+    </div>
+
+    <!-- Google Scholar Profile -->
+    <a
+      class="apple-tile apple-scholar-link"
+      href="https://scholar.google.com/citations?user=B0llklQAAAAJ"
+      target="_blank"
+      rel="noopener noreferrer"
+      aria-label="Open Google Scholar profile"
+    >
+
+      <div class="apple-link-icon">
+        <i class="fas fa-graduation-cap"></i>
+      </div>
+
+      <div class="apple-link-text">
+        <strong>Google Scholar</strong>
+        <span>View publications and citation metrics</span>
+      </div>
+
+      <i class="fas fa-external-link-alt"></i>
+
+    </a>
 
   </div>
 
-  <!-- =====================================
-       CITATION DISTRIBUTION
-  ====================================== -->
-
-  <div class="scholar-distribution">
-
-    <!-- Circular visualization -->
-    <div class="citation-donut">
-
-      <svg
-        viewBox="0 0 120 120"
-        role="img"
-        aria-label="97.7 percent of citations are from 2021 onward"
-      >
-
-        <circle
-          class="donut-track"
-          cx="60"
-          cy="60"
-          r="42.9"
-        />
-
-        <circle
-          class="donut-progress"
-          cx="60"
-          cy="60"
-          r="42.9"
-        />
-
-      </svg>
-
-      <div class="donut-text">
-
-        <span class="donut-percentage">
-          97.7%
-        </span>
-
-        <span class="donut-caption">
-          Since 2021
-        </span>
-
-      </div>
-
-    </div>
-
-    <!-- Citation breakdown -->
-    <div class="distribution-details">
-
-      <h3>Citation Distribution</h3>
-
-      <p>
-        The majority of lifetime citations
-        have been received since 2021.
-      </p>
-
-      <!-- Recent -->
-      <div class="distribution-row">
-
-        <div class="distribution-meta">
-          <span>Since 2021</span>
-          <strong>85 citations</strong>
-        </div>
-
-        <div class="distribution-track">
-          <div
-            class="distribution-fill"
-            style="width:97.7%">
-          </div>
-        </div>
-
-      </div>
-
-      <!-- Earlier -->
-      <div class="distribution-row">
-
-        <div class="distribution-meta">
-          <span>Before 2021</span>
-          <strong>2 citations</strong>
-        </div>
-
-        <div class="distribution-track">
-          <div
-            class="distribution-fill early"
-            style="width:2.3%; min-width:4px;">
-          </div>
-        </div>
-
-      </div>
-
-    </div>
-
-  </div>
-
-  <!-- =====================================
-       RECENT PERIOD METRICS
-  ====================================== -->
-
-  <div class="scholar-period">
-
-    <div class="period-card">
-
-      <div class="period-card-label">
-        <span>Since 2021</span>
-        <strong>h-index</strong>
-      </div>
-
-      <div class="period-card-value">
-        5
-      </div>
-
-    </div>
-
-    <div class="period-card">
-
-      <div class="period-card-label">
-        <span>Since 2021</span>
-        <strong>i10-index</strong>
-      </div>
-
-      <div class="period-card-value">
-        3
-      </div>
-
-    </div>
-
-  </div>
-
-  <p class="scholar-note">
-    Source: Google Scholar. Citation statistics are
-    based on the provided snapshot and are updated manually.
+  <p class="apple-scholar-note">
+    Source: Google Scholar. Metrics based on the
+    provided snapshot and updated manually.
   </p>
 
 </section>
