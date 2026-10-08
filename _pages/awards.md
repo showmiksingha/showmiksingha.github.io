@@ -1,11 +1,11 @@
-
 ---
-title: "Awards & Honors"
+title: "Awards"
 permalink: /awards/
 layout: default
 author_profile: false
 classes: wide
 ---
+
 
 <div class="wrap" markdown="1">
 
@@ -46,175 +46,229 @@ classes: wide
   border-radius: 999px;
   object-fit: cover;
   display: block;
-  margin: 0 auto 12px;
+  margin: 0 auto 10px auto;
 }
 
 .author-name {
   text-align: center;
-  font-size: 1.15rem;
-  font-weight: 750;
-  margin-bottom: 6px;
+  font-weight: 800;
+  margin: 0;
 }
 
 .author-bio {
   text-align: center;
-  color: #64748b;
-  font-size: 0.85rem;
-  line-height: 1.6;
+  color: #6b7280;
+  margin: 6px 0 12px 0;
+  font-size: 0.95rem;
 }
 
 .author-links {
-  margin-top: 16px;
+  list-style: none;
+  padding: 0;
+  margin: 0;
+}
+
+.author-links li {
+  margin: 8px 0;
 }
 
 .author-links a {
-  display: block;
-  padding: 7px 4px;
-  color: #334155;
   text-decoration: none;
-  font-size: 0.88rem;
+  display: inline-flex;
+  gap: 8px;
+  align-items: center;
 }
 
-.author-links a:hover {
-  color: #2563eb;
-}
-
-/* ===== Awards Content ===== */
-.awards-content {
+/* ===== Publications Content ===== */
+.pub-content {
   min-width: 0;
+  color: #242424;
 }
 
-.awards-content h1 {
+.pub-content h1 {
   font-size: 2rem;
-  margin: 0 0 10px;
-  font-weight: 750;
-}
-
-.awards-intro {
-  color: #64748b;
-  font-size: 0.95rem;
-  line-height: 1.7;
-  margin-bottom: 28px;
-}
-
-/* ===== Year Heading ===== */
-.awards-year {
-  font-size: 1.35rem;
-  font-weight: 700;
-  margin: 30px 0 16px;
-  padding-bottom: 9px;
+  margin: 0 0 14px;
+  padding-bottom: 12px;
   border-bottom: 2px solid #e5e7eb;
 }
 
-/* ===== Award Cards ===== */
-.award-card {
-  display: flex;
-  gap: 16px;
-  align-items: flex-start;
-  padding: 20px;
-  margin-bottom: 15px;
+.pub-intro {
+  font-size: 0.96rem;
+  color: #555;
+  margin-bottom: 25px;
+}
+
+.pub-stats {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 12px;
+  margin: 20px 0 32px;
+}
+
+.pub-stat {
   border: 1px solid #e5e7eb;
-  border-radius: 12px;
-  background: #fff;
-  transition: border-color 0.2s, box-shadow 0.2s;
+  border-radius: 10px;
+  padding: 15px;
+  text-align: center;
+  background: #fafafa;
 }
 
-.award-card:hover {
-  border-color: #93c5fd;
-  box-shadow: 0 4px 14px rgba(0,0,0,0.05);
-}
-
-.award-icon {
-  flex-shrink: 0;
-  width: 44px;
-  height: 44px;
-  border-radius: 12px;
-  background: #eff6ff;
+.pub-stat strong {
+  display: block;
+  font-size: 1.65rem;
   color: #2563eb;
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  font-size: 1.25rem;
 }
 
-.award-details {
-  flex: 1;
-  min-width: 0;
+.pub-stat span {
+  font-size: 0.83rem;
+  color: #555;
 }
 
-.award-title {
-  font-size: 1.05rem;
-  font-weight: 700;
-  color: #1e293b;
-  margin: 0 0 7px;
-  line-height: 1.5;
+.pub-content h2 {
+  font-size: 1.35rem;
+  margin: 36px 0 18px;
+  padding-bottom: 8px;
+  border-bottom: 1px solid #e5e7eb;
 }
 
-.award-organization {
-  font-size: 0.91rem;
-  color: #475569;
-  line-height: 1.6;
-  margin-bottom: 6px;
+/* ===== Publication List ===== */
+.publication-list {
+  list-style-type: decimal;
+  padding-left: 28px;
+  margin: 0;
 }
 
-.award-description {
-  font-size: 0.88rem;
+.publication-list li {
+  padding-left: 5px;
+  margin-bottom: 19px;
+  font-size: 0.94rem;
+  line-height: 1.75;
+  overflow-wrap: anywhere;
+}
+
+.publication-list li::marker {
   color: #64748b;
-  line-height: 1.6;
-}
-
-.award-tag {
-  display: inline-block;
-  margin-top: 10px;
-  padding: 4px 10px;
-  background: #f1f5f9;
-  color: #475569;
-  border-radius: 6px;
-  font-size: 0.75rem;
   font-weight: 600;
 }
 
+.publication-list strong {
+  font-weight: 700;
+  color: #111827;
+}
+
+.publication-list em {
+  color: #444;
+}
+
+.pub-year {
+  color: #64748b;
+  font-weight: 600;
+}
+
+.pub-tag {
+  display: inline-block;
+  font-size: 0.72rem;
+  font-weight: 600;
+  color: #1d4ed8;
+  background: #eff6ff;
+  padding: 2px 8px;
+  border-radius: 5px;
+  margin-left: 5px;
+}
+
 @media (max-width: 600px) {
-  .award-card {
-    padding: 15px;
-    gap: 12px;
+  .pub-stats {
+    gap: 7px;
   }
 
-  .award-icon {
-    width: 38px;
-    height: 38px;
+  .pub-stat {
+    padding: 12px 5px;
+  }
+
+  .pub-stat strong {
+    font-size: 1.3rem;
+  }
+
+  .publication-list li {
+    font-size: 0.9rem;
   }
 }
+
+/* ===== Skills: Icons and Bullet Lists ===== */
+.skills-content {
+  min-width: 0;
+}
+
+.skill-category h2 i {
+  color: #2563eb;
+  margin-right: 10px;
+}
+
+.skill-list {
+  list-style-type: disc;
+  padding-left: 28px;
+  margin: 10px 0 24px;
+}
+
+.skill-list li {
+  font-size: 0.94rem;
+  line-height: 1.75;
+  margin-bottom: 5px;
+  padding-left: 4px;
+}
+
+.skill-list li::marker {
+  color: #64748b;
+}
+
 </style>
 
 <div class="edu-layout">
 
-  <!-- LEFT: Author Profile -->
+  <!-- =====================================
+       LEFT: AUTHOR PROFILE
+  ====================================== -->
+
   <aside class="author-card">
 
     <img
-      src="/images/profile.png"
-      alt="Showmik Singha"
       class="author-avatar"
+      src="/assets/images/profile.JPG"
+      alt="Showmik Singha"
     >
 
-    <div class="author-name">Showmik Singha</div>
+    <p class="author-name">Showmik Singha</p>
 
-    <div class="author-bio">
-      Ph.D. Candidate<br>
-      Electrical and Computer Engineering<br>
-      University of Missouri–Columbia
-    </div>
+    <p class="author-bio">
+      PhD Candidate, University of Missouri
+    </p>
 
-    <div class="author-links">
-      <a href="/">🏠 Home</a>
-      <a href="/education/">🎓 Education</a>
-      <a href="/publications/">📚 Publications</a>
-      <a href="/projects/">🔬 Projects</a>
-      <a href="/skills/">⚙️ Skills</a>
-      <a href="/awards/">🏆 Awards & Honors</a>
-    </div>
+    <ul class="author-links">
 
+      <li>
+        <a href="mailto:ssqk4@umsystem.edu">
+          <i class="fas fa-fw fa-envelope"></i>
+          <span>Email</span>
+        </a>
+      </li>
+
+      <li>
+        <a href="https://github.com/showmiksingha"
+           target="_blank" rel="noopener">
+          <i class="fab fa-fw fa-github"></i>
+          <span>GitHub</span>
+        </a>
+      </li>
+
+      <li>
+        <a href="https://www.linkedin.com/in/showmiksingha/"
+           target="_blank" rel="noopener">
+          <i class="fab fa-fw fa-linkedin"></i>
+          <span>LinkedIn</span>
+        </a>
+      </li>
+
+    </ul>
   </aside>
 
   <!-- RIGHT: Awards -->
