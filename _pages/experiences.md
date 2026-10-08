@@ -9,7 +9,11 @@ classes: wide
 <div class="wrap" markdown="1">
 
 <style>
-/* ===== Page Layout ===== */
+
+/* ==========================================
+   PAGE LAYOUT
+========================================== */
+
 .edu-layout {
   display: grid;
   grid-template-columns: 260px minmax(0, 1fr);
@@ -23,7 +27,10 @@ classes: wide
   }
 }
 
-/* ===== Author Card ===== */
+/* ==========================================
+   AUTHOR PROFILE
+========================================== */
+
 .author-card {
   position: sticky;
   top: 90px;
@@ -52,6 +59,8 @@ classes: wide
   text-align: center;
   font-weight: 800;
   margin: 0;
+  color: #1e293b;
+  font-size: 1.25rem;
 }
 
 .author-bio {
@@ -59,6 +68,7 @@ classes: wide
   color: #6b7280;
   margin: 6px 0 12px 0;
   font-size: 0.95rem;
+  line-height: 1.6;
 }
 
 .author-links {
@@ -76,434 +86,554 @@ classes: wide
   display: inline-flex;
   gap: 8px;
   align-items: center;
+  color: #475569;
+  font-size: 0.9rem;
+  transition: color 0.2s ease;
 }
 
-/* ===== Main Content ===== */
-.awards-content {
+.author-links a:hover {
+  color: #2563eb;
+}
+
+.author-links i {
+  width: 17px;
+  text-align: center;
+}
+
+/* ==========================================
+   MAIN EXPERIENCE CONTENT
+========================================== */
+
+.exp-content {
   min-width: 0;
   color: #242424;
 }
 
-.awards-content h1 {
+.exp-content > h1 {
   font-size: 2rem;
-  margin: 0 0 14px;
-  padding-bottom: 12px;
-  border-bottom: 2px solid #e5e7eb;
-}
-
-.awards-intro {
-  font-size: 0.96rem;
-  color: #555;
-  line-height: 1.75;
-  margin-bottom: 25px;
-}
-
-/* ===== Statistics ===== */
-.awards-stats {
-  display: grid;
-  grid-template-columns: repeat(3, minmax(0, 1fr));
-  gap: 12px;
-  margin: 20px 0 32px;
-}
-
-.awards-stat {
-  border: 1px solid #e5e7eb;
-  border-radius: 10px;
-  padding: 15px;
-  text-align: center;
-  background: #fafafa;
-}
-
-.awards-stat strong {
-  display: block;
-  font-size: 1.65rem;
   font-weight: 800;
+  color: #1e293b;
+  margin: 0 0 16px;
+  padding-bottom: 13px;
+  border-bottom: 2px solid #e5e7eb;
+  letter-spacing: -0.5px;
+}
+
+/* ==========================================
+   QUICK SECTION NAVIGATION
+========================================== */
+
+.exp-navigation {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 10px;
+  margin: 23px 0 38px;
+}
+
+.exp-navigation a {
+  display: inline-flex;
+  align-items: center;
+  gap: 8px;
+  padding: 9px 15px;
+  border: 1px solid #e2e8f0;
+  border-radius: 30px;
+  background: #fff;
+  color: #475569;
+  font-size: 0.81rem;
+  font-weight: 650;
+  text-decoration: none;
+  transition: all 0.25s ease;
+}
+
+.exp-navigation a:hover {
+  background: #eff6ff;
+  color: #1d4ed8;
+  border-color: #bfdbfe;
+  transform: translateY(-2px);
+}
+
+.exp-navigation i {
   color: #2563eb;
+  font-size: 0.85rem;
 }
 
-.awards-stat span {
-  font-size: 0.83rem;
-  color: #555;
+/* ==========================================
+   EXPERIENCE SECTIONS
+========================================== */
+
+.exp-section {
+  margin-bottom: 48px;
+  scroll-margin-top: 110px;
 }
 
-/* ===== Section Titles ===== */
-.awards-heading {
-  font-size: 1.35rem;
-  margin: 36px 0 18px;
-  padding-bottom: 8px;
+.section-heading {
+  display: flex;
+  align-items: center;
+  gap: 13px;
+  margin-bottom: 23px;
+  padding-bottom: 13px;
   border-bottom: 1px solid #e5e7eb;
 }
 
-.awards-heading i {
-  color: #2563eb;
-  margin-right: 9px;
-}
-
-/* ===== Featured Awards ===== */
-.featured-grid {
-  display: grid;
-  grid-template-columns: repeat(2, minmax(0, 1fr));
-  gap: 15px;
-}
-
-.featured-card {
-  position: relative;
-  border: 1px solid #f0d99b;
-  border-radius: 14px;
-  padding: 22px;
-  background: linear-gradient(
-    135deg,
-    #fffbeb 0%,
-    #ffffff 85%
-  );
-  overflow: hidden;
-  transition: transform 0.25s, box-shadow 0.25s;
-}
-
-.featured-card:first-child {
-  grid-column: 1 / -1;
-}
-
-.featured-card::before {
-  content: "";
-  position: absolute;
-  left: 0;
-  top: 0;
-  bottom: 0;
-  width: 4px;
-  background: #d97706;
-}
-
-.featured-card:hover {
-  transform: translateY(-4px);
-  box-shadow: 0 8px 24px rgba(0,0,0,0.07);
-}
-
-.featured-header {
-  display: flex;
-  justify-content: space-between;
-  align-items: center;
-  gap: 12px;
-  margin-bottom: 15px;
-}
-
-.featured-icon {
-  width: 48px;
-  height: 48px;
-  border-radius: 12px;
-  background: #fef3c7;
-  color: #b45309;
+.section-icon {
+  width: 43px;
+  height: 43px;
+  flex-shrink: 0;
   display: flex;
   align-items: center;
   justify-content: center;
-  font-size: 1.3rem;
+  border-radius: 12px;
+  background: #eff6ff;
+  color: #2563eb;
+  font-size: 1.1rem;
 }
 
-.featured-date {
-  font-size: 0.75rem;
-  font-weight: 700;
-  color: #92400e;
-  background: #fef3c7;
-  padding: 5px 11px;
-  border-radius: 20px;
-  white-space: nowrap;
-}
-
-.featured-title {
-  font-size: 1.05rem;
-  font-weight: 750;
-  color: #1f2937;
-  line-height: 1.5;
-  margin-bottom: 8px;
-}
-
-.featured-org {
-  font-size: 0.87rem;
-  color: #475569;
-  line-height: 1.65;
-}
-
-.featured-description {
-  font-size: 0.85rem;
-  line-height: 1.7;
-  color: #64748b;
-  margin-top: 10px;
-}
-
-/* ===== Timeline ===== */
-.awards-timeline {
-  position: relative;
-  margin-top: 22px;
-  padding-left: 28px;
-  border-left: 2px solid #e2e8f0;
-}
-
-.timeline-year {
-  position: relative;
-  margin: 30px 0 17px;
-}
-
-.timeline-year:first-child {
-  margin-top: 0;
-}
-
-.timeline-year::before {
-  content: "";
-  position: absolute;
-  left: -36px;
-  top: 5px;
-  width: 12px;
-  height: 12px;
-  background: #2563eb;
-  border: 3px solid #fff;
-  border-radius: 50%;
-  box-shadow: 0 0 0 2px #bfdbfe;
-}
-
-.timeline-year h3 {
-  font-size: 1.2rem;
+.section-heading h2 {
+  font-size: 1.32rem;
   font-weight: 800;
   color: #1e293b;
   margin: 0;
+  letter-spacing: -0.25px;
 }
 
-/* ===== Award Cards ===== */
-.award-card {
-  display: flex;
-  gap: 15px;
-  padding: 19px;
-  margin-bottom: 14px;
-  border: 1px solid #e5e7eb;
-  border-radius: 12px;
+.section-description {
+  font-size: 0.9rem;
+  color: #64748b;
+  line-height: 1.75;
+  margin: -7px 0 25px;
+}
+
+/* ==========================================
+   VERTICAL EXPERIENCE TIMELINE
+========================================== */
+
+.exp-timeline {
+  position: relative;
+  padding-left: 28px;
+  margin-left: 9px;
+  border-left: 2px solid #dbeafe;
+}
+
+/* ==========================================
+   EXPERIENCE CARDS
+========================================== */
+
+.exp-card {
+  position: relative;
   background: #fff;
-  transition: transform 0.2s,
-              border-color 0.2s,
-              box-shadow 0.2s;
+  border: 1px solid #e5e7eb;
+  border-radius: 15px;
+  padding: 24px;
+  margin-bottom: 23px;
+  transition:
+    transform 0.25s ease,
+    box-shadow 0.25s ease,
+    border-color 0.25s ease;
 }
 
-.award-card:hover {
-  transform: translateX(4px);
+.exp-card:last-child {
+  margin-bottom: 0;
+}
+
+.exp-card:hover {
+  transform: translateY(-3px);
   border-color: #bfdbfe;
-  box-shadow: 0 5px 18px rgba(0,0,0,0.055);
+  box-shadow: 0 9px 27px rgba(15, 23, 42, 0.065);
 }
 
-.award-icon {
-  flex-shrink: 0;
-  width: 44px;
-  height: 44px;
-  border-radius: 11px;
+/* Timeline nodes */
+
+.exp-card::before {
+  content: "";
+  position: absolute;
+  width: 12px;
+  height: 12px;
+  border-radius: 50%;
+  background: #2563eb;
+  border: 3px solid #fff;
+  box-shadow: 0 0 0 2px #bfdbfe;
+  left: -39px;
+  top: 28px;
+  box-sizing: content-box;
+}
+
+/* Featured ongoing positions */
+
+.exp-card.featured {
+  border-top: 3px solid #2563eb;
+  background: linear-gradient(
+    155deg,
+    #fff 78%,
+    #f7faff 100%
+  );
+}
+
+.exp-card.featured::before {
+  background: #10b981;
+  box-shadow: 0 0 0 2px #a7f3d0;
+}
+
+/* ==========================================
+   EXPERIENCE CARD HEADER
+========================================== */
+
+.exp-card-header {
+  display: flex;
+  justify-content: space-between;
+  align-items: flex-start;
+  flex-wrap: wrap;
+  gap: 10px;
+  margin-bottom: 12px;
+}
+
+.exp-role {
+  font-size: 1.1rem;
+  font-weight: 800;
+  color: #1e293b;
+  line-height: 1.45;
+  margin: 0;
+}
+
+.exp-date {
+  display: inline-block;
+  font-size: 0.76rem;
+  font-weight: 700;
+  color: #1d4ed8;
+  background: #eff6ff;
+  border: 1px solid #dbeafe;
+  border-radius: 25px;
+  padding: 6px 11px;
+  white-space: nowrap;
+}
+
+/* ==========================================
+   ONGOING STATUS
+========================================== */
+
+.exp-status {
+  display: inline-flex;
+  align-items: center;
+  gap: 7px;
+  font-size: 0.72rem;
+  font-weight: 700;
+  color: #047857;
+  background: #ecfdf5;
+  border: 1px solid #bbf7d0;
+  padding: 6px 11px;
+  border-radius: 25px;
+  margin-bottom: 13px;
+}
+
+.status-dot {
+  display: inline-block;
+  width: 7px;
+  height: 7px;
+  border-radius: 50%;
+  background: #10b981;
+}
+
+/* ==========================================
+   ORGANIZATION AND LOCATION
+========================================== */
+
+.exp-org {
+  font-size: 0.95rem;
+  font-weight: 700;
+  color: #334155;
+  line-height: 1.65;
+  margin-bottom: 6px;
+}
+
+.exp-location {
   display: flex;
   align-items: center;
-  justify-content: center;
-  font-size: 1.15rem;
+  gap: 7px;
+  font-size: 0.82rem;
+  color: #94a3b8;
+  margin-bottom: 19px;
 }
 
-.award-icon.gold {
-  background: #fef3c7;
-  color: #b45309;
+.exp-location i {
+  color: #94a3b8;
 }
 
-.award-icon.blue {
-  background: #dbeafe;
-  color: #2563eb;
-}
+/* ==========================================
+   RESPONSIBILITIES
+========================================== */
 
-.award-icon.green {
-  background: #dcfce7;
-  color: #15803d;
-}
-
-.award-icon.purple {
-  background: #f3e8ff;
-  color: #9333ea;
-}
-
-.award-details {
-  flex: 1;
-  min-width: 0;
-}
-
-.award-title {
-  font-size: 0.99rem;
-  font-weight: 750;
-  color: #1e293b;
-  line-height: 1.5;
-  margin: 0 0 6px;
-}
-
-.award-organization {
-  font-size: 0.87rem;
+.exp-description {
+  font-size: 0.9rem;
   color: #475569;
-  line-height: 1.65;
+  line-height: 1.8;
 }
 
-.award-description {
-  color: #64748b;
-  font-size: 0.85rem;
-  line-height: 1.7;
-  margin-top: 8px;
+.exp-description ul {
+  list-style: none;
+  padding: 0;
+  margin: 0;
 }
 
-/* ===== Labels ===== */
-.award-labels {
+.exp-description li {
+  position: relative;
+  padding-left: 19px;
+  margin-bottom: 12px;
+}
+
+.exp-description li:last-child {
+  margin-bottom: 0;
+}
+
+.exp-description li::before {
+  content: "";
+  position: absolute;
+  top: 11px;
+  left: 1px;
+  width: 6px;
+  height: 6px;
+  background: #60a5fa;
+  border-radius: 50%;
+}
+
+/* ==========================================
+   SKILL TAGS
+========================================== */
+
+.exp-tags {
   display: flex;
   flex-wrap: wrap;
   gap: 7px;
-  margin-top: 11px;
+  margin-top: 20px;
+  padding-top: 16px;
+  border-top: 1px solid #f1f5f9;
 }
 
-.award-tag {
+.exp-tag {
   display: inline-block;
-  padding: 4px 10px;
-  border-radius: 20px;
-  background: #eff6ff;
-  color: #1d4ed8;
-  font-size: 0.73rem;
-  font-weight: 600;
-}
-
-.award-tag.gold {
-  background: #fef3c7;
-  color: #92400e;
-}
-
-.award-tag.green {
-  background: #dcfce7;
-  color: #166534;
-}
-
-.award-tag.purple {
-  background: #f3e8ff;
-  color: #7e22ce;
-}
-
-.award-tag.date {
+  padding: 6px 10px;
+  border-radius: 7px;
   background: #f1f5f9;
   color: #475569;
+  font-size: 0.72rem;
+  font-weight: 600;
+  line-height: 1.35;
 }
 
-/* ===== Responsive ===== */
+/* ==========================================
+   MENTORSHIP IMPACT METRICS
+========================================== */
+
+.impact-grid {
+  display: grid;
+  grid-template-columns: repeat(3, minmax(0, 1fr));
+  gap: 11px;
+  margin: 20px 0 24px;
+}
+
+.impact-box {
+  text-align: center;
+  padding: 19px 9px;
+  background: #f8fafc;
+  border: 1px solid #e2e8f0;
+  border-radius: 12px;
+  transition: all 0.25s ease;
+}
+
+.impact-box:hover {
+  background: #eff6ff;
+  border-color: #bfdbfe;
+}
+
+.impact-number {
+  display: block;
+  font-size: 1.85rem;
+  font-weight: 850;
+  color: #2563eb;
+  line-height: 1.2;
+}
+
+.impact-label {
+  display: block;
+  font-size: 0.73rem;
+  color: #64748b;
+  line-height: 1.5;
+  margin-top: 7px;
+}
+
+/* ==========================================
+   REVIEWER DETAILS
+========================================== */
+
+.review-count {
+  display: inline-flex;
+  align-items: center;
+  gap: 7px;
+  padding: 7px 11px;
+  border-radius: 7px;
+  background: #eff6ff;
+  color: #1d4ed8;
+  font-size: 0.76rem;
+  font-weight: 650;
+  margin-top: 17px;
+}
+
+/* ==========================================
+   RESPONSIVE DESIGN
+========================================== */
+
 @media (max-width: 700px) {
-  .featured-grid {
-    grid-template-columns: 1fr;
-  }
 
-  .featured-card:first-child {
-    grid-column: auto;
-  }
-}
-
-@media (max-width: 600px) {
-  .awards-content h1 {
-    font-size: 1.65rem;
-  }
-
-  .awards-stats {
+  .exp-navigation {
     gap: 7px;
   }
 
-  .awards-stat {
-    padding: 12px 5px;
+  .exp-navigation a {
+    font-size: 0.75rem;
+    padding: 8px 11px;
   }
 
-  .awards-stat strong {
-    font-size: 1.3rem;
+}
+
+@media (max-width: 600px) {
+
+  .exp-content > h1 {
+    font-size: 1.7rem;
   }
 
-  .awards-stat span {
-    font-size: 0.72rem;
+  .section-heading h2 {
+    font-size: 1.15rem;
   }
 
-  .awards-timeline {
-    padding-left: 20px;
-  }
-
-  .timeline-year::before {
-    left: -28px;
-  }
-
-  .award-card {
-    padding: 14px;
-    gap: 11px;
-  }
-
-  .award-icon {
+  .section-icon {
     width: 38px;
     height: 38px;
   }
 
-  .featured-card {
+  .exp-timeline {
+    padding-left: 20px;
+  }
+
+  .exp-card {
     padding: 18px;
   }
+
+  .exp-card::before {
+    left: -31px;
+  }
+
+  .exp-card-header {
+    flex-direction: column;
+    align-items: flex-start;
+  }
+
+  .exp-date {
+    white-space: normal;
+  }
+
+  .impact-grid {
+    gap: 7px;
+  }
+
+  .impact-box {
+    padding: 13px 5px;
+  }
+
+  .impact-number {
+    font-size: 1.45rem;
+  }
+
+  .impact-label {
+    font-size: 0.67rem;
+  }
+
 }
+
+/* ==========================================
+   ACCESSIBILITY
+========================================== */
+
+@media (prefers-reduced-motion: reduce) {
+
+  .exp-card,
+  .impact-box,
+  .exp-navigation a,
+  .author-links a {
+    transition: none;
+  }
+
+}
+
 </style>
+
 
 <div class="edu-layout">
 
-  <!-- =====================================
-       LEFT: AUTHOR PROFILE
-  ====================================== -->
+<!-- ======================================
+     LEFT: AUTHOR PROFILE
+====================================== -->
 
-  <aside class="author-card">
+<aside class="author-card">
 
-    <img
-      class="author-avatar"
-      src="/assets/images/profile.JPG"
-      alt="Showmik Singha"
-    >
+  <img
+    class="author-avatar"
+    src="/assets/images/profile.JPG"
+    alt="Showmik Singha"
+  >
 
-    <p class="author-name">Showmik Singha</p>
+  <p class="author-name">
+    Showmik Singha
+  </p>
 
-    <p class="author-bio">
-      PhD Candidate, University of Missouri
-    </p>
+  <p class="author-bio">
+    PhD Candidate, University of Missouri
+  </p>
 
-    <ul class="author-links">
+  <ul class="author-links">
 
-      <li>
-        <a href="mailto:ssqk4@umsystem.edu">
-          <i class="fas fa-fw fa-envelope"></i>
-          <span>Email</span>
-        </a>
-      </li>
+    <li>
+      <a href="mailto:ssqk4@umsystem.edu">
+        <i class="fas fa-fw fa-envelope"></i>
+        <span>Email</span>
+      </a>
+    </li>
 
-      <li>
-        <a href="https://github.com/showmiksingha"
-           target="_blank" rel="noopener">
-          <i class="fab fa-fw fa-github"></i>
-          <span>GitHub</span>
-        </a>
-      </li>
+    <li>
+      <a href="https://github.com/showmiksingha"
+         target="_blank"
+         rel="noopener noreferrer">
+        <i class="fab fa-fw fa-github"></i>
+        <span>GitHub</span>
+      </a>
+    </li>
 
-      <li>
-        <a href="https://www.linkedin.com/in/showmiksingha/"
-           target="_blank" rel="noopener">
-          <i class="fab fa-fw fa-linkedin"></i>
-          <span>LinkedIn</span>
-        </a>
-      </li>
+    <li>
+      <a href="https://www.linkedin.com/in/showmiksingha/"
+         target="_blank"
+         rel="noopener noreferrer">
+        <i class="fab fa-fw fa-linkedin"></i>
+        <span>LinkedIn</span>
+      </a>
+    </li>
 
-    </ul>
-  </aside>
+  </ul>
+
+</aside>
 
 
-<!-- =====================================
-     RIGHT: EXPERIENCE
-===================================== -->
+<!-- ======================================
+     RIGHT: EXPERIENCE CONTENT
+====================================== -->
 
 <main class="exp-content">
+
 <h1>Professional Experiences</h1>
-<!-- =====================================
-     HERO SECTION
-===================================== -->
 
 
-
-<!-- =====================================
+<!-- ======================================
      QUICK NAVIGATION
-===================================== -->
+====================================== -->
 
-<nav class="exp-navigation" aria-label="Experience sections">
+<nav class="exp-navigation"
+     aria-label="Experience sections">
 
   <a href="#research">
     <i class="fas fa-microscope"></i>
@@ -528,29 +658,33 @@ classes: wide
 </nav>
 
 
-<!-- =====================================
+<!-- ======================================
      1. RESEARCH EXPERIENCE
-===================================== -->
+====================================== -->
 
 <section class="exp-section" id="research">
 
   <div class="section-heading">
+
     <div class="section-icon">
       <i class="fas fa-microscope"></i>
     </div>
+
     <h2>Research Experiences</h2>
+
   </div>
-
-
 
   <div class="exp-timeline">
 
 
-    <!-- ONGOING DOCTORAL RESEARCH -->
+    <!-- ================================
+         DOCTORAL RESEARCH
+    ================================= -->
 
     <article class="exp-card featured">
 
       <div class="exp-card-header">
+
         <h3 class="exp-role">
           Doctoral Researcher
         </h3>
@@ -558,6 +692,7 @@ classes: wide
         <span class="exp-date">
           Jan 2024 – Present
         </span>
+
       </div>
 
       <div class="exp-status">
@@ -575,6 +710,7 @@ classes: wide
       </div>
 
       <div class="exp-description">
+
         <ul>
 
           <li>
@@ -616,25 +752,30 @@ classes: wide
           </li>
 
         </ul>
+
       </div>
 
       <div class="exp-tags">
+
         <span class="exp-tag">GaN HEMT</span>
         <span class="exp-tag">Ga₂O₃ MOSFET</span>
         <span class="exp-tag">Radiation Effects</span>
         <span class="exp-tag">TCAD</span>
         <span class="exp-tag">Machine Learning</span>
+
       </div>
 
     </article>
 
 
-    
-    <!-- BOSTON UNIVERSITY GRA -->
+    <!-- ================================
+         BOSTON UNIVERSITY
+    ================================= -->
 
     <article class="exp-card">
 
       <div class="exp-card-header">
+
         <h3 class="exp-role">
           Graduate Research Assistant
         </h3>
@@ -642,6 +783,7 @@ classes: wide
         <span class="exp-date">
           Sep 2022 – Dec 2023
         </span>
+
       </div>
 
       <div class="exp-org">
@@ -654,6 +796,7 @@ classes: wide
       </div>
 
       <div class="exp-description">
+
         <ul>
 
           <li>
@@ -683,13 +826,16 @@ classes: wide
           </li>
 
         </ul>
+
       </div>
 
       <div class="exp-tags">
+
         <span class="exp-tag">HgCdTe</span>
         <span class="exp-tag">Photodetectors</span>
         <span class="exp-tag">Simulation</span>
         <span class="exp-tag">Quantum Efficiency</span>
+
       </div>
 
     </article>
@@ -699,29 +845,33 @@ classes: wide
 </section>
 
 
-<!-- =====================================
+<!-- ======================================
      2. TEACHING EXPERIENCE
-===================================== -->
+====================================== -->
 
 <section class="exp-section" id="teaching">
 
   <div class="section-heading">
+
     <div class="section-icon">
       <i class="fas fa-chalkboard-teacher"></i>
     </div>
+
     <h2>Teaching Experience</h2>
+
   </div>
-
-
 
   <div class="exp-timeline">
 
 
-    <!-- MIZZOU GTA -->
+    <!-- ================================
+         MIZZOU GTA
+    ================================= -->
 
     <article class="exp-card featured">
 
       <div class="exp-card-header">
+
         <h3 class="exp-role">
           Graduate Teaching Assistant
         </h3>
@@ -729,6 +879,7 @@ classes: wide
         <span class="exp-date">
           Jan 2024 – Present
         </span>
+
       </div>
 
       <div class="exp-status">
@@ -748,6 +899,7 @@ classes: wide
       </div>
 
       <div class="exp-description">
+
         <ul>
 
           <li>
@@ -782,24 +934,30 @@ classes: wide
           </li>
 
         </ul>
+
       </div>
 
       <div class="exp-tags">
+
         <span class="exp-tag">Circuit Theory</span>
         <span class="exp-tag">Logic Systems</span>
         <span class="exp-tag">Signals &amp; Systems</span>
         <span class="exp-tag">Cadence</span>
         <span class="exp-tag">Course Materials</span>
+
       </div>
 
     </article>
 
 
-    <!-- SUST FACULTY -->
+    <!-- ================================
+         SUST FACULTY MEMBER
+    ================================= -->
 
     <article class="exp-card">
 
       <div class="exp-card-header">
+
         <h3 class="exp-role">
           Faculty Member
         </h3>
@@ -807,6 +965,7 @@ classes: wide
         <span class="exp-date">
           Sep 2018 – Aug 2022
         </span>
+
       </div>
 
       <div class="exp-org">
@@ -822,6 +981,7 @@ classes: wide
       </div>
 
       <div class="exp-description">
+
         <ul>
 
           <li>
@@ -857,13 +1017,16 @@ classes: wide
           </li>
 
         </ul>
+
       </div>
 
       <div class="exp-tags">
+
         <span class="exp-tag">University Teaching</span>
         <span class="exp-tag">Curriculum Development</span>
         <span class="exp-tag">Student Mentorship</span>
         <span class="exp-tag">Electrical Engineering</span>
+
       </div>
 
     </article>
@@ -873,17 +1036,20 @@ classes: wide
 </section>
 
 
-<!-- =====================================
+<!-- ======================================
      3. RESEARCH MENTORSHIP
-===================================== -->
+====================================== -->
 
 <section class="exp-section" id="mentorship">
 
   <div class="section-heading">
+
     <div class="section-icon">
       <i class="fas fa-user-graduate"></i>
     </div>
+
     <h2>Research Mentorship</h2>
+
   </div>
 
   <p class="section-description">
@@ -898,13 +1064,11 @@ classes: wide
     <article class="exp-card">
 
       <div class="exp-card-header">
+
         <h3 class="exp-role">
           Undergraduate Research Mentor
         </h3>
 
-        <span class="exp-date">
-          University of Missouri
-        </span>
       </div>
 
       <div class="exp-org">
@@ -916,34 +1080,55 @@ classes: wide
         Columbia, Missouri, USA
       </div>
 
-      <!-- Mentorship Impact -->
+
+      <!-- MENTORSHIP IMPACT -->
 
       <div class="impact-grid">
 
         <div class="impact-box">
-          <span class="impact-number">4</span>
-          <span class="impact-label">
-            Undergraduate<br>Students
+
+          <span class="impact-number">
+            4
           </span>
+
+          <span class="impact-label">
+            Undergraduate<br>
+            Students
+          </span>
+
         </div>
 
         <div class="impact-box">
-          <span class="impact-number">5</span>
-          <span class="impact-label">
-            Conference<br>Presentations
+
+          <span class="impact-number">
+            5
           </span>
+
+          <span class="impact-label">
+            Conference<br>
+            Presentations
+          </span>
+
         </div>
 
         <div class="impact-box">
-          <span class="impact-number">1</span>
-          <span class="impact-label">
-            Additional Accepted<br>Manuscript
+
+          <span class="impact-number">
+            1
           </span>
+
+          <span class="impact-label">
+            Additional Accepted<br>
+            Manuscript
+          </span>
+
         </div>
 
       </div>
 
+
       <div class="exp-description">
+
         <ul>
 
           <li>
@@ -975,13 +1160,27 @@ classes: wide
           </li>
 
         </ul>
+
       </div>
 
       <div class="exp-tags">
-        <span class="exp-tag">Undergraduate Research</span>
-        <span class="exp-tag">Mentorship</span>
-        <span class="exp-tag">Research Communication</span>
-        <span class="exp-tag">Student Development</span>
+
+        <span class="exp-tag">
+          Undergraduate Research
+        </span>
+
+        <span class="exp-tag">
+          Mentorship
+        </span>
+
+        <span class="exp-tag">
+          Research Communication
+        </span>
+
+        <span class="exp-tag">
+          Student Development
+        </span>
+
       </div>
 
     </article>
@@ -991,34 +1190,41 @@ classes: wide
 </section>
 
 
-<!-- =====================================
+<!-- ======================================
      4. PROFESSIONAL SERVICE
-===================================== -->
+====================================== -->
 
 <section class="exp-section" id="service">
 
   <div class="section-heading">
+
     <div class="section-icon">
       <i class="fas fa-clipboard-check"></i>
     </div>
-    <h2>Professional Service</h2>
-  </div>
 
-  
+    <h2>Professional Service</h2>
+
+  </div>
 
   <div class="exp-timeline">
 
 
-    <!-- BATS 2025 -->
+    <!-- ================================
+         BATS 2025 REVIEWER
+    ================================= -->
 
     <article class="exp-card">
 
       <div class="exp-card-header">
+
         <h3 class="exp-role">
           Conference Reviewer
         </h3>
 
-        <span class="exp-date">2025</span>
+        <span class="exp-date">
+          2025
+        </span>
+
       </div>
 
       <div class="exp-org">
@@ -1028,9 +1234,8 @@ classes: wide
       </div>
 
       <div class="exp-description">
-        <ul>
 
-        
+        <ul>
 
           <li>
             Evaluated technical submissions
@@ -1040,23 +1245,33 @@ classes: wide
           </li>
 
         </ul>
+
       </div>
 
-    
+      <div class="review-count">
+        <i class="fas fa-check-circle"></i>
+        1 Completed Review
+      </div>
 
     </article>
 
 
-    <!-- Q-BATS 2024 -->
+    <!-- ================================
+         Q-BATS 2024 REVIEWER
+    ================================= -->
 
     <article class="exp-card">
 
       <div class="exp-card-header">
+
         <h3 class="exp-role">
           Conference Reviewer
         </h3>
 
-        <span class="exp-date">2024</span>
+        <span class="exp-date">
+          2024
+        </span>
+
       </div>
 
       <div class="exp-org">
@@ -1067,6 +1282,7 @@ classes: wide
       </div>
 
       <div class="exp-description">
+
         <ul>
 
           <li>
@@ -1078,9 +1294,13 @@ classes: wide
           </li>
 
         </ul>
+
       </div>
 
-    
+      <div class="review-count">
+        <i class="fas fa-check-circle"></i>
+        2 Completed Reviews
+      </div>
 
     </article>
 
@@ -1090,5 +1310,7 @@ classes: wide
 
 
 </main>
+
 </div>
+
 </div>
