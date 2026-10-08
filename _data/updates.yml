@@ -1,24 +1,80 @@
 years:
   - year: 2026
     items:
+      - date: "Oct 2026"
+        text: "Actively seeking full-time positions."
+     
+      - date: "Oct 2026"
+        text: "Scheduled to present two oral papers at the IEEE Workshop on Wide Bandgap Power Devices and Applications (WiPDA 2026), Burlington, Vermont."
+
       - date: "Sep 2026"
         text: "Successfully passed the Ph.D. Comprehensive Examination and advanced to Ph.D. candidacy in Electrical and Computer Engineering at the University of Missouri–Columbia."
 
-      - date: "Sep 2026"
-        text: "Received the College of Engineering Outstanding Ph.D. Student Award at the University of Missouri."
-
+      - date: "Jun 2026"
+        text: "Presented research at the 84th Device Research Conference (DRC 2026)."
+      
+      - date: "May 2026"
+        text: "Awarded the Dean's Graduate Summer Retention Fellowship by the College of Engineering, University of Missouri."
+      
       - date: "May 2026"
         text: "Received the Electrical Engineering and Computer Science Outstanding Ph.D. Student and Teaching Assistant Award at the University of Missouri."
 
+      - date: "April 2026"
+        text: "Received the College of Engineering Outstanding Ph.D. Student Award at the University of Missouri."
+      
+     
+
+    
+
   - year: 2025
     items:
-      - date: "Sep 2025"
-        text: "Successfully passed the Ph.D. Comprehensive Examination and advanced to Ph.D. candidacy in Electrical and Computer Engineering at the University of Missouri–Columbia."
 
-      - date: "Sep 2025"
-        text: "Received the College of Engineering Outstanding Ph.D. Student Award at the University of Missouri."
+      - date: "October 2025"
+        text: "Presented research on single-event transient effects in Gallium Oxide MOSFETs under oblique particle irradiation at IEEE WiPDA 2025."
 
-      - date: "May 2025"
-        text: "Received the Electrical Engineering and Computer Science Outstanding Ph.D. Student and Teaching Assistant Award at the University of Missouri."
+      - date: "August 2025"
+        text: "Presented research on AlN/β-Ga₂O₃ HEMTs at the U.S. Gallium Oxide Workshop (GOX 2025)."
 
- 
+      - date: "April 2025"
+        text: "Received Second Place and the People's Choice Award at the 41st Research and Creative Activities Forum (RCAF) Poster Competition, University of Missouri."
+
+      - date: "March 2025"
+        text: "Received the Best Oral Paper and Graduate Poster Award at the 33rd Annual Connecticut Symposium on Microelectronics and Optoelectronics."
+
+
+  - year: 2024
+    items:
+      - date: "Jan 2024"
+        text: "Started the Ph.D. program in Electrical and Computer Engineering at the University of Missouri–Columbia under the supervision of Prof. Syed Kamrul Islam."
+
+      - date: "2024"
+        text: "Started serving as a Graduate Research and Teaching Assistant at the University of Missouri."
+
+      - date: "2024"
+        text: "Received the Best Graduate Poster Award at the 32nd Annual Connecticut Symposium on Microelectronics and Optoelectronics."
+
+      - date: "2024"
+        text: "Presented research at the IEEE Midwest Symposium on Circuits and Systems (MWSCAS 2024)."
+
+  - year: 2023
+    items:
+      - date: "2023"
+        text: "Completed the Master of Science in Electrical and Computer Engineering at Boston University."
+
+  - year: 2022
+    items:
+      - date: "Aug 2022"
+        text: "Concluded faculty appointment in the Department of Electrical and Electronic Engineering at Shahjalal University of Science and Technology (SUST) to pursue graduate studies in the United States."
+
+  - year: 2019
+    items:
+      - date: "2019"
+        text: "Received the Best Paper Award at the First International Conference on Emerging Electrical Energy, Electronics and Computing Technologies (ICE4CT)."
+
+  - year: 2018
+    items:
+      - date: "Sep 2018"
+        text: "Joined the Department of Electrical and Electronic Engineering at Shahjalal University of Science and Technology (SUST) as a Faculty Member."
+
+      - date: "Feb 2018"
+        text: "Completed the Bachelor of Science in Electrical and Electronic Engineering at Shahjalal University of Science and Technology (SUST), graduating with a CGPA of 3.93/4.00 and securing first position in the class."
