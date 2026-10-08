@@ -492,64 +492,11 @@ classes: wide
 ===================================== -->
 
 <main class="exp-content">
-
+<h1>Professional Experiences</h1>
 <!-- =====================================
      HERO SECTION
 ===================================== -->
 
-<div class="exp-hero">
-
-  <span class="exp-eyebrow">
-    MY PROFESSIONAL JOURNEY
-  </span>
-
-  <h1>Experience &amp; Impact</h1>
-
-  <p>
-    Bridging semiconductor research,
-    engineering education, and mentorship.
-    My experience spans advanced device modeling,
-    university teaching, collaborative research,
-    and academic service across multiple institutions.
-  </p>
-
-  <div class="hero-tags">
-    <span>Semiconductor Research</span>
-    <span>Engineering Education</span>
-    <span>Research Mentorship</span>
-  </div>
-
-</div>
-
-
-<!-- =====================================
-     KEY STATISTICS
-===================================== -->
-
-<div class="exp-stats">
-
-  <div class="stat-card">
-    <span class="stat-number">3</span>
-    <span class="stat-label">
-      Academic<br>Institutions
-    </span>
-  </div>
-
-  <div class="stat-card">
-    <span class="stat-number">4</span>
-    <span class="stat-label">
-      Undergraduate<br>Researchers Mentored
-    </span>
-  </div>
-
-  <div class="stat-card">
-    <span class="stat-number">6</span>
-    <span class="stat-label">
-      Mentorship Research<br>Outputs
-    </span>
-  </div>
-
-</div>
 
 
 <!-- =====================================
@@ -591,14 +538,10 @@ classes: wide
     <div class="section-icon">
       <i class="fas fa-microscope"></i>
     </div>
-    <h2>Research Experience</h2>
+    <h2>Research Experiences</h2>
   </div>
 
-  <p class="section-description">
-    Computational modeling, semiconductor
-    device physics, reliability analysis,
-    and data-driven device optimization.
-  </p>
+
 
   <div class="exp-timeline">
 
@@ -686,80 +629,7 @@ classes: wide
     </article>
 
 
-    <!-- MIZZOU GRA -->
-
-    <article class="exp-card">
-
-      <div class="exp-card-header">
-        <h3 class="exp-role">
-          Graduate Research Assistant
-        </h3>
-
-        <span class="exp-date">
-          Aug 2024 – Jul 2025
-        </span>
-      </div>
-
-      <div class="exp-org">
-        University of Missouri–Columbia
-      </div>
-
-      <div class="exp-location">
-        <i class="fas fa-map-marker-alt"></i>
-        Columbia, Missouri, USA
-      </div>
-
-      <div class="exp-description">
-        <ul>
-
-          <li>
-            Developed and calibrated
-            physics-based TCAD models
-            of GaN HEMTs and other
-            wide-bandgap power devices;
-            analyzed electrical characteristics,
-            electric-field distribution,
-            carrier transport, and
-            high-field behavior.
-          </li>
-
-          <li>
-            Executed parametric sweeps
-            across device geometry,
-            material properties, bias,
-            temperature, and radiation
-            conditions to evaluate
-            design sensitivities.
-          </li>
-
-          <li>
-            Extracted SPICE-compatible
-            device models for device-
-            and circuit-level evaluation.
-          </li>
-
-          <li>
-            Investigated performance-
-            and reliability-limiting
-            mechanisms through electrical
-            data analysis to guide
-            device-design optimization.
-          </li>
-
-        </ul>
-      </div>
-
-      <div class="exp-tags">
-        <span class="exp-tag">TCAD</span>
-        <span class="exp-tag">SPICE</span>
-        <span class="exp-tag">Device Modeling</span>
-        <span class="exp-tag">Parametric Sweeps</span>
-        <span class="exp-tag">Reliability</span>
-      </div>
-
-    </article>
-
-
+    
     <!-- BOSTON UNIVERSITY GRA -->
 
     <article class="exp-card">
@@ -842,12 +712,7 @@ classes: wide
     <h2>Teaching Experience</h2>
   </div>
 
-  <p class="section-description">
-    University-level instruction,
-    laboratory development,
-    curriculum improvement,
-    and undergraduate education.
-  </p>
+
 
   <div class="exp-timeline">
 
@@ -1139,11 +1004,7 @@ classes: wide
     <h2>Professional Service</h2>
   </div>
 
-  <p class="section-description">
-    Contributing to the scientific
-    community through technical
-    manuscript evaluation and peer review.
-  </p>
+  
 
   <div class="exp-timeline">
 
@@ -1169,13 +1030,7 @@ classes: wide
       <div class="exp-description">
         <ul>
 
-          <li>
-            Completed one peer review
-            for the 2025 International
-            Workshop on Biomedical
-            Applications, Technologies
-            and Sensors.
-          </li>
+        
 
           <li>
             Evaluated technical submissions
@@ -1187,10 +1042,7 @@ classes: wide
         </ul>
       </div>
 
-      <div class="review-count">
-        <i class="fas fa-check-circle"></i>
-        1 Completed Review
-      </div>
+    
 
     </article>
 
@@ -1218,14 +1070,6 @@ classes: wide
         <ul>
 
           <li>
-            Completed two peer reviews
-            for the 2024 International
-            Workshop on Quantum &amp;
-            Biomedical Applications,
-            Technologies, and Sensors.
-          </li>
-
-          <li>
             Contributed to the independent
             technical assessment of
             conference manuscripts,
@@ -1236,10 +1080,7 @@ classes: wide
         </ul>
       </div>
 
-      <div class="review-count">
-        <i class="fas fa-check-circle"></i>
-        2 Completed Reviews
-      </div>
+    
 
     </article>
 
