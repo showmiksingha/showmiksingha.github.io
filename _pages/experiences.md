@@ -1,6 +1,6 @@
 ---
-title: "Experience"
-permalink: /experience/
+title: "Experiences"
+permalink: /experiences/
 layout: default
 author_profile: false
 classes: wide
