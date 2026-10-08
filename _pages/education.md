@@ -153,7 +153,7 @@ classes: wide
     <div class="edu-content">
       <h3>B.Sc. in Electrical and Electronic Engineering (EEE)</h3>
       <div class="edu-meta">
-      <span>February 2018</span>
+      <span>Feb 2018</span>
         <span>Department of Electrical and Electronic Engineering</span>
         <span>Rank: 1st</span>
       </div>
