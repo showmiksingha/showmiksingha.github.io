@@ -378,7 +378,7 @@ classes: wide
 
       <li>
         <a
-          href="https://www.linkedin.com/in/showmiksingha/"
+          href="https://www.linkedin.com/in/showmik-singha-293967147"
           target="_blank"
           rel="noopener noreferrer"
         >
