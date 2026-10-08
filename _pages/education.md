@@ -168,28 +168,84 @@ classes: wide
 
 ---
 
-## <i class="fas fa-book"></i> Major Courses
+<!-- =========================
+     MAJOR COURSES
+========================== -->
+<h2>
+  <i class="fas fa-book"></i> Major Courses
+</h2>
 <hr class="section-rule"/>
 
-<ul class="edu-list">
-  <li>Solid State Devices</li>
-    <li>Optoelectronics</li>
-    <li>VLSI</li>
-  <li>Power Electronics</li>
-  <li>Analog and Digital Electronics</li>
-  <li>Signals and Linear Systems</li>
-  <li>Digital Signal Processing</li>
-  <li>Control System</li>
-  <li>Power System</li>
-    <li>Microprocessors and Interfacing</li>
-    <li>Electrical Properties of Materilas</li>
-    <li>Digital Electronics</li>
-  <li>Electromagnetic Fields and Waves</li>
-  <li>Electrical Machines</li>
-  <li>Electrical Circuits</li>
-  <li>C Programming</li>
-  
-</ul>
+<style>
+/* ===== Major Courses Pills ===== */
+.edu-course-grid {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 10px;
+  margin: 20px 0 30px;
+}
+
+.edu-course-pill {
+  display: inline-flex;
+  align-items: center;
+  padding: 9px 15px;
+  background: #f8fafc;
+  color: #334155;
+  border: 1px solid #e2e8f0;
+  border-radius: 999px;
+  font-size: 0.88rem;
+  font-weight: 500;
+  line-height: 1.4;
+  cursor: default;
+  transition:
+    background-color 0.25s ease,
+    color 0.25s ease,
+    border-color 0.25s ease,
+    box-shadow 0.25s ease,
+    transform 0.25s ease;
+}
+
+.edu-course-pill:hover {
+  background: #2563eb;
+  color: #ffffff;
+  border-color: #2563eb;
+  transform: translateY(-3px);
+  box-shadow: 0 5px 14px rgba(37, 99, 235, 0.22);
+}
+
+@media (max-width: 600px) {
+  .edu-course-grid {
+    gap: 8px;
+  }
+
+  .edu-course-pill {
+    padding: 8px 12px;
+    font-size: 0.82rem;
+  }
+}
+</style>
+
+<div class="edu-course-grid">
+  <span class="edu-course-pill">Solid State Devices</span>
+  <span class="edu-course-pill">Optoelectronics</span>
+  <span class="edu-course-pill">VLSI</span>
+  <span class="edu-course-pill">Power Electronics</span>
+  <span class="edu-course-pill">Analog and Digital Electronics</span>
+  <span class="edu-course-pill">Signals and Linear Systems</span>
+  <span class="edu-course-pill">Digital Signal Processing</span>
+  <span class="edu-course-pill">Control Systems</span>
+  <span class="edu-course-pill">Power Systems</span>
+  <span class="edu-course-pill">Microprocessors and Interfacing</span>
+  <span class="edu-course-pill">Electrical Properties of Materials</span>
+  <span class="edu-course-pill">Digital Electronics</span>
+  <span class="edu-course-pill">Electromagnetic Fields and Waves</span>
+  <span class="edu-course-pill">Electrical Machines</span>
+  <span class="edu-course-pill">Electrical Circuits</span>
+  <span class="edu-course-pill">C Programming</span>
+</div>
+
+
+
 
 
 
