@@ -193,24 +193,6 @@ classes: wide
 
 
 
----
 
-
-
-
-
-## <i class="fas fa-award"></i> Academic Awards
-<hr class="section-rule"/>
-
-<ul class="edu-list">
-  <li>Dean's Summer Retention Fellowship - College of Engineering — University of Missouri (2026)</li>
-    <li>Outstanding Ph.D. Student Award - College of Engineering — University of Missouri (2026)</li>
-  <li> Outstanding Ph.D. Student and Teaching Assistant Award - Dept. of Electrical Engineering and Computer Science  — University of Missouri (2026)</li>
-  <li> Travel Fellowship Award - Dept. of Electrical Engineering and Computer Science  — University of Missouri (2024,2025)</li>
-  <li>2<sup>nd</sup> Place & People’s Choice Award — 41<sup>st</sup> Research and Creative Activities Forum (RCAF) Poster Competition, University of Missouri (2025)</li>
-  <li>Best Oral Paper & Graduate Poster Award — 33<sup>rd</sup> Annual Connecticut Symposium on Microelectronics & Optoelectronics (2025)</li>
-  <li>Best Graduate Poster Award — 32<sup>nd</sup> Annual Connecticut Symposium on Microelectronics & Optoelectronics (2024)</li>
-  <li>Best Paper Award — First International Conference on Emerging Electrical Energy, Electronics and Computing Technologies (ICE4CT) (2019)</li>
-</ul>
 
 </div> <!-- /.wrap -->
