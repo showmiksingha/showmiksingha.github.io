@@ -4,112 +4,604 @@ permalink: /
 title: "Home"
 ---
 
-<!-- =========================
-     HERO (background image + left photo + centered text)
-========================== -->
-<section class="hero hero--split">
-  <div class="hero__overlay">
-    <div class="hero__content">
+<style>
+/* ============================================
+   APPLE-INSPIRED HOMEPAGE BENTO
+   Scoped to avoid affecting theme navigation,
+   News & Updates, or Get in Touch.
+============================================ */
 
-      <!-- LEFT: Photo -->
-      <div class="hero__photo">
-        <img src="{{ '/assets/images/profile.JPG' | relative_url }}" alt="Showmik Singha">
+.home-bento-section {
+  padding: 42px 20px 52px;
+  background: #f5f5f7;
+}
+
+.home-bento-wrap {
+  max-width: 1180px;
+  margin: 0 auto;
+}
+
+.home-bento-grid {
+  display: grid;
+  grid-template-columns: repeat(12, minmax(0, 1fr));
+  gap: 16px;
+  align-items: stretch;
+}
+
+.home-bento-grid *,
+.home-bento-grid *::before,
+.home-bento-grid *::after {
+  box-sizing: border-box;
+}
+
+.home-bento-card {
+  min-width: 0;
+  border-radius: 24px;
+  background: #ffffff;
+  padding: 30px;
+  overflow: hidden;
+  position: relative;
+  border: 1px solid rgba(0, 0, 0, .035);
+  transition:
+    transform .3s ease,
+    box-shadow .3s ease;
+}
+
+.home-bento-card:hover {
+  transform: translateY(-4px);
+  box-shadow: 0 14px 35px rgba(0, 0, 0, .075);
+}
+
+.home-bento-eyebrow {
+  display: block;
+  margin-bottom: 17px;
+  font-size: 11px;
+  font-weight: 750;
+  letter-spacing: 1.8px;
+  text-transform: uppercase;
+  color: #86868b;
+}
+
+.home-bento-card h1,
+.home-bento-card h2,
+.home-bento-card h3 {
+  padding: 0;
+  border: 0;
+  line-height: 1.18;
+  letter-spacing: -.65px;
+}
+
+.home-bento-card p {
+  margin: 0;
+  line-height: 1.75;
+  color: #55565b;
+}
+
+/* ============================================
+   INTRODUCTION CARD
+============================================ */
+
+.home-bento-intro {
+  grid-column: span 8;
+  min-height: 365px;
+  padding: 48px;
+  background: #ffffff;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+}
+
+.home-bento-intro h1 {
+  margin: 0 0 23px;
+  font-size: clamp(39px, 5vw, 64px);
+  font-weight: 800;
+  letter-spacing: -2.5px;
+  color: #1d1d1f;
+}
+
+.home-bento-intro h1 span {
+  color: #0071e3;
+}
+
+.home-bento-intro .intro-tagline {
+  font-size: clamp(17px, 2vw, 22px);
+  font-weight: 500;
+  line-height: 1.55;
+  max-width: 610px;
+  color: #55565b;
+}
+
+.home-bento-intro .intro-location {
+  margin-top: 25px;
+  color: #737378;
+  font-size: 13px;
+  font-weight: 550;
+}
+
+.home-bento-intro .intro-location i {
+  margin-right: 7px;
+  color: #0071e3;
+}
+
+/* ============================================
+   PROFILE PHOTO CARD
+============================================ */
+
+.home-bento-photo {
+  grid-column: span 4;
+  min-height: 365px;
+  padding: 0;
+  display: flex;
+  flex-direction: column;
+  background: #e9edf2;
+}
+
+.home-bento-photo-frame {
+  flex: 1;
+  min-height: 280px;
+  overflow: hidden;
+}
+
+.home-bento-photo-frame img {
+  width: 100%;
+  height: 100%;
+  min-height: 280px;
+  object-fit: cover;
+  object-position: center 25%;
+  display: block;
+  transition: transform .5s ease;
+}
+
+.home-bento-photo:hover img {
+  transform: scale(1.035);
+}
+
+.home-bento-photo-caption {
+  padding: 17px 22px;
+  background: #fff;
+}
+
+.home-bento-photo-caption strong {
+  display: block;
+  font-size: 17px;
+  color: #1d1d1f;
+}
+
+.home-bento-photo-caption span {
+  display: block;
+  margin-top: 4px;
+  color: #77777c;
+  font-size: 12px;
+}
+
+/* ============================================
+   BIOGRAPHY
+============================================ */
+
+.home-bento-bio {
+  grid-column: span 8;
+  padding: 36px;
+}
+
+.home-bento-bio h2 {
+  font-size: 30px;
+  font-weight: 750;
+  margin: 0 0 19px;
+  color: #1d1d1f;
+}
+
+.home-bento-bio p {
+  font-size: 15px;
+  margin-bottom: 14px;
+}
+
+.home-bento-bio p:last-child {
+  margin-bottom: 0;
+}
+
+/* ============================================
+   RESEARCH SUMMARY
+============================================ */
+
+.home-bento-focus {
+  grid-column: span 4;
+  padding: 35px;
+  background: #17263d;
+  color: #ffffff;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+}
+
+.home-bento-focus .home-bento-eyebrow {
+  color: #9bc3f4;
+}
+
+.home-bento-focus h2 {
+  color: #fff;
+  font-size: 26px;
+  margin: 0 0 17px;
+}
+
+.home-bento-focus p {
+  color: #d0daea;
+  font-size: 14px;
+}
+
+.home-bento-focus .focus-divider {
+  height: 1px;
+  background: rgba(255,255,255,.17);
+  margin: 24px 0;
+}
+
+.home-bento-focus .focus-highlight {
+  color: #a9cbff;
+  font-weight: 650;
+  font-size: 13px;
+  line-height: 1.7;
+}
+
+/* ============================================
+   RESEARCH INTERESTS
+============================================ */
+
+.home-bento-interests-heading {
+  grid-column: 1 / -1;
+  padding: 30px 36px;
+  background: #e9eff8;
+}
+
+.home-bento-interests-heading h2 {
+  font-size: clamp(27px, 3vw, 36px);
+  font-weight: 780;
+  margin: 0 0 8px;
+  color: #1d1d1f;
+}
+
+.home-bento-interests-heading p {
+  font-size: 14px;
+}
+
+/* Dynamically generated interests cards */
+
+.home-bento-interest-grid {
+  grid-column: 1 / -1;
+  display: grid;
+  grid-template-columns: repeat(3, minmax(0, 1fr));
+  gap: 16px;
+}
+
+.home-bento-interest {
+  min-width: 0;
+  min-height: 145px;
+  border-radius: 22px;
+  padding: 25px 26px;
+  background: #ffffff;
+  border: 1px solid rgba(0,0,0,.04);
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  gap: 22px;
+  transition:
+    transform .3s ease,
+    box-shadow .3s ease;
+}
+
+.home-bento-interest:hover {
+  transform: translateY(-4px);
+  box-shadow: 0 12px 30px rgba(0,0,0,.07);
+}
+
+.home-bento-interest-icon {
+  width: 43px;
+  height: 43px;
+  border-radius: 13px;
+  background: #edf4ff;
+  color: #0071e3;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-size: 19px;
+}
+
+.home-bento-interest span {
+  display: block;
+  font-size: 15px;
+  line-height: 1.5;
+  font-weight: 670;
+  color: #1d1d1f;
+  overflow-wrap: anywhere;
+}
+
+/* ============================================
+   MOBILE RESPONSIVENESS
+============================================ */
+
+@media (max-width: 900px) {
+  .home-bento-intro,
+  .home-bento-bio {
+    grid-column: span 7;
+  }
+
+  .home-bento-photo,
+  .home-bento-focus {
+    grid-column: span 5;
+  }
+
+  .home-bento-intro {
+    padding: 34px;
+  }
+
+  .home-bento-interest-grid {
+    grid-template-columns: repeat(2, minmax(0,1fr));
+  }
+}
+
+@media (max-width: 650px) {
+  .home-bento-section {
+    padding: 22px 14px 35px;
+  }
+
+  .home-bento-grid {
+    gap: 13px;
+  }
+
+  .home-bento-intro,
+  .home-bento-photo,
+  .home-bento-bio,
+  .home-bento-focus,
+  .home-bento-interests-heading {
+    grid-column: 1 / -1;
+    min-height: auto;
+  }
+
+  .home-bento-intro {
+    padding: 35px 27px;
+  }
+
+  .home-bento-intro h1 {
+    letter-spacing: -1.7px;
+  }
+
+  .home-bento-photo-frame {
+    height: 330px;
+    flex: none;
+  }
+
+  .home-bento-photo-frame img {
+    height: 330px;
+  }
+
+  .home-bento-bio,
+  .home-bento-focus {
+    padding: 29px 25px;
+  }
+
+  .home-bento-interests-heading {
+    padding: 27px;
+  }
+
+  .home-bento-interest-grid {
+    grid-template-columns: 1fr;
+    gap: 13px;
+  }
+
+  .home-bento-interest {
+    min-height: 120px;
+  }
+}
+
+@media (prefers-reduced-motion: reduce) {
+  .home-bento-card,
+  .home-bento-photo-frame img,
+  .home-bento-interest {
+    transition: none;
+  }
+}
+</style>
+
+
+<!-- ============================================
+     APPLE STYLE BENTO GRID
+============================================ -->
+
+<section class="home-bento-section">
+
+  <div class="home-bento-wrap">
+
+    <div class="home-bento-grid">
+
+      <!-- ==============================
+           1. INTRODUCTION
+      =============================== -->
+
+      <div class="home-bento-card home-bento-intro">
+
+        <span class="home-bento-eyebrow">
+          WELCOME TO MY PORTFOLIO
+        </span>
+
+        <h1>
+          HI, I'M <span>Showmik.</span>
+        </h1>
+
+        <p class="intro-tagline">
+          Bridging Semiconductor Device Physics,
+          Computational Modeling, and Machine Learning.
+        </p>
+
+        <p class="intro-location">
+          <i class="fas fa-map-marker-alt"
+             aria-hidden="true"></i>
+          Ph.D. Candidate · University of Missouri–Columbia
+        </p>
+
       </div>
 
-      <!-- RIGHT: Centered Text -->
-      <div class="hero__text">
-        <h1 class="hero__title">HI, I'M <span class="hero__name">Showmik</span></h1>
-        <div class="hero__rule"></div>
 
-        <h2 class="hero__subtitle">
-          Bridging Semiconductor Device Physics, Computational Modeling, and Machine Learning.
+      <!-- ==============================
+           2. PROFILE PHOTO
+      =============================== -->
+
+      <div class="home-bento-card home-bento-photo">
+
+        <div class="home-bento-photo-frame">
+
+          <img
+            src="{{ '/assets/images/profile.JPG' | relative_url }}"
+            alt="Showmik Singha"
+            loading="eager"
+          >
+
+        </div>
+
+        <div class="home-bento-photo-caption">
+
+          <strong>Showmik Singha</strong>
+
+          <span>
+            Electrical & Computer Engineering
+          </span>
+
+        </div>
+
+      </div>
+
+
+      <!-- ==============================
+           3. BRIEF BIOGRAPHY
+      =============================== -->
+
+      <div class="home-bento-card home-bento-bio">
+
+        <span class="home-bento-eyebrow">
+          A LITTLE ABOUT ME
+        </span>
+
+        <h2>Hello, I'm Showmik.</h2>
+
+        <p>
+          I am a Ph.D. candidate in Electrical and Computer
+          Engineering at the University of Missouri–Columbia,
+          specializing in
+          <strong>wide-bandgap and ultra-wide-bandgap
+          semiconductor devices</strong>,
+          power electronics, and device reliability.
+        </p>
+
+        <p>
+          My research focuses on
+          <strong>GaN HEMTs and
+          β-Ga<sub>2</sub>O<sub>3</sub> MOSFETs</strong>,
+          investigating radiation-induced transient effects,
+          high-temperature behavior, carrier transport,
+          and device performance using TCAD-based
+          computational modeling.
+        </p>
+
+        <p>
+          I also integrate
+          <strong>machine learning with semiconductor
+          device physics</strong>
+          to accelerate parameter extraction,
+          inverse modeling, and design optimization.
+          My experience extends to semiconductor
+          characterization, fabrication, and
+          university-level teaching and mentorship.
+        </p>
+
+      </div>
+
+
+      <!-- ==============================
+           4. RESEARCH VISION
+      =============================== -->
+
+      <div class="home-bento-card home-bento-focus">
+
+        <span class="home-bento-eyebrow">
+          MY RESEARCH VISION
+        </span>
+
+        <h2>
+          Reliable Electronics for Extreme Environments.
         </h2>
+
+        <p>
+          Understanding semiconductor device behavior
+          under radiation, elevated temperatures,
+          and demanding operating conditions
+          to support next-generation power electronics.
+        </p>
+
+        <div class="focus-divider"></div>
+
+        <div class="focus-highlight">
+          Semiconductor Devices
+          &nbsp;·&nbsp;
+          Radiation Reliability
+          &nbsp;·&nbsp;
+          Machine Learning
+        </div>
+
+      </div>
+
+
+      <!-- ==============================
+           5. RESEARCH INTEREST HEADER
+      =============================== -->
+
+      <div class="home-bento-card home-bento-interests-heading">
+
+        <span class="home-bento-eyebrow">
+          AREAS OF EXPLORATION
+        </span>
+
+        <h2>Research Interests</h2>
+
+        <p>
+          Exploring semiconductor technologies
+          through device physics, simulation,
+          reliability analysis, and data-driven design.
+        </p>
+
+      </div>
+
+
+      <!-- ==============================
+           6. RESEARCH INTEREST CARDS
+           SAME EXISTING YAML DATA
+      =============================== -->
+
+      <div class="home-bento-interest-grid">
+
+        {% for item in site.data.interests.items %}
+
+          <div class="home-bento-interest">
+
+            <div class="home-bento-interest-icon">
+              <i class="fas fa-microchip"
+                 aria-hidden="true"></i>
+            </div>
+
+            <span>{{ item }}</span>
+
+          </div>
+
+        {% endfor %}
+
       </div>
 
     </div>
-  </div>
-</section>
-
-<!-- =========================
-     HELLO SECTION
-========================== -->
-<section class="section section--white">
-  <div class="wrap center-col">
-
-    <h2 class="section__heading">HELLO,</h2>
-
-    <p>
-      I am Showmik, a PhD candidate in Electrical and Computer
-      Engineering at the University of Missouri–Columbia,
-      specializing in
-      <strong>wide-bandgap and ultra-wide-bandgap semiconductor devices</strong>,
-      power electronics, and device reliability.
-      My research focuses on developing and analyzing next-generation
-      semiconductor devices for high-efficiency power conversion
-      and operation in extreme environments, including radiation
-      and elevated temperature.
-    </p>
-
-    <p>
-      My technical focus includes semiconductor device physics,
-      TCAD-based device modeling, electrical characterization,
-      and reliability analysis of
-      <strong>GaN HEMTs and β-Ga<sub>2</sub>O<sub>3</sub> MOSFETs</strong>.
-      I investigate device behavior under heavy-ion radiation,
-      temperature variation, and different operating conditions
-      to better understand transient response, charge-collection
-      mechanisms, and device performance.
-    </p>
-
-    <p>
-      Beyond conventional device simulation, I integrate
-      <strong>machine learning with semiconductor device modeling</strong>
-      to accelerate parameter extraction, device optimization,
-      and inverse design.
-      My work includes developing predictive models to extract
-      physical device parameters directly from electrical
-      characteristics and reduce the time required for device
-      design and optimization.
-    </p>
-
-    <p>
-      My research experience also extends to semiconductor
-      fabrication, device characterization, compact-model extraction,
-      and interdisciplinary experimental work.
-      I have contributed to projects involving
-      AlN/β-Ga<sub>2</sub>O<sub>3</sub> heterostructure devices
-      and nanostructured biosensor fabrication using
-      two-photon polymerization and thermal processing.
-      In addition to research, I have several years of
-      university-level teaching experience and enjoy mentoring
-      students in semiconductor devices, electronics,
-      circuit analysis, and engineering problem solving.
-    </p>
 
   </div>
+
 </section>
 
-<!-- =========================
-     RESEARCH INTERESTS
-========================== -->
-<section class="section section--soft">
-  <div class="wrap center">
-
-    <h2 class="big-title">
-      RESEARCH INTERESTS
-    </h2>
-
-    <div class="keywords">
-      {% for item in site.data.interests.items %}
-        <span class="kw">{{ item }}</span>
-      {% endfor %}
-    </div>
-
-  </div>
-</section>
 
 <!-- =========================
      NEWS AND UPDATES
+     ORIGINAL CODE — UNCHANGED
 ========================== -->
 <section class="section section--white">
   <div class="wrap">
@@ -173,6 +665,7 @@ title: "Home"
 
 <!-- =========================
      GET IN TOUCH
+     ORIGINAL CODE — UNCHANGED
 ========================== -->
 <section class="section section--soft">
   <div class="wrap center">
