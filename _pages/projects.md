@@ -45,206 +45,238 @@ classes: wide
   border-radius: 999px;
   object-fit: cover;
   display: block;
-  margin: 0 auto 12px;
+  margin: 0 auto 10px auto;
 }
 
 .author-name {
-  font-size: 1.25rem;
-  font-weight: 700;
   text-align: center;
-  margin-bottom: 6px;
-}
-
-.author-title {
-  font-size: 0.9rem;
-  text-align: center;
-  color: #555;
-  margin-bottom: 12px;
+  font-weight: 800;
+  margin: 0;
 }
 
 .author-bio {
-  font-size: 0.88rem;
-  line-height: 1.6;
-  color: #555;
   text-align: center;
+  color: #6b7280;
+  margin: 6px 0 12px 0;
+  font-size: 0.95rem;
 }
 
 .author-links {
-  margin-top: 16px;
-  font-size: 0.9rem;
+  list-style: none;
+  padding: 0;
+  margin: 0;
+}
+
+.author-links li {
+  margin: 8px 0;
 }
 
 .author-links a {
-  display: block;
-  margin-bottom: 9px;
   text-decoration: none;
+  display: inline-flex;
+  gap: 8px;
+  align-items: center;
 }
 
-.author-links a:hover {
-  text-decoration: underline;
-}
-
-/* ===== Projects Content ===== */
-.project-content {
+/* ===== Publications Content ===== */
+.pub-content {
   min-width: 0;
+  color: #242424;
 }
 
-.project-content h1 {
-  margin-top: 0;
-  margin-bottom: 12px;
-}
-
-.project-intro {
-  color: #555;
-  line-height: 1.7;
-  margin-bottom: 26px;
-}
-
-/* ===== Project Categories ===== */
-.project-category {
-  margin-top: 30px;
-  margin-bottom: 18px;
-  padding-bottom: 9px;
+.pub-content h1 {
+  font-size: 2rem;
+  margin: 0 0 14px;
+  padding-bottom: 12px;
   border-bottom: 2px solid #e5e7eb;
-  font-size: 1.35rem;
-  font-weight: 700;
 }
 
-/* ===== Individual Projects ===== */
-.project-item {
-  margin-bottom: 30px;
-  padding-bottom: 22px;
+.pub-intro {
+  font-size: 0.96rem;
+  color: #555;
+  margin-bottom: 25px;
+}
+
+.pub-stats {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 12px;
+  margin: 20px 0 32px;
+}
+
+.pub-stat {
+  border: 1px solid #e5e7eb;
+  border-radius: 10px;
+  padding: 15px;
+  text-align: center;
+  background: #fafafa;
+}
+
+.pub-stat strong {
+  display: block;
+  font-size: 1.65rem;
+  color: #2563eb;
+}
+
+.pub-stat span {
+  font-size: 0.83rem;
+  color: #555;
+}
+
+.pub-content h2 {
+  font-size: 1.35rem;
+  margin: 36px 0 18px;
+  padding-bottom: 8px;
   border-bottom: 1px solid #e5e7eb;
 }
 
-.project-item:last-child {
-  border-bottom: none;
+/* ===== Publication List ===== */
+.publication-list {
+  list-style-type: decimal;
+  padding-left: 28px;
+  margin: 0;
 }
 
-.project-title {
-  font-size: 1.12rem;
-  font-weight: 700;
-  margin-bottom: 8px;
-  line-height: 1.5;
+.publication-list li {
+  padding-left: 5px;
+  margin-bottom: 19px;
+  font-size: 0.94rem;
+  line-height: 1.75;
+  overflow-wrap: anywhere;
 }
 
-.project-meta {
-  font-size: 0.88rem;
+.publication-list li::marker {
   color: #64748b;
-  margin-bottom: 12px;
+  font-weight: 600;
 }
 
-.project-description {
-  line-height: 1.7;
-  margin-bottom: 12px;
+.publication-list strong {
+  font-weight: 700;
+  color: #111827;
 }
 
-.project-list {
-  margin: 10px 0 12px 0;
-  padding-left: 22px;
+.publication-list em {
+  color: #444;
 }
 
-.project-list li {
-  margin-bottom: 9px;
-  line-height: 1.65;
+.pub-year {
+  color: #64748b;
+  font-weight: 600;
 }
 
-/* ===== Technology Tags ===== */
-.project-tags {
-  display: flex;
-  flex-wrap: wrap;
-  gap: 7px;
-  margin-top: 15px;
-}
-
-.project-tag {
+.pub-tag {
   display: inline-block;
-  background: #f1f5f9;
-  color: #334155;
-  padding: 5px 10px;
-  border-radius: 6px;
-  font-size: 0.78rem;
-  font-weight: 500;
+  font-size: 0.72rem;
+  font-weight: 600;
+  color: #1d4ed8;
+  background: #eff6ff;
+  padding: 2px 8px;
+  border-radius: 5px;
+  margin-left: 5px;
 }
 
-/* ===== Responsive ===== */
 @media (max-width: 600px) {
-  .project-category {
-    font-size: 1.2rem;
+  .pub-stats {
+    gap: 7px;
   }
 
-  .project-title {
-    font-size: 1.05rem;
+  .pub-stat {
+    padding: 12px 5px;
   }
 
-  .project-list {
-    padding-left: 19px;
+  .pub-stat strong {
+    font-size: 1.3rem;
+  }
+
+  .publication-list li {
+    font-size: 0.9rem;
   }
 }
+
+/* ===== Skills: Icons and Bullet Lists ===== */
+.skills-content {
+  min-width: 0;
+}
+
+.skill-category h2 i {
+  color: #2563eb;
+  margin-right: 10px;
+}
+
+.skill-list {
+  list-style-type: disc;
+  padding-left: 28px;
+  margin: 10px 0 24px;
+}
+
+.skill-list li {
+  font-size: 0.94rem;
+  line-height: 1.75;
+  margin-bottom: 5px;
+  padding-left: 4px;
+}
+
+.skill-list li::marker {
+  color: #64748b;
+}
+
 </style>
 
 <div class="edu-layout">
 
-  <!-- LEFT: Author Profile -->
+  <!-- =====================================
+       LEFT: AUTHOR PROFILE
+  ====================================== -->
+
   <aside class="author-card">
 
     <img
-      src="{{ '/images/profile.png' | relative_url }}"
-      alt="Showmik Singha"
       class="author-avatar"
+      src="/assets/images/profile.JPG"
+      alt="Showmik Singha"
     >
 
-    <div class="author-name">Showmik Singha</div>
+    <p class="author-name">Showmik Singha</p>
 
-    <div class="author-title">
-      Ph.D. Candidate<br>
-      Electrical and Computer Engineering<br>
-      University of Missouri–Columbia
-    </div>
+    <p class="author-bio">
+      PhD Candidate, University of Missouri
+    </p>
 
-    <div class="author-bio">
-      Semiconductor Device Modeling,
-      Wide-Bandgap Power Electronics,
-      Radiation Effects, and
-      Machine Learning.
-    </div>
+    <ul class="author-links">
 
-    <div class="author-links">
-      <a href="mailto:{{ site.author.email }}">
-        <i class="fas fa-envelope"></i> Email
-      </a>
+      <li>
+        <a href="mailto:ssqk4@umsystem.edu">
+          <i class="fas fa-fw fa-envelope"></i>
+          <span>Email</span>
+        </a>
+      </li>
 
-      <a href="https://scholar.google.com/" target="_blank" rel="noopener noreferrer">
-        <i class="ai ai-google-scholar"></i> Google Scholar
-      </a>
+      <li>
+        <a href="https://github.com/showmiksingha"
+           target="_blank" rel="noopener">
+          <i class="fab fa-fw fa-github"></i>
+          <span>GitHub</span>
+        </a>
+      </li>
 
-      <a href="https://www.linkedin.com/" target="_blank" rel="noopener noreferrer">
-        <i class="fab fa-linkedin"></i> LinkedIn
-      </a>
+      <li>
+        <a href="https://www.linkedin.com/in/showmiksingha/"
+           target="_blank" rel="noopener">
+          <i class="fab fa-fw fa-linkedin"></i>
+          <span>LinkedIn</span>
+        </a>
+      </li>
 
-      <a href="https://github.com/" target="_blank" rel="noopener noreferrer">
-        <i class="fab fa-github"></i> GitHub
-      </a>
-    </div>
-
+    </ul>
   </aside>
+
 
   <!-- RIGHT: Projects -->
   <main class="project-content">
 
     <h1>Research Projects</h1>
 
-    <p class="project-intro">
-      My research focuses on semiconductor device
-      modeling, radiation-induced reliability,
-      wide- and ultra-wide-bandgap power devices,
-      machine learning-assisted device optimization,
-      and experimental microfabrication.
-      My work combines numerical simulation,
-      computational analysis, and experimental
-      techniques to advance next-generation
-      electronic technologies.
-    </p>
+
 
     <!-- ===================================== -->
     <!-- RADIATION EFFECTS -->
