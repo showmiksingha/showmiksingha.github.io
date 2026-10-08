@@ -5,553 +5,588 @@ title: "Home"
 ---
 
 <style>
-/* =========================================
-   HOMEPAGE GLOBAL WIDTH & SPACING
-========================================= */
+/* ============================================
+   APPLE-INSPIRED HOMEPAGE BENTO
+   Scoped to avoid affecting theme navigation,
+   News & Updates, or Get in Touch.
+============================================ */
 
-.home-page {
-  --home-max-width: 1200px;
-  --home-blue: #2563eb;
-  --home-text: #111827;
-  --home-muted: #64748b;
-  --home-radius: 22px;
-  width: 100%;
+.home-bento-section {
+  padding: 42px 20px 52px;
+  background: #f5f5f7;
 }
 
-.home-page *,
-.home-page *::before,
-.home-page *::after {
-  box-sizing: border-box;
-}
-
-.home-container {
-  width: min(100% - 40px, var(--home-max-width));
-  margin-left: auto;
-  margin-right: auto;
-}
-
-.home-section {
-  margin-top: 44px;
-  margin-bottom: 44px;
-}
-
-.home-section-heading {
-  margin-bottom: 22px;
-}
-
-.home-section-heading h2 {
-  font-size: clamp(1.4rem, 2.6vw, 2rem);
-  font-weight: 800;
-  letter-spacing: -0.035em;
-  color: var(--home-text);
-  margin: 0 0 7px;
-  border: 0;
-}
-
-.home-section-heading p {
-  color: var(--home-muted);
-  font-size: 0.93rem;
-  line-height: 1.65;
-  margin: 0;
-}
-
-/* =========================================
-   ORIGINAL HERO
-========================================= */
-
-.home-page .hero--split {
-  position: relative;
-  width: 100%;
-  border-radius: 0;
-  overflow: hidden;
-  background:
-    linear-gradient(
-      120deg,
-      rgba(12, 27, 51, 0.92),
-      rgba(22, 48, 82, 0.78)
-    ),
-    url("{{ '/assets/images/hero-bg.jpg' | relative_url }}")
-    center / cover no-repeat;
-}
-
-.home-page .hero__overlay {
-  width: 100%;
-  padding: 75px 0;
-}
-
-.home-page .hero__content {
-  width: min(100% - 40px, var(--home-max-width));
-  margin: 0 auto;
-  display: grid;
-  grid-template-columns: 220px minmax(0, 1fr);
-  gap: 46px;
-  align-items: center;
-}
-
-.home-page .hero__photo {
-  display: flex;
-  justify-content: center;
-}
-
-.home-page .hero__photo img {
-  width: 210px;
-  height: 210px;
-  border-radius: 50%;
-  object-fit: cover;
-  border: 5px solid rgba(255,255,255,0.85);
-  box-shadow: 0 15px 45px rgba(0,0,0,0.2);
-}
-
-.home-page .hero__text {
-  text-align: center;
-  min-width: 0;
-}
-
-.home-page .hero__title {
-  color: #fff;
-  font-size: clamp(2.1rem, 4vw, 3.6rem);
-  font-weight: 800;
-  line-height: 1.2;
-  letter-spacing: -0.04em;
-  margin: 0;
-}
-
-.home-page .hero__name {
-  color: #93c5fd;
-}
-
-.home-page .hero__rule {
-  width: 78px;
-  height: 4px;
-  background: #60a5fa;
-  margin: 22px auto;
-  border-radius: 10px;
-}
-
-.home-page .hero__subtitle {
-  color: #e2e8f0;
-  font-size: clamp(1rem, 1.6vw, 1.3rem);
-  font-weight: 400;
-  line-height: 1.65;
-  max-width: 740px;
+.home-bento-wrap {
+  max-width: 1180px;
   margin: 0 auto;
 }
 
-/* =========================================
-   APPLE-STYLE BENTO GRID
-========================================= */
-
-.home-bento {
+.home-bento-grid {
   display: grid;
   grid-template-columns: repeat(12, minmax(0, 1fr));
   gap: 16px;
-  width: 100%;
+  align-items: stretch;
 }
 
-/* All tiles share the same styling */
-.home-tile {
+.home-bento-grid *,
+.home-bento-grid *::before,
+.home-bento-grid *::after {
+  box-sizing: border-box;
+}
+
+.home-bento-card {
+  min-width: 0;
+  border-radius: 24px;
+  background: #ffffff;
+  padding: 30px;
+  overflow: hidden;
   position: relative;
+  border: 1px solid rgba(0, 0, 0, .035);
+  transition:
+    transform .3s ease,
+    box-shadow .3s ease;
+}
+
+.home-bento-card:hover {
+  transform: translateY(-4px);
+  box-shadow: 0 14px 35px rgba(0, 0, 0, .075);
+}
+
+.home-bento-eyebrow {
+  display: block;
+  margin-bottom: 17px;
+  font-size: 11px;
+  font-weight: 750;
+  letter-spacing: 1.8px;
+  text-transform: uppercase;
+  color: #86868b;
+}
+
+.home-bento-card h1,
+.home-bento-card h2,
+.home-bento-card h3 {
+  padding: 0;
+  border: 0;
+  line-height: 1.18;
+  letter-spacing: -.65px;
+}
+
+.home-bento-card p {
+  margin: 0;
+  line-height: 1.75;
+  color: #55565b;
+}
+
+/* ============================================
+   INTRODUCTION CARD
+============================================ */
+
+.home-bento-intro {
+  grid-column: span 8;
+  min-height: 365px;
+  padding: 48px;
+  background: #ffffff;
   display: flex;
   flex-direction: column;
-  min-width: 0;
-  overflow: hidden;
-  border-radius: var(--home-radius);
-  padding: 28px;
-  background: #f5f7fa;
-  border: 1px solid #edf0f4;
-
-  transition:
-    transform 0.3s ease,
-    box-shadow 0.3s ease,
-    border-color 0.3s ease;
+  justify-content: center;
 }
 
-.home-tile:hover {
-  transform: translateY(-5px);
-  box-shadow: 0 18px 40px rgba(15,23,42,0.08);
-  border-color: #dbeafe;
-}
-
-.home-tile-label {
-  display: flex;
-  align-items: center;
-  gap: 9px;
-  font-size: 0.76rem;
-  font-weight: 750;
-  letter-spacing: 0.08em;
-  text-transform: uppercase;
-  color: #64748b;
-  margin-bottom: 18px;
-}
-
-.home-tile-label i {
-  color: #2563eb;
-}
-
-.home-tile h3 {
-  font-size: clamp(1.25rem, 2vw, 1.7rem);
-  line-height: 1.25;
+.home-bento-intro h1 {
+  margin: 0 0 23px;
+  font-size: clamp(39px, 5vw, 64px);
   font-weight: 800;
-  color: #111827;
-  letter-spacing: -0.035em;
-  margin: 0 0 14px;
+  letter-spacing: -2.5px;
+  color: #1d1d1f;
 }
 
-.home-tile p {
-  color: #475569;
-  font-size: 0.94rem;
-  line-height: 1.78;
-  margin: 0;
+.home-bento-intro h1 span {
+  color: #0071e3;
 }
 
-/* About Me: large tile */
-.home-tile--about {
-  grid-column: span 7;
-  min-height: 320px;
-  background: #f4f7fc;
+.home-bento-intro .intro-tagline {
+  font-size: clamp(17px, 2vw, 22px);
+  font-weight: 500;
+  line-height: 1.55;
+  max-width: 610px;
+  color: #55565b;
 }
 
-/* Profile details tile */
-.home-tile--profile {
-  grid-column: span 5;
-  min-height: 320px;
-  background: #17253d;
-  border-color: #17253d;
-  justify-content: space-between;
+.home-bento-intro .intro-location {
+  margin-top: 25px;
+  color: #737378;
+  font-size: 13px;
+  font-weight: 550;
 }
 
-.home-tile--profile .home-tile-label {
-  color: #cbd5e1;
+.home-bento-intro .intro-location i {
+  margin-right: 7px;
+  color: #0071e3;
 }
 
-.home-tile--profile .home-tile-label i {
-  color: #93c5fd;
+/* ============================================
+   PROFILE PHOTO CARD
+============================================ */
+
+.home-bento-photo {
+  grid-column: span 4;
+  min-height: 365px;
+  padding: 0;
+  display: flex;
+  flex-direction: column;
+  background: #e9edf2;
 }
 
-.home-tile--profile h3 {
+.home-bento-photo-frame {
+  flex: 1;
+  min-height: 280px;
+  overflow: hidden;
+}
+
+.home-bento-photo-frame img {
+  width: 100%;
+  height: 100%;
+  min-height: 280px;
+  object-fit: cover;
+  object-position: center 25%;
+  display: block;
+  transition: transform .5s ease;
+}
+
+.home-bento-photo:hover img {
+  transform: scale(1.035);
+}
+
+.home-bento-photo-caption {
+  padding: 17px 22px;
+  background: #fff;
+}
+
+.home-bento-photo-caption strong {
+  display: block;
+  font-size: 17px;
+  color: #1d1d1f;
+}
+
+.home-bento-photo-caption span {
+  display: block;
+  margin-top: 4px;
+  color: #77777c;
+  font-size: 12px;
+}
+
+/* ============================================
+   BIOGRAPHY
+============================================ */
+
+.home-bento-bio {
+  grid-column: span 8;
+  padding: 36px;
+}
+
+.home-bento-bio h2 {
+  font-size: 30px;
+  font-weight: 750;
+  margin: 0 0 19px;
+  color: #1d1d1f;
+}
+
+.home-bento-bio p {
+  font-size: 15px;
+  margin-bottom: 14px;
+}
+
+.home-bento-bio p:last-child {
+  margin-bottom: 0;
+}
+
+/* ============================================
+   RESEARCH SUMMARY
+============================================ */
+
+.home-bento-focus {
+  grid-column: span 4;
+  padding: 35px;
+  background: #17263d;
+  color: #ffffff;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+}
+
+.home-bento-focus .home-bento-eyebrow {
+  color: #9bc3f4;
+}
+
+.home-bento-focus h2 {
   color: #fff;
+  font-size: 26px;
+  margin: 0 0 17px;
 }
 
-.home-tile--profile p {
-  color: #cbd5e1;
+.home-bento-focus p {
+  color: #d0daea;
+  font-size: 14px;
 }
 
-.home-profile-icon {
-  width: 58px;
-  height: 58px;
-  border-radius: 17px;
+.home-bento-focus .focus-divider {
+  height: 1px;
+  background: rgba(255,255,255,.17);
+  margin: 24px 0;
+}
+
+.home-bento-focus .focus-highlight {
+  color: #a9cbff;
+  font-weight: 650;
+  font-size: 13px;
+  line-height: 1.7;
+}
+
+/* ============================================
+   RESEARCH INTERESTS
+============================================ */
+
+.home-bento-interests-heading {
+  grid-column: 1 / -1;
+  padding: 30px 36px;
+  background: #e9eff8;
+}
+
+.home-bento-interests-heading h2 {
+  font-size: clamp(27px, 3vw, 36px);
+  font-weight: 780;
+  margin: 0 0 8px;
+  color: #1d1d1f;
+}
+
+.home-bento-interests-heading p {
+  font-size: 14px;
+}
+
+/* Dynamically generated interests cards */
+
+.home-bento-interest-grid {
+  grid-column: 1 / -1;
+  display: grid;
+  grid-template-columns: repeat(3, minmax(0, 1fr));
+  gap: 16px;
+}
+
+.home-bento-interest {
+  min-width: 0;
+  min-height: 145px;
+  border-radius: 22px;
+  padding: 25px 26px;
+  background: #ffffff;
+  border: 1px solid rgba(0,0,0,.04);
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  gap: 22px;
+  transition:
+    transform .3s ease,
+    box-shadow .3s ease;
+}
+
+.home-bento-interest:hover {
+  transform: translateY(-4px);
+  box-shadow: 0 12px 30px rgba(0,0,0,.07);
+}
+
+.home-bento-interest-icon {
+  width: 43px;
+  height: 43px;
+  border-radius: 13px;
+  background: #edf4ff;
+  color: #0071e3;
   display: flex;
   align-items: center;
   justify-content: center;
-  background: rgba(255,255,255,0.10);
-  color: #93c5fd;
-  font-size: 1.65rem;
-  margin-bottom: 20px;
+  font-size: 19px;
 }
 
-/* Research interests tile */
-.home-tile--research {
-  grid-column: span 8;
-  min-height: 280px;
-  background: #fff;
-  border-color: #e5e7eb;
+.home-bento-interest span {
+  display: block;
+  font-size: 15px;
+  line-height: 1.5;
+  font-weight: 670;
+  color: #1d1d1f;
+  overflow-wrap: anywhere;
 }
 
-/* Research focus tile */
-.home-tile--focus {
-  grid-column: span 4;
-  min-height: 280px;
-  background: #eaf1ff;
-  justify-content: space-between;
-}
-
-/* Research interest pills */
-.home-research-pills {
-  display: flex;
-  flex-wrap: wrap;
-  gap: 10px;
-  align-content: flex-start;
-}
-
-.home-research-pill {
-  display: inline-flex;
-  align-items: center;
-  max-width: 100%;
-  padding: 9px 13px;
-  font-size: 0.79rem;
-  line-height: 1.4;
-  font-weight: 600;
-  color: #334155;
-  border-radius: 999px;
-  border: 1px solid #e2e8f0;
-  background: #f8fafc;
-  transition:
-    background 0.25s ease,
-    border-color 0.25s ease,
-    color 0.25s ease,
-    transform 0.25s ease;
-}
-
-.home-research-pill:hover {
-  background: #eaf1ff;
-  border-color: #93c5fd;
-  color: #1d4ed8;
-  transform: translateY(-2px);
-}
-
-/* Focus tile highlights */
-.home-focus-highlight {
-  font-size: clamp(1.4rem, 2.5vw, 2.1rem);
-  line-height: 1.22;
-  font-weight: 800;
-  letter-spacing: -0.04em;
-  color: #1d4ed8;
-  margin-bottom: 12px;
-}
-
-.home-focus-footer {
-  display: flex;
-  align-items: center;
-  gap: 9px;
-  color: #1d4ed8;
-  font-size: 0.83rem;
-  font-weight: 700;
-  margin-top: 18px;
-}
-
-/* =========================================
-   NEWS & UPDATES SECTION
-========================================= */
-
-.home-news {
-  width: 100%;
-}
-
-.home-news-list {
-  display: flex;
-  flex-direction: column;
-  gap: 14px;
-  width: 100%;
-}
-
-.home-news-year {
-  font-size: 1.2rem;
-  font-weight: 800;
-  margin: 25px 0 12px;
-  color: #111827;
-}
-
-.home-news-card {
-  display: grid;
-  grid-template-columns: 110px minmax(0, 1fr);
-  gap: 20px;
-  align-items: start;
-  width: 100%;
-  border: 1px solid #e5e7eb;
-  border-radius: 15px;
-  background: #fff;
-  padding: 21px 24px;
-  transition:
-    box-shadow 0.25s ease,
-    border-color 0.25s ease,
-    transform 0.25s ease;
-}
-
-.home-news-card:hover {
-  transform: translateY(-2px);
-  box-shadow: 0 10px 25px rgba(15,23,42,0.06);
-  border-color: #bfdbfe;
-}
-
-.home-news-date {
-  font-size: 0.8rem;
-  font-weight: 750;
-  color: #2563eb;
-  line-height: 1.55;
-}
-
-.home-news-description {
-  color: #374151;
-  font-size: 0.91rem;
-  line-height: 1.7;
-  min-width: 0;
-}
-
-.home-news-description a {
-  color: #2563eb;
-  text-decoration: none;
-}
-
-.home-news-description a:hover {
-  text-decoration: underline;
-}
-
-.home-news-more {
-  margin-top: 20px;
-  text-align: center;
-}
-
-.home-news-more a {
-  display: inline-flex;
-  align-items: center;
-  gap: 10px;
-  padding: 11px 20px;
-  border-radius: 999px;
-  font-size: 0.88rem;
-  font-weight: 700;
-  border: 1px solid #dbeafe;
-  background: #eff6ff;
-  color: #1d4ed8;
-  text-decoration: none;
-  transition: transform 0.25s ease,
-              background 0.25s ease;
-}
-
-.home-news-more a:hover {
-  transform: translateY(-2px);
-  background: #dbeafe;
-}
-
-/* =========================================
-   RESPONSIVE LAYOUT
-========================================= */
+/* ============================================
+   MOBILE RESPONSIVENESS
+============================================ */
 
 @media (max-width: 900px) {
-
-  .home-bento {
-    grid-template-columns: repeat(2, minmax(0, 1fr));
+  .home-bento-intro,
+  .home-bento-bio {
+    grid-column: span 7;
   }
 
-  .home-tile--about,
-  .home-tile--research {
-    grid-column: span 2;
+  .home-bento-photo,
+  .home-bento-focus {
+    grid-column: span 5;
   }
 
-  .home-tile--profile,
-  .home-tile--focus {
-    grid-column: span 1;
+  .home-bento-intro {
+    padding: 34px;
   }
 
-  .home-page .hero__content {
-    grid-template-columns: 180px minmax(0, 1fr);
-    gap: 24px;
-  }
-
-  .home-page .hero__photo img {
-    width: 170px;
-    height: 170px;
+  .home-bento-interest-grid {
+    grid-template-columns: repeat(2, minmax(0,1fr));
   }
 }
 
 @media (max-width: 650px) {
-
-  .home-container {
-    width: min(100% - 28px, var(--home-max-width));
+  .home-bento-section {
+    padding: 22px 14px 35px;
   }
 
-  .home-section {
-    margin-top: 30px;
-    margin-bottom: 30px;
+  .home-bento-grid {
+    gap: 13px;
   }
 
-  .home-page .hero__overlay {
-    padding: 46px 0;
-  }
-
-  .home-page .hero__content {
-    width: min(100% - 28px, var(--home-max-width));
-    grid-template-columns: 1fr;
-    gap: 22px;
-  }
-
-  .home-page .hero__photo img {
-    width: 155px;
-    height: 155px;
-  }
-
-  .home-bento {
-    grid-template-columns: 1fr;
-    gap: 12px;
-  }
-
-  .home-tile--about,
-  .home-tile--profile,
-  .home-tile--research,
-  .home-tile--focus {
-    grid-column: span 1;
+  .home-bento-intro,
+  .home-bento-photo,
+  .home-bento-bio,
+  .home-bento-focus,
+  .home-bento-interests-heading {
+    grid-column: 1 / -1;
     min-height: auto;
   }
 
-  .home-tile {
-    padding: 22px;
-    border-radius: 18px;
+  .home-bento-intro {
+    padding: 35px 27px;
   }
 
-  .home-tile--profile,
-  .home-tile--focus {
-    min-height: 235px;
+  .home-bento-intro h1 {
+    letter-spacing: -1.7px;
   }
 
-  .home-news-card {
+  .home-bento-photo-frame {
+    height: 330px;
+    flex: none;
+  }
+
+  .home-bento-photo-frame img {
+    height: 330px;
+  }
+
+  .home-bento-bio,
+  .home-bento-focus {
+    padding: 29px 25px;
+  }
+
+  .home-bento-interests-heading {
+    padding: 27px;
+  }
+
+  .home-bento-interest-grid {
     grid-template-columns: 1fr;
-    gap: 7px;
-    padding: 17px;
+    gap: 13px;
   }
 
-  .home-news-date {
-    font-size: 0.78rem;
+  .home-bento-interest {
+    min-height: 120px;
   }
 }
 
 @media (prefers-reduced-motion: reduce) {
-  .home-tile,
-  .home-research-pill,
-  .home-news-card,
-  .home-news-more a {
+  .home-bento-card,
+  .home-bento-photo-frame img,
+  .home-bento-interest {
     transition: none;
-  }
-
-  .home-tile:hover,
-  .home-research-pill:hover,
-  .home-news-card:hover {
-    transform: none;
   }
 }
 </style>
 
-<div class="home-page">
 
-<!-- =========================================
-     HERO SECTION
-========================================= -->
+<!-- ============================================
+     APPLE STYLE BENTO GRID
+============================================ -->
 
-<section class="hero hero--split">
+<section class="home-bento-section">
 
-  <div class="hero__overlay">
+  <div class="home-bento-wrap">
 
-    <div class="hero__content">
+    <div class="home-bento-grid">
 
-      <!-- LEFT: Profile Photo -->
-      <div class="hero__photo">
-        <img
-          src="{{ '/assets/images/profile.JPG' | relative_url }}"
-          alt="Showmik Singha"
-        >
-      </div>
+      <!-- ==============================
+           1. INTRODUCTION
+      =============================== -->
 
-      <!-- RIGHT: Introduction -->
-      <div class="hero__text">
+      <div class="home-bento-card home-bento-intro">
 
-        <h1 class="hero__title">
-          HI, I'M <span class="hero__name">Showmik</span>
+        <span class="home-bento-eyebrow">
+          WELCOME TO MY PORTFOLIO
+        </span>
+
+        <h1>
+          HI, I'M <span>Showmik.</span>
         </h1>
 
-        <div class="hero__rule"></div>
-
-        <h2 class="hero__subtitle">
+        <p class="intro-tagline">
           Bridging Semiconductor Device Physics,
           Computational Modeling, and Machine Learning.
+        </p>
+
+        <p class="intro-location">
+          <i class="fas fa-map-marker-alt"
+             aria-hidden="true"></i>
+          Ph.D. Candidate · University of Missouri–Columbia
+        </p>
+
+      </div>
+
+
+      <!-- ==============================
+           2. PROFILE PHOTO
+      =============================== -->
+
+      <div class="home-bento-card home-bento-photo">
+
+        <div class="home-bento-photo-frame">
+
+          <img
+            src="{{ '/assets/images/profile.JPG' | relative_url }}"
+            alt="Showmik Singha"
+            loading="eager"
+          >
+
+        </div>
+
+        <div class="home-bento-photo-caption">
+
+          <strong>Showmik Singha</strong>
+
+          <span>
+            Electrical & Computer Engineering
+          </span>
+
+        </div>
+
+      </div>
+
+
+      <!-- ==============================
+           3. BRIEF BIOGRAPHY
+      =============================== -->
+
+      <div class="home-bento-card home-bento-bio">
+
+        <span class="home-bento-eyebrow">
+          A LITTLE ABOUT ME
+        </span>
+
+        <p>
+          I am a Ph.D. candidate in Electrical and Computer
+          Engineering at the University of Missouri–Columbia,
+          specializing in
+          <strong>wide-bandgap and ultra-wide-bandgap
+          semiconductor devices</strong>,
+          power electronics, and device reliability.
+        </p>
+
+        <p>
+          My research focuses on
+          <strong>GaN HEMTs and
+          β-Ga<sub>2</sub>O<sub>3</sub> MOSFETs</strong>,
+          investigating radiation-induced transient effects,
+          high-temperature behavior, carrier transport,
+          and device performance using TCAD-based
+          computational modeling.
+        </p>
+
+        <p>
+          I also integrate
+          <strong>machine learning with semiconductor
+          device physics</strong>
+          to accelerate parameter extraction,
+          inverse modeling, and design optimization.
+          My experience extends to semiconductor
+          characterization, fabrication, and
+          university-level teaching and mentorship.
+        </p>
+
+      </div>
+
+
+      <!-- ==============================
+           4. RESEARCH VISION
+      =============================== -->
+
+      <div class="home-bento-card home-bento-focus">
+
+        <span class="home-bento-eyebrow">
+          MY RESEARCH VISION
+        </span>
+
+        <h2>
+          Reliable Electronics for Extreme Environments.
         </h2>
+
+        <p>
+          Understanding semiconductor device behavior
+          under radiation, elevated temperatures,
+          and demanding operating conditions
+          to support next-generation power electronics.
+        </p>
+
+        <div class="focus-divider"></div>
+
+        <div class="focus-highlight">
+          Semiconductor Devices
+          &nbsp;·&nbsp;
+          Radiation Reliability
+          &nbsp;·&nbsp;
+          Machine Learning
+        </div>
+
+      </div>
+
+
+      <!-- ==============================
+           5. RESEARCH INTEREST HEADER
+      =============================== -->
+
+      <div class="home-bento-card home-bento-interests-heading">
+
+        <span class="home-bento-eyebrow">
+          AREAS OF EXPLORATION
+        </span>
+
+        <h2>Research Interests</h2>
+
+        <p>
+          Exploring semiconductor technologies
+          through device physics, simulation,
+          reliability analysis, and data-driven design.
+        </p>
+
+      </div>
+
+
+      <!-- ==============================
+           6. RESEARCH INTEREST CARDS
+           SAME EXISTING YAML DATA
+      =============================== -->
+
+      <div class="home-bento-interest-grid">
+
+        {% for item in site.data.interests.items %}
+
+          <div class="home-bento-interest">
+
+            <div class="home-bento-interest-icon">
+              <i class="fas fa-microchip"
+                 aria-hidden="true"></i>
+            </div>
+
+            <span>{{ item }}</span>
+
+          </div>
+
+        {% endfor %}
 
       </div>
 
@@ -561,288 +596,116 @@ title: "Home"
 
 </section>
 
-<!-- =========================================
-     APPLE-STYLE BENTO GRID
-========================================= -->
 
-<section class="home-section home-container">
+<!-- =========================
+     NEWS AND UPDATES
+     ORIGINAL CODE — UNCHANGED
+========================== -->
+<section class="section section--white">
+  <div class="wrap">
 
-  <div class="home-bento">
-
-    <!-- About Me -->
-    <article class="home-tile home-tile--about">
-
-      <div class="home-tile-label">
-        <i class="fas fa-user"></i>
-        About Me
-      </div>
-
-      <h3>
-        Exploring the Future of Semiconductor Technology
-      </h3>
-
-      <p>
-        I am a Ph.D. Candidate in Electrical and
-        Computer Engineering at the University
-        of Missouri–Columbia, working under the
-        supervision of Prof. Syed Kamrul Islam.
-      </p>
-
-      <p style="margin-top:14px;">
-        My research focuses on wide- and ultra-wide-bandgap
-        semiconductor devices, device reliability under
-        extreme operating environments, and the integration
-        of machine learning with physics-based device modeling.
-      </p>
-
-      <p style="margin-top:14px;">
-        I am particularly interested in bridging semiconductor
-        device physics, computational simulations, and
-        data-driven optimization to advance next-generation
-        power electronics.
-      </p>
-
-    </article>
-
-    <!-- Academic Identity -->
-    <article class="home-tile home-tile--profile">
-
-      <div>
-
-        <div class="home-tile-label">
-          <i class="fas fa-graduation-cap"></i>
-          Academic Profile
-        </div>
-
-        <div class="home-profile-icon">
-          <i class="fas fa-microchip"></i>
-        </div>
-
-        <h3>
-          Ph.D. Candidate
-        </h3>
-
-        <p>
-          Electrical and Computer Engineering
-        </p>
-
-      </div>
-
-      <p>
-        University of Missouri–Columbia<br>
-        Columbia, Missouri, USA
-      </p>
-
-    </article>
-
-    <!-- Research Interests -->
-    <article class="home-tile home-tile--research">
-
-      <div class="home-tile-label">
-        <i class="fas fa-flask"></i>
-        Research Interests
-      </div>
-
-      <h3>
-        Areas of Research
-      </h3>
-
-      <div class="home-research-pills">
-
-        {% if site.data.research_interests.items %}
-
-          {% for interest in site.data.research_interests.items %}
-
-            <span class="home-research-pill">
-              {{ interest }}
-            </span>
-
-          {% endfor %}
-
-        {% else %}
-
-          <span class="home-research-pill">
-            WBG &amp; UWBG Semiconductors
-          </span>
-
-          <span class="home-research-pill">
-            Semiconductor Device Physics
-          </span>
-
-          <span class="home-research-pill">
-            Radiation Effects &amp; Reliability
-          </span>
-
-          <span class="home-research-pill">
-            TCAD Simulation
-          </span>
-
-          <span class="home-research-pill">
-            Power Semiconductor Devices
-          </span>
-
-          <span class="home-research-pill">
-            ML-Based Device Modeling
-          </span>
-
-          <span class="home-research-pill">
-            Electrical Characterization
-          </span>
-
-          <span class="home-research-pill">
-            Device-to-System Co-Design
-          </span>
-
-        {% endif %}
-
-      </div>
-
-    </article>
-
-    <!-- Research Focus -->
-    <article class="home-tile home-tile--focus">
-
-      <div>
-
-        <div class="home-tile-label">
-          <i class="fas fa-satellite"></i>
-          Research Vision
-        </div>
-
-        <div class="home-focus-highlight">
-          Reliable Electronics for Extreme Environments.
-        </div>
-
-        <p>
-          Investigating semiconductor device performance
-          and reliability for applications in space,
-          aviation, and advanced power systems.
-        </p>
-
-      </div>
-
-      <div class="home-focus-footer">
-        <i class="fas fa-arrow-right"></i>
-        From Device Physics to Applications
-      </div>
-
-    </article>
-
-  </div>
-
-</section>
-
-<!-- =========================================
-     NEWS & UPDATES
-========================================= -->
-
-<section class="home-section home-container home-news">
-
-  <div class="home-section-heading">
-    <h2>
-      <i class="fas fa-bullhorn"
-         style="color:#2563eb;margin-right:9px;"></i>
-      News &amp; Updates
+    <h2 class="big-title">
+      News and Updates
     </h2>
 
-    <p>
-      Recent academic milestones, research presentations,
-      publications, and professional achievements.
-    </p>
-  </div>
+    <div class="timeline-scroll">
+      <div class="timeline">
 
-  <div class="home-news-list">
+        {% for year in site.data.updates.years %}
 
-    {% assign news_count = 0 %}
+          <div class="timeline__year">
 
-    {% if site.data.updates.years %}
+            <!-- YEAR LABEL -->
+            <div class="timeline__year-label">
+              {{ year.year }}
+            </div>
 
-      {% for year_group in site.data.updates.years %}
+            <!-- YEAR ITEMS -->
+            <div class="timeline__items">
 
-        {% for update in year_group.items %}
+              {% for u in year.items %}
 
-          {% if news_count < 6 %}
+                <div class="timeline__item">
 
-            <div class="home-news-card">
+                  <div class="timeline__date">
+                    {{ u.date }}
+                  </div>
 
-              <div class="home-news-date">
-                {{ update.date }}
-              </div>
+                  <div class="timeline__text">
 
-              <div class="home-news-description">
-                {{ update.text }}
+                    {{ u.text }}
 
-                {% if update.link %}
-                  <a
-                    href="{{ update.link }}"
-                    target="_blank"
-                    rel="noopener noreferrer"
-                    aria-label="Read more about this update"
-                  >
-                    <i class="fas fa-external-link-alt"></i>
-                  </a>
-                {% endif %}
-              </div>
+                    {% if u.link %}
+                      <a href="{{ u.link }}"
+                         target="_blank"
+                         rel="noopener noreferrer">
+                        Link
+                      </a>
+                    {% endif %}
+
+                  </div>
+
+                </div>
+
+              {% endfor %}
 
             </div>
 
-            {% assign news_count = news_count | plus: 1 %}
-
-          {% endif %}
+          </div>
 
         {% endfor %}
 
-      {% endfor %}
-
-    {% else %}
-
-      <div class="home-news-card">
-        <div class="home-news-date">Sep 2026</div>
-        <div class="home-news-description">
-          Successfully passed the Ph.D. Comprehensive
-          Examination and advanced to Ph.D. candidacy
-          at the University of Missouri–Columbia.
-        </div>
       </div>
-
-      <div class="home-news-card">
-        <div class="home-news-date">2026</div>
-        <div class="home-news-description">
-          Two oral presentations accepted at the IEEE
-          Workshop on Wide Bandgap Power Devices and
-          Applications (WiPDA 2026).
-        </div>
-      </div>
-
-      <div class="home-news-card">
-        <div class="home-news-date">2026</div>
-        <div class="home-news-description">
-          Received the Outstanding Ph.D. Student Award
-          from the College of Engineering at the
-          University of Missouri.
-        </div>
-      </div>
-
-      <div class="home-news-card">
-        <div class="home-news-date">2026</div>
-        <div class="home-news-description">
-          Received the Outstanding Ph.D. Student and
-          Teaching Assistant Award from the Department
-          of Electrical Engineering and Computer Science.
-        </div>
-      </div>
-
-    {% endif %}
+    </div>
 
   </div>
-
-  <div class="home-news-more">
-    <a href="{{ '/updates/' | relative_url }}">
-      View All Updates
-      <i class="fas fa-arrow-right"></i>
-    </a>
-  </div>
-
 </section>
 
-</div>
+<!-- =========================
+     GET IN TOUCH
+     ORIGINAL CODE — UNCHANGED
+========================== -->
+<section class="section section--soft">
+  <div class="wrap center">
+
+    <h2 class="big-title underline">
+      GET IN TOUCH
+    </h2>
+
+    <div class="social-row">
+
+      <!-- EMAIL -->
+      <a class="social"
+         href="mailto:ssqk4@umsystem.edu"
+         aria-label="Email Showmik Singha">
+
+        <i class="fas fa-envelope" aria-hidden="true"></i>
+
+      </a>
+
+      <!-- GITHUB -->
+      <a class="social"
+         href="https://github.com/showmiksingha"
+         target="_blank"
+         rel="noopener noreferrer"
+         aria-label="GitHub Profile">
+
+        <i class="fab fa-github" aria-hidden="true"></i>
+
+      </a>
+
+      <!-- LINKEDIN -->
+      <a class="social"
+         href="https://www.linkedin.com/in/showmik-singha-293967147/"
+         target="_blank"
+         rel="noopener noreferrer"
+         aria-label="LinkedIn Profile">
+
+        <i class="fab fa-linkedin-in" aria-hidden="true"></i>
+
+      </a>
+
+    </div>
+
+  </div>
+</section>
