@@ -345,15 +345,7 @@ classes: wide
 
     <h1>Research Projects</h1>
 
-    <p class="project-intro">
-      My research integrates semiconductor device
-      physics, numerical simulation, radiation
-      reliability, machine learning, and
-      microfabrication. These projects investigate
-      next-generation electronic devices for
-      high-performance power conversion and
-      operation in extreme environments.
-    </p>
+ 
 
     <!-- ===================================== -->
     <!-- RADIATION EFFECTS -->
