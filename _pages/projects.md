@@ -644,9 +644,9 @@ classes: wide
         of Semiconductor PIN Diodes
       </h3>
 
-      <div class="project-meta">
-        <i class="fas fa-microchip"></i>
-        Semiconductor Device Modeling and Data Analysis
+     <div class="project-meta">
+        <i class="fas fa-university"></i>
+        University of Missouri–Columbia
       </div>
 
       <ul class="project-list">
@@ -703,9 +703,9 @@ classes: wide
         Fabrication Using Two-Photon Polymerization
       </h3>
 
-      <div class="project-meta">
-        <i class="fas fa-flask"></i>
-        Microfabrication and Biosensor Development
+     <div class="project-meta">
+        <i class="fas fa-university"></i>
+        University of Missouri–Columbia
       </div>
 
       <ul class="project-list">
