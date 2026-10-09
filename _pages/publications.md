@@ -561,7 +561,7 @@ classes: wide
     </li>
 
     <li>
-      <a href="https://www.linkedin.com/in/showmiksingha/"
+      <a href="https://www.linkedin.com/in/showmik-singha-293967147"
          target="_blank"
          rel="noopener">
         <i class="fab fa-fw fa-linkedin"></i>
@@ -581,12 +581,7 @@ classes: wide
 
 <h1>Publications</h1>
 
-<p class="pub-intro">
-  Peer-reviewed journal articles, invited papers,
-  and conference publications in semiconductor devices,
-  wide and ultrawide bandgap materials, power electronics,
-  device modeling, radiation effects, and emerging technologies.
-</p>
+
 
 <!-- =========================================
      PUBLICATION SUMMARY
@@ -630,7 +625,7 @@ classes: wide
 
     <div>
       <h2>Research Impact</h2>
-      <p>Academic impact at a glance.</p>
+     
     </div>
 
     <i class="fas fa-graduation-cap"></i>
@@ -721,10 +716,7 @@ classes: wide
 
   </div>
 
-  <p class="apple-scholar-note">
-    Source: Google Scholar. Metrics based on the
-    provided snapshot and updated manually.
-  </p>
+
 
 </section>
 
@@ -734,7 +726,7 @@ classes: wide
 
 <h2 class="pub-section-title">
   <i class="fas fa-book-open"></i>
-  Journal Publications
+  Journals
 </h2>
 
 <ol class="publication-list">
@@ -809,7 +801,7 @@ classes: wide
 
 <h2 class="pub-section-title">
   <i class="fas fa-users"></i>
-  Conference Publications
+  Conferences
 </h2>
 
 <ol class="publication-list">
@@ -819,7 +811,7 @@ classes: wide
     M. Y. Rahman, M. M. Hossain, and S. K. Islam,
     "Machine Learning Enabled Parameter Extraction of
     β-Ga<sub>2</sub>O<sub>3</sub> MOSFETs,"
-    <em>84th Device Research Conference (DRC)</em>,
+    <em>84th Device Research Conference (DRC) (Presented)</em>,
     <span class="pub-year">2026</span>.
   </li>
 
