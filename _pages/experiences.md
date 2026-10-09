@@ -1045,12 +1045,7 @@ classes: wide
 
   </div>
 
-  <p class="section-description">
-    Mentoring undergraduate researchers
-    in thesis research, academic projects,
-    technical analysis, scientific writing,
-    and research dissemination.
-  </p>
+
 
   <div class="exp-timeline">
 
@@ -1068,6 +1063,10 @@ classes: wide
         </h3>
 
       </div>
+
+       <span class="exp-date">
+          Jan 2024 – Present
+        </span>
 
       <div class="exp-org">
         University of Missouri–Columbia
@@ -1204,10 +1203,7 @@ classes: wide
       </div>
 
       <div class="exp-org">
-        Department of Electrical
-        &amp; Electronic Engineering<br>
-        Shahjalal University of Science
-        and Technology (SUST)
+        Shahjalal University of Science and Technology (SUST)
       </div>
 
       <div class="exp-location">
