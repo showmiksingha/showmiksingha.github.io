@@ -296,47 +296,57 @@ classes: wide
   <!-- ===================================== -->
   <!-- LEFT: AUTHOR PROFILE -->
   <!-- ===================================== -->
-  <aside class="author-card">
+  <!-- ======================================
+     LEFT: AUTHOR PROFILE
+====================================== -->
 
-    <img
-      src="{{ '/assets/images/profile.JPG' | relative_url }}"
-      alt="Showmik Singha"
-      class="author-avatar"
-    >
+<aside class="author-card">
 
-    <div class="author-name">
-      Showmik Singha
-    </div>
+  <img
+    class="author-avatar"
+    src="/assets/images/profile.JPG"
+    alt="Showmik Singha"
+  >
 
-    <div class="author-title">
-      PhD Candidate, University of Missouri
-    </div>
+  <p class="author-name">
+    Showmik Singha
+  </p>
 
-    <div class="author-bio">
-      Semiconductor Device Modeling,
-      Wide- and Ultra-Wide-Bandgap Power Devices,
-      Radiation Effects, and Machine Learning.
-    </div>
+  <p class="author-bio">
+    PhD Candidate, University of Missouri
+  </p>
 
-    <div class="author-links">
+  <ul class="author-links">
 
+    <li>
       <a href="mailto:ssqk4@umsystem.edu">
-        <i class="fas fa-envelope"></i> Email
+        <i class="fas fa-fw fa-envelope"></i>
+        <span>Email</span>
       </a>
+    </li>
 
-      <a href="https://scholar.google.com/citations?user=B0llklQAAAAJ&hl=en"
-         target="_blank" rel="noopener noreferrer">
-        <i class="ai ai-google-scholar"></i> Google Scholar
-      </a>
-
+    <li>
       <a href="https://github.com/showmiksingha"
-         target="_blank" rel="noopener noreferrer">
-        <i class="fab fa-github"></i> GitHub
+         target="_blank"
+         rel="noopener noreferrer">
+        <i class="fab fa-fw fa-github"></i>
+        <span>GitHub</span>
       </a>
+    </li>
 
-    </div>
+    <li>
+      <a href="https://www.linkedin.com/in/showmik-singha-293967147"
+         target="_blank"
+         rel="noopener noreferrer">
+        <i class="fab fa-fw fa-linkedin"></i>
+        <span>LinkedIn</span>
+      </a>
+    </li>
 
-  </aside>
+  </ul>
+
+</aside>
+
 
   <!-- ===================================== -->
   <!-- RIGHT: RESEARCH PROJECTS -->
