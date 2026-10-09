@@ -7,8 +7,7 @@ title: "Home"
 <style>
 /* ============================================
    APPLE-INSPIRED HOMEPAGE BENTO
-   Scoped to avoid affecting theme navigation,
-   News & Updates, or Get in Touch.
+   Scoped to preserve navigation, news and contact
 ============================================ */
 
 .home-bento-section {
@@ -35,6 +34,10 @@ title: "Home"
   box-sizing: border-box;
 }
 
+/* ============================================
+   COMMON BENTO CARD DESIGN
+============================================ */
+
 .home-bento-card {
   min-width: 0;
   border-radius: 24px;
@@ -55,10 +58,10 @@ title: "Home"
 
 .home-bento-eyebrow {
   display: block;
-  margin-bottom: 17px;
-  font-size: 11px;
-  font-weight: 750;
-  letter-spacing: 1.8px;
+  margin-bottom: 18px;
+  font-size: .85rem;
+  font-weight: 700;
+  letter-spacing: 1.5px;
   text-transform: uppercase;
   color: #86868b;
 }
@@ -68,7 +71,7 @@ title: "Home"
 .home-bento-card h3 {
   padding: 0;
   border: 0;
-  line-height: 1.18;
+  line-height: 1.2;
   letter-spacing: -.65px;
 }
 
@@ -79,7 +82,7 @@ title: "Home"
 }
 
 /* ============================================
-   INTRODUCTION CARD
+   1. INTRODUCTION CARD
 ============================================ */
 
 .home-bento-intro {
@@ -94,8 +97,9 @@ title: "Home"
 
 .home-bento-intro h1 {
   margin: 0 0 23px;
-  font-size: clamp(39px, 5vw, 64px);
+  font-size: clamp(3rem, 4.5vw, 5rem);
   font-weight: 800;
+  line-height: 1.12;
   letter-spacing: -2.5px;
   color: #1d1d1f;
 }
@@ -105,18 +109,19 @@ title: "Home"
 }
 
 .home-bento-intro .intro-tagline {
-  font-size: clamp(17px, 2vw, 22px);
+  font-size: clamp(1.2rem, 1.6vw, 1.55rem);
   font-weight: 500;
-  line-height: 1.55;
-  max-width: 610px;
+  line-height: 1.6;
+  max-width: 800px;
   color: #55565b;
 }
 
 .home-bento-intro .intro-location {
   margin-top: 25px;
   color: #737378;
-  font-size: 13px;
+  font-size: 1rem;
   font-weight: 550;
+  line-height: 1.6;
 }
 
 .home-bento-intro .intro-location i {
@@ -125,7 +130,7 @@ title: "Home"
 }
 
 /* ============================================
-   PROFILE PHOTO CARD
+   2. PROFILE PHOTO CARD
 ============================================ */
 
 .home-bento-photo {
@@ -164,7 +169,7 @@ title: "Home"
 
 .home-bento-photo-caption strong {
   display: block;
-  font-size: 17px;
+  font-size: 1.3rem;
   color: #1d1d1f;
 }
 
@@ -172,36 +177,29 @@ title: "Home"
   display: block;
   margin-top: 4px;
   color: #77777c;
-  font-size: 12px;
+  font-size: 1rem;
 }
 
 /* ============================================
-   BIOGRAPHY
+   3. BIOGRAPHY CARD
 ============================================ */
 
 .home-bento-bio {
   grid-column: span 7;
   padding: 36px;
-}
-
-.home-bento-bio h2 {
-  font-size: 30px;
-  font-weight: 750;
-  margin: 0 0 19px;
-  color: #1d1d1f;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
 }
 
 .home-bento-bio p {
-  font-size: 15px;
-  margin-bottom: 14px;
-}
-
-.home-bento-bio p:last-child {
+  font-size: 1.08rem;
+  line-height: 1.85;
   margin-bottom: 0;
 }
 
 /* ============================================
-   RESEARCH SUMMARY
+   4. RESEARCH VISION CARD
 ============================================ */
 
 .home-bento-focus {
@@ -220,13 +218,15 @@ title: "Home"
 
 .home-bento-focus h2 {
   color: #fff;
-  font-size: 26px;
+  font-size: clamp(1.8rem, 2.3vw, 2.3rem);
+  line-height: 1.3;
   margin: 0 0 17px;
 }
 
 .home-bento-focus p {
   color: #d0daea;
-  font-size: 14px;
+  font-size: 1.08rem;
+  line-height: 1.8;
 }
 
 .home-bento-focus .focus-divider {
@@ -238,12 +238,12 @@ title: "Home"
 .home-bento-focus .focus-highlight {
   color: #a9cbff;
   font-weight: 650;
-  font-size: 13px;
-  line-height: 1.7;
+  font-size: 1rem;
+  line-height: 1.8;
 }
 
 /* ============================================
-   RESEARCH INTERESTS
+   5. RESEARCH INTERESTS HEADER
 ============================================ */
 
 .home-bento-interests-heading {
@@ -253,27 +253,27 @@ title: "Home"
 }
 
 .home-bento-interests-heading h2 {
-  font-size: clamp(27px, 3vw, 36px);
+  font-size: clamp(2rem, 2.8vw, 2.6rem);
   font-weight: 780;
   margin: 0 0 8px;
   color: #1d1d1f;
 }
 
 .home-bento-interests-heading p {
-  font-size: 14px;
+  font-size: 1.05rem;
+  line-height: 1.7;
 }
 
-/* Research interests: consistent pill layout */
-
 /* ============================================
-   RESEARCH INTERESTS — MATCH EDUCATION PILLS
+   6. RESEARCH INTEREST PILLS
+   MATCHES EDUCATION PAGE
 ============================================ */
 
 .home-bento-interest-grid {
   grid-column: 1 / -1;
   display: flex;
   flex-wrap: wrap;
-  align-content: start;
+  align-content: flex-start;
   gap: 10px;
   padding: 25px 28px;
   margin: 0;
@@ -286,14 +286,14 @@ title: "Home"
   display: inline-flex;
   align-items: center;
   max-width: 100%;
-  padding: 9px 15px;
+  padding: 11px 18px;
   background: #f8fafc;
   color: #334155;
   border: 1px solid #e2e8f0;
   border-radius: 999px;
-  font-size: 0.88rem;
+  font-size: 1rem;
   font-weight: 500;
-  line-height: 1.4;
+  line-height: 1.5;
   cursor: default;
 
   transition:
@@ -312,28 +312,15 @@ title: "Home"
   box-shadow: 0 5px 14px rgba(37, 99, 235, 0.22);
 }
 
-@media (max-width: 600px) {
-  .home-bento-interest-grid {
-    gap: 8px;
-    padding: 20px;
-  }
-
-  .home-bento-interest {
-    padding: 8px 12px;
-    font-size: 0.82rem;
-  }
-}
-
-
-   
 /* ============================================
-   MOBILE RESPONSIVENESS
+   TABLET RESPONSIVENESS
 ============================================ */
 
 @media (max-width: 900px) {
 
   .home-bento-intro {
     grid-column: span 8;
+    padding: 34px;
   }
 
   .home-bento-photo {
@@ -347,11 +334,11 @@ title: "Home"
   .home-bento-focus {
     grid-column: span 5;
   }
-
-  .home-bento-intro {
-    padding: 34px;
-  }
 }
+
+/* ============================================
+   MOBILE RESPONSIVENESS
+============================================ */
 
 @media (max-width: 650px) {
 
@@ -377,7 +364,12 @@ title: "Home"
   }
 
   .home-bento-intro h1 {
+    font-size: clamp(2.4rem, 8vw, 3.2rem);
     letter-spacing: -1.7px;
+  }
+
+  .home-bento-intro .intro-tagline {
+    font-size: 1.12rem;
   }
 
   .home-bento-photo-frame {
@@ -394,20 +386,34 @@ title: "Home"
     padding: 29px 25px;
   }
 
+  .home-bento-bio p,
+  .home-bento-focus p {
+    font-size: 1rem;
+    line-height: 1.75;
+  }
+
+  .home-bento-eyebrow {
+    font-size: .78rem;
+  }
+
   .home-bento-interests-heading {
     padding: 27px;
   }
 
   .home-bento-interest-grid {
     padding: 20px;
-    gap: 9px;
+    gap: 8px;
   }
 
   .home-bento-interest {
-    padding: 9px 13px;
-    font-size: 12px;
+    padding: 9px 14px;
+    font-size: .92rem;
   }
 }
+
+/* ============================================
+   ACCESSIBILITY
+============================================ */
 
 @media (prefers-reduced-motion: reduce) {
 
@@ -488,7 +494,7 @@ title: "Home"
 
 
       <!-- ==============================
-           3. BRIEF BIOGRAPHY
+           3. SINGLE-PARAGRAPH BIOGRAPHY
       =============================== -->
 
       <div class="home-bento-card home-bento-bio">
@@ -498,33 +504,18 @@ title: "Home"
         </span>
 
         <p>
-          I am a Ph.D. candidate in Electrical and Computer
-          Engineering at the University of Missouri–Columbia,
-          specializing in
-          <strong>wide-bandgap and ultra-wide-bandgap
-          semiconductor devices</strong>,
-          power electronics, and device reliability.
-        </p>
-
-        <p>
-          My research focuses on
-          <strong>GaN HEMTs and
-          β-Ga<sub>2</sub>O<sub>3</sub> MOSFETs</strong>,
-          investigating radiation-induced transient effects,
-          high-temperature behavior, carrier transport,
-          and device performance using TCAD-based
-          computational modeling.
-        </p>
-
-        <p>
-          I also integrate
-          <strong>machine learning with semiconductor
-          device physics</strong>
-          to accelerate parameter extraction,
-          inverse modeling, and design optimization.
-          My experience extends to semiconductor
-          characterization, fabrication, and
-          university-level teaching and mentorship.
+          I am a Ph.D. candidate in Electrical and Computer Engineering
+          at the University of Missouri–Columbia, specializing in
+          <strong>wide- and ultra-wide-bandgap semiconductor devices</strong>,
+          power electronics, and device reliability. My research focuses on
+          <strong>GaN HEMTs and β-Ga<sub>2</sub>O<sub>3</sub> MOSFETs</strong>,
+          investigating radiation effects, high-temperature behavior,
+          and device performance through TCAD-based modeling. I also
+          integrate <strong>machine learning with semiconductor device
+          physics</strong> for parameter extraction, inverse modeling,
+          and device optimization. Beyond research, I have experience
+          in semiconductor fabrication, electrical characterization,
+          university teaching, and student mentorship.
         </p>
 
       </div>
@@ -565,7 +556,7 @@ title: "Home"
 
 
       <!-- ==============================
-           5. RESEARCH INTEREST HEADER
+           5. RESEARCH INTERESTS HEADER
       =============================== -->
 
       <div class="home-bento-card home-bento-interests-heading">
@@ -587,26 +578,20 @@ title: "Home"
 
       <!-- ==============================
            6. RESEARCH INTEREST PILLS
-           EXISTING YAML DATA
+           SAME STYLE AS EDUCATION PAGE
       =============================== -->
 
-      
-<!-- ==============================
-     RESEARCH INTEREST PILLS
-     SAME STYLE AS EDUCATION PAGE
-============================== -->
+      <div class="home-bento-interest-grid">
 
-<div class="home-bento-interest-grid">
+        {% for item in site.data.interests.items %}
 
-  {% for item in site.data.interests.items %}
+          <span class="home-bento-interest">
+            {{ item }}
+          </span>
 
-    <span class="home-bento-interest">
-      {{ item }}
-    </span>
+        {% endfor %}
 
-  {% endfor %}
-
-</div>
+      </div>
 
     </div>
 
