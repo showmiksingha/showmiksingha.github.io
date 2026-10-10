@@ -532,12 +532,7 @@ classes: wide
 <header class="eca-header">
   <h1>Extracurricular Activities</h1>
 
-  <p class="eca-intro">
-    Beyond academics and research, I engage in student
-    leadership, professional organizations, technical
-    communities, and sports, which provide opportunities
-    to develop leadership, teamwork, and communication skills.
-  </p>
+
 </header>
 
 
@@ -574,7 +569,7 @@ classes: wide
           </h3>
 
           <p class="eca-org-subtitle">
-            University of Missouri–Columbia
+            University of Missouri–Columbia, USA
           </p>
         </div>
 
