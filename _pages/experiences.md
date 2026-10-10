@@ -395,27 +395,45 @@ classes: wide
 }
 
 /* ==========================================
-   SKILL TAGS
+   SKILL TAGS — BLUE HOVER PILLS
 ========================================== */
 
 .exp-tags {
   display: flex;
   flex-wrap: wrap;
-  gap: 7px;
+  gap: 10px;
   margin-top: 20px;
   padding-top: 16px;
   border-top: 1px solid #f1f5f9;
 }
 
 .exp-tag {
-  display: inline-block;
-  padding: 6px 10px;
-  border-radius: 7px;
-  background: #f1f5f9;
-  color: #475569;
-  font-size: 0.72rem;
-  font-weight: 600;
-  line-height: 1.35;
+  display: inline-flex;
+  align-items: center;
+  padding: 9px 15px;
+  background: #f8fafc;
+  color: #334155;
+  border: 1px solid #e2e8f0;
+  border-radius: 999px;
+  font-size: 0.88rem;
+  font-weight: 500;
+  line-height: 1.4;
+  cursor: default;
+
+  transition:
+    background-color 0.25s ease,
+    color 0.25s ease,
+    border-color 0.25s ease,
+    transform 0.25s ease,
+    box-shadow 0.25s ease;
+}
+
+.exp-tag:hover {
+  background: #2563eb;
+  color: #ffffff;
+  border-color: #2563eb;
+  transform: translateY(-2px);
+  box-shadow: 0 4px 12px rgba(37,99,235,0.18);
 }
 
 /* ==========================================
@@ -530,6 +548,15 @@ classes: wide
     white-space: normal;
   }
 
+  .exp-tags {
+    gap: 8px;
+  }
+
+  .exp-tag {
+    padding: 7px 12px;
+    font-size: 0.8rem;
+  }
+
   .impact-grid {
     gap: 7px;
   }
@@ -557,8 +584,13 @@ classes: wide
   .exp-card,
   .impact-box,
   .exp-navigation a,
-  .author-links a {
+  .author-links a,
+  .exp-tag {
     transition: none;
+  }
+
+  .exp-tag:hover {
+    transform: none;
   }
 
 }
@@ -1045,14 +1077,17 @@ classes: wide
 
   </div>
 
-
+  <p class="section-description">
+    Mentoring undergraduate researchers
+    in thesis research, academic projects,
+    technical analysis, scientific writing,
+    and research dissemination.
+  </p>
 
   <div class="exp-timeline">
 
 
-    <!-- ==================================
-         MIZZOU RESEARCH MENTORSHIP
-    ================================== -->
+    <!-- MIZZOU RESEARCH MENTORSHIP -->
 
     <article class="exp-card">
 
@@ -1062,11 +1097,11 @@ classes: wide
           Undergraduate Research Mentor
         </h3>
 
-      </div>
-
-       <span class="exp-date">
+        <span class="exp-date">
           Jan 2024 – Present
         </span>
+
+      </div>
 
       <div class="exp-org">
         University of Missouri–Columbia
@@ -1183,9 +1218,7 @@ classes: wide
     </article>
 
 
-    <!-- ==================================
-         SUST RESEARCH MENTORSHIP
-    ================================== -->
+    <!-- SUST RESEARCH MENTORSHIP -->
 
     <article class="exp-card">
 
@@ -1203,7 +1236,8 @@ classes: wide
       </div>
 
       <div class="exp-org">
-        Shahjalal University of Science and Technology (SUST)
+        Shahjalal University of Science
+        and Technology (SUST)
       </div>
 
       <div class="exp-location">
