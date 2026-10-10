@@ -981,17 +981,31 @@ classes: wide
 
     <article class="exp-card">
 
-      <div class="exp-card-header">
+       <!-- Assistant Professor -->
+  <div class="exp-card-header">
 
-        <h3 class="exp-role">
-          Faculty Member
-        </h3>
+    <h3 class="exp-role">
+      Assistant Professor
+    </h3>
 
-        <span class="exp-date">
-          Sep 2018 – Aug 2022
-        </span>
+    <span class="exp-date">
+      Sep 2020 – Aug 2022
+    </span>
 
-      </div>
+  </div>
+
+  <!-- Lecturer -->
+  <div class="exp-card-header">
+
+    <h3 class="exp-role">
+      Lecturer
+    </h3>
+
+    <span class="exp-date">
+      Sep 2018 – Sep 2020
+    </span>
+
+  </div>
 
       <div class="exp-org">
         Department of Electrical
