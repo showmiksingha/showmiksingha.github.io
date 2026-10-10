@@ -139,98 +139,226 @@ classes: wide
   margin-right: 9px;
 }
 
-/* ===== Featured Awards ===== */
+/* ============================================
+   APPLE-STYLE FEATURED RECOGNITIONS BENTO GRID
+============================================ */
+
 .featured-grid {
   display: grid;
   grid-template-columns: repeat(2, minmax(0, 1fr));
-  gap: 15px;
+  grid-template-areas:
+    "hero hero"
+    "teaching fellowship";
+  gap: 16px;
+  margin-top: 20px;
 }
 
+/* General Bento Card */
 .featured-card {
   position: relative;
-  border: 1px solid #f0d99b;
-  border-radius: 14px;
-  padding: 22px;
-  background: linear-gradient(
-    135deg,
-    #fffbeb 0%,
-    #ffffff 85%
-  );
+  isolation: isolate;
+  display: flex;
+  flex-direction: column;
+  min-width: 0;
+  min-height: 248px;
+  padding: clamp(22px, 3vw, 32px);
+  border: 1px solid #e5e7eb;
+  border-radius: 22px;
   overflow: hidden;
-  transition: transform 0.25s, box-shadow 0.25s;
+  background: #f8fafc;
+
+  transition:
+    transform 0.28s ease,
+    box-shadow 0.28s ease,
+    border-color 0.28s ease;
 }
 
-.featured-card:first-child {
-  grid-column: 1 / -1;
-}
-
-.featured-card::before {
-  content: "";
-  position: absolute;
-  left: 0;
-  top: 0;
-  bottom: 0;
-  width: 4px;
-  background: #d97706;
-}
-
+/* Hover Effect */
 .featured-card:hover {
-  transform: translateY(-4px);
-  box-shadow: 0 8px 24px rgba(0,0,0,0.07);
+  transform: translateY(-5px);
+  border-color: #bfdbfe;
+  box-shadow: 0 16px 34px rgba(30, 64, 175, 0.10);
 }
 
+/* Large Featured Card */
+.featured-card--hero {
+  grid-area: hero;
+  min-height: 270px;
+
+  background: linear-gradient(
+    125deg,
+    #eaf3ff 0%,
+    #f5f9ff 60%,
+    #ffffff 100%
+  );
+
+  border-color: #dbeafe;
+}
+
+/* Teaching Card */
+.featured-card--teaching {
+  grid-area: teaching;
+
+  background: linear-gradient(
+    145deg,
+    #f8fafc,
+    #eef2ff
+  );
+}
+
+/* Fellowship Card */
+.featured-card--fellowship {
+  grid-area: fellowship;
+
+  background: linear-gradient(
+    145deg,
+    #f8fafc,
+    #edf9f4
+  );
+}
+
+/* Decorative Background Icons */
+.featured-watermark {
+  position: absolute;
+  right: -12px;
+  bottom: -16px;
+  color: #2563eb;
+  opacity: 0.075;
+  font-size: clamp(105px, 15vw, 190px);
+  line-height: 1;
+  pointer-events: none;
+  z-index: -1;
+}
+
+.featured-card--fellowship .featured-watermark {
+  color: #059669;
+}
+
+/* Card Header */
 .featured-header {
   display: flex;
-  justify-content: space-between;
   align-items: center;
+  justify-content: space-between;
   gap: 12px;
-  margin-bottom: 15px;
+  margin-bottom: 22px;
 }
 
+/* Icons */
 .featured-icon {
   width: 48px;
   height: 48px;
-  border-radius: 12px;
-  background: #fef3c7;
-  color: #b45309;
-  display: flex;
+
+  display: inline-flex;
   align-items: center;
   justify-content: center;
-  font-size: 1.3rem;
+  flex-shrink: 0;
+
+  border-radius: 15px;
+  color: #2563eb;
+  background: #dbeafe;
+  font-size: 1.25rem;
 }
 
+.featured-card--fellowship .featured-icon {
+  background: #d1fae5;
+  color: #047857;
+}
+
+/* Date Badge */
 .featured-date {
+  display: inline-flex;
+  align-items: center;
+
+  border: 1px solid #dbeafe;
+  border-radius: 999px;
+  padding: 6px 12px;
+
+  background: rgba(255, 255, 255, 0.8);
+  color: #334155;
+
+  font-weight: 650;
   font-size: 0.75rem;
-  font-weight: 700;
-  color: #92400e;
-  background: #fef3c7;
-  padding: 5px 11px;
-  border-radius: 20px;
   white-space: nowrap;
 }
 
-.featured-title {
-  font-size: 1.05rem;
-  font-weight: 750;
-  color: #1f2937;
-  line-height: 1.5;
-  margin-bottom: 8px;
+/* Category */
+.featured-eyebrow {
+  color: #2563eb;
+  font-size: 0.76rem;
+  font-weight: 800;
+  letter-spacing: 0.09em;
+  text-transform: uppercase;
+  margin-bottom: 10px;
 }
 
+.featured-card--fellowship .featured-eyebrow {
+  color: #047857;
+}
+
+/* Award Title */
+.featured-title {
+  max-width: 580px;
+  margin: 0 0 11px;
+
+  color: #0f172a;
+  font-size: clamp(1.12rem, 1.6vw, 1.4rem);
+  line-height: 1.35;
+  font-weight: 800;
+  overflow-wrap: anywhere;
+}
+
+.featured-card--hero .featured-title {
+  font-size: clamp(1.45rem, 2.5vw, 2rem);
+  max-width: 640px;
+}
+
+/* Organization */
 .featured-org {
-  font-size: 0.87rem;
   color: #475569;
+  font-size: 0.88rem;
   line-height: 1.65;
 }
 
+/* Description */
 .featured-description {
-  font-size: 0.85rem;
-  line-height: 1.7;
   color: #64748b;
-  margin-top: 10px;
+  font-size: 0.86rem;
+  line-height: 1.65;
+
+  margin-top: auto;
+  padding-top: 18px;
+  max-width: 570px;
 }
 
-/* ===== Timeline ===== */
+/* Responsive Bento */
+@media (max-width: 700px) {
+  .featured-grid {
+    grid-template-columns: minmax(0, 1fr);
+    grid-template-areas:
+      "hero"
+      "teaching"
+      "fellowship";
+  }
+
+  .featured-card {
+    min-height: 235px;
+  }
+}
+
+@media (prefers-reduced-motion: reduce) {
+  .featured-card {
+    transition: none;
+  }
+
+  .featured-card:hover {
+    transform: none;
+  }
+}
+
+/* ============================================
+   AWARDS TIMELINE
+============================================ */
+
 .awards-timeline {
   position: relative;
   margin-top: 22px;
@@ -276,15 +404,17 @@ classes: wide
   border: 1px solid #e5e7eb;
   border-radius: 12px;
   background: #fff;
-  transition: transform 0.2s,
-              border-color 0.2s,
-              box-shadow 0.2s;
+
+  transition:
+    transform 0.2s,
+    border-color 0.2s,
+    box-shadow 0.2s;
 }
 
 .award-card:hover {
   transform: translateX(4px);
   border-color: #bfdbfe;
-  box-shadow: 0 5px 18px rgba(0,0,0,0.055);
+  box-shadow: 0 5px 18px rgba(0, 0, 0, 0.055);
 }
 
 .award-icon {
@@ -292,6 +422,7 @@ classes: wide
   width: 44px;
   height: 44px;
   border-radius: 11px;
+
   display: flex;
   align-items: center;
   justify-content: center;
@@ -383,16 +514,6 @@ classes: wide
 }
 
 /* ===== Responsive ===== */
-@media (max-width: 700px) {
-  .featured-grid {
-    grid-template-columns: 1fr;
-  }
-
-  .featured-card:first-child {
-    grid-column: auto;
-  }
-}
-
 @media (max-width: 600px) {
   .awards-content h1 {
     font-size: 1.65rem;
@@ -430,10 +551,6 @@ classes: wide
   .award-icon {
     width: 38px;
     height: 38px;
-  }
-
-  .featured-card {
-    padding: 18px;
   }
 }
 </style>
@@ -476,7 +593,7 @@ classes: wide
       </li>
 
       <li>
-        <a href="https://www.linkedin.com/in/showmik-singha-293967147"
+        <a href="https://www.linkedin.com/in/showmiksingha/"
            target="_blank" rel="noopener">
           <i class="fab fa-fw fa-linkedin"></i>
           <span>LinkedIn</span>
@@ -493,9 +610,6 @@ classes: wide
   <main class="awards-content">
 
     <h1>Awards & Honors</h1>
-
-    
-  
 
     <!-- ===== STATISTICS ===== -->
     <div class="awards-stats">
@@ -518,7 +632,7 @@ classes: wide
     </div>
 
     <!-- =====================================
-         FEATURED RECOGNITIONS
+         APPLE-STYLE FEATURED BENTO GRID
     ====================================== -->
 
     <h2 class="awards-heading">
@@ -528,14 +642,26 @@ classes: wide
 
     <div class="featured-grid">
 
-      <!-- Featured 1 -->
-      <div class="featured-card">
+      <!-- Large Hero Card -->
+      <div class="featured-card featured-card--hero">
+
+        <i class="fas fa-trophy featured-watermark"
+           aria-hidden="true"></i>
 
         <div class="featured-header">
+
           <div class="featured-icon">
             <i class="fas fa-trophy"></i>
           </div>
-          <span class="featured-date">April 2026</span>
+
+          <span class="featured-date">
+            April 2026
+          </span>
+
+        </div>
+
+        <div class="featured-eyebrow">
+          Academic Excellence
         </div>
 
         <div class="featured-title">
@@ -554,22 +680,36 @@ classes: wide
 
       </div>
 
-      <!-- Featured 2 -->
-      <div class="featured-card">
+      <!-- Teaching and Research Card -->
+      <div class="featured-card featured-card--teaching">
+
+        <i class="fas fa-medal featured-watermark"
+           aria-hidden="true"></i>
 
         <div class="featured-header">
+
           <div class="featured-icon">
             <i class="fas fa-medal"></i>
           </div>
-          <span class="featured-date">May 2026</span>
+
+          <span class="featured-date">
+            May 2026
+          </span>
+
+        </div>
+
+        <div class="featured-eyebrow">
+          Research & Teaching
         </div>
 
         <div class="featured-title">
-          Outstanding Ph.D. Student and Teaching Assistant Award
+          Outstanding Ph.D. Student and Teaching
+          Assistant Award
         </div>
 
         <div class="featured-org">
-          Department of Electrical Engineering and Computer Science<br>
+          Department of Electrical Engineering and
+          Computer Science<br>
           University of Missouri
         </div>
 
@@ -580,14 +720,26 @@ classes: wide
 
       </div>
 
-      <!-- Featured 3 -->
-      <div class="featured-card">
+      <!-- Fellowship Card -->
+      <div class="featured-card featured-card--fellowship">
+
+        <i class="fas fa-graduation-cap featured-watermark"
+           aria-hidden="true"></i>
 
         <div class="featured-header">
+
           <div class="featured-icon">
             <i class="fas fa-graduation-cap"></i>
           </div>
-          <span class="featured-date">May 2026</span>
+
+          <span class="featured-date">
+            May 2026
+          </span>
+
+        </div>
+
+        <div class="featured-eyebrow">
+          Graduate Fellowship
         </div>
 
         <div class="featured-title">
@@ -620,11 +772,12 @@ classes: wide
     <div class="awards-timeline">
 
       <!-- ============== 2026 ============== -->
+
       <div class="timeline-year">
         <h3>2026</h3>
       </div>
 
-      <!-- May 2026: Dean's Fellowship -->
+      <!-- Dean's Summer Retention Fellowship -->
       <div class="award-card">
         <div class="award-icon green">
           <i class="fas fa-graduation-cap"></i>
@@ -636,7 +789,8 @@ classes: wide
           </div>
 
           <div class="award-organization">
-            College of Engineering, University of Missouri
+            College of Engineering,
+            University of Missouri
           </div>
 
           <div class="award-description">
@@ -645,13 +799,17 @@ classes: wide
           </div>
 
           <div class="award-labels">
-            <span class="award-tag green">Graduate Fellowship</span>
-            <span class="award-tag date">May 2026</span>
+            <span class="award-tag green">
+              Graduate Fellowship
+            </span>
+            <span class="award-tag date">
+              May 2026
+            </span>
           </div>
         </div>
       </div>
 
-      <!-- May 2026: Outstanding Student and TA -->
+      <!-- Outstanding Student and TA -->
       <div class="award-card">
         <div class="award-icon gold">
           <i class="fas fa-medal"></i>
@@ -659,22 +817,28 @@ classes: wide
 
         <div class="award-details">
           <div class="award-title">
-            Outstanding Ph.D. Student and Teaching Assistant Award
+            Outstanding Ph.D. Student and
+            Teaching Assistant Award
           </div>
 
           <div class="award-organization">
-            Department of Electrical Engineering and Computer Science,
+            Department of Electrical Engineering
+            and Computer Science,
             University of Missouri
           </div>
 
           <div class="award-labels">
-            <span class="award-tag gold">Research & Teaching</span>
-            <span class="award-tag date">May 2026</span>
+            <span class="award-tag gold">
+              Research & Teaching
+            </span>
+            <span class="award-tag date">
+              May 2026
+            </span>
           </div>
         </div>
       </div>
 
-      <!-- April 2026: Outstanding PhD -->
+      <!-- Outstanding PhD -->
       <div class="award-card">
         <div class="award-icon gold">
           <i class="fas fa-trophy"></i>
@@ -686,17 +850,22 @@ classes: wide
           </div>
 
           <div class="award-organization">
-            College of Engineering, University of Missouri
+            College of Engineering,
+            University of Missouri
           </div>
 
           <div class="award-labels">
-            <span class="award-tag gold">Academic Excellence</span>
-            <span class="award-tag date">April 2026</span>
+            <span class="award-tag gold">
+              Academic Excellence
+            </span>
+            <span class="award-tag date">
+              April 2026
+            </span>
           </div>
         </div>
       </div>
 
-      <!-- April 2026: Mentor Nomination -->
+      <!-- Undergraduate Mentor Nomination -->
       <div class="award-card">
         <div class="award-icon purple">
           <i class="fas fa-chalkboard-teacher"></i>
@@ -718,18 +887,23 @@ classes: wide
           </div>
 
           <div class="award-labels">
-            <span class="award-tag purple">Mentorship Nomination</span>
-            <span class="award-tag date">April 2026</span>
+            <span class="award-tag purple">
+              Mentorship Nomination
+            </span>
+            <span class="award-tag date">
+              April 2026
+            </span>
           </div>
         </div>
       </div>
 
       <!-- ============== 2025 ============== -->
+
       <div class="timeline-year">
         <h3>2025</h3>
       </div>
 
-      <!-- August 2025: Travel -->
+      <!-- Travel Fellowship 2025 -->
       <div class="award-card">
         <div class="award-icon green">
           <i class="fas fa-plane"></i>
@@ -741,18 +915,23 @@ classes: wide
           </div>
 
           <div class="award-organization">
-            Department of Electrical Engineering and Computer Science,
+            Department of Electrical Engineering
+            and Computer Science,
             University of Missouri
           </div>
 
           <div class="award-labels">
-            <span class="award-tag green">Travel Fellowship</span>
-            <span class="award-tag date">August 2025</span>
+            <span class="award-tag green">
+              Travel Fellowship
+            </span>
+            <span class="award-tag date">
+              August 2025
+            </span>
           </div>
         </div>
       </div>
 
-      <!-- April 2025: RCAF -->
+      <!-- RCAF 2025 -->
       <div class="award-card">
         <div class="award-icon gold">
           <i class="fas fa-award"></i>
@@ -764,21 +943,23 @@ classes: wide
           </div>
 
           <div class="award-organization">
-            41st Research and Creative Activities Forum (RCAF)
-            Poster Competition, University of Missouri
-          </div>
-
-          <div class="label">
+            41st Research and Creative Activities
+            Forum (RCAF) Poster Competition,
+            University of Missouri
           </div>
 
           <div class="award-labels">
-            <span class="award-tag gold">Research Presentation</span>
-            <span class="award-tag date">April 2025</span>
+            <span class="award-tag gold">
+              Research Presentation
+            </span>
+            <span class="award-tag date">
+              April 2025
+            </span>
           </div>
         </div>
       </div>
 
-      <!-- March 2025: CMOC -->
+      <!-- Connecticut Symposium 2025 -->
       <div class="award-card">
         <div class="award-icon gold">
           <i class="fas fa-trophy"></i>
@@ -795,18 +976,23 @@ classes: wide
           </div>
 
           <div class="award-labels">
-            <span class="award-tag gold">Research Excellence</span>
-            <span class="award-tag date">March 2025</span>
+            <span class="award-tag gold">
+              Research Excellence
+            </span>
+            <span class="award-tag date">
+              March 2025
+            </span>
           </div>
         </div>
       </div>
 
       <!-- ============== 2024 ============== -->
+
       <div class="timeline-year">
         <h3>2024</h3>
       </div>
 
-      <!-- August 2024: Travel -->
+      <!-- Travel Fellowship 2024 -->
       <div class="award-card">
         <div class="award-icon green">
           <i class="fas fa-plane"></i>
@@ -818,18 +1004,23 @@ classes: wide
           </div>
 
           <div class="award-organization">
-            Department of Electrical Engineering and Computer Science,
+            Department of Electrical Engineering
+            and Computer Science,
             University of Missouri
           </div>
 
           <div class="award-labels">
-            <span class="award-tag green">Travel Fellowship</span>
-            <span class="award-tag date">August 2024</span>
+            <span class="award-tag green">
+              Travel Fellowship
+            </span>
+            <span class="award-tag date">
+              August 2024
+            </span>
           </div>
         </div>
       </div>
 
-      <!-- March 2024: CMOC -->
+      <!-- Connecticut Symposium 2024 -->
       <div class="award-card">
         <div class="award-icon gold">
           <i class="fas fa-medal"></i>
@@ -846,18 +1037,23 @@ classes: wide
           </div>
 
           <div class="award-labels">
-            <span class="award-tag gold">Research Presentation</span>
-            <span class="award-tag date">March 2024</span>
+            <span class="award-tag gold">
+              Research Presentation
+            </span>
+            <span class="award-tag date">
+              March 2024
+            </span>
           </div>
         </div>
       </div>
 
       <!-- ============== 2019 ============== -->
+
       <div class="timeline-year">
         <h3>2019</h3>
       </div>
 
-      <!-- October 2019: ICE4CT -->
+      <!-- Best Paper ICE4CT -->
       <div class="award-card">
         <div class="award-icon gold">
           <i class="fas fa-trophy"></i>
@@ -869,23 +1065,29 @@ classes: wide
           </div>
 
           <div class="award-organization">
-            First International Conference on Emerging Electrical
-            Energy, Electronics and Computing Technologies (ICE4CT)
+            First International Conference on Emerging
+            Electrical Energy, Electronics and Computing
+            Technologies (ICE4CT)
           </div>
 
           <div class="award-labels">
-            <span class="award-tag gold">Best Paper</span>
-            <span class="award-tag date">October 2019</span>
+            <span class="award-tag gold">
+              Best Paper
+            </span>
+            <span class="award-tag date">
+              October 2019
+            </span>
           </div>
         </div>
       </div>
 
       <!-- ============== 2018 ============== -->
+
       <div class="timeline-year">
         <h3>2018</h3>
       </div>
 
-      <!-- February 2018: BSc Honours -->
+      <!-- BSc Degree with Honours -->
       <div class="award-card">
         <div class="award-icon purple">
           <i class="fas fa-graduation-cap"></i>
@@ -897,7 +1099,8 @@ classes: wide
           </div>
 
           <div class="award-organization">
-            Department of Electrical and Electronic Engineering,
+            Department of Electrical and Electronic
+            Engineering,
             Shahjalal University of Science and Technology
           </div>
 
@@ -908,8 +1111,12 @@ classes: wide
           </div>
 
           <div class="award-labels">
-            <span class="award-tag purple">Academic Distinction</span>
-            <span class="award-tag date">February 2018</span>
+            <span class="award-tag purple">
+              Academic Distinction
+            </span>
+            <span class="award-tag date">
+              February 2018
+            </span>
           </div>
         </div>
       </div>
